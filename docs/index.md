@@ -6,12 +6,12 @@ El material intelectual pertenece al profesor José Enrique Atienzar. Los materi
 El temario se estructura de la siguiente forma
 
 1. **[Introducción a JavaScript y las herramientas de FrontEnd](T01/README.md)**
-2. **[Fundamentos de JavaScript ](2/README.md)**
-3. **[Arrays, Objectos...,  y Clases](3/README.md)**
-4. **[Gestionando el DOM](4/README.md)**
-5. **[Gestión de Eventos y Formularios](5/README.md)**
-6. **[AJAX](6/README.md)**
-7. **[Almacenamiento en el lado del cliente](7/README.md)**
+2. **[Fundamentos de JavaScript ](T02/README.md)**
+3. **[Arrays, Objectos...,  y Clases](T03/README.md)**
+4. **[Gestionando el DOM](T04/README.md)**
+5. **[Gestión de Eventos y Formularios](T05/README.md)**
+6. **[AJAX](T06/README.md)**
+7. **[Almacenamiento en el lado del cliente](T07/README.md)**
 
 
 

@@ -4,12 +4,12 @@ site_name: DWEC
 nav:
   - Home: index.md
   - U1 - Herramientas de Frontend: T01/README.md
-  - U2 - Fundamentos de JavaScript: 2/README.md
-  - U3 - Arrays, objetos... y clases: 3/README.md
-  - U4 - Gestionando el DOM: 4/README.md
-  - U5 - Eventos y formularios: 5/README.md
-  - U6 - AJAX: 6/README.md
-  - U7 - Almacenamiento del lado del cliente: 7/README.md
+  - U2 - Fundamentos de JavaScript: T02/README.md
+  - U3 - Arrays, objetos... y clases: T03/README.md
+  - U4 - Gestionando el DOM: T04/README.md
+  - U5 - Eventos y formularios: T05/README.md
+  - U6 - AJAX: T06/README.md
+  - U7 - Almacenamiento del lado del cliente: T07/README.md
 
 
 theme:
