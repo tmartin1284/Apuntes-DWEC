@@ -1,0 +1,59 @@
+site_name: DWEC
+
+
+nav:
+  - Home: index.md
+  - U1 - Herramientas de Frontend: T01/README.md
+  - U2 - Fundamentos de JavaScript: 2/README.md
+  - U3 - Arrays, objetos... y clases: 3/README.md
+  - U4 - Gestionando el DOM: 4/README.md
+  - U5 - Eventos y formularios: 5/README.md
+  - U6 - AJAX: 6/README.md
+  - U7 - Almacenamiento del lado del cliente: 7/README.md
+
+
+theme:
+  logo: T01/img/js_logo.png
+  name: material
+  features:
+    - content.code.copy
+    - content.tabs.link
+  navigation_depth: 3
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to automatic mode
+
+extra_css:
+  - "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  - "css/custom.css"
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.emoji
+  - toc:
+      toc_depth: 3
