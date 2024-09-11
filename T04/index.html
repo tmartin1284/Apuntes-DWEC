@@ -1,0 +1,863 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../T03/">
+      
+      
+        <link rel="next" href="../T05/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>U4 - Gestionando el DOM - DWEC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-4-manipulacion-del-dom" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DWEC" class="md-header__button md-logo" aria-label="DWEC" data-md-component="logo">
+      
+  <img src="../T01/img/js_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DWEC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              U4 - Gestionando el DOM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to automatic mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to automatic mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DWEC" class="md-nav__button md-logo" aria-label="DWEC" data-md-component="logo">
+      
+  <img src="../T01/img/js_logo.png" alt="logo">
+
+    </a>
+    DWEC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U1 - Herramientas de Frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U2 - Fundamentos de JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U3 - Arrays, objetos... y clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    U4 - Gestionando el DOM
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    U4 - Gestionando el DOM
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-modelo-de-objetos-del-documento-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Modelo de Objetos del Documento (DOM)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Modelo de Objetos del Documento (DOM)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-historia-del-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Historia del DOM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-estructura-del-arbol-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Estructura del Árbol DOM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Estructura del Árbol DOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-la-interfaz-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 La Interfaz Node
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U5 - Eventos y formularios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T06/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U6 - AJAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T07/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U7 - Almacenamiento del lado del cliente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-modelo-de-objetos-del-documento-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Modelo de Objetos del Documento (DOM)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Modelo de Objetos del Documento (DOM)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-historia-del-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Historia del DOM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-estructura-del-arbol-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Estructura del Árbol DOM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Estructura del Árbol DOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-la-interfaz-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 La Interfaz Node
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="unidad-4-manipulacion-del-dom"><strong>UNIDAD 4 - Manipulación del DOM</strong></h1>
+<h2 id="1-modelo-de-objetos-del-documento-dom"><strong>1. Modelo de Objetos del Documento (DOM)</strong></h2>
+<p>El DOM (Modelo de Objetos del Documento) es un estándar del W3C que define cómo acceder a documentos como HTML y XML. Es una interfaz de programación de aplicaciones (API) de la plataforma W3C que permite a los scripts acceder y actualizar dinámicamente el contenido, la estructura y el estilo de un documento.</p>
+<ul>
+<li><strong>Estándar</strong>: El DOM es un estándar mantenido por el World Wide Web Consortium (W3C) que proporciona una representación estructurada de un documento.</li>
+<li><strong>API</strong>: Sirve como una interfaz para la programación, permitiendo a los desarrolladores manipular la estructura, el estilo y el contenido del documento a través de lenguajes de scripting como JavaScript.</li>
+<li><strong>Actualizaciones Dinámicas</strong>: Con el DOM, los scripts pueden modificar dinámicamente el contenido, la estructura y el estilo del documento, permitiendo aplicaciones web interactivas y reactivas.</li>
+</ul>
+<p>Aquí tienes un ejemplo simple de cómo podrías usar el DOM para cambiar dinámicamente el contenido de un elemento HTML:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de DOM<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;title&quot;</span><span class="p">&gt;</span>¡Hola, Mundo!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;changeTitle()&quot;</span><span class="p">&gt;</span>Cambiar Título<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">changeTitle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="c1">// Accede al elemento DOM con el id &#39;title&#39;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">titleElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">);</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">            </span><span class="c1">// Cambia el contenido del elemento</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">            </span><span class="nx">titleElement</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;¡Hola, DOM!&#39;</span><span class="p">;</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<h3 id="11-historia-del-dom"><strong>1.1 Historia del DOM</strong></h3>
+<ul>
+<li>
+<p><strong>Web Temprana (1990s)</strong>: La web comenzó con páginas HTML estáticas simples. No había una manera estándar de manipular el contenido o la estructura de estas páginas de manera dinámica.</p>
+</li>
+<li>
+<p><strong>Guerras Netscape e IE</strong>: Netscape Navigator e Internet Explorer (IE) fueron los dos navegadores dominantes. Cada uno desarrolló sus propios métodos para manipular documentos HTML, lo que llevó a problemas de compatibilidad.</p>
+</li>
+<li>
+<p><strong>Introducción de JavaScript (1995)</strong>: Brendan Eich creó JavaScript para Netscape, permitiendo interacciones dinámicas básicas. Sin embargo, el enfoque de Netscape era diferente del de IE. Netscape Navigator 2.0 fue el primer navegador en implementar el denominado <strong>DOM Nivel 0</strong>.</p>
+</li>
+<li>
+<p><strong>Participación del W3C (1998)</strong>: El <a href="https://www.w3.org">World Wide Web Consortium (W3C)</a> intervino para estandarizar cómo se deberían acceder y manipular los documentos, resultando en la creación del Modelo de Objetos del Documento <strong>(DOM) Nivel 1</strong>.</p>
+</li>
+<li>
+<p><strong>DOM Nivel 1 (1998)</strong>: Se lanzó la primera versión del DOM, proporcionando una manera estandarizada de manipular la estructura y el contenido del documento <strong>a través de diferentes navegadores</strong>.</p>
+</li>
+<li>
+<p><strong>DOM Nivel 2 (2000)</strong>: Introdujo características más avanzadas como <strong>soporte para CSS</strong>, <strong>eventos</strong> y manipulación de documentos XML.</p>
+</li>
+<li>
+<p><strong>DOM Nivel 3 (2004)</strong>: Expansión adicional de la API para incluir más características para la manipulación y navegación de documentos.</p>
+</li>
+<li>
+<p><strong>HTML5 y la Web Moderna (2010s)</strong>: HTML5 trajo actualizaciones significativas al DOM, haciéndolo más robusto y permitiendo aplicaciones web más complejas. Los navegadores modernos han adoptado e implementado estos estándares de manera consistente.</p>
+</li>
+</ul>
+<p>El desarrollo y la estandarización del DOM han sido cruciales para crear la web dinámica e interactiva que conocemos hoy, proporcionando una manera consistente para que los scripts interactúen y modifiquen documentos web a través de diferentes navegadores.</p>
+<p><a href="https://www.w3.org/DOM/DOMTR">--&gt; Estándar DOM Nivel 3 por el W3C</a></p>
+<h2 id="2-estructura-del-arbol-dom"><strong>2. Estructura del Árbol DOM</strong></h2>
+<p>Un árbol DOM es una estructura de árbol cuyos nodos representan el contenido de un documento HTML o XML. Cada documento HTML o XML tiene una representación en árbol DOM. Por ejemplo, considera el siguiente documento:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi Título<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://alink.com&quot;</span><span class="p">&gt;</span>Mi Enlace<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi Encabezado<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>Tiene un árbol DOM que se ve así:</p>
+<p><img alt="Árbol DOM" src="img/dom_tree.png" /></p>
+<p>Aunque el árbol anterior es similar al árbol DOM del documento, no es idéntico, ya que <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace">el árbol DOM real conserva el espacio en blanco</a>.</p>
+<p>Cuando un navegador web analiza un documento HTML, construye un árbol DOM y luego lo usa para mostrar el documento.</p>
+<p>FUENTE: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model">mdn web docs_</a></p>
+<h4 id="reglas-de-estructura-del-arbol">Reglas de Estructura del Árbol:</h4>
+<p>Para organizar la estructura del árbol, hay una serie de reglas:</p>
+<ul>
+<li>En el árbol de nodos, el nodo superior (documento) se llama <strong>raíz</strong>.</li>
+<li><strong>Cada nodo</strong>, excepto el nodo raíz, <strong>tiene un padre</strong>.</li>
+<li>Un nodo puede tener <strong>cualquier número de hijos</strong>.</li>
+<li>Una <strong>hoja</strong> es un nodo con <strong>sin hijos</strong>.</li>
+<li>Los nodos que <strong>comparten el mismo padre</strong> son <strong>hermanos</strong>.</li>
+</ul>
+<h3 id="21-la-interfaz-node"><strong>2.1 La Interfaz Node</strong></h3>
+<p>Un <strong>Node</strong> es una interfaz abstracta que representa un solo nodo en el árbol. Estos nodos pueden ser un Documento, un Elemento, un DocumentFragment y más.</p>
+<ul>
+<li><strong>Documento</strong>: El nodo raíz del documento HTML.</li>
+<li><strong>DocumentType</strong>: Un nodo que representa el DTD (Definición de Tipo de Documento) de la página.</li>
+<li><strong>Elemento</strong>: Un nodo que representa un elemento HTML.</li>
+<li><strong>Attr</strong>: Un nodo que representa un atributo de un elemento.</li>
+<li><strong>Texto</strong>: Un nodo que almacena el texto contenido dentro de un nodo Elemento.</li>
+<li><strong>Comentario</strong>: Un nodo que almacena un comentario en el documento HTML.</li>
+</ul>
+<h4 id="interfaz-node">Interfaz Node</h4>
+<ul>
+<li>Para manipular la información de los nodos, JavaScript crea un objeto llamado <code>Node</code>.</li>
+<li>Este objeto define propiedades y métodos para procesar documentos.</li>
+<li>También define un conjunto de constantes que identifican los tipos de nodos. Estos son los valores que la propiedad <code>nodeType</code> puede tener:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Constante</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Valor</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Node.ELEMENT_NODE</code></td>
+<td>Representa un nodo de elemento.</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>Node.ATTRIBUTE_NODE</code></td>
+<td>Representa un nodo de atributo.</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>Node.TEXT_NODE</code></td>
+<td>Representa un nodo de texto.</td>
+<td>3</td>
+</tr>
+<tr>
+<td><code>Node.CDATA_SECTION_NODE</code></td>
+<td>Representa un nodo de sección CDATA.</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>Node.ENTITY_REFERENCE_NODE</code></td>
+<td>Representa un nodo de referencia de entidad.</td>
+<td>5</td>
+</tr>
+<tr>
+<td><code>Node.ENTITY_NODE</code></td>
+<td>Representa un nodo de entidad.</td>
+<td>6</td>
+</tr>
+<tr>
+<td><code>Node.PROCESSING_INSTRUCTION_NODE</code></td>
+<td>Representa un nodo de instrucción de procesamiento.</td>
+<td>7</td>
+</tr>
+<tr>
+<td><code>Node.COMMENT_NODE</code></td>
+<td>Representa un nodo de comentario.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><code>Node.DOCUMENT_NODE</code></td>
+<td>Representa el nodo del documento.</td>
+<td>9</td>
+</tr>
+<tr>
+<td><code>Node.DOCUMENT_TYPE_NODE</code></td>
+<td>Representa el nodo de tipo de documento.</td>
+<td>10</td>
+</tr>
+<tr>
+<td><code>Node.DOCUMENT_FRAGMENT_NODE</code></td>
+<td>Representa un nodo de fragmento de documento.</td>
+<td>11</td>
+</tr>
+<tr>
+<td><code>Node.NOTATION_NODE</code></td>
+<td>Representa un nodo de notación.</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<h4 id="propiedades-y-metodos-del-nodo">Propiedades y Métodos del Nodo</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Propiedad/Método</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nodeName</code></td>
+<td>Devuelve el nombre del nodo.</td>
+</tr>
+<tr>
+<td><code>nodeType</code></td>
+<td>Devuelve un código entero que representa el tipo de nodo.</td>
+</tr>
+<tr>
+<td><code>nodeValue</code></td>
+<td>Establece o devuelve el valor del nodo. Para nodos de elementos, esto es <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>parentNode</code></td>
+<td>Devuelve el nodo padre del nodo especificado.</td>
+</tr>
+<tr>
+<td><code>childNodes</code></td>
+<td>Devuelve una NodeList de los nodos hijos del nodo especificado.</td>
+</tr>
+<tr>
+<td><code>firstChild</code></td>
+<td>Devuelve el primer nodo hijo del nodo especificado.</td>
+</tr>
+<tr>
+<td><code>lastChild</code></td>
+<td>Devuelve el último nodo hijo del nodo especificado.</td>
+</tr>
+<tr>
+<td><code>previousSibling</code></td>
+<td>Devuelve el nodo hermano anterior del nodo especificado.</td>
+</tr>
+<tr>
+<td><code>nextSibling</code></td>
+<td>Devuelve el nodo hermano siguiente del nodo especificado.</td>
+</tr>
+<tr>
+<td><code>textContent</code></td>
+<td>Establece o devuelve el contenido de texto del nodo y sus descendientes.</td>
+</tr>
+<tr>
+<td><code>appendChild(node)</code></td>
+<td>Agrega un nuevo nodo hijo al final de la lista de hijos de un nodo padre especificado.</td>
+</tr>
+<tr>
+<td><code>removeChild(node)</code></td>
+<td>Elimina un nodo hijo del</td>
+</tr>
+</tbody>
+</table>
+<p>nodo padre especificado.                                              |
+| <code>replaceChild(newNode, oldNode)</code>   | Reemplaza un nodo hijo por otro en el nodo padre especificado.                                |
+| <code>cloneNode(deep)</code>                  | Clona el nodo actual. Si <code>deep</code> es <code>true</code>, también clona todos los nodos descendientes.      |</p>
+<p>Estos métodos y propiedades proporcionan una variedad de maneras para manipular los nodos dentro del árbol DOM, permitiendo una amplia gama de operaciones en la estructura del documento.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
