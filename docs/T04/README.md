@@ -1,8 +1,6 @@
-Aquí tienes la traducción al español del texto:
 
----
 
-# **UNIDAD4 - Manipulación del DOM**
+# **UNIDAD 4 - Manipulación del DOM**
 
 ## **1. Modelo de Objetos del Documento (DOM)**
 
