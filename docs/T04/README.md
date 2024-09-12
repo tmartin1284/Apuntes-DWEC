@@ -6,6 +6,9 @@
 
 El DOM (Modelo de Objetos del Documento) es un estándar del W3C que define cómo acceder a documentos como HTML y XML. Es una interfaz de programación de aplicaciones (API) de la plataforma W3C que permite a los scripts acceder y actualizar dinámicamente el contenido, la estructura y el estilo de un documento.
 
+Es decir, si analizamos el documento html de la página web, nos vamos a encontrar una serie de etiquetas 
+unas dentro de otras. DOM permite manejar esas etiquetas como objetos de la página, y de esta forma gestionarla dinámicamente.
+
 - **Estándar**: El DOM es un estándar mantenido por el World Wide Web Consortium (W3C) que proporciona una representación estructurada de un documento.
 - **API**: Sirve como una interfaz para la programación, permitiendo a los desarrolladores manipular la estructura, el estilo y el contenido del documento a través de lenguajes de scripting como JavaScript.
 - **Actualizaciones Dinámicas**: Con el DOM, los scripts pueden modificar dinámicamente el contenido, la estructura y el estilo del documento, permitiendo aplicaciones web interactivas y reactivas.
