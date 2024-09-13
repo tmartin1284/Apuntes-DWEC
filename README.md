@@ -1,7 +1,7 @@
 # **Desarrollo web en entorno cliente**
 
 Estos apuntes se corresponden con la parte en español del módulo Desarrollo Web en Entorno Cliente. 
-Son la traducción del material desarrollado por el profesor [José Enrique Atienzar](https://github.com/jeatzr) para la [versión bilingüe del módulo.](https://jeatzr.github.io/dwec-bi/) para la versión bilingüe del módulo.
+Son la traducción del material desarrollado por el profesor [José Enrique Atienzar](https://github.com/jeatzr) para la [versión bilingüe del módulo.](https://jeatzr.github.io/dwec-bi/) 
 Están basados en la tecnología de documentación de código MkDocs, y en el lenguaje MarkDown.
 Estos materiales están accesibles en [https://tmartin1284.github.io/dwec/](https://tmartin1284.github.io/dwec/)
 El material está en continua revisión y mejora.

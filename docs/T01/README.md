@@ -17,7 +17,7 @@
 Para más información, recordad los apuntes de SISI del año pasao. Echadle un ojo a la parte de redes (tercer trimestre, y sobretodo al curso de ccna de Cisco que hicistéis).
 #### La World Wide Web (WWW):
 - **Definición**: La World Wide Web es una colección de información, accesible a través del Internet, que está formateada e interconectada utilizando hipertexto y hipermedia. Es un servicio que opera sobre el Internet.
-- **Historia**: La World Wide Web (WWW), o comunmente conocida como "la Web" fue inventada por Tim Berners-Lee en 1989 mientras trabajaba en CERN. Desarrolló el primer navegador web y servidor web, y el primer sitio web se publicó en 1991. La WWW creció rápidamente en popularidad a lo largo de la década de 1990, convirtiéndose en una parte importante de la vida cotidiana.
+- **Historia**: La World Wide Web (WWW), o comunmente conocida como "la Web" fue inventada por Tim Berners-Lee en 1989 mientras trabajaba en CERN. Desarrolló el primer navegador web y servidor web, y el primer sitio web se publicó en 1991. La web creció rápidamente en popularidad a lo largo de la década de 1990, convirtiéndose en una parte importante de la vida cotidiana.
 - **Componentes**: La WWW consta de páginas web, sitios web y navegadores web. Las páginas web son documentos escritos en HTML y se accede a través de URLs.
 - **Funciones**: Permite a los usuarios acceder y navegar por las páginas web a través de navegadores web (como Chrome, Firefox, Safari). Estas páginas pueden contener texto, imágenes, videos y enlaces a otras páginas.
 
@@ -27,7 +27,7 @@ Para más información, recordad los apuntes de SISI del año pasao. Echadle un 
 - **Internet**: La red global subyacente que conecta millones de computadoras.
 - **La Web**: Un subconjunto del Internet, compuesto por páginas y sitios web, accesibles a través de navegadores web.
 
-La wdb depende del Internet para funcionar, pero el Internet también soporta muchos otros servicios además de la Web.
+La web depende del Internet para funcionar, pero el Internet también soporta muchos otros servicios además de la Web.
 
 ## **2. Arquitectura Web**
 
