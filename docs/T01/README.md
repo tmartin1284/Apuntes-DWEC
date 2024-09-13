@@ -349,8 +349,8 @@ Tenemos varias formas de incluir código JavaScript en nuestra página web:
 3. **Atributos Defer y Async**
     Puedes usar los atributos `defer` o `async` en la etiqueta `<script>` para controlar el comportamiento de carga de tu JavaScript.
 
-      - `defer`: El script se ejecutará después de que el HTML se haya analizado completamente.
-      - `async`: El script se ejecutará de manera asíncrona tan pronto como esté disponible.
+      - `defer`: El script se ejecutará después de que el HTML se haya analizado completamente. Esto nos añade dos ventajas: por una parte, la carga de la página no se queda 'parada' proque haya que cargar un script 'gordo' (que los hay, de hecho es lo más común); y dos, cuando el script se ejecuta es seguro que toda la página (con los objetos correspondientes a las etiquetas) está cargada y son accesibles al script. El uso de `defer` nos da más control sobre la ejecución de los scripts porque `defer` mantiene el orden de ejecución si tienes múltiples scripts.
+      - `async`: El script se ejecutará de manera asíncrona tan pronto como esté disponible. Se ejecuta a su "bola", y si hay varios scripts marcados con `async`, se van a ejecutar todos en hilos (procesos) independientes al proceso de carga de la página principal.
 
     ```html
     <!DOCTYPE html>
@@ -380,9 +380,20 @@ Tenemos varias formas de incluir código JavaScript en nuestra página web:
     console.log("Script Async Cargado");
     ```
 
-    Colocar tus etiquetas de script justo antes de la etiqueta de cierre `</body>` asegura que el script se ejecute después de que se haya analizado el HTML. Sin embargo, esto no garantiza inherentemente el orden de ejecución si tienes múltiples scripts y comportamiento asíncrono. El uso de `defer` nos da más control sobre la ejecución de los scripts porque `defer` mantiene el orden de ejecución si tienes múltiples scripts.
+    La alternativa sin usar estos atributos, es poner los scripts justo antes de la etiqueta de cierre del  `</body>` .
+
+    ```js
+    <body>
+         ...todo el contenido está arriba del script...
+
+         <script src="./miscript.js"></script>
+    </body>
+    ```
+
+    Colocar tus etiquetas de script justo antes de la etiqueta de cierre `</body>` asegura que el script se ejecute después de que se haya analizado el HTML. Sin embargo, esto no garantiza inherentemente el orden de ejecución si tienes múltiples scripts y comportamiento asíncrono. 
 
     Aun así, en nuestro caso, cualquiera de las dos opciones es válida para preservar la ejecución del script una vez que el documento HTML esté totalmente analizado.
+
 
 4. **Manejadores de Eventos en Atributos HTML**
    
@@ -404,11 +415,6 @@ Tenemos varias formas de incluir código JavaScript en nuestra página web:
     ```
 
 
-
-
-Claro, aquí tienes la traducción al español del texto sobre Bootstrap:
-
----
 
 ## **7. Bootstrap**
 
@@ -458,7 +464,7 @@ Bootstrap es un popular framework de código abierto para el desarrollo de **sit
      - Escribe `bs5-navbar-default` y presiona `Tab` para insertar un snippet de barra de navegación de Bootstrap.
      - Escribe `bs5-button-default` y presiona `Tab` para insertar un snippet de botón predeterminado de Bootstrap.
 
-## **8. Recursos**
+5. **Recursos**
 - **Documentación Oficial**: [Documentación de Bootstrap](https://getbootstrap.com/docs/)
 - **Ejemplos y Plantillas**: Explora varios ejemplos y plantillas de Bootstrap para comenzar rápidamente.
 - **Snippets de B4 para VSCode**: [Extensión B5 Quick Snippets](https://marketplace.visualstudio.com/items?itemName=anbuselvanrocky.bootstrap5-vscode)
