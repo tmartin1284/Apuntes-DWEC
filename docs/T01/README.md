@@ -431,6 +431,7 @@ Bootstrap es un popular framework de código abierto para el desarrollo de **sit
 #### Cómo Usar Bootstrap:
 
 1. **Formas de Incluir Bootstrap en Tu Proyecto:**
+   
    - **Descargar Bootstrap**: Puedes descargar los archivos compilados de Bootstrap manualmente y agregarlos a tu archivo HTML.
    - **A través de CDN**: Puedes agregar los enlaces de CDN a los archivos CSS y de scripts en el archivo HTML sin descargarlos.
    - **Instalar dependencias**: Puedes instalar las dependencias en el proyecto con `npm i bootstrap@5.3.3`. En este caso, el gestor de paquetes de Node mantiene el control de los archivos.
@@ -439,6 +440,7 @@ Bootstrap es un popular framework de código abierto para el desarrollo de **sit
    Obtén más información en: [getbootstrap.com](https://getbootstrap.com)
 
 2. **Usar Componentes de Bootstrap:**
+   
    - **Sistema de Cuadrícula**: Crea diseños responsivos utilizando el sistema de cuadrícula de Bootstrap. Por ejemplo:
      ```html
      <div class="container">
@@ -454,22 +456,24 @@ Bootstrap es un popular framework de código abierto para el desarrollo de **sit
      ```
 
 3. **Personalizar Bootstrap:**
+   
    - **Sobrescribir Predeterminados**: Personaliza los estilos de Bootstrap agregando tus propias reglas CSS después del enlace CSS de Bootstrap en tu HTML.
    - **Usar las Herramientas de Personalización de Bootstrap**: Modifica las variables de Bootstrap y recompila el CSS si estás utilizando una herramienta de construcción.
 
 4. **Usar Snippets de B5 en Visual Studio Code:**
+   
    - **Instalar la Extensión Bootstrap 5 Quick Snippets**: Para agilizar tu proceso de desarrollo, instala la extensión **Bootstrap 5 Quick Snippets** para Visual Studio Code. Esta extensión proporciona fragmentos de código para Bootstrap 5, permitiéndote insertar rápidamente componentes y clases de Bootstrap en tu código.
    - **Usar Snippets**: Una vez instalada, puedes usar los snippets para insertar código de Bootstrap. Por ejemplo:
      - Escribe `bs5-$` y presiona `Tab` para crear la plantilla completa del documento HTML.
      - Escribe `bs5-navbar-default` y presiona `Tab` para insertar un snippet de barra de navegación de Bootstrap.
      - Escribe `bs5-button-default` y presiona `Tab` para insertar un snippet de botón predeterminado de Bootstrap.
 
-5. **Recursos**
-- **Documentación Oficial**: [Documentación de Bootstrap](https://getbootstrap.com/docs/)
-- **Ejemplos y Plantillas**: Explora varios ejemplos y plantillas de Bootstrap para comenzar rápidamente.
-- **Snippets de B4 para VSCode**: [Extensión B5 Quick Snippets](https://marketplace.visualstudio.com/items?itemName=anbuselvanrocky.bootstrap5-vscode)
+#### **Recursos**
+   - **Documentación Oficial**: [Documentación de Bootstrap](https://getbootstrap.com/docs/)
+   - **Ejemplos y Plantillas**: Explora varios ejemplos y plantillas de Bootstrap para comenzar rápidamente.
+   - **Snippets de B4 para VSCode**: [Extensión B5 Quick Snippets](https://marketplace.visualstudio.com/items?itemName=anbuselvanrocky.bootstrap5-vscode)
 
---- 
+
 
 
 
