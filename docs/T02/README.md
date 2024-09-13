@@ -72,7 +72,8 @@ Usando la declaración `debugger`, puedes pausar la ejecución del código en un
 
 ```javascript
 function add(a, b) {
-    debugger;  // La ejecución se detendrá aquí si las herramientas de desarrollo están abiertas
+    debugger;  // La ejecución se detendrá aquí 
+                //si las herramientas de desarrollo están abiertas
     return a + b;
 }
 add(2, 3);
