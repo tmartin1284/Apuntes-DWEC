@@ -380,7 +380,7 @@ Tenemos varias formas de incluir código JavaScript en nuestra página web:
     console.log("Script Async Cargado");
     ```
 
-    La alternativa sin usar estos atributos, es poner los scripts justo antes de la etiqueta de cierre del  `</body>` .
+    La alternativa sin usar estos atributos, es poner los scripts justo antes de la etiqueta de cierre del  `</body>`.
 
     ```js
     <body>
@@ -414,13 +414,11 @@ Tenemos varias formas de incluir código JavaScript en nuestra página web:
     </html>
     ```
 
-
-
 ## **7. Bootstrap**
 
 #### ¿Qué es Bootstrap?
 
-Bootstrap es un popular framework de código abierto para el desarrollo de **sitios web responsivos y móviles primero**. Proporciona una colección de componentes de CSS y JavaScript que te ayudan a diseñar y construir interfaces de usuario de manera rápida y eficiente. Bootstrap está diseñado para simplificar el proceso de creación de diseños consistentes y visualmente atractivos en diferentes dispositivos y tamaños de pantalla.
+Bootstrap es un popular framework de código abierto para el desarrollo de **sitios web responsivos y orientados a móviles**. Proporciona una colección de componentes de CSS y JavaScript que te ayudan a diseñar y construir interfaces de usuario de manera rápida y eficiente. Bootstrap está diseñado para simplificar el proceso de creación de diseños consistentes y visualmente atractivos en diferentes dispositivos y tamaños de pantalla.
 
 #### Características Clave:
 - **Sistema de Cuadrícula Responsiva**: Ajusta automáticamente el diseño según el tamaño de la pantalla, asegurando que tu sitio web se vea bien en todos los dispositivos.
@@ -431,17 +429,16 @@ Bootstrap es un popular framework de código abierto para el desarrollo de **sit
 #### Cómo Usar Bootstrap:
 
 1. **Formas de Incluir Bootstrap en Tu Proyecto:**
-   
-   - **Descargar Bootstrap**: Puedes descargar los archivos compilados de Bootstrap manualmente y agregarlos a tu archivo HTML.
-   - **A través de CDN**: Puedes agregar los enlaces de CDN a los archivos CSS y de scripts en el archivo HTML sin descargarlos.
-   - **Instalar dependencias**: Puedes instalar las dependencias en el proyecto con `npm i bootstrap@5.3.3`. En este caso, el gestor de paquetes de Node mantiene el control de los archivos.
-   - **Usar Snippet de Bootstrap**: Puedes usar, por ejemplo, el snippet `bs5-$` en el editor VSCode. La plantilla Bs5 escribirá todos los enlaces de CDN por ti.
+    - **Descargar Bootstrap**: Puedes descargar los archivos compilados de Bootstrap manualmente y agregarlos a tu archivo HTML.
+    - **A través de CDN**: Puedes agregar los enlaces de CDN a los archivos CSS y de scripts en el archivo HTML sin descargarlos.
+    - **Instalar dependencias**: Puedes instalar las dependencias en el proyecto con `npm i bootstrap@5.3.3`. En este caso, el gestor de paquetes de Node mantiene el control de los archivos.
+    - **Usar Snippet de Bootstrap**: Puedes usar, por ejemplo, el snippet `bs5-$` en el editor VSCode. La plantilla Bs5 escribirá todos los enlaces de CDN por ti.
 
-   Obtén más información en: [getbootstrap.com](https://getbootstrap.com)
+   Obtén más información en: [getbootstrap.com](https://getbootstrap.com).
 
 2. **Usar Componentes de Bootstrap:**
-   
-   - **Sistema de Cuadrícula**: Crea diseños responsivos utilizando el sistema de cuadrícula de Bootstrap. Por ejemplo:
+
+    - **Sistema de Cuadrícula**: Crea diseños responsivos utilizando el sistema de cuadrícula de Bootstrap. Por ejemplo:
      ```html
      <div class="container">
          <div class="row">
@@ -450,25 +447,23 @@ Bootstrap es un popular framework de código abierto para el desarrollo de **sit
          </div>
      </div>
      ```
-   - **Componentes**: Utiliza componentes pre-estilizados como botones, formularios y barras de navegación:
+    - **Componentes**: Utiliza componentes pre-estilizados como botones, formularios y barras de navegación:
      ```html
      <button type="button" class="btn btn-primary">Botón Primario</button>
      ```
 
 3. **Personalizar Bootstrap:**
-   
-   - **Sobrescribir Predeterminados**: Personaliza los estilos de Bootstrap agregando tus propias reglas CSS después del enlace CSS de Bootstrap en tu HTML.
-   - **Usar las Herramientas de Personalización de Bootstrap**: Modifica las variables de Bootstrap y recompila el CSS si estás utilizando una herramienta de construcción.
+    - **Sobrescribir Predeterminados**: Personaliza los estilos de Bootstrap agregando tus propias reglas CSS después del enlace CSS de Bootstrap en tu HTML.
+    - **Usar las Herramientas de Personalización de Bootstrap**: Modifica las variables de Bootstrap y recompila el CSS si estás utilizando una herramienta de construcción.
 
 4. **Usar Snippets de B5 en Visual Studio Code:**
-   
-   - **Instalar la Extensión Bootstrap 5 Quick Snippets**: Para agilizar tu proceso de desarrollo, instala la extensión **Bootstrap 5 Quick Snippets** para Visual Studio Code. Esta extensión proporciona fragmentos de código para Bootstrap 5, permitiéndote insertar rápidamente componentes y clases de Bootstrap en tu código.
-   - **Usar Snippets**: Una vez instalada, puedes usar los snippets para insertar código de Bootstrap. Por ejemplo:
+    - **Instalar la Extensión Bootstrap 5 Quick Snippets**: Para agilizar tu proceso de desarrollo, instala la extensión **Bootstrap 5 Quick Snippets** para Visual Studio Code. Esta extensión proporciona fragmentos de código para Bootstrap 5, permitiéndote insertar rápidamente componentes y clases de Bootstrap en tu código.
+    - **Usar Snippets**: Una vez instalada, puedes usar los snippets para insertar código de Bootstrap. Por ejemplo:
      - Escribe `bs5-$` y presiona `Tab` para crear la plantilla completa del documento HTML.
      - Escribe `bs5-navbar-default` y presiona `Tab` para insertar un snippet de barra de navegación de Bootstrap.
      - Escribe `bs5-button-default` y presiona `Tab` para insertar un snippet de botón predeterminado de Bootstrap.
 
-#### **Recursos**
+#### Recursos:
    - **Documentación Oficial**: [Documentación de Bootstrap](https://getbootstrap.com/docs/)
    - **Ejemplos y Plantillas**: Explora varios ejemplos y plantillas de Bootstrap para comenzar rápidamente.
    - **Snippets de B4 para VSCode**: [Extensión B5 Quick Snippets](https://marketplace.visualstudio.com/items?itemName=anbuselvanrocky.bootstrap5-vscode)
