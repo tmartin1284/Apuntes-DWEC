@@ -55,7 +55,7 @@ Gramática léxica: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
 
 ### **2.1 Consola de depuración**
 
-Podemos ver la consola en el navegador seleccionando la opción "Inspeccionar".
+Podemos ver la consola en el navegador seleccionando la opción "Inspeccionar". Ya dependiendo del navegador habrá uno u otros atajos de teclado. En Chrome se abre `Ctrl`+`mayus`+`i`, o con `click derecho`+`inspeccionar`, o con `F10`. Si tienes un navegador distinto, te toca investigar.
 Podemos interactuar con el objeto de consola del sistema invocando sus métodos.
 
 ```js
@@ -188,11 +188,6 @@ const variableInmutable = "No puedo cambiar";
 ```
 
 
-
-Aquí tienes la traducción del texto al español:
-
----
-
 ## **4. Tipos de Datos Primitivos**
 
 JavaScript tiene varios tipos de datos primitivos:
@@ -287,6 +282,7 @@ let esEstrictamenteIgualConTiposDiferentes = 5 === '5';  // false (sin coerción
 let esDistinto = 5 != '5';  // false (coerción de tipos)
 let esEstrictamenteDistinto = 5 !== '5';  // true (sin coerción de tipos)
 ```
+La "coerción de tipos" fuerza la conversión y comparación del contenido de los operandos, cuando son de tipos distintos.
 [--> Comparaciones de igualdad y semejanza](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
 
 #### Métodos Adicionales para Números en el Objeto Math
@@ -294,7 +290,7 @@ let esEstrictamenteDistinto = 5 !== '5';  // true (sin coerción de tipos)
 JavaScript también proporciona varios métodos incorporados para trabajar con números a través del [Objeto Math](#62-math-object).
 
 <div class="exercise-box">
-<h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico</h3>
+<h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico 2a</h3>
 <p>En JavaScript no hay un operador para calcular la <strong>división entera</strong>. ¿Puedes implementar una forma de obtener esta operación utilizando las operaciones enumeradas arriba?</p>
 <p>Ejemplos:</p>
 <ul>
@@ -405,10 +401,8 @@ Ciudad Springfield
 62704`;
 ```
 
-<div
-
- class="exercise-box">
-    <h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico: Trabajando con Cadenas en JavaScript</h3>
+<div class="exercise-box">
+    <h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico 2b: Trabajando con Cadenas en JavaScript</h3>
     <p>Sigue estos pasos para completar el ejercicio:</p>
     <ol>
         <li><strong>Concatenación y Literales de Plantilla</strong>:

@@ -1165,7 +1165,7 @@
 <p><strong>async-script.js</strong></p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Script Async Cargado&quot;</span><span class="p">);</span>
 </span></code></pre></div>
-<p>La alternativa sin usar estos atributos, es poner los scripts justo antes de la etiqueta de cierre del  <code>&lt;/body&gt;</code> .</p>
+<p>La alternativa sin usar estos atributos, es poner los scripts justo antes de la etiqueta de cierre del  <code>&lt;/body&gt;</code>.</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">     </span><span class="p">...</span><span class="nx">todo</span><span class="w"> </span><span class="nx">el</span><span class="w"> </span><span class="nx">contenido</span><span class="w"> </span><span class="nx">está</span><span class="w"> </span><span class="nx">arriba</span><span class="w"> </span><span class="nx">del</span><span class="w"> </span><span class="nx">script</span><span class="p">...</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
@@ -1195,7 +1195,7 @@
 </ol>
 <h2 id="7-bootstrap"><strong>7. Bootstrap</strong></h2>
 <h4 id="que-es-bootstrap">¿Qué es Bootstrap?</h4>
-<p>Bootstrap es un popular framework de código abierto para el desarrollo de <strong>sitios web responsivos y móviles primero</strong>. Proporciona una colección de componentes de CSS y JavaScript que te ayudan a diseñar y construir interfaces de usuario de manera rápida y eficiente. Bootstrap está diseñado para simplificar el proceso de creación de diseños consistentes y visualmente atractivos en diferentes dispositivos y tamaños de pantalla.</p>
+<p>Bootstrap es un popular framework de código abierto para el desarrollo de <strong>sitios web responsivos y orientados a móviles</strong>. Proporciona una colección de componentes de CSS y JavaScript que te ayudan a diseñar y construir interfaces de usuario de manera rápida y eficiente. Bootstrap está diseñado para simplificar el proceso de creación de diseños consistentes y visualmente atractivos en diferentes dispositivos y tamaños de pantalla.</p>
 <h4 id="caracteristicas-clave">Características Clave:</h4>
 <ul>
 <li><strong>Sistema de Cuadrícula Responsiva</strong>: Ajusta automáticamente el diseño según el tamaño de la pantalla, asegurando que tu sitio web se vea bien en todos los dispositivos.</li>
@@ -1205,55 +1205,56 @@
 </ul>
 <h4 id="como-usar-bootstrap">Cómo Usar Bootstrap:</h4>
 <ol>
-<li><strong>Formas de Incluir Bootstrap en Tu Proyecto:</strong></li>
+<li><strong>Formas de Incluir Bootstrap en Tu Proyecto:</strong><ul>
 <li><strong>Descargar Bootstrap</strong>: Puedes descargar los archivos compilados de Bootstrap manualmente y agregarlos a tu archivo HTML.</li>
 <li><strong>A través de CDN</strong>: Puedes agregar los enlaces de CDN a los archivos CSS y de scripts en el archivo HTML sin descargarlos.</li>
 <li><strong>Instalar dependencias</strong>: Puedes instalar las dependencias en el proyecto con <code>npm i bootstrap@5.3.3</code>. En este caso, el gestor de paquetes de Node mantiene el control de los archivos.</li>
 <li><strong>Usar Snippet de Bootstrap</strong>: Puedes usar, por ejemplo, el snippet <code>bs5-$</code> en el editor VSCode. La plantilla Bs5 escribirá todos los enlaces de CDN por ti.</li>
+</ul>
+</li>
 </ol>
-<p>Obtén más información en: <a href="https://getbootstrap.com">getbootstrap.com</a></p>
+<p>Obtén más información en: <a href="https://getbootstrap.com">getbootstrap.com</a>.</p>
 <ol>
-<li><strong>Usar Componentes de Bootstrap:</strong></li>
+<li>
+<p><strong>Usar Componentes de Bootstrap:</strong></p>
+<ul>
 <li><strong>Sistema de Cuadrícula</strong>: Crea diseños responsivos utilizando el sistema de cuadrícula de Bootstrap. Por ejemplo:
-     <div class="language-html highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+ <div class="language-html highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-6&quot;</span><span class="p">&gt;</span>Columna 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-6&quot;</span><span class="p">&gt;</span>Columna 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></code></pre></div></li>
-<li>
-<p><strong>Componentes</strong>: Utiliza componentes pre-estilizados como botones, formularios y barras de navegación:
-     <div class="language-html highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="p">&gt;</span>Botón Primario<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></code></pre></div></p>
+<li><strong>Componentes</strong>: Utiliza componentes pre-estilizados como botones, formularios y barras de navegación:
+ <div class="language-html highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="p">&gt;</span>Botón Primario<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></code></pre></div></li>
+</ul>
 </li>
 <li>
 <p><strong>Personalizar Bootstrap:</strong></p>
-</li>
+<ul>
 <li><strong>Sobrescribir Predeterminados</strong>: Personaliza los estilos de Bootstrap agregando tus propias reglas CSS después del enlace CSS de Bootstrap en tu HTML.</li>
-<li>
-<p><strong>Usar las Herramientas de Personalización de Bootstrap</strong>: Modifica las variables de Bootstrap y recompila el CSS si estás utilizando una herramienta de construcción.</p>
+<li><strong>Usar las Herramientas de Personalización de Bootstrap</strong>: Modifica las variables de Bootstrap y recompila el CSS si estás utilizando una herramienta de construcción.</li>
+</ul>
 </li>
 <li>
 <p><strong>Usar Snippets de B5 en Visual Studio Code:</strong></p>
-</li>
-<li><strong>Instalar la Extensión Bootstrap 5 Quick Snippets</strong>: Para agilizar tu proceso de desarrollo, instala la extensión <strong>Bootstrap 5 Quick Snippets</strong> para Visual Studio Code. Esta extensión proporciona fragmentos de código para Bootstrap 5, permitiéndote insertar rápidamente componentes y clases de Bootstrap en tu código.</li>
-<li>
-<p><strong>Usar Snippets</strong>: Una vez instalada, puedes usar los snippets para insertar código de Bootstrap. Por ejemplo:</p>
 <ul>
+<li><strong>Instalar la Extensión Bootstrap 5 Quick Snippets</strong>: Para agilizar tu proceso de desarrollo, instala la extensión <strong>Bootstrap 5 Quick Snippets</strong> para Visual Studio Code. Esta extensión proporciona fragmentos de código para Bootstrap 5, permitiéndote insertar rápidamente componentes y clases de Bootstrap en tu código.</li>
+<li><strong>Usar Snippets</strong>: Una vez instalada, puedes usar los snippets para insertar código de Bootstrap. Por ejemplo:</li>
 <li>Escribe <code>bs5-$</code> y presiona <code>Tab</code> para crear la plantilla completa del documento HTML.</li>
 <li>Escribe <code>bs5-navbar-default</code> y presiona <code>Tab</code> para insertar un snippet de barra de navegación de Bootstrap.</li>
 <li>Escribe <code>bs5-button-default</code> y presiona <code>Tab</code> para insertar un snippet de botón predeterminado de Bootstrap.</li>
 </ul>
 </li>
-<li>
-<p><strong>Recursos</strong></p>
-</li>
+</ol>
+<h4 id="recursos">Recursos:</h4>
+<ul>
 <li><strong>Documentación Oficial</strong>: <a href="https://getbootstrap.com/docs/">Documentación de Bootstrap</a></li>
 <li><strong>Ejemplos y Plantillas</strong>: Explora varios ejemplos y plantillas de Bootstrap para comenzar rápidamente.</li>
 <li><strong>Snippets de B4 para VSCode</strong>: <a href="https://marketplace.visualstudio.com/items?itemName=anbuselvanrocky.bootstrap5-vscode">Extensión B5 Quick Snippets</a></li>
-</ol>
-<hr />
+</ul>
 
 
 
