@@ -947,7 +947,7 @@
 <p>Gramática léxica: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar</a></p>
 <h2 id="2-mensajes-en-consola-y-alertas-en-el-navegador"><strong>2. Mensajes en consola y alertas en el navegador</strong></h2>
 <h3 id="21-consola-de-depuracion"><strong>2.1 Consola de depuración</strong></h3>
-<p>Podemos ver la consola en el navegador seleccionando la opción "Inspeccionar".
+<p>Podemos ver la consola en el navegador seleccionando la opción "Inspeccionar". Ya dependiendo del navegador habrá uno u otros atajos de teclado. En Chrome se abre <code>Ctrl</code>+<code>mayus</code>+<code>i</code>, o con <code>click derecho</code>+<code>inspeccionar</code>, o con <code>F10</code>. Si tienes un navegador distinto, te toca investigar.
 Podemos interactuar con el objeto de consola del sistema invocando sus métodos.</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;¡Hola Mundo!&#39;</span><span class="p">);</span><span class="w">           </span><span class="c1">// mensaje general</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;Este es un mensaje informativo&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// mensaje informativo</span>
@@ -1041,8 +1041,6 @@ Cuando la ejecución del código alcanza la declaración <code>debugger</code>, 
 </span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">variableInmutable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;No puedo cambiar&quot;</span><span class="p">;</span>
 </span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="c1">// variableInmutable = &quot;Intentando cambiar&quot;;  // Error de tipo no capturado: Asignación a una variable constante.</span>
 </span></code></pre></div>
-<p>Aquí tienes la traducción del texto al español:</p>
-<hr />
 <h2 id="4-tipos-de-datos-primitivos"><strong>4. Tipos de Datos Primitivos</strong></h2>
 <p>JavaScript tiene varios tipos de datos primitivos:</p>
 <ul>
@@ -1132,11 +1130,12 @@ Cuando la ejecución del código alcanza la declaración <code>debugger</code>, 
 </span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="kd">let</span><span class="w"> </span><span class="nx">esDistinto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;5&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// false (coerción de tipos)</span>
 </span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="kd">let</span><span class="w"> </span><span class="nx">esEstrictamenteDistinto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;5&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// true (sin coerción de tipos)</span>
 </span></code></pre></div>
+La "coerción de tipos" fuerza la conversión y comparación del contenido de los operandos, cuando son de tipos distintos.
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">--&gt; Comparaciones de igualdad y semejanza</a></p>
 <h4 id="metodos-adicionales-para-numeros-en-el-objeto-math">Métodos Adicionales para Números en el Objeto Math</h4>
 <p>JavaScript también proporciona varios métodos incorporados para trabajar con números a través del <a href="#62-math-object">Objeto Math</a>.</p>
 <div class="exercise-box">
-<h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico</h3>
+<h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico 2a</h3>
 <p>En JavaScript no hay un operador para calcular la <strong>división entera</strong>. ¿Puedes implementar una forma de obtener esta operación utilizando las operaciones enumeradas arriba?</p>
 <p>Ejemplos:</p>
 <ul>
@@ -1238,10 +1237,8 @@ Cuando la ejecución del código alcanza la declaración <code>debugger</code>, 
 </span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="sb">Ciudad Springfield</span>
 </span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="sb">62704`</span><span class="p">;</span>
 </span></code></pre></div>
-<p><div
-
- class="exercise-box">
-    <h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico: Trabajando con Cadenas en JavaScript</h3>
+<div class="exercise-box">
+    <h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico 2b: Trabajando con Cadenas en JavaScript</h3>
     <p>Sigue estos pasos para completar el ejercicio:</p>
     <ol>
         <li><strong>Concatenación y Literales de Plantilla</strong>:
@@ -1277,7 +1274,7 @@ Cuando la ejecución del código alcanza la declaración <code>debugger</code>, 
         </li>
     </ol>
 </div>
-</p>
+
 <h3 id="43-tipo-booleano"><strong>4.3 Tipo Booleano</strong></h3>
 <ul>
 <li>Solo acepta dos valores: <code>true</code> o <code>false</code></li>
