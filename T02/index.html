@@ -1661,20 +1661,24 @@ La "coerción de tipos" fuerza la conversión y comparación del contenido de lo
 <h4 id="navigator"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator">navigator</a></h4>
 <p>Para identificar las características de la plataforma en la que se ejecuta una aplicación web, puedes usar propiedades y métodos proporcionados por el objeto <code>navigator</code> en JavaScript:</p>
 <ol>
-<li><strong>Tipo de Navegador y Versión</strong>:</li>
 <li>
-<p>Usa <code>navigator.userAgent</code> para obtener la cadena del User-Agent, que incluye información sobre el tipo de navegador y la versión.</p>
+<p><strong>Tipo de Navegador y Versión</strong>:</p>
+<ul>
+<li>Usa <code>navigator.userAgent</code> para obtener la cadena del User-Agent, que incluye información sobre el tipo de navegador y la versión.</li>
+</ul>
 </li>
 <li>
 <p><strong>Sistema Operativo</strong>:</p>
-</li>
-<li>
-<p>Usa <code>navigator.platform</code> para recuperar la plataforma en la que se está ejecutando el navegador (por ejemplo, "Win32", "Linux x86_64", "MacIntel").</p>
+<ul>
+<li>Usa <code>navigator.platform</code> para recuperar la plataforma en la que se está ejecutando el navegador (por ejemplo, "Win32", "Linux x86_64", "MacIntel").</li>
+</ul>
 </li>
 <li>
 <p><strong>Geolocalización</strong>:</p>
-</li>
+<ul>
 <li>Utiliza la API de Geolocalización para solicitar y obtener la ubicación geográfica actual del dispositivo, siempre que el usuario conceda permiso.</li>
+</ul>
+</li>
 </ol>
 <p>Ejemplo de código JavaScript:
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="c1">// User Agent</span>
