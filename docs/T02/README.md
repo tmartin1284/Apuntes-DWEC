@@ -890,13 +890,13 @@ Además de los objetos presentados anteriormente, hay otros tipos de objetos que
 Para identificar las características de la plataforma en la que se ejecuta una aplicación web, puedes usar propiedades y métodos proporcionados por el objeto `navigator` en JavaScript:
 
 1. **Tipo de Navegador y Versión**:
-   - Usa `navigator.userAgent` para obtener la cadena del User-Agent, que incluye información sobre el tipo de navegador y la versión.
+    - Usa `navigator.userAgent` para obtener la cadena del User-Agent, que incluye información sobre el tipo de navegador y la versión.
 
 2. **Sistema Operativo**:
-   - Usa `navigator.platform` para recuperar la plataforma en la que se está ejecutando el navegador (por ejemplo, "Win32", "Linux x86_64", "MacIntel").
+    - Usa `navigator.platform` para recuperar la plataforma en la que se está ejecutando el navegador (por ejemplo, "Win32", "Linux x86_64", "MacIntel").
 
 3. **Geolocalización**:
-   - Utiliza la API de Geolocalización para solicitar y obtener la ubicación geográfica actual del dispositivo, siempre que el usuario conceda permiso.
+    - Utiliza la API de Geolocalización para solicitar y obtener la ubicación geográfica actual del dispositivo, siempre que el usuario conceda permiso.
 
    Ejemplo de código JavaScript:
 ```javascript
