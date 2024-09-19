@@ -1810,89 +1810,91 @@ La "coerción de tipos" fuerza la conversión y comparación del contenido de lo
 <h3 id="71-funciones-globales-en-javascript"><strong>7.1 Funciones Globales en JavaScript</strong></h3>
 <p>Las funciones globales en JavaScript son funciones integradas que son parte del objeto global y pueden ser llamadas desde cualquier parte de tu código. Están disponibles tanto en el entorno del navegador como en Node.js. Aquí hay algunas de las funciones globales más comúnmente utilizadas:</p>
 <ol>
-<li><strong><code>parseInt(string, radix)</code></strong></li>
-<li>Analiza una cadena y devuelve un entero en la base especificada.</li>
 <li>
-<p>Ejemplo:
-     <div class="language-javascript highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;10&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// 10</span>
-</span></code></pre></div></p>
+<p><strong><code>parseInt(string, radix)</code></strong></p>
+<ul>
+<li>Analiza una cadena y devuelve un entero en la base especificada.</li>
+<li>Ejemplo:
+ <div class="language-javascript highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;10&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// 10</span>
+</span></code></pre></div></li>
+</ul>
 </li>
 <li>
 <p><strong><code>parseFloat(string)</code></strong></p>
-</li>
+<ul>
 <li>Analiza una cadena y devuelve un número de punto flotante.</li>
-<li>
-<p>Ejemplo:
-     <div class="language-javascript highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="s2">&quot;10.5&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 10.5</span>
-</span></code></pre></div></p>
+<li>Ejemplo:
+ <div class="language-javascript highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="s2">&quot;10.5&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 10.5</span>
+</span></code></pre></div></li>
+</ul>
 </li>
 <li>
 <p><strong><code>isNaN(value)</code></strong></p>
-</li>
+<ul>
 <li>Determina si un valor es NaN (No es un Número).</li>
-<li>
-<p>Ejemplo:
-     <div class="language-javascript highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">isNaN</span><span class="p">(</span><span class="s2">&quot;hola&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
-</span></code></pre></div></p>
+<li>Ejemplo:
+ <div class="language-javascript highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">isNaN</span><span class="p">(</span><span class="s2">&quot;hola&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</span></code></pre></div></li>
+</ul>
 </li>
 <li>
 <p><strong><code>isFinite(value)</code></strong></p>
-</li>
+<ul>
 <li>Determina si un valor es un número finito.</li>
-<li>
-<p>Ejemplo:
-     <div class="language-javascript highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">isFinite</span><span class="p">(</span><span class="mf">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+<li>Ejemplo:
+ <div class="language-javascript highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">isFinite</span><span class="p">(</span><span class="mf">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
 </span><span id="__span-51-2"><a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">resultado2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">isFinite</span><span class="p">(</span><span class="kc">Infinity</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
-</span></code></pre></div></p>
+</span></code></pre></div></li>
+</ul>
 </li>
 <li>
 <p><strong><code>eval(string)</code></strong></p>
-</li>
+<ul>
 <li>Evalúa código JavaScript representado como una cadena.</li>
-<li>
-<p>Ejemplo:
-     <div class="language-javascript highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">eval</span><span class="p">(</span><span class="s2">&quot;2 + 2&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 4</span>
-</span></code></pre></div></p>
+<li>Ejemplo:
+ <div class="language-javascript highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">eval</span><span class="p">(</span><span class="s2">&quot;2 + 2&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 4</span>
+</span></code></pre></div></li>
+</ul>
 </li>
 <li>
 <p><strong><code>encodeURI(uri)</code></strong></p>
-</li>
+<ul>
 <li>Codifica un Identificador de Recurso Uniforme (URI) escapando ciertos caracteres.</li>
-<li>
-<p>Ejemplo:
-     <div class="language-javascript highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://www.example.com?name=John Doe&quot;</span><span class="p">;</span>
+<li>Ejemplo:
+ <div class="language-javascript highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://www.example.com?name=John Doe&quot;</span><span class="p">;</span>
 </span><span id="__span-53-2"><a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">uriCodificado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">encodeURI</span><span class="p">(</span><span class="nx">uri</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;https://www.example.com?name=John%20Doe&quot;</span>
-</span></code></pre></div></p>
+</span></code></pre></div></li>
+</ul>
 </li>
 <li>
 <p><strong><code>encodeURIComponent(uriComponent)</code></strong></p>
-</li>
+<ul>
 <li>Codifica un componente URI escapando ciertos caracteres.</li>
-<li>
-<p>Ejemplo:
-     <div class="language-javascript highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">componenteURI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;John Doe &amp; Co&quot;</span><span class="p">;</span>
+<li>Ejemplo:
+ <div class="language-javascript highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">componenteURI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;John Doe &amp; Co&quot;</span><span class="p">;</span>
 </span><span id="__span-54-2"><a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">componenteURICodificado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">componenteURI</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;John%20Doe%20%26%20Co&quot;</span>
-</span></code></pre></div></p>
+</span></code></pre></div></li>
+</ul>
 </li>
 <li>
 <p><strong><code>decodeURI(encodedURI)</code></strong></p>
-</li>
+<ul>
 <li>Decodifica un Identificador de Recurso Uniforme (URI) creado con <code>encodeURI</code>.</li>
-<li>
-<p>Ejemplo:
-     <div class="language-javascript highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">uriCodificado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://www.example.com?name=John%20Doe&quot;</span><span class="p">;</span>
+<li>Ejemplo:
+ <div class="language-javascript highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">uriCodificado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://www.example.com?name=John%20Doe&quot;</span><span class="p">;</span>
 </span><span id="__span-55-2"><a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">uriDecodificado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">decodeURI</span><span class="p">(</span><span class="nx">uriCodificado</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;https://www.example.com?name=John Doe&quot;</span>
-</span></code></pre></div></p>
+</span></code></pre></div></li>
+</ul>
 </li>
 <li>
 <p><strong><code>decodeURIComponent(encodedURIComponent)</code></strong></p>
-</li>
+<ul>
 <li>Decodifica un componente URI creado con <code>encodeURIComponent</code>.</li>
-<li>
-<p>Ejemplo:
-     <div class="language-javascript highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">componenteURICodificado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;John%20Doe%20%26%20Co&quot;</span><span class="p">;</span>
+<li>Ejemplo:
+ <div class="language-javascript highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">componenteURICodificado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;John%20Doe%20%26%20Co&quot;</span><span class="p">;</span>
 </span><span id="__span-56-2"><a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">componenteURIDecodificado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">decodeURIComponent</span><span class="p">(</span><span class="nx">componenteURICodificado</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;John Doe &amp; Co&quot;</span>
-</span></code></pre></div></p>
+</span></code></pre></div></li>
+</ul>
 </li>
 <li>
 <p><strong><code>setTimeout(function, delay)</code></strong></p>
