@@ -18,17 +18,17 @@ Al dominar la gestión de eventos y la validación de formularios, mejorarás la
 En JavaScript, la gestión de eventos te permite responder a acciones de los usuarios u otros eventos activados en el navegador. Existen diferentes modelos para gestionar eventos, cada uno ofreciendo distintas maneras de adjuntar oyentes de eventos y gestionar la propagación de eventos.
 
 1. **Modelo Tradicional de Eventos (`onclick`, `onmouseover`, etc.)**
-   - **Descripción:** Este modelo implica asignar directamente atributos de manejador de eventos a elementos HTML.
-   - **Uso:** Adjuntar eventos dentro de etiquetas HTML o configurarlos mediante JavaScript utilizando propiedades de los elementos (`element.onclick = function() {...}`).
-   - **Ejemplo:**
+     - **Descripción:** Este modelo implica asignar directamente atributos de manejador de eventos a elementos HTML.
+     - **Uso:** Adjuntar eventos dentro de etiquetas HTML o configurarlos mediante JavaScript utilizando propiedades de los elementos (`element.onclick = function() {...}`).
+     - **Ejemplo:**
      ```html
      <button onclick="alert('¡Botón clicado!')">Haz clic aquí</button>
      ```
 
 2. **Modelo de Eventos Nivel 2 del DOM (método `addEventListener()`)**
-   - **Descripción:** Introducido en el Nivel 2 del DOM, este modelo ofrece un enfoque más flexible para la gestión de eventos.
-   - **Uso:** Adjuntar eventos utilizando `addEventListener(event, handler, useCapture)`, donde `event` es el tipo de evento (por ejemplo, `'click'`), `handler` es la función a ejecutar, y `useCapture` (opcional) especifica el flujo del evento.
-   - **Ejemplo:**
+     - **Descripción:** Introducido en el Nivel 2 del DOM, este modelo ofrece un enfoque más flexible para la gestión de eventos.
+     - **Uso:** Adjuntar eventos utilizando `addEventListener(event, handler, useCapture)`, donde `event` es el tipo de evento (por ejemplo, `'click'`), `handler` es la función a ejecutar, y `useCapture` (opcional) especifica el flujo del evento.
+     - **Ejemplo:**
      ```javascript
      const boton = document.querySelector('button');
      boton.addEventListener('click', function() {
@@ -37,9 +37,9 @@ En JavaScript, la gestión de eventos te permite responder a acciones de los usu
      ```
 
 3. **Delegación de Eventos**
-   - **Descripción:** En lugar de adjuntar oyentes de eventos a elementos individuales, esta técnica implica adjuntar un solo oyente de eventos a un elemento padre.
-   - **Uso:** Utilizar la burbuja de eventos colocando oyentes de eventos en elementos padres y delegar el manejo en función del elemento objetivo (`event.target`).
-   - **Ejemplo:**
+     - **Descripción:** En lugar de adjuntar oyentes de eventos a elementos individuales, esta técnica implica adjuntar un solo oyente de eventos a un elemento padre.
+     - **Uso:** Utilizar la burbuja de eventos colocando oyentes de eventos en elementos padres y delegar el manejo en función del elemento objetivo (`event.target`).
+     - **Ejemplo:**
      ```html
      <ul id="lista">
        <li>Elemento 1</li>
@@ -485,43 +485,56 @@ La validación se puede realizar de muchas maneras, pero es aconsejable hacerlo 
 
 Se recomienda que todo el código esté dentro del evento `DOMContentLoaded` o `load` de la ventana. Esto asegura que todo el documento esté cargado antes de comenzar a ejecutar el código.
 
+
 ```js
+// Es una buena práctica que todo el código esté dentro del evento 'DOMContentLoaded' o 'load' 
 document.addEventListener('DOMContentLoaded', function () {
+  // Capturar todos los elementos 
   const form = document.getElementById('contactForm');
   const name = document.getElementById('name');
   const email = document.getElementById('email');
   const password = document.getElementById('password');
 
+  // Crear el manejador del evento para el envío del formulario ('submit')
   form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Previene que el formulario se envíe automáticamente
-    event.stopPropagation(); // Previene que el evento burbujee a elementos padre
+    event.preventDefault(); // Evita que el formulario se envíe automáticamente
+    event.stopPropagation(); // Evita que el evento se propague a elementos padre
 
+    // Llamar a la función principal de validación 
     if (validateForm()) {
-      console.log("Todos los campos están bien, podemos continuar");
-      form.submit();  // Forzando el envío
+      console.log("Todos los campos están bien, podemos proceder");
+      form.submit();  // Forzar el envío
     } else {
-      console.log("Hay algún campo no válido. El usuario debería revisarlos.")
+      console.log("Hay algún campo no válido. El usuario debe revisarlos.")
     }
   });
 
+  // Esta función se encarga de validar todos los campos y 
+  // devolver un booleano: true si todos los campos están bien, false en caso contrario
   function validateForm() {
+    // Esta bandera se inicializa como true.
+    // En caso de encontrar un error en un campo, esta variable se convierte en false.
     var isValid = true;
 
+    // Lógica de validación personalizada
+    // Ejemplo de validación personalizada solo comprobando la longitud 
     if (name.value.trim().length < 2) {
-      markFieldAsNotValid(name)
+      markFieldAsNotValid(name);
       isValid = false;
     } else {
-      markFieldAsValid(name)
+      markFieldAsValid(name);
     }
 
+    // Podemos llamar a funciones personalizadas de validación de campos 
+    // también podemos comprobar diferentes condiciones y mostrar diferentes mensajes de error
     if (email.value === "") {
-      markFieldAsNotValid(email, "El correo electrónico es obligatorio")
+      markFieldAsNotValid(email, "El correo electrónico es obligatorio");
       isValid = false;
     } else if (!isValidEmail(email.value)) {
-      markFieldAsNotValid(email, "Por favor, proporciona una dirección de correo electrónico válida.")
+      markFieldAsNotValid(email, "Por favor, proporciona una dirección de correo válida.");
       isValid = false;
     } else {
-      markFieldAsValid(email)
+      markFieldAsValid(email);
     }
 
     if (!isValidPassword(password.value)) {
@@ -531,32 +544,61 @@ document.addEventListener('DOMContentLoaded', function () {
       markFieldAsValid(password);
     }
 
+    // Después de validar todos los campos, devolvemos el valor de la bandera isValid
     return isValid;
   }
 
-  function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
+  // Definición de las funciones de validación de campos y otras funciones auxiliares
+  // ....
 
-  function isValidPassword(passwd) {
-    return (passwd.length >= 6)
-  }
-
-  function markFieldAsNotValid(element, message) {
-    if (message) {
-      element.parentNode.querySelector(".error-message").textContent = message;
-    }
-    element.parentNode.classList.add
-
-("is-not-valid-field");
-  }
-
-  function markFieldAsValid(element) {
-    element.parentNode.classList.remove("is-not-valid-field");
-  }
-});
+}
 ```
+
+##### Funciones de validación de campos específicos
+  Cuando la validación es más compleja, podemos definir funciones que validen ciertos campos.
+
+```js
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function isValidPassword(passwd) {
+  return (passwd.length >= 6);
+}
+
+```
+##### Funciones auxiliares para gestionar mensajes de error
+ Podemos crear funciones que gestionen los mensajes de error. En este caso, hemos creado una para mostrar el error y otra para ocultarlo. Funcionan sobre el elemento que pasamos a la función. El código navega hacia el elemento padre para agregar o eliminar la clase is-not-valid-field.
+
+```js
+// Esta función marca un campo como no válido y añade el mensaje de error
+function markFieldAsNotValid(element, message) {
+  // Si tenemos un mensaje personalizado, lo mostramos. En caso contrario, mostramos el mensaje de error presente en el HTML
+  if (message) {
+    element.parentNode.querySelector(".error-message").textContent = message;
+  }
+  // Añadiendo la clase que muestra el mensaje de error y añade el borde rojo (css)
+  element.parentNode.classList.add("is-not-valid-field");
+}
+
+// Esta función marca un campo como válido y oculta el mensaje de error
+function markFieldAsValid(element) {
+  element.parentNode.classList.remove("is-not-valid-field");
+}
+
+```
+Recordemos la estructura de un elemento form-group:
+
+
+```js
+<div class="form-group">
+    <label for="name">Nombre</label>
+    <input type="text" class="form-control" id="name" name="name">
+    <div class="error-message">El nombre es obligatorio y debe tener al menos 2 caracteres de longitud.</div>
+</div>
+```
+
 
 ##### CSS para Manejar Errores
 
@@ -580,6 +622,8 @@ Necesitamos algo de CSS para hacer visibles los mensajes de error y el borde roj
 }
 ```
 
+![Vanilla js Validation](img/vanilla-validation.png)
+
 <div class="exercise-box">
     <h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico</h3>
     <p>Agrega tres nuevos campos al formulario existente:</p>
@@ -593,8 +637,6 @@ Necesitamos algo de CSS para hacer visibles los mensajes de error y el borde roj
 </div>
 
 
-
-Aquí tienes la traducción del texto:
 
 ### 4.2 **Validación nativa con HTML5**
 

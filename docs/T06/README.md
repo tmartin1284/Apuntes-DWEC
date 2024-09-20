@@ -81,13 +81,13 @@ Por qué es importante la asincronía
 
 2. **[Promesas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)**:
    
-   - Objetos que representan la eventual finalización o falla de una operación asincrónica.
-   - Proporcionan métodos como then y catch para manejar casos de éxito y error.
+     - Objetos que representan la eventual finalización o falla de una operación asincrónica.
+     - Proporcionan métodos como then y catch para manejar casos de éxito y error.
 
 3. **[Async/Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)**
 
-   - Azúcar sintáctica construida sobre Promesas, proporcionando una forma más legible y concisa de escribir código asincrónico.
-   - Requiere el uso de la palabra clave async para definir una función que utiliza await para operaciones asincrónicas.
+     - Azúcar sintáctica construida sobre Promesas, proporcionando una forma más legible y concisa de escribir código asincrónico.
+     - Requiere el uso de la palabra clave async para definir una función que utiliza await para operaciones asincrónicas.
 
 ### 1.3 **Métodos para Hacer Solicitudes Ajax en JS**
 
@@ -145,85 +145,85 @@ Las APIs REST públicas proporcionan a los desarrolladores acceso a una variedad
 ##### Redes Sociales y Comunicación
 
 1. **Twitter API**
-   - **Descripción:** Permite a los desarrolladores interactuar con datos de Twitter.
-   - **Documentación:** [Twitter API Docs](https://developer.twitter.com/en/docs)
+     - **Descripción:** Permite a los desarrolladores interactuar con datos de Twitter.
+     - **Documentación:** [Twitter API Docs](https://developer.twitter.com/en/docs)
 
 2. **Facebook Graph API**
-   - **Descripción:** Proporciona acceso a datos del gráfico social de Facebook.
-   - **Documentación:** [Facebook Graph API Docs](https://developers.facebook.com/docs/graph-api/)
+     - **Descripción:** Proporciona acceso a datos del gráfico social de Facebook.
+     - **Documentación:** [Facebook Graph API Docs](https://developers.facebook.com/docs/graph-api/)
 
 3. **Slack API**
-   - **Descripción:** Permite la integración con Slack para mensajería y colaboración.
-   - **Documentación:** [Slack API Docs](https://api.slack.com/)
+     - **Descripción:** Permite la integración con Slack para mensajería y colaboración.
+     - **Documentación:** [Slack API Docs](https://api.slack.com/)
 
 ##### Mapas y Geolocalización
 
 4. **Google Maps API**
-   - **Descripción:** Ofrece una amplia gama de servicios relacionados con mapas, incluyendo geolocalización, enrutamiento e información de lugares.
-   - **Documentación:** [Google Maps API Docs](https://developers.google.com/maps/documentation)
+     - **Descripción:** Ofrece una amplia gama de servicios relacionados con mapas, incluyendo geolocalización, enrutamiento e información de lugares.
+     - **Documentación:** [Google Maps API Docs](https://developers.google.com/maps/documentation)
 
 5. **OpenWeatherMap API**
-   - **Descripción:** Proporciona datos meteorológicos, pronósticos e información histórica.
-   - **Documentación:** [OpenWeatherMap
+      - **Descripción:** Proporciona datos meteorológicos, pronósticos e información histórica.
+     - **Documentación:** [OpenWeatherMap
 
  API Docs](https://openweathermap.org/api)
 
 6. **Mapbox API**
-   - **Descripción:** Ofrece mapas personalizables y servicios de geolocalización.
-   - **Documentación:** [Mapbox API Docs](https://docs.mapbox.com/api/)
+     - **Descripción:** Ofrece mapas personalizables y servicios de geolocalización.
+     - **Documentación:** [Mapbox API Docs](https://docs.mapbox.com/api/)
 
 ##### Finanzas y Criptomonedas
 
 7. **CoinGecko API**
-   - **Descripción:** Proporciona datos sobre criptomonedas, incluyendo precios, capitalización de mercado y volumen de negociación.
-   - **Documentación:** [CoinGecko API Docs](https://www.coingecko.com/en/api)
+     - **Descripción:** Proporciona datos sobre criptomonedas, incluyendo precios, capitalización de mercado y volumen de negociación.
+     - **Documentación:** [CoinGecko API Docs](https://www.coingecko.com/en/api)
 
 8. **Alpha Vantage API**
-   - **Descripción:** Ofrece datos financieros, incluyendo precios de acciones, indicadores técnicos y datos de divisas.
-   - **Documentación:** [Alpha Vantage API Docs](https://www.alphavantage.co/documentation/)
+     - **Descripción:** Ofrece datos financieros, incluyendo precios de acciones, indicadores técnicos y datos de divisas.
+     - **Documentación:** [Alpha Vantage API Docs](https://www.alphavantage.co/documentation/)
 
 ##### Entretenimiento
 
 9. **Spotify API**
-   - **Descripción:** Permite acceso al catálogo musical de Spotify y datos de usuario.
-   - **Documentación:** [Spotify API Docs](https://developer.spotify.com/documentation/web-api/)
+     - **Descripción:** Permite acceso al catálogo musical de Spotify y datos de usuario.
+     - **Documentación:** [Spotify API Docs](https://developer.spotify.com/documentation/web-api/)
 
 10. **The Movie Database (TMDb) API**
-    - **Descripción:** Proporciona información sobre películas, programas de televisión y actores.
-    - **Documentación:** [TMDb API Docs](https://developers.themoviedb.org/3)
+      - **Descripción:** Proporciona información sobre películas, programas de televisión y actores.
+      - **Documentación:** [TMDb API Docs](https://developers.themoviedb.org/3)
 
 11. **YouTube Data API**
-    - **Descripción:** Permite acceso a contenido de YouTube y datos de usuario.
-    - **Documentación:** [YouTube Data API Docs](https://developers.google.com/youtube/v3)
+      - **Descripción:** Permite acceso a contenido de YouTube y datos de usuario.
+      - **Documentación:** [YouTube Data API Docs](https://developers.google.com/youtube/v3)
 
 ##### Utilidad y Varios
 
 12. **GitHub API**
-    - **Descripción:** Proporciona acceso a repositorios de GitHub, problemas y datos de usuario.
-    - **Documentación:** [GitHub API Docs](https://docs.github.com/en/rest)
+      - **Descripción:** Proporciona acceso a repositorios de GitHub, versiones y datos de usuario.
+      - **Documentación:** [GitHub API Docs](https://docs.github.com/en/rest)
 
 13. **REST Countries API**
-    - **Descripción:** Ofrece información sobre países, incluyendo población, área y ciudades capitales.
-    - **Documentación:** [REST Countries API Docs](https://restcountries.com/)
+      - **Descripción:** Ofrece información sobre países, incluyendo población, área y ciudades capitales.
+      - **Documentación:** [REST Countries API Docs](https://restcountries.com/)
 
 14. **NASA API**
-    - **Descripción:** Proporciona acceso a una amplia gama de datos de la NASA, incluyendo imágenes, videos e información planetaria.
-    - **Documentación:** [NASA API Docs](https://api.nasa.gov/)
+      - **Descripción:** Proporciona acceso a una amplia gama de datos de la NASA, incluyendo imágenes, videos e información planetaria.
+      - **Documentación:** [NASA API Docs](https://api.nasa.gov/)
 
 15. **Random User API**
-    - **Descripción:** Genera datos de usuario aleatorios, incluyendo nombres, direcciones y fotos de perfil.
-    - **Documentación:** [Random User API Docs](https://randomuser.me/)
+      - **Descripción:** Genera datos de usuario aleatorios, incluyendo nombres, direcciones y fotos de perfil.
+      - **Documentación:** [Random User API Docs](https://randomuser.me/)
 
 16. **Open Library API**
-    - **Descripción:** Proporciona acceso a datos de libros del proyecto Open Library.
-    - **Documentación:** [Open Library API Docs](https://openlibrary.org/developers/api)
+      - **Descripción:** Proporciona acceso a datos de libros del proyecto Open Library.
+      - **Documentación:** [Open Library API Docs](https://openlibrary.org/developers/api)
 
 17. **PokeAPI**
-    - **Descripción:** Ofrece datos del universo Pokémon, incluyendo Pokémon, habilidades y movimientos.
-    - **Documentación:** [PokeAPI Docs](https://pokeapi.co/docs/)
+      - **Descripción:** Ofrece datos del universo Pokémon, incluyendo Pokémon, habilidades y movimientos.
+      - **Documentación:** [PokeAPI Docs](https://pokeapi.co/docs/)
 
-> #### <i class="fa-solid fa-circle-check"></i> ¡Verifica esto!
-> [Mucho más REST API pública](https://github.com/public-apis/public-apis)
+> #### <i class="fa-solid fa-circle-check"></i> ¡-Comprueba esto!
+> [Mucho más que una REST API pública](https://github.com/public-apis/public-apis)
 
 <div class="exercise-box">
   <h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico 1: Creando un archivo .rest para una API REST pública</h3>
