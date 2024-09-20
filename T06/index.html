@@ -1,0 +1,1706 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../T05/">
+      
+      
+        <link rel="next" href="../T07/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>U6 - AJAX - DWEC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-6-ajax" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DWEC" class="md-header__button md-logo" aria-label="DWEC" data-md-component="logo">
+      
+  <img src="../img/js.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DWEC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              U6 - AJAX
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to automatic mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to automatic mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DWEC" class="md-nav__button md-logo" aria-label="DWEC" data-md-component="logo">
+      
+  <img src="../img/js.webp" alt="logo">
+
+    </a>
+    DWEC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U1 - Herramientas de Frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U2 - Fundamentos de JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U3 - Arrays, objetos... y clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U4 - Gestionando el DOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U5 - Eventos y formularios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    U6 - AJAX
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    U6 - AJAX
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-a-ajax" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción a AJAX
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción a AJAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-la-solicitud-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 La Solicitud HTTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-entendiendo-la-asincronia-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Entendiendo la Asincronía en JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-metodos-para-hacer-solicitudes-ajax-en-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Métodos para Hacer Solicitudes Ajax en JS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. REST API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. REST API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-herramientas-backend-para-construir-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Herramientas Backend para construir REST API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-api-rest-publica" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 API REST Pública
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-servidor-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Servidor JSON
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-diferentes-soluciones-para-probar-tu-api-rest" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Diferentes Soluciones para Probar Tu API REST
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Diferentes Soluciones para Probar Tu API REST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-postman" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Postman
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-thunder-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Thunder Client
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-rest-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 REST Client
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-xmlhttprequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. XMLHttpRequest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-fetch-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Fetch API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Fetch API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-fetch-con-promesas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Fetch con Promesas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-fetch-con-asyncawait" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Fetch con Async/Await
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-manejo-de-respuestas-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Manejo de Respuestas HTTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-solicitudes-get-post-put-patch-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Solicitudes GET, POST, PUT, PATCH, DELETE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-encapsular-solicitudes-fetch-en-modulos-reutilizables" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Encapsular Solicitudes Fetch en Módulos Reutilizables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T07/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U7 - Almacenamiento del lado del cliente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-a-ajax" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción a AJAX
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción a AJAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-la-solicitud-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 La Solicitud HTTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-entendiendo-la-asincronia-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Entendiendo la Asincronía en JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-metodos-para-hacer-solicitudes-ajax-en-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Métodos para Hacer Solicitudes Ajax en JS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. REST API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. REST API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-herramientas-backend-para-construir-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Herramientas Backend para construir REST API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-api-rest-publica" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 API REST Pública
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-servidor-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Servidor JSON
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-diferentes-soluciones-para-probar-tu-api-rest" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Diferentes Soluciones para Probar Tu API REST
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Diferentes Soluciones para Probar Tu API REST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-postman" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Postman
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-thunder-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Thunder Client
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-rest-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 REST Client
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-xmlhttprequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. XMLHttpRequest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-fetch-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Fetch API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Fetch API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-fetch-con-promesas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Fetch con Promesas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-fetch-con-asyncawait" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Fetch con Async/Await
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-manejo-de-respuestas-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Manejo de Respuestas HTTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-solicitudes-get-post-put-patch-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Solicitudes GET, POST, PUT, PATCH, DELETE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-encapsular-solicitudes-fetch-en-modulos-reutilizables" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Encapsular Solicitudes Fetch en Módulos Reutilizables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="unidad-6-ajax"><strong>UNIDAD 6 - AJAX</strong></h1>
+<h2 id="1-introduccion-a-ajax">1. <strong>Introducción a AJAX</strong></h2>
+<p>¿Qué es AJAX?</p>
+<p><img alt="ajax" src="img/00_ajax.png" /></p>
+<h4 id="definicion">Definición</h4>
+<p>AJAX, que significa JavaScript Asincrónico y XML, es una técnica utilizada para crear aplicaciones web dinámicas e interactivas. Permite que las páginas web se actualicen de forma asincrónica al intercambiar pequeñas cantidades de datos con el servidor en segundo plano. Esto significa que es posible actualizar partes de una página web sin recargar toda la página.</p>
+<h3 id="11-la-solicitud-http"><strong>1.1 La Solicitud HTTP</strong></h3>
+<p>Una solicitud AJAX es, esencialmente, una solicitud HTTP asincrónica.</p>
+<p>HTTP es un protocolo para obtener recursos como documentos HTML. Es la base de cualquier intercambio de datos en la Web y es un protocolo cliente-servidor, lo que significa que las solicitudes son iniciadas por el receptor, generalmente el navegador web. Un documento completo se construye típicamente a partir de recursos como contenido de texto, instrucciones de diseño, imágenes, videos, scripts y más.</p>
+<p><img alt="fetching a page" src="img/fetching-a-page.svg" /></p>
+<p>Fuente --&gt; <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">mdn web docs</a></p>
+<p>Aquí están los componentes básicos de una solicitud HTTP:</p>
+<h4 id="metodos-http">Métodos HTTP:</h4>
+<ul>
+<li><strong>GET:</strong> Solicita datos del servidor. Solo debe recuperar datos y no cambiar ningún estado del servidor.</li>
+<li><strong>POST:</strong> Envía datos para ser procesados a un recurso específico. A menudo causa un cambio en el estado del servidor.</li>
+<li><strong>PUT:</strong> Actualiza un recurso actual con nuevos datos.</li>
+<li><strong>PATCH:</strong> Actualiza parte de un recurso actual con nuevos datos.</li>
+<li><strong>DELETE:</strong> Elimina un recurso específico.</li>
+</ul>
+<h4 id="url-de-solicitud">URL de Solicitud</h4>
+<p>La URL especifica el <strong>punto final</strong> al que se envía la solicitud. Es la dirección del recurso.</p>
+<h4 id="encabezados">Encabezados</h4>
+<p>Los encabezados HTTP permiten al cliente y al servidor pasar información adicional con una solicitud o respuesta HTTP.</p>
+<h4 id="cuerpo">Cuerpo</h4>
+<p>El cuerpo de una solicitud HTTP contiene los datos que se enviarán al servidor (principalmente utilizados con solicitudes <strong>POST</strong> y <strong>PUT</strong>).
+El formato más común para enviar datos es texto plano formateado en JSON.</p>
+<p>Ejemplo de solicitud GET y POST:</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">  </span><span class="nf">GET</span> <span class="nn">https://example.com/comments/1</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  ###
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  GET https://example.com/topics/1 HTTP/1.1
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  ###
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  POST https://example.com/comments HTTP/1.1
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  content-type: application/json
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  {
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      &quot;name&quot;: &quot;sample&quot;,
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>      &quot;time&quot;: &quot;Wed, 21 Oct 2015 18:27:50 GMT&quot;
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  }
+</span></code></pre></div>
+<h4 id="codigos-de-estado-de-respuesta-http"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">Códigos de Estado de Respuesta HTTP</a></strong></h4>
+<h3 id="12-entendiendo-la-asincronia-en-javascript">1.2 <strong>Entendiendo la Asincronía en JavaScript</strong></h3>
+<p>La asincronía es un concepto fundamental en JavaScript que permite a los programas manejar múltiples tareas a la vez sin bloquear el hilo principal. Es crucial para mejorar el rendimiento, especialmente en aplicaciones web, donde operaciones como solicitudes de red, lectura de archivos o temporizadores son comunes.</p>
+<p><img alt="Async vs Sync" src="img/sync-vs-async.png" /></p>
+<p>Por qué es importante la asincronía</p>
+<ol>
+<li><strong>Mejora del Rendimiento:</strong> Al manejar tareas de manera concurrente, la aplicación se mantiene receptiva y puede realizar múltiples operaciones de manera eficiente.</li>
+<li><strong>Mejor Experiencia del Usuario:</strong> Los usuarios no tienen que esperar a que se completen tareas de larga duración antes de interactuar con la aplicación.</li>
+<li><strong>Operaciones No Bloqueantes:</strong> Críticas para solicitudes de red, lectura de archivos y otras operaciones de E/S donde esperar detendría la ejecución del código subsiguiente.</li>
+</ol>
+<h4 id="patrones-asincronicos-comunes">Patrones Asincrónicos Comunes</h4>
+<ol>
+<li>
+<p><strong>Callbacks:</strong> Funciones pasadas como argumentos a otras funciones para ser ejecutadas más tarde. Pueden llevar a "callback hell" al tratar con múltiples callbacks anidados.</p>
+</li>
+<li>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesas</a></strong>:</p>
+</li>
+<li>
+<p>Objetos que representan la eventual finalización o falla de una operación asincrónica.</p>
+</li>
+<li>
+<p>Proporcionan métodos como then y catch para manejar casos de éxito y error.</p>
+</li>
+<li>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">Async/Await</a></strong></p>
+</li>
+<li>
+<p>Azúcar sintáctica construida sobre Promesas, proporcionando una forma más legible y concisa de escribir código asincrónico.</p>
+</li>
+<li>Requiere el uso de la palabra clave async para definir una función que utiliza await para operaciones asincrónicas.</li>
+</ol>
+<h3 id="13-metodos-para-hacer-solicitudes-ajax-en-js">1.3 <strong>Métodos para Hacer Solicitudes Ajax en JS</strong></h3>
+<h4 id="objeto-xmlhttprequest"><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API">Objeto XMLHttpRequest</a></h4>
+<ul>
+<li><strong>Descripción</strong>: Un método clásico para realizar solicitudes HTTP. Desarrollado inicialmente en 2006, todavía se utiliza hoy en día. Originalmente tenía problemas de compatibilidad con Internet Explorer, que usaba un nombre diferente para este objeto.</li>
+<li><strong>Uso</strong>: Aunque es más antiguo y considerado más engorroso, <code>XMLHttpRequest</code> todavía es funcional y está soportado en todos los navegadores.</li>
+</ul>
+<h4 id="fetch-api"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Fetch API</a></h4>
+<ul>
+<li><strong>Descripción</strong>: Un método más moderno, potente, flexible y fácil de usar para hacer solicitudes HTTP.</li>
+<li><strong>Uso</strong>: La Fetch API es ahora la forma preferida de hacer solicitudes HTTP debido a su simplicidad y arquitectura basada en promesas incorporadas.</li>
+</ul>
+<h4 id="otros-metodos">Otros Métodos</h4>
+<ul>
+<li><strong><a href="https://axios-http.com/docs/intro">Axios</a></strong>: Un cliente HTTP basado en promesas para el navegador y Node.js. Es popular por su facilidad de uso y capacidad para manejar solicitudes y respuestas como JSON.</li>
+<li><strong><a href="https://jquery.com/">jQuery</a></strong>: Una biblioteca de JavaScript rápida, pequeña y rica en características. jQuery proporciona un método simple <a href="https://api.jquery.com/Jquery.ajax/"><code>$.ajax</code></a> para realizar solicitudes Ajax, lo que simplifica el proceso. La biblioteca jQuery y su método <code>$.ajax()</code> tuvieron su momento de gloria facilitando las cosas durante la era de <code>XMLHttpRequest</code> y el antiguo Internet Explorer.</li>
+</ul>
+<h2 id="2-rest-api">2. <strong>REST API</strong></h2>
+<p>Una REST API (Interfaz de Programación de Aplicaciones de Transferencia de Estado Representacional) es un conjunto de reglas y convenciones para construir e interactuar con servicios web. Las REST APIs permiten que diferentes sistemas <strong>se comuniquen a través de HTTP</strong> utilizando los métodos estándar que hemos visto en el punto anterior, facilitando la integración e interacción con aplicaciones y servicios web.</p>
+<h4 id="componentes-clave">Componentes Clave</h4>
+<ul>
+<li><strong>Punto final:</strong> Una <strong>URL</strong> específica donde se puede acceder a la API.</li>
+<li><strong>Método:</strong> El tipo de solicitud que se está realizando (por ejemplo, GET, POST, PUT, DELETE, PATCH).</li>
+<li><strong>Solicitud:</strong> Los datos o acciones que deseas enviar al servidor. En la solicitud se incluyen los <strong>encabezados</strong> y el <strong>cuerpo</strong> si es necesario.</li>
+<li><strong>Respuesta:</strong> Los datos enviados de vuelta desde el servidor después de procesar la solicitud.</li>
+</ul>
+<p><img alt="REST-API" src="img/rest-api.png" /></p>
+<h3 id="21-herramientas-backend-para-construir-rest-api">2.1 <strong>Herramientas Backend para construir REST API</strong></h3>
+<p>Podemos construir una REST API con cualquier lenguaje de servidor:</p>
+<ul>
+<li>PHP</li>
+<li>Java</li>
+<li>Ruby</li>
+<li>Python</li>
+<li>NODE.js </li>
+<li>ASP.NET</li>
+</ul>
+<p>Para construir una API, a menudo usarás un marco de servidor. Algunas opciones populares son:</p>
+<ul>
+<li><strong>Node.js con <a href="https://expressjs.com/">Express</a> (JavaScript)</strong></li>
+<li><strong><a href="https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/javascript/">Django</a> (Python)</strong></li>
+<li><strong><a href="https://fastapi.tiangolo.com/">FastAPI</a> (Python)</strong></li>
+<li><strong><a href="https://rubyonrails.org/">Ruby on Rails</a> (Ruby)</strong></li>
+<li><strong><a href="https://stackabuse.com/build-a-spring-boot-rest-api-with-java-full-guide/">Spring Boot</a> (Java)</strong></li>
+</ul>
+<p><img alt="js meme" src="img/js-meme.jpg" /></p>
+<p>Pero este es un tema de Frontend, así que vamos a usar APIs REST públicas y una API REST de juguete construida con <code>json-server</code>.</p>
+<h3 id="22-api-rest-publica">2.2 <strong>API REST Pública</strong></h3>
+<p>Las APIs REST públicas proporcionan a los desarrolladores acceso a una variedad de servicios, datos y funcionalidades de diferentes proveedores. Aquí hay una lista de algunas APIs REST públicas comúnmente utilizadas:</p>
+<h5 id="redes-sociales-y-comunicacion">Redes Sociales y Comunicación</h5>
+<ol>
+<li><strong>Twitter API</strong></li>
+<li><strong>Descripción:</strong> Permite a los desarrolladores interactuar con datos de Twitter.</li>
+<li>
+<p><strong>Documentación:</strong> <a href="https://developer.twitter.com/en/docs">Twitter API Docs</a></p>
+</li>
+<li>
+<p><strong>Facebook Graph API</strong></p>
+</li>
+<li><strong>Descripción:</strong> Proporciona acceso a datos del gráfico social de Facebook.</li>
+<li>
+<p><strong>Documentación:</strong> <a href="https://developers.facebook.com/docs/graph-api/">Facebook Graph API Docs</a></p>
+</li>
+<li>
+<p><strong>Slack API</strong></p>
+</li>
+<li><strong>Descripción:</strong> Permite la integración con Slack para mensajería y colaboración.</li>
+<li><strong>Documentación:</strong> <a href="https://api.slack.com/">Slack API Docs</a></li>
+</ol>
+<h5 id="mapas-y-geolocalizacion">Mapas y Geolocalización</h5>
+<ol>
+<li><strong>Google Maps API</strong></li>
+<li><strong>Descripción:</strong> Ofrece una amplia gama de servicios relacionados con mapas, incluyendo geolocalización, enrutamiento e información de lugares.</li>
+<li>
+<p><strong>Documentación:</strong> <a href="https://developers.google.com/maps/documentation">Google Maps API Docs</a></p>
+</li>
+<li>
+<p><strong>OpenWeatherMap API</strong></p>
+</li>
+<li><strong>Descripción:</strong> Proporciona datos meteorológicos, pronósticos e información histórica.</li>
+<li><strong>Documentación:</strong> [OpenWeatherMap</li>
+</ol>
+<p>API Docs](https://openweathermap.org/api)</p>
+<ol>
+<li><strong>Mapbox API</strong></li>
+<li><strong>Descripción:</strong> Ofrece mapas personalizables y servicios de geolocalización.</li>
+<li><strong>Documentación:</strong> <a href="https://docs.mapbox.com/api/">Mapbox API Docs</a></li>
+</ol>
+<h5 id="finanzas-y-criptomonedas">Finanzas y Criptomonedas</h5>
+<ol>
+<li><strong>CoinGecko API</strong></li>
+<li><strong>Descripción:</strong> Proporciona datos sobre criptomonedas, incluyendo precios, capitalización de mercado y volumen de negociación.</li>
+<li>
+<p><strong>Documentación:</strong> <a href="https://www.coingecko.com/en/api">CoinGecko API Docs</a></p>
+</li>
+<li>
+<p><strong>Alpha Vantage API</strong></p>
+</li>
+<li><strong>Descripción:</strong> Ofrece datos financieros, incluyendo precios de acciones, indicadores técnicos y datos de divisas.</li>
+<li><strong>Documentación:</strong> <a href="https://www.alphavantage.co/documentation/">Alpha Vantage API Docs</a></li>
+</ol>
+<h5 id="entretenimiento">Entretenimiento</h5>
+<ol>
+<li><strong>Spotify API</strong></li>
+<li><strong>Descripción:</strong> Permite acceso al catálogo musical de Spotify y datos de usuario.</li>
+<li>
+<p><strong>Documentación:</strong> <a href="https://developer.spotify.com/documentation/web-api/">Spotify API Docs</a></p>
+</li>
+<li>
+<p><strong>The Movie Database (TMDb) API</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Proporciona información sobre películas, programas de televisión y actores.</li>
+<li><strong>Documentación:</strong> <a href="https://developers.themoviedb.org/3">TMDb API Docs</a></li>
+</ul>
+</li>
+<li>
+<p><strong>YouTube Data API</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Permite acceso a contenido de YouTube y datos de usuario.</li>
+<li><strong>Documentación:</strong> <a href="https://developers.google.com/youtube/v3">YouTube Data API Docs</a></li>
+</ul>
+</li>
+</ol>
+<h5 id="utilidad-y-varios">Utilidad y Varios</h5>
+<ol>
+<li>
+<p><strong>GitHub API</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Proporciona acceso a repositorios de GitHub, problemas y datos de usuario.</li>
+<li><strong>Documentación:</strong> <a href="https://docs.github.com/en/rest">GitHub API Docs</a></li>
+</ul>
+</li>
+<li>
+<p><strong>REST Countries API</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Ofrece información sobre países, incluyendo población, área y ciudades capitales.</li>
+<li><strong>Documentación:</strong> <a href="https://restcountries.com/">REST Countries API Docs</a></li>
+</ul>
+</li>
+<li>
+<p><strong>NASA API</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Proporciona acceso a una amplia gama de datos de la NASA, incluyendo imágenes, videos e información planetaria.</li>
+<li><strong>Documentación:</strong> <a href="https://api.nasa.gov/">NASA API Docs</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Random User API</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Genera datos de usuario aleatorios, incluyendo nombres, direcciones y fotos de perfil.</li>
+<li><strong>Documentación:</strong> <a href="https://randomuser.me/">Random User API Docs</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Open Library API</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Proporciona acceso a datos de libros del proyecto Open Library.</li>
+<li><strong>Documentación:</strong> <a href="https://openlibrary.org/developers/api">Open Library API Docs</a></li>
+</ul>
+</li>
+<li>
+<p><strong>PokeAPI</strong></p>
+<ul>
+<li><strong>Descripción:</strong> Ofrece datos del universo Pokémon, incluyendo Pokémon, habilidades y movimientos.</li>
+<li><strong>Documentación:</strong> <a href="https://pokeapi.co/docs/">PokeAPI Docs</a></li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<h4 id="verifica-esto"><i class="fa-solid fa-circle-check"></i> ¡Verifica esto!</h4>
+<p><a href="https://github.com/public-apis/public-apis">Mucho más REST API pública</a></p>
+</blockquote>
+<div class="exercise-box">
+  <h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico 1: Creando un archivo .rest para una API REST pública</h3>
+  <p>En este ejercicio, crearás un archivo `.rest` utilizando la extensión REST Client para Visual Studio Code. Explorarás una API REST pública gratuita para datos de Pokémon. El archivo debe contener al menos 5 puntos finales diferentes.</p>
+  <p>Sigue estos pasos:</p>
+  <ol>
+    <li>Instala la extensión REST Client para Visual Studio Code si aún no lo has hecho.</li>
+    <li>Elige una API REST de acceso gratuito.</li>
+    <li>Crea un nuevo archivo llamado `tu-api-elegida.rest` en tu directorio de proyecto.</li>
+    <li>Agrega cinco puntos finales diferentes a tu archivo `tu-api-elegida.rest`:</li>
+    <li>Prueba los puntos finales.</li>
+  </ol>
+</div>
+
+<p>Claro, aquí tienes la traducción al español del texto:</p>
+<hr />
+<h3 id="23-servidor-json">2.3 <strong>Servidor JSON</strong></h3>
+<p><a href="https://www.npmjs.com/package/json-server">JSON Server</a> es una herramienta poderosa que permite a los desarrolladores crear una API REST falsa completa con un esfuerzo mínimo. Es especialmente útil para desarrolladores frontend que necesitan una forma rápida y sencilla de simular un servidor backend sin configurar un entorno de servidor completo. Con JSON Server, puedes crear rápidamente una API simulada, probar tu código frontend y prototipar aplicaciones sin necesidad de un backend real.</p>
+<h4 id="caracteristicas-clave">Características Clave</h4>
+<ul>
+<li><strong>Sin Necesidad de Programación:</strong> Crea una API completa a partir de un simple archivo JSON.</li>
+<li><strong>Configuración Extremadamente Rápida:</strong> Pon en marcha una API simulada en minutos.</li>
+<li><strong>Rutas RESTful:</strong> Genera automáticamente rutas RESTful basadas en tus datos.</li>
+<li><strong>Operaciones CRUD:</strong> Soporta operaciones de Crear, Leer, Actualizar y Eliminar.</li>
+<li><strong>Rutas Personalizadas:</strong> Permite definir rutas personalizadas y agregar middleware para configuraciones más complejas.</li>
+<li><strong>Servicio de Archivos Estáticos:</strong> Puede servir archivos estáticos junto con la API, útil para servir tu aplicación frontend.</li>
+</ul>
+<div class="exercise-box">
+  <h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico: Crear una API Falsa con JSON Server</h3>
+  <p>En este ejercicio, crearás una API REST falsa usando JSON Server. Esto te ayudará a entender cómo simular un backend para tu desarrollo frontend. Sigue los pasos a continuación para configurar y ejecutar tu API falsa:</p>
+
+  <h4>Pasos para Crear una API Falsa</h4>
+
+  <ol>
+    <li>
+      <strong>Instala JSON Server:</strong>
+      <p>Primero, asegúrate de tener Node.js instalado. Luego, instala JSON Server globalmente usando npm.</p>
+      <pre><code>npm install -g json-server</code></pre>
+    </li>
+    <li>
+      <strong>Crea un Archivo <code>db.json</code>:</strong>
+      <p>En tu directorio de proyecto, crea un archivo llamado <code>db.json</code>. Este archivo contendrá tus datos falsos. A continuación, se muestra una estructura de ejemplo para una API simple:</p>
+      <pre><code> {
+  "posts": [
+    { "id": 1, "title": "Hola Mundo", "author": "John Doe" },
+    { "id": 2, "title": "Aprendiendo JSON Server", "author": "Jane Doe" }
+  ],
+  "comments": [
+    { "id": 1, "postId": 1, "body": "¡Gran publicación!" },
+    { "id": 2, "postId": 2, "body": "Muy informativa." }
+  ],
+  "profile": { "name": "John Doe" }
+}</code></pre>
+    </li>
+    <li>
+      <strong>Inicia JSON Server:</strong>
+      <p>Ejecuta JSON Server con el archivo <code>db.json</code> que creaste.</p>
+      <pre><code>npx json-server db.json</code></pre>
+    </li>
+    <li>
+      <strong>Accede a Tu API Falsa:</strong>
+      <p>Una vez que JSON Server esté en funcionamiento, puedes acceder a tu API falsa en <code>http://localhost:3000</code>. Aquí hay algunos ejemplos de endpoints basados en el archivo <code>db.json</code>:</p>
+      <ul>
+        <li><code>GET /posts</code> - Listar todas las publicaciones</li>
+        <li><code>GET /posts/1</code> - Obtener una publicación específica por ID</li>
+        <li><code>POST /posts</code> - Crear una nueva publicación</li>
+        <li><code>PUT /posts/1</code> - Actualizar una publicación por ID</li>
+        <li><code>DELETE /posts/1</code> - Eliminar una publicación por ID</li>
+        <li><code>GET /comments</code> - Listar todos los comentarios</li>
+        <li><code>GET /profile</code> - Obtener el perfil</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Realiza Solicitudes a Tu API Falsa:</strong>
+      <p>Utiliza herramientas como Postman, cURL, o la extensión REST Client en Visual Studio Code para hacer solicitudes a tus endpoints de API falsa y observar las respuestas.</p>
+    </li>
+  </ol>
+  <p>Experimenta con diferentes estructuras de datos y endpoints para familiarizarte con el funcionamiento de JSON Server. Esta es una herramienta poderosa para configurar rápidamente un backend simulado que ayude en el desarrollo frontend.</p>
+</div>
+
+<h2 id="3-diferentes-soluciones-para-probar-tu-api-rest">3. <strong>Diferentes Soluciones para Probar Tu API REST</strong></h2>
+<p>Al desarrollar y probar APIs REST, es esencial tener herramientas que te ayuden a hacer solicitudes a tus endpoints e inspeccionar las respuestas.</p>
+<p>Podemos simplemente pegar la URL del endpoint en la barra de direcciones del navegador cuando tenemos una solicitud GET simple.</p>
+<p>Intenta pegar esto en tu navegador:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>https://pokeapi.co/api/v2/pokemon/ditto
+</span></code></pre></div>
+<p>Podemos mejorar la respuesta JSON mostrada en el navegador con algún complemento para Chrome como <a href="https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh">JSON Viewer</a>.</p>
+<p>También podemos usar el comando <a href="https://linuxize.com/post/curl-rest-api/">curl</a> para probar un endpoint en la línea de comandos.</p>
+<p>Pero cuando tenemos solicitudes más complicadas, como POST con cargas útiles y encabezados más complejos, preferimos usar una opción más robusta.</p>
+<p>Aquí hay tres soluciones populares:</p>
+<h3 id="31-postman">3.1 <strong>Postman</strong></h3>
+<h4 id="descripcion-general">Descripción General</h4>
+<p>Postman es un entorno completo para el desarrollo de APIs que te permite crear, compartir, probar y documentar APIs. Tiene una interfaz amigable y ofrece una amplia gama de características.</p>
+<h4 id="caracteristicas-clave_1">Características Clave</h4>
+<ul>
+<li><strong>Colecciones:</strong> Organiza tus solicitudes API en colecciones para una mejor gestión y colaboración.</li>
+<li><strong>Variables de Entorno:</strong> Cambia fácilmente entre diferentes entornos (por ejemplo, desarrollo, pruebas, producción) usando variables.</li>
+<li><strong>Pruebas Automatizadas:</strong> Crea scripts de prueba usando JavaScript para automatizar las pruebas de la API.</li>
+<li><strong>Servidores Simulados:</strong> Simula endpoints de API con fines de prueba sin necesidad del servidor real.</li>
+<li><strong>Colaboración:</strong> Comparte colecciones y espacios de trabajo con miembros del equipo para mejorar la colaboración.</li>
+</ul>
+<p><img alt="Postman" src="img/postman.png" /></p>
+<h4 id="ejemplo-de-uso">Ejemplo de Uso</h4>
+<ol>
+<li>Crea una nueva solicitud.</li>
+<li>Establece el método HTTP (GET, POST, PUT, DELETE, etc.).</li>
+<li>Ingresa la URL del endpoint de la API.</li>
+<li>Agrega encabezados, parámetros de consulta y cuerpo de la solicitud si es necesario.</li>
+<li>Haz clic en el botón "Enviar" para realizar la solicitud e inspeccionar la respuesta.</li>
+</ol>
+<h4 id="descargar">Descargar</h4>
+<p><a href="https://www.postman.com/downloads/">Descargar Postman</a></p>
+<h3 id="32-thunder-client">3.2 <strong>Thunder Client</strong></h3>
+<h4 id="descripcion-general_1">Descripción General</h4>
+<p>Thunder Client es un cliente REST API ligero para la extensión Visual Studio Code (VSCode). Está diseñado para ser simple y fácil de usar dentro del entorno de VSCode.</p>
+<h4 id="caracteristicas-clave_2">Características Clave</h4>
+<ul>
+<li><strong>Integrado con VSCode:</strong> No es necesario cambiar entre aplicaciones; úsalo directamente dentro de tu editor de código.</li>
+<li><strong>Variables de Entorno:</strong> Gestiona variables de entorno para cambiar fácilmente entre diferentes configuraciones.</li>
+<li><strong>Colecciones:</strong> Organiza tus solicitudes en colecciones para una mejor estructura.</li>
+<li><strong>Pruebas Rápidas:</strong> Capacidades básicas de prueba para validar tus respuestas de API.</li>
+<li><strong>Ligero:</strong> Diseño minimalista con características esenciales para pruebas de API rápidas y eficientes.</li>
+</ul>
+<h4 id="ejemplo-de-uso_1">Ejemplo de Uso</h4>
+<ol>
+<li>Instala la extensión Thunder Client en VSCode.</li>
+<li>Abre el panel de Thunder Client desde la barra lateral.</li>
+<li>Crea una nueva solicitud y establece el método HTTP.</li>
+<li>Ingresa la URL del endpoint de la API.</li>
+<li>Agrega encabezados, parámetros de consulta y cuerpo de la solicitud si es necesario.</li>
+<li>Haz clic en el botón "Enviar" para realizar la solicitud y ver la respuesta.</li>
+</ol>
+<p><img alt="thunder client" src="img/thunder-client.png" /></p>
+<h4 id="descargar_1">Descargar</h4>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client">Descargar Thunder Client</a></p>
+<h3 id="33-rest-client">3.3 <strong>REST Client</strong></h3>
+<h4 id="descripcion-general_2">Descripción General</h4>
+<p>REST Client es otra extensión de VSCode que te permite enviar solicitudes HTTP y ver las respuestas directamente en tu editor de código. Es ideal para aquellos que prefieren un enfoque más centrado en el código.</p>
+<h4 id="caracteristicas-clave_3">Características Clave</h4>
+<ul>
+<li><strong>Archivos de Solicitud:</strong> Escribe tus solicitudes en archivos <code>.http</code> o <code>.rest</code> para mejor organización y control de versiones.</li>
+<li><strong>Variables de Entorno:</strong> Usa variables de entorno para gestionar diferentes configuraciones para tus solicitudes API.</li>
+<li><strong>Documentación en Línea:</strong> Documenta tus solicitudes en línea con tu código para una mejor legibilidad.</li>
+<li><strong>Soporte para Varios Métodos HTTP:</strong> Envía fácilmente solicitudes GET, POST, PUT, DELETE y otros tipos de solicitudes HTTP.</li>
+</ul>
+<h4 id="ejemplo-de-uso_2">Ejemplo de Uso</h4>
+<ol>
+<li>Instala la extensión REST Client en VSCode.</li>
+<li>Crea un nuevo archivo <code>.http</code> o <code>.rest</code>.</li>
+<li>Escribe tu solicitud, por ejemplo:</li>
+</ol>
+<p><div class="language-http highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">GET</span> <span class="nn">https://example.com/comments/</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nn">1</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>###
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>GET https://example.com/topics/1 HTTP/1.1
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>###
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>POST https://example.com/comments HTTP/1.1
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>content-type: application/json
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>{
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    &quot;name&quot;: &quot;muestra&quot;,
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    &quot;time&quot;: &quot;Wed, 21 Oct 2015 18:27:50 GMT&quot;
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>}
+</span></code></pre></div>
+4. Haz clic en el enlace "Enviar Solicitud" encima de la solicitud para ejecutarla y ver la respuesta en un panel dividido.</p>
+<p><img alt="REST client" src="img/rest-client.png" /></p>
+<h4 id="descargar_2">Descargar</h4>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client">Descargar REST Client</a></p>
+<h2 id="4-xmlhttprequest">4. <strong>XMLHttpRequest</strong></h2>
+<p>No vamos a usar esta forma más antigua, pero podemos ver este pequeño ejemplo para entenderlo.</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Crea un nuevo objeto XMLHttpRequest</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">xhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">// Configúralo: solicitud GET para la URL /users</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;https://jsonplaceholder.typicode.com/users&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1">// Configura una función para manejar la respuesta</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="nx">xhr</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;load&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">200</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">300</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="c1">// Analiza la respuesta JSON</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="c1">// Registra la respuesta en la consola</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">users</span><span class="p">);</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="c1">// Muestra la respuesta en el elemento &lt;pre&gt;</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;responseOutput&#39;</span><span class="p">).</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">users</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;La solicitud falló. Código de estado devuelto: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="p">);</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="p">});</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="c1">// Manejar errores de red</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="nx">xhr</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;La solicitud falló.&#39;</span><span class="p">);</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="p">})</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="c1">// Envía la solicitud</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+</span></code></pre></div>
+<h2 id="5-fetch-api">5. <strong>Fetch API</strong></h2>
+<p>En el desarrollo web moderno, Fetch simplifica y mejora muchos aspectos de las conexiones AJAX. Es ahora compatible con la mayoría de los navegadores, lo que lo convierte en una opción preferida para manejar solicitudes asíncronas.</p>
+<h4 id="metodos-clave-para-manejar-la-asincronia-con-fetch">Métodos Clave para Manejar la Asincronía con Fetch:</h4>
+<ol>
+<li><strong>Promesas</strong></li>
+<li><strong>async / await</strong></li>
+</ol>
+<h5 id="-enlace-a-fetch-en-mdn"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">--&gt; Enlace a Fetch en MDN</a></h5>
+<h3 id="51-fetch-con-promesas">5.1 <strong>Fetch con Promesas</strong></h3>
+<p>La API Fetch utiliza <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesas</a> para manejar operaciones asíncronas. Aquí hay un ejemplo básico de cómo usar Fetch con Promesas:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// Esta es una solicitud GET con promesas</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://jsonplaceholder.typicode.com/posts/1&#39;</span><span class="p">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="c1">// analiza la respuesta JSON</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="p">})</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">      </span><span class="c1">// Haz algo con los datos</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;output&#39;</span><span class="p">).</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span><span class="p">})</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">));</span>
+</span></code></pre></div>
+<h3 id="52-fetch-con-asyncawait">5.2 <strong>Fetch con Async/Await</strong></h3>
+<p>La sintaxis <a href="#52-fetch-with-asyncawait">async/await</a> proporciona una forma más limpia y legible de manejar operaciones asíncronas. Es importante notar que <code>await</code> solo puede usarse dentro de una función <code>async</code>. Aquí te mostramos cómo usar Fetch con async/await:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// Esta es una solicitud GET con async/await</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">fetchData</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://jsonplaceholder.typicode.com/posts/1&#39;</span><span class="p">);</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="c1">// analiza la respuesta JSON</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="c1">// haz algo con los datos</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Claro, aquí tienes la traducción al español:</p>
+<h3 id="53-manejo-de-respuestas-http">5.3 <strong>Manejo de Respuestas HTTP</strong></h3>
+<p>El objeto <code>Response</code> en la API Fetch proporciona varios métodos para manejar y formatear las respuestas HTTP. Cada uno de estos métodos devuelve una promesa que se resuelve a diferentes tipos de datos.</p>
+<ul>
+<li><code>response.json()</code>: Devuelve una promesa resuelta a un objeto JSON.</li>
+<li><code>response.text()</code>: Devuelve una promesa resuelta a texto sin formato.</li>
+<li><code>response.formData()</code>: Devuelve una promesa resuelta a <code>formData</code>.</li>
+<li><code>response.blob()</code>: Devuelve una promesa resuelta a un <code>Blob</code> (un objeto similar a un archivo de datos binarios).</li>
+</ul>
+<h4 id="responsejson"><code>response.json()</code></h4>
+<p>Este es el que utilizaremos la mayoría de las veces, porque JSON es el formato más común que las API nos ofrecen para los datos.</p>
+<ul>
+<li>Devuelve una promesa resuelta a un objeto JSON.</li>
+<li>Útil para manejar respuestas que contienen datos JSON.</li>
+</ul>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.ejemplo.com/datos&#39;</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">));</span>
+</span></code></pre></div>
+<h4 id="informacion-sobre-el-estado-de-la-conexion">Información sobre el Estado de la Conexión</h4>
+<p>El objeto <code>Response</code> también proporciona información sobre el estado de la conexión:</p>
+<h4 id="responsestatus"><code>response.status</code></h4>
+<ul>
+<li>Devuelve el código de estado de la respuesta.</li>
+<li>Los valores típicos incluyen:<ul>
+<li><code>100-199</code>: Respuestas informativas.</li>
+<li><code>200-299</code>: Respuestas exitosas.<ul>
+<li><code>200</code>: OK.</li>
+</ul>
+</li>
+<li><code>300-399</code>: Mensajes de redirección.</li>
+<li><code>400-499</code>: Respuesta de error del cliente.<ul>
+<li><code>404</code>: No encontrado.</li>
+</ul>
+</li>
+<li><code>500-599</code>: Respuestas de error del servidor.<ul>
+<li><code>500</code>: Error interno del servidor.</li>
+</ul>
+</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">Todos los códigos de estado de respuesta HTTP</a>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.ejemplo.com/datos&#39;</span><span class="p">)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">);</span><span class="w"> </span><span class="c1">// por ejemplo, 200, 404, 500</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="p">})</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">));</span>
+</span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h4 id="responseok"><code>response.ok</code></h4>
+<ul>
+<li>Devuelve un booleano que indica si la respuesta fue exitosa (código de estado en el rango 200-299).</li>
+</ul>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.ejemplo.com/datos&#39;</span><span class="p">)</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;La respuesta de la red no fue correcta&#39;</span><span class="p">);</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="p">})</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">));</span>
+</span></code></pre></div>
+<h3 id="53-solicitudes-get-post-put-patch-delete">5.3 <strong>Solicitudes GET, POST, PUT, PATCH, DELETE</strong></h3>
+<p>Como puedes ver, si no especificas un método, el método por defecto es GET. En los ejemplos anteriores hemos creado solicitudes GET. No hemos definido <code>method</code>, <code>body</code> o <code>headers</code> en las opciones de fetch.</p>
+<p>Cuando se trata de solicitudes POST, PUT y PATCH, necesitamos incluir <code>method</code>, <code>body</code> y <code>headers</code> como opciones de fetch.</p>
+<h4 id="solicitudes-get">Solicitudes GET:</h4>
+<ul>
+<li>Para solicitudes GET, generalmente no necesitamos incluir un encabezado Content-Type. Las solicitudes GET no tienen cuerpo, por lo que no hay un tipo de contenido que especificar.</li>
+<li>Sin embargo, podemos enviar algunos datos como parámetros cuando el punto final de la API lo permite.</li>
+<li>Pero quizás necesitemos incluir información en el encabezado, como <code>'Authorization'</code> en los casos en que sea necesario.</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// Ejemplo de solicitud GET simple</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.ejemplo.com/get-images?query=gatos&amp;limit=20&#39;</span><span class="p">)</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">));</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="c1">// GET con autorización requerida</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.ejemplo.com/get-images?query=gatos&amp;limit=20&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">        </span><span class="s1">&#39;Authorization&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Bearer tu-api-key&#39;</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="p">})</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">    </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">));</span>
+</span></code></pre></div>
+<h4 id="solicitudes-post-put-patch">Solicitudes POST, PUT, PATCH:</h4>
+<p>Para estos tipos de solicitudes que crean o modifican un recurso, necesitamos enviar un <code>body</code>. Será necesario incluir:</p>
+<ul>
+<li>Encabezado <code>Content-Type</code> para especificar el tipo de contenido<ul>
+<li>Valores comunes para el encabezado Content-Type incluyen <code>application/json</code>, <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code>, etc.</li>
+</ul>
+</li>
+<li><code>method</code>:<ul>
+<li><code>'POST'</code></li>
+<li><code>'PUT'</code></li>
+<li><code>'PATCH'</code></li>
+</ul>
+</li>
+<li><code>body</code>: La mayoría de las veces, cuando <code>Content-Type</code> es JSON, tenemos que 'stringify' algún objeto de datos:<ul>
+<li><code>body: JSON.stringify(data)</code></li>
+</ul>
+</li>
+</ul>
+<p>Ejemplos:
+<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">BASE_URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://api.ejemplo.com&#39;</span><span class="p">;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">API_KEY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;tu-api-key&#39;</span><span class="p">;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1">// Función para manejar solicitudes POST</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">export</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">postData</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">,</span><span class="w"> </span><span class="nx">body</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">BASE_URL</span><span class="si">}${</span><span class="nx">endpoint</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">            </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">            </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">                </span><span class="s1">&#39;Authorization&#39;</span><span class="o">:</span><span class="w"> </span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">API_KEY</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">                </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">            </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`Error: </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">statusText</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error al enviar datos:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="nx">error</span><span class="p">;</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="p">}</span>
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="c1">// Función para manejar solicitudes PUT</span>
+</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="k">export</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">putData</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">,</span><span class="w"> </span><span class="nx">body</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">BASE_URL</span><span class="si">}${</span><span class="nx">endpoint</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="w">            </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;PUT&#39;</span><span class="p">,</span>
+</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="w">            </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="w">                </span><span class="s1">&#39;Authorization&#39;</span><span class="o">:</span><span class="w"> </span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">API_KEY</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+</span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a><span class="w">                </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
+</span><span id="__span-10-34"><a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-10-35"><a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="w">            </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span>
+</span><span id="__span-10-36"><a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-10-37"><a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-38"><a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`Error: </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">statusText</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span id="__span-10-39"><a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-10-40"><a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span id="__span-10-41"><a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
+</span><span id="__span-10-42"><a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-43"><a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error al actualizar datos:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+</span><span id="__span-10-44"><a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="nx">error</span><span class="p">;</span>
+</span><span id="__span-10-45"><a id="__codelineno-10-45" name="__codelineno-10-45" href="#__codelineno-10-45"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-46"><a id="__codelineno-10-46" name="__codelineno-10-46" href="#__codelineno-10-46"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<h4 id="solicitudes-delete">Solicitudes DELETE</h4>
+<ul>
+<li>El método DELETE se utiliza para eliminar un recurso identificado por una URL. Al igual que el método GET, el método DELETE generalmente no necesita un cuerpo y, por lo tanto, no suele requerir un encabezado <code>Content-Type</code>. Sin embargo, hay algunos escenarios en los que podrías necesitar incluir un cuerpo con una solicitud DELETE y también podría ser necesario incluir información en el encabezado como <code>'Authorization'</code>.</li>
+</ul>
+<p>Ejemplo:
+<div class="language-js highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">// Función de eliminación simple sin opciones</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">export</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">simpleDeleteData</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">BASE_URL</span><span class="si">}${</span><span class="nx">endpoint</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">          </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;DELETE&#39;</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`Error: </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">statusText</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error al eliminar datos:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="nx">error</span><span class="p">;</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="p">}</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="c1">// Función más avanzada, con algunas opciones</span>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="k">export</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">deleteData</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">,</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="w">            </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;DELETE&#39;</span><span class="p">,</span>
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="w">            </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="w">                </span><span class="s1">&#39;Authorization&#39;</span><span class="o">:</span><span class="w"> </span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">API_KEY</span><span class="si">}</span><span class="sb">`</span>
+</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-11-26"><a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="w">        </span><span class="p">};</span>
+</span><span id="__span-11-27"><a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="w">        </span><span class="c1">// Si se pide un cuerpo, lo stringify</span>
+</span><span id="__span-11-28"><a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">body</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-29"><a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="w">            </span><span class="nx">options</span><span class="p">.</span><span class="nx">headers</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span><span class="p">;</span>
+</span><span id="__span-11-30"><a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="w">            </span><span class="nx">options</span><span class="p">.</span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
+</span><span id="__span-11-31"><a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-11-32"><a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">BASE_URL</span><span class="si">}${</span><span class="nx">endpoint</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
+</span><span id="__span-11-33"><a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-34"><a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`Error: </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">statusText</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span id="__span-11-35"><a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-11-36"><a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span id="__span-11-37"><a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
+</span><span id="__span-11-38"><a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-39"><a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error al eliminar datos:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+</span><span id="__span-11-40"><a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="nx">error</span><span class="p">;</span>
+</span><span id="__span-11-41"><a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-11-42"><a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p></div>
+Claro, aquí tienes la traducción al español:</p>
+<h3 id="54-encapsular-solicitudes-fetch-en-modulos-reutilizables">5.4 <strong>Encapsular Solicitudes Fetch en Módulos Reutilizables</strong></h3>
+<p>Siempre es una buena práctica encapsular las solicitudes <code>fetch</code> a nuestra API en un módulo de JavaScript separado que podamos importar en el módulo principal. Para este propósito, debemos utilizar <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">Módulos de Ecma Script</a> (ESM).</p>
+<ol>
+<li><strong>Importar el Script Principal como un Módulo</strong></li>
+</ol>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;your-main.js&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;module&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<ol>
+<li><strong>Crear el Módulo <code>your-api.js</code></strong></li>
+</ol>
+<p>Crea un archivo de JavaScript separado llamado <code>your-api.js</code> que encapsule toda la lógica para acceder a la API. Este módulo contendrá constantes, como la URL base y las claves de la API, así como funciones para realizar solicitudes a la API.</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">// your-api.js</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">BASE_URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://api.example.com&#39;</span><span class="p">;</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">API_KEY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;your-api-key&#39;</span><span class="p">;</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="c1">// Función para manejar solicitudes GET</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="k">export</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">fetchData</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">BASE_URL</span><span class="si">}${</span><span class="nx">endpoint</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">            </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">                </span><span class="s1">&#39;Authorization&#39;</span><span class="o">:</span><span class="w"> </span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">API_KEY</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">                </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`Error: </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">statusText</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error al Obtener Datos:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="nx">error</span><span class="p">;</span>
+</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-13-24"><a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="p">}</span>
+</span><span id="__span-13-25"><a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>
+</span><span id="__span-13-26"><a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="c1">// Función para manejar solicitudes POST</span>
+</span><span id="__span-13-27"><a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="k">export</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">postData</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">,</span><span class="w"> </span><span class="nx">body</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-28"><a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-29"><a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">BASE_URL</span><span class="si">}${</span><span class="nx">endpoint</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-30"><a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a><span class="w">            </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+</span><span id="__span-13-31"><a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a><span class="w">            </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-32"><a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a><span class="w">                </span><span class="s1">&#39;Authorization&#39;</span><span class="o">:</span><span class="w"> </span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">API_KEY</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+</span><span id="__span-13-33"><a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a><span class="w">                </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
+</span><span id="__span-13-34"><a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-13-35"><a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a><span class="w">            </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span>
+</span><span id="__span-13-36"><a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-13-37"><a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-38"><a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`Error: </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">statusText</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span id="__span-13-39"><a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-13-40"><a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span id="__span-13-41"><a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
+</span><span id="__span-13-42"><a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-43"><a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error al Publicar Datos:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+</span><span id="__span-13-44"><a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="nx">error</span><span class="p">;</span>
+</span><span id="__span-13-45"><a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-13-46"><a id="__codelineno-13-46" name="__codelineno-13-46" href="#__codelineno-13-46"></a><span class="p">}</span>
+</span><span id="__span-13-47"><a id="__codelineno-13-47" name="__codelineno-13-47" href="#__codelineno-13-47"></a>
+</span><span id="__span-13-48"><a id="__codelineno-13-48" name="__codelineno-13-48" href="#__codelineno-13-48"></a><span class="c1">// Otras funciones relacionadas con la API se pueden agregar aquí</span>
+</span></code></pre></div>
+<ol>
+<li><strong>Importar y Usar el Módulo de API en el Script Principal</strong></li>
+</ol>
+<p>En tu archivo principal de JavaScript, <code>your-main.js</code>, importa las funciones del módulo <code>your-api.js</code> y úsalas para realizar solicitudes a la API.</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1">// your-main.js</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">fetchData</span><span class="p">,</span><span class="w"> </span><span class="nx">postData</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./your-api.js&#39;</span><span class="p">;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">        </span><span class="c1">// Ejemplo de realizar una solicitud GET</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetchData</span><span class="p">(</span><span class="s1">&#39;/some-endpoint&#39;</span><span class="p">);</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Datos Obtenidos:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">);</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">        </span><span class="c1">// Ejemplo de realizar una solicitud POST</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">postDataBody</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;value&#39;</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">postDataResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">postData</span><span class="p">(</span><span class="s1">&#39;/some-endpoint&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">postDataBody</span><span class="p">);</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Datos Publicados:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">postDataResponse</span><span class="p">);</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error en la Función Principal:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="p">}</span>
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="c1">// Ejecutar la función principal</span>
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="nx">main</span><span class="p">();</span>
+</span></code></pre></div>
+<div class="important-box">
+<h3><i class="fa-solid fa-circle-exclamation"></i>IMPORTANTE</h3>
+<p>A partir de ahora, es <strong>OBLIGATORIO</strong> encapsular las funciones fetch de cada API a la que accedemos en nuestro proyecto en un <strong>módulo separado</strong>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
