@@ -1,6 +1,6 @@
-## **UNIDAD 3 - Arrays, Objectos... y Clases**
+# **UNIDAD 3 - Arrays, Objectos... y Clases**
 
-### **1. Arrays**
+## **1. Arrays**
 
 Un Array es un conjunto ordenado de valores relacionados. Cada uno de estos valores se llama un elemento, y cada elemento tiene un índice que indica su posición numérica en el Array. Debes declarar un Array antes de poder usarlo.
 
@@ -383,11 +383,6 @@ Se utiliza para ordenar los elementos de un array en su lugar y devuelve el arra
   </script>
 </div>
 
-
-
-¡Claro! Aquí tienes la traducción al español del texto sobre objetos en JavaScript:
-
----
 
 ## **2. Objetos**
 
