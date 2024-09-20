@@ -1,0 +1,32 @@
+.exercise-box {
+  border: 2px solid #377edb;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.important-box {
+  border: 2px solid #dbc237;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.exercise-box h3 {
+  margin-top: 0;
+  color: #5820e4;
+  display: flex;
+  align-items: center;
+}
+
+.important-box h3 {
+  margin-top: 0;
+  color: #db4537;
+  display: flex;
+  align-items: center;
+}
+
+.exercise-box h3 .fas,
+.important-box h3 .fa-solid {
+  margin-right: 10px;
+}
