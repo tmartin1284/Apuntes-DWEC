@@ -846,12 +846,12 @@ unas dentro de otras. DOM permite manejar esas etiquetas como objetos de la pág
 <h3 id="21-la-interfaz-node"><strong>2.1 La Interfaz Node</strong></h3>
 <p>Un <strong>Node</strong> es una interfaz abstracta que representa un solo nodo en el árbol. Estos nodos pueden ser un Documento, un Elemento, un DocumentFragment y más.</p>
 <ul>
-<li><strong>Documento</strong>: El nodo raíz del documento HTML.</li>
+<li><strong>Document</strong>: El nodo raíz del documento HTML.</li>
 <li><strong>DocumentType</strong>: Un nodo que representa el DTD (Definición de Tipo de Documento) de la página.</li>
-<li><strong>Elemento</strong>: Un nodo que representa un elemento HTML.</li>
+<li><strong>Element</strong>: Un nodo que representa un elemento HTML.</li>
 <li><strong>Attr</strong>: Un nodo que representa un atributo de un elemento.</li>
-<li><strong>Texto</strong>: Un nodo que almacena el texto contenido dentro de un nodo Elemento.</li>
-<li><strong>Comentario</strong>: Un nodo que almacena un comentario en el documento HTML.</li>
+<li><strong>Text</strong>: Un nodo que almacena el texto contenido dentro de un nodo Elemento.</li>
+<li><strong>Comment</strong>: Un nodo que almacena un comentario en el documento HTML.</li>
 </ul>
 <h4 id="interfaz-node">Interfaz Node</h4>
 <ul>
@@ -930,7 +930,7 @@ unas dentro de otras. DOM permite manejar esas etiquetas como objetos de la pág
 </tr>
 </tbody>
 </table>
-<h4 id="propiedades-y-metodos-del-nodo">Propiedades y Métodos del Nodo</h4>
+<h4 id="propiedades-y-metodos-de-la-interfaz-node">Propiedades y Métodos de la interfaz Node</h4>
 <table>
 <thead>
 <tr>
@@ -985,19 +985,24 @@ unas dentro de otras. DOM permite manejar esas etiquetas como objetos de la pág
 </tr>
 <tr>
 <td><code>removeChild(node)</code></td>
-<td>Elimina un nodo hijo del</td>
+<td>Elimina un nodo hijo del nodo padre especificado.</td>
+</tr>
+<tr>
+<td><code>replaceChild(newNode, oldNode)</code></td>
+<td>Reemplaza un nodo hijo por otro en el nodo padre especificado.</td>
+</tr>
+<tr>
+<td><code>cloneNode(deep)</code></td>
+<td>Clona el nodo actual. Si <code>deep</code> es <code>true</code>, también clona todos los nodos descendientes.</td>
 </tr>
 </tbody>
 </table>
-<p>nodo padre especificado.                                              |
-| <code>replaceChild(newNode, oldNode)</code>   | Reemplaza un nodo hijo por otro en el nodo padre especificado.                                |
-| <code>cloneNode(deep)</code>                  | Clona el nodo actual. Si <code>deep</code> es <code>true</code>, también clona todos los nodos descendientes.      |</p>
 <p>Estos métodos y propiedades proporcionan una variedad de maneras para manipular los nodos dentro del árbol DOM, permitiendo una amplia gama de operaciones en la estructura del documento.</p>
 <p>Para saber más <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node">--&gt; Interfaz Node @ mdn web docs_</a></p>
 <h2 id="3-la-clase-element"><strong>3. La Clase Element</strong></h2>
 <p>La clase <code>Element</code> representa un elemento en la jerarquía del DOM, heredando de la interfaz <code>Node</code>.</p>
 <p>En el contexto del DOM (Modelo de Objetos del Documento), un elemento se refiere a un elemento HTML individual dentro de un documento HTML. Los elementos HTML son los bloques de construcción de las páginas web e incluyen etiquetas como <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, entre otras.</p>
-<h4 id="algunas-propiedades-y-metodos-del-elemento">Algunas Propiedades y Métodos del Elemento</h4>
+<h4 id="algunas-propiedades-y-metodos-de-la-clase-element">Algunas Propiedades y Métodos de la clase Element</h4>
 <table>
 <thead>
 <tr>
