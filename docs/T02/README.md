@@ -456,14 +456,14 @@ Ciudad Springfield
 
 #### Verdadero vs Falso
 
-| Verdadero    | Falso        |
-| ------------ | ------------ |
-| 1            | 0, -0        |
-| `"Cualquiera"` | `""`       |
-| 3.14         | NaN          |
-| `100 > 5`    | null         |
-| `1 < 100`    | undefined    |
-| `'1' == 1`   | `'1' === 1` |
+| Verdadero      | Falso       |
+| -------------- | ----------- |
+| 1              | 0, -0       |
+| `"Cualquiera"` | `""`        |
+| 3.14           | NaN         |
+| `100 > 5`      | null        |
+| `1 < 100`      | undefined   |
+| `'1' == 1`     | `'1' === 1` |
 
 ```js
 // Ejemplo 1: Usando Boolean() para obtener el valor booleano
@@ -595,14 +595,17 @@ Ejemplos de uso:
 let fruit = 'apple';
 
 switch (fruit) {
-    case 'apple':
+    case 'manzana':
         console.log("Esto es una manzana.");
         break;
-    case 'banana':
+    case 'platano':
         console.log("Esto es un plátano.");
         break;
-    case 'orange':
+    case 'naranja':
         console.log("Esto es una naranja.");
+        break;
+    case 'zanahoria':
+        console.log("Cuidao que se lo come Manolo.");
         break;
     default:
         console.log("Fruta desconocida.");
@@ -672,14 +675,21 @@ for (let fruit of fruits) {
 Sin embargo, en JavaScript, **la forma más común de iterar sobre arrays de objetos** es utilizando el método `forEach`. Este método ejecuta una función proporcionada una vez para cada elemento del array, lo que lo hace más conveniente y legible para estas tareas.
 
 ```js
-const users = [
-    { name: 'John', age: 30 },
+const users = [  //sabemos lo que es name y age
+    { name: 'John', age: 15 },
     { name: 'Jane', age: 25 },
-    { name: 'Jim', age: 35 }
+    { name: 'Jim', age: 35 },
+    { name: 'Manolo', age: 2 },
 ];
 
 users.forEach(user => {
-    console.log(`${user.name} tiene ${user.age} años.`);
+    console.log(`${user.name} tiene ${user.age} años.`);  //fijaos que estamos usando literales
+    if (user.age >= 18) {  //le estamos pasando una función, y dentro podemos poner el codigo que nos dé la gana
+        console.log(`El usuario ${user.name} es mayor de edad, y puede salir al recreo`); 
+    } else {
+        console.log(`El usuario ${user.name} es menor de edad, y necesita que le firmen su padres`); 
+
+    }
 });
 ```
 
@@ -689,7 +699,7 @@ El bucle `while` repite un bloque de código mientras una condición especificad
 
 ```js
 let i = 0;
-while (i > 0.5) {
+while (i > 0.5) {  //cuidado con la expresión que ponemos aqui, no vayamos a crear un bucle infinito
     console.log(i);
     i = Math.rand();
 }
@@ -709,7 +719,7 @@ Los objetos nativos de JavaScript se pueden categorizar en dos tipos según su c
 
 #### Objetos Independientes del Navegador (También disponibles en Node.js)
 
-Estos objetos son parte de la especificación del lenguaje JavaScript y se pueden usar tanto en el navegador como en entornos del lado del servidor (como Node.js). Generalmente comienzan con una letra mayúscula:
+Estos objetos son parte de la especificación del lenguaje JavaScript y se pueden usar tanto en el navegador como en entornos del lado del servidor (como Node.js). Generalmente comienzan con una letra mayúscula (y son los marcados en rojo en la figura anterior):
 
 - **Math**: Proporciona constantes y funciones matemáticas.
 - **Number**: Representa valores numéricos y proporciona métodos para operaciones numéricas.
@@ -1044,76 +1054,76 @@ console.log(mensaje); // Salida: ¡Hola, Alice!
 Las funciones globales en JavaScript son funciones integradas que son parte del objeto global y pueden ser llamadas desde cualquier parte de tu código. Están disponibles tanto en el entorno del navegador como en Node.js. Aquí hay algunas de las funciones globales más comúnmente utilizadas:
 
 1. **`parseInt(string, radix)`**
-   - Analiza una cadena y devuelve un entero en la base especificada.
-   - Ejemplo:
+     - Analiza una cadena y devuelve un entero en la base especificada.
+     - Ejemplo:
      ```javascript
      let num = parseInt("10", 10); // 10
      ```
 
 2. **`parseFloat(string)`**
-   - Analiza una cadena y devuelve un número de punto flotante.
-   - Ejemplo:
+     - Analiza una cadena y devuelve un número de punto flotante.
+     - Ejemplo:
      ```javascript
      let num = parseFloat("10.5"); // 10.5
      ```
 
 3. **`isNaN(value)`**
-   - Determina si un valor es NaN (No es un Número).
-   - Ejemplo:
+     - Determina si un valor es NaN (No es un Número).
+     - Ejemplo:
      ```javascript
      let resultado = isNaN("hola"); // true
      ```
 
 4. **`isFinite(value)`**
-   - Determina si un valor es un número finito.
-   - Ejemplo:
+     - Determina si un valor es un número finito.
+     - Ejemplo:
      ```javascript
      let resultado = isFinite(10); // true
      let resultado2 = isFinite(Infinity); // false
      ```
 
 5. **`eval(string)`**
-   - Evalúa código JavaScript representado como una cadena.
-   - Ejemplo:
+     - Evalúa código JavaScript representado como una cadena.
+     - Ejemplo:
      ```javascript
      let resultado = eval("2 + 2"); // 4
      ```
 
 6. **`encodeURI(uri)`**
-   - Codifica un Identificador de Recurso Uniforme (URI) escapando ciertos caracteres.
-   - Ejemplo:
+     - Codifica un Identificador de Recurso Uniforme (URI) escapando ciertos caracteres.
+     - Ejemplo:
      ```javascript
      let uri = "https://www.example.com?name=John Doe";
      let uriCodificado = encodeURI(uri); // "https://www.example.com?name=John%20Doe"
      ```
 
 7. **`encodeURIComponent(uriComponent)`**
-   - Codifica un componente URI escapando ciertos caracteres.
-   - Ejemplo:
+     - Codifica un componente URI escapando ciertos caracteres.
+     - Ejemplo:
      ```javascript
      let componenteURI = "John Doe & Co";
      let componenteURICodificado = encodeURIComponent(componenteURI); // "John%20Doe%20%26%20Co"
      ```
 
 8. **`decodeURI(encodedURI)`**
-   - Decodifica un Identificador de Recurso Uniforme (URI) creado con `encodeURI`.
-   - Ejemplo:
+     - Decodifica un Identificador de Recurso Uniforme (URI) creado con `encodeURI`.
+     - Ejemplo:
      ```javascript
      let uriCodificado = "https://www.example.com?name=John%20Doe";
      let uriDecodificado = decodeURI(uriCodificado); // "https://www.example.com?name=John Doe"
      ```
 
 9. **`decodeURIComponent(encodedURIComponent)`**
-   - Decodifica un componente URI creado con `encodeURIComponent`.
-   - Ejemplo:
+     - Decodifica un componente URI creado con `encodeURIComponent`.
+     - Ejemplo:
      ```javascript
      let componenteURICodificado = "John%20Doe%20%26%20Co";
      let componenteURIDecodificado = decodeURIComponent(componenteURICodificado); // "John Doe & Co"
      ```
 
 10. **`setTimeout(function, delay)`**
-    - Llama a una función o evalúa una expresión después de un número específico de milisegundos.
-    - Ejemplo:
+     - Llama a una función o evalúa una expresión después de un número específico de milisegundos.
+     - Ejemplo:
       ```javascript
       setTimeout(function() {
           console.log("Hola después de 2 segundos");
@@ -1121,8 +1131,8 @@ Las funciones globales en JavaScript son funciones integradas que son parte del 
       ```
 
 11. **`setInterval(function, delay)`**
-    - Llama repetidamente a una función o evalúa una expresión a intervalos especificados (en milisegundos).
-    - Ejemplo:
+     - Llama repetidamente a una función o evalúa una expresión a intervalos especificados (en milisegundos).
+     - Ejemplo:
       ```javascript
       setInterval(function() {
           console.log("Hola cada 2 segundos");
@@ -1130,8 +1140,8 @@ Las funciones globales en JavaScript son funciones integradas que son parte del 
       ```
 
 12. **`clearTimeout(timeoutID)`**
-    - Limpia un temporizador establecido con `setTimeout`.
-    - Ejemplo:
+     - Limpia un temporizador establecido con `setTimeout`.
+     - Ejemplo:
       ```javascript
       let timeoutID = setTimeout(function() {
           console.log("Esto no se ejecutará");
@@ -1140,8 +1150,8 @@ Las funciones globales en JavaScript son funciones integradas que son parte del 
       ```
 
 13. **`clearInterval(intervalID)`**
-    - Limpia un temporizador establecido con `setInterval`.
-    - Ejemplo:
+     - Limpia un temporizador establecido con `setInterval`.
+     - Ejemplo:
       ```javascript
       let intervalID = setInterval(function() {
           console.log("Esto no se ejecutará repetidamente");
