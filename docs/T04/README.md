@@ -101,12 +101,12 @@ Para organizar la estructura del árbol, hay una serie de reglas:
 
 Un **Node** es una interfaz abstracta que representa un solo nodo en el árbol. Estos nodos pueden ser un Documento, un Elemento, un DocumentFragment y más.
 
-- **Documento**: El nodo raíz del documento HTML.
+- **Document**: El nodo raíz del documento HTML.
 - **DocumentType**: Un nodo que representa el DTD (Definición de Tipo de Documento) de la página.
-- **Elemento**: Un nodo que representa un elemento HTML.
+- **Element**: Un nodo que representa un elemento HTML.
 - **Attr**: Un nodo que representa un atributo de un elemento.
-- **Texto**: Un nodo que almacena el texto contenido dentro de un nodo Elemento.
-- **Comentario**: Un nodo que almacena un comentario en el documento HTML.
+- **Text**: Un nodo que almacena el texto contenido dentro de un nodo Elemento.
+- **Comment**: Un nodo que almacena un comentario en el documento HTML.
 
 #### Interfaz Node
 
@@ -129,7 +129,7 @@ Un **Node** es una interfaz abstracta que representa un solo nodo en el árbol. 
 | `Node.DOCUMENT_FRAGMENT_NODE`      | Representa un nodo de fragmento de documento. | 11    |
 | `Node.NOTATION_NODE`               | Representa un nodo de notación.           | 12        |
 
-#### Propiedades y Métodos del Nodo
+#### Propiedades y Métodos de la interfaz Node
 
 | **Propiedad/Método**               | **Descripción**                                                                               |
 | ---------------------------------- | --------------------------------------------------------------------------------------------- |
@@ -144,9 +144,7 @@ Un **Node** es una interfaz abstracta que representa un solo nodo en el árbol. 
 | `nextSibling`                      | Devuelve el nodo hermano siguiente del nodo especificado.                                     |
 | `textContent`                      | Establece o devuelve el contenido de texto del nodo y sus descendientes.                      |
 | `appendChild(node)`                | Agrega un nuevo nodo hijo al final de la lista de hijos de un nodo padre especificado.          |
-| `removeChild(node)`                | Elimina un nodo hijo del
-
- nodo padre especificado.                                              |
+| `removeChild(node)`                | Elimina un nodo hijo del nodo padre especificado.                                              |
 | `replaceChild(newNode, oldNode)`   | Reemplaza un nodo hijo por otro en el nodo padre especificado.                                |
 | `cloneNode(deep)`                  | Clona el nodo actual. Si `deep` es `true`, también clona todos los nodos descendientes.      |
 
@@ -160,7 +158,7 @@ La clase `Element` representa un elemento en la jerarquía del DOM, heredando de
 
 En el contexto del DOM (Modelo de Objetos del Documento), un elemento se refiere a un elemento HTML individual dentro de un documento HTML. Los elementos HTML son los bloques de construcción de las páginas web e incluyen etiquetas como `<div>`, `<p>`, `<a>`, `<img>`, entre otras.
 
-#### Algunas Propiedades y Métodos del Elemento
+#### Algunas Propiedades y Métodos de la clase Element
 
 | **Propiedad/Método**                    | **Descripción**                                                                                        |
 | -------------------------------------- | ---------------------------------------------------------------------------------------------------- |

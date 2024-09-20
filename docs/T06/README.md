@@ -238,9 +238,6 @@ Las APIs REST públicas proporcionan a los desarrolladores acceso a una variedad
   </ol>
 </div>
 
-Claro, aquí tienes la traducción al español del texto:
-
----
 
 ### 2.3 **Servidor JSON**
 
@@ -503,7 +500,7 @@ async function fetchData() {
 ```
 
 
-Claro, aquí tienes la traducción al español:
+
 
 ### 5.3 **Manejo de Respuestas HTTP**
 
@@ -717,8 +714,7 @@ export async function deleteData(endpoint, body = null) {
 }
 ```
 
-</div>
-Claro, aquí tienes la traducción al español:
+
 
 ### 5.4 **Encapsular Solicitudes Fetch en Módulos Reutilizables**
 

@@ -6,6 +6,8 @@ El material intelectual pertenece al profesor José Enrique Atienzar. Los materi
 
 El temario se estructura de la siguiente forma:
 
+**Primer trimestre**
+
 1. **[Introducción a JavaScript y las herramientas de FrontEnd](T01/README.md)**
 2. **[Fundamentos de JavaScript ](T02/README.md)**
 3. **[Arrays, Objectos...,  y Clases](T03/README.md)**
@@ -14,6 +16,10 @@ El temario se estructura de la siguiente forma:
 6. **[AJAX](T06/README.md)**
 7. **[Almacenamiento en el lado del cliente](T07/README.md)**
 
+
+**Segundo trimestre**
+
+[Cargando contenidos]
 
 
 
