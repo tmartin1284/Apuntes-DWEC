@@ -261,7 +261,7 @@ Devuelve una copia superficial de una porción de un array en un nuevo array obj
 const someFruits = allFruits.slice(1, 3);
 console.log(someFruits); // Salida: ["Banana", "Cherry"]
 ```
-El último índice no está incluido. En el ejemplo tomamos del índice 1 al índice 3 (no incluido).
+El último índice no está incluido. En el ejemplo tomamos del índice 1 al índice 3 (no incluido). Osea, el 1 y el 2.
 
 #### 7. `splice`
 
@@ -283,9 +283,7 @@ console.log(index); // Salida: 1
 
 #### 9. `includes`
 
-Determina si un array incluye un cierto elemento, devol
-
-viendo verdadero o falso.
+Determina si un array incluye un cierto elemento, devolviendo verdadero o falso.
 
 ```javascript
 const hasBanana = allFruits.includes("Banana");
@@ -655,4 +653,3 @@ console.log("\nJSON convertido de vuelta a objeto:");
 console.log(parsedObject);
 ```
 
-Esta guía completa proporciona una visión detallada de cómo trabajar con objetos, arreglos de objetos y JSON en JavaScript, equipándote con el conocimiento necesario para manejar diversas estructuras de datos y formatos de intercambio en tus proyectos.
