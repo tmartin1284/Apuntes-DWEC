@@ -6,7 +6,7 @@
 }
 
 .important-box {
-  border: 2px solid #dbc237;
+  border: 2px solid #f10713;
   padding: 10px;
   margin: 15px 0;
   border-radius: 5px;
@@ -14,14 +14,14 @@
 
 .exercise-box h3 {
   margin-top: 0;
-  color: #5820e4;
+  color: #1b26ed;
   display: flex;
   align-items: center;
 }
 
 .important-box h3 {
   margin-top: 0;
-  color: #db4537;
+  color: #d70e11;
   display: flex;
   align-items: center;
 }
