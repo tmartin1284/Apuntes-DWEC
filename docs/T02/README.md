@@ -1022,9 +1022,7 @@ Una función en programación es un bloque reutilizable de código que realiza u
 
 #### Características Clave de las Funciones:
 
-1. **Modularidad**: Las funciones permiten dividir el código en piezas más pequeñas y
-
- manejables, cada una realizando una tarea específica.
+1. **Modularidad**: Las funciones permiten dividir el código en piezas más pequeñas y manejables, cada una realizando una tarea específica.
 2. **Reusabilidad**: Una vez definida, una función puede ser llamada múltiples veces dentro de un programa, reduciendo la redundancia.
 3. **Abstracción**: Las funciones permiten encapsular operaciones complejas, ocultando los detalles y exponiendo solo las interfaces necesarias.
 4. **Mantenibilidad**: Las funciones facilitan la actualización y gestión del código. Los cambios realizados dentro de una función no afectan otras partes del código que dependen de ella.
@@ -1161,7 +1159,7 @@ Las funciones globales en JavaScript son funciones integradas que son parte del 
 
 
 
-      ### **7.2 Declaración de Funciones del Usuario**
+### **7.2 Declaración de Funciones del Usuario**
 
 En JavaScript, puedes crear funciones personalizadas para encapsular y reutilizar código. Existen varias formas de declarar funciones:
 

@@ -13,7 +13,7 @@ nav:
 
 
 theme:
-  logo: img/js.webp
+  logo: img/js.jpg
   name: material
   features:
     - content.code.copy
