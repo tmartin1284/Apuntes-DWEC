@@ -547,7 +547,7 @@ myCar.drive(30);
 console.log(`Total mileage: ${myCar.mileage} miles.`);
 ```
 
-## **4. Arreglos de Objetos**
+## **4. Arrays de Objetos (aqui no arreglamos nada)**
 
 En JavaScript, los arreglos pueden contener una colección de objetos. Cada objeto dentro del arreglo puede tener sus propias propiedades y métodos, lo que permite una organización y manipulación estructurada de los datos.
 
