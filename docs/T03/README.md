@@ -549,29 +549,29 @@ console.log(`Total mileage: ${myCar.mileage} miles.`);
 
 ## **4. Arrays de Objetos (aqui no arreglamos nada)**
 
-En JavaScript, los arreglos pueden contener una colección de objetos. Cada objeto dentro del arreglo puede tener sus propias propiedades y métodos, lo que permite una organización y manipulación estructurada de los datos.
+En JavaScript, los arrays pueden contener una colección de objetos. Cada objeto dentro del array puede tener sus propias propiedades y métodos, lo que permite una organización y manipulación estructurada de los datos.
 
 ```javascript
-// Definir un arreglo de objetos (arreglo de coches)
+// Definir un array de objetos (array de coches)
 let cars = [
   { brand: "Toyota", model: "Corolla", year: 2020 },
   { brand: "Honda", model: "Civic", year: 2019 },
   { brand: "Ford", model: "Mustang", year: 2021 }
 ];
 
-// Acceder a los objetos en el arreglo
+// Acceder a los objetos en el array
 console.log(cars[0]); // Salida: { brand: "Toyota", model: "Corolla", year: 2020 }
 
-// Añadir un nuevo objeto al arreglo
+// Añadir un nuevo objeto al array
 cars.push({ brand: "Tesla", model: "Model S", year: 2022 });
 
-// Modificar un objeto en el arreglo
+// Modificar un objeto en el array
 cars[1].year = 2020;
 
-// Eliminar un objeto del arreglo
+// Eliminar un objeto del array
 cars.splice(2, 1); // Elimina el objeto en el índice 2
 
-// Iterar sobre el arreglo de objetos
+// Iterar sobre el array de objetos
 cars.forEach(function(car) {
   console.log(`${car.brand} ${car.model} (${car.year})`);
 });
@@ -586,7 +586,7 @@ cars.forEach(function(car) {
 - **Datos en pares nombre/valor**: Los datos JSON se representan como pares clave-valor.
 - **Datos separados por comas**: Los datos JSON se separan por comas.
 - **Llaves que contienen objetos**: Los datos JSON están encerrados en llaves `{}` para denotar objetos.
-- **Corchetes que contienen arreglos**: Los arreglos JSON están encerrados en corchetes `[]`.
+- **Corchetes que contienen arrays**: Los arrays JSON están encerrados en corchetes `[]`.
 
 ```json
 {
@@ -609,7 +609,7 @@ cars.forEach(function(car) {
 
 #### Puntos Clave
 
-  - **Tipos de Datos**: JSON admite cadenas, números, objetos, arreglos, booleanos y valores nulos.
+  - **Tipos de Datos**: JSON admite cadenas, números, objetos, arrays, booleanos y valores nulos.
   - **Formato Universal**: JSON es independiente del lenguaje de programación, lo que lo hace adecuado para el intercambio de datos.
   - **Parseo y Serialización**: JSON puede ser convertido en objetos JavaScript usando `JSON.parse()` y convertido de nuevo a JSON usando `JSON.stringify()`.
 
@@ -622,7 +622,7 @@ cars.forEach(function(car) {
 #### Ejemplo de Parseo y Serialización de JSON
 
 ```javascript
-// Objeto con múltiples atributos, incluyendo un arreglo de objetos
+// Objeto con múltiples atributos, incluyendo un array de objetos
 let user = {
   name: "John Doe",
   age: 35,

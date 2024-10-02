@@ -316,13 +316,15 @@ element.classList.toggle("visible", false); // Elimina la clase "visible"
 - **`replace( oldClass, newClass )`**: Reemplaza una clase existente por una nueva.
 
     ```js
-    // Selecciona un elemento con id "myElement"
+    // Select an element with id "myElement"
     const element = document.getElementById("myElement");
 
-    // Re
-
-emplaza una clase
-    element.classList.replace("oldClass", "newClass");
+    // Check if a class exists
+    if (element.classList.contains("active")) {
+      console.log("Element is active");
+    } else {
+      console.log("Element is not active");
+    }
     ```
 
 ## **4. Creando Nuevo Contenido**
