@@ -47,11 +47,11 @@ Ejemplo de solicitud GET y POST:
 ```http
   GET https://example.com/comments/1 HTTP/1.1
 
-  ###
+  <!-- ---------- -->
 
   GET https://example.com/topics/1 HTTP/1.1
 
-  ###
+  <!-- ---------- -->
 
   POST https://example.com/comments HTTP/1.1
   content-type: application/json
@@ -77,7 +77,7 @@ Por qué es importante la asincronía
 
 #### Patrones Asincrónicos Comunes
 
-1. **Callbacks:** Funciones pasadas como argumentos a otras funciones para ser ejecutadas más tarde. Pueden llevar a "callback hell" al tratar con múltiples callbacks anidados.
+1. **Callbacks:** Funciones pasadas como argumentos a otras funciones para ser ejecutadas más tarde. Pueden llevar a un "callback hell" al tratar con múltiples callbacks anidados.
 
 2. **[Promesas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)**:
    
@@ -105,7 +105,7 @@ Por qué es importante la asincronía
 
 ## 2. **REST API**
 
-Una REST API (Interfaz de Programación de Aplicaciones de Transferencia de Estado Representacional) es un conjunto de reglas y convenciones para construir e interactuar con servicios web. Las REST APIs permiten que diferentes sistemas **se comuniquen a través de HTTP** utilizando los métodos estándar que hemos visto en el punto anterior, facilitando la integración e interacción con aplicaciones y servicios web.
+Una REST API (Representational State Transfer Application Programming Interface) es una  interfaz de programación de aplicaciones (API o API web) que se ajusta a los límites de la arquitectura REST (Transferencia de Estado Representacional). Es un conjunto de reglas y convenciones para construir e interactuar con servicios web. Las REST APIs permiten que diferentes sistemas **se comuniquen a través de HTTP** utilizando los métodos estándar que hemos visto en el punto anterior, facilitando la integración e interacción con aplicaciones y servicios web.
 
 #### Componentes Clave
 - **Punto final:** Una **URL** específica donde se puede acceder a la API.

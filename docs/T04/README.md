@@ -68,11 +68,11 @@ Un árbol DOM es una estructura de árbol cuyos nodos representan el contenido d
 ```html
 <html lang="es">
   <head>
-    <title>Mi Título</title>
+    <title>My Tittle</title>
   </head>
   <body>
-    <a href="http://alink.com">Mi Enlace</a>
-    <h1>Mi Encabezado</h1>
+    <a href="http://alink.com">My Link</a>
+    <h1>My Header</h1>
   </body>
 </html>
 ```
