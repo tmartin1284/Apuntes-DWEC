@@ -194,8 +194,11 @@ Podemos navegar por el árbol del DOM desde un nodo dado a elementos relativos c
 | `parentElement()`          | Devuelve el elemento padre del elemento especificado en el árbol del DOM.         |
 | `firstElementChild()`      | Devuelve el primer elemento hijo del elemento especificado.                        |
 | `lastElementChild()`       | Devuelve el último elemento hijo del elemento especificado.                        |
-| `children`                 | Devuelve una HTMLCollection en vivo de los elementos hijos del elemento especificado. |
-| `childElementCount`        | Devuelve el número de elementos hijos del elemento especificado.                  |
+| `childNodes()`                 | Devuelve una HTMLCollection en vivo de los elementos hijos del elemento especificado. |
+| `childElementCount()`        | Devuelve el número de elementos hijos del elemento especificado.                  |
+
+Mucho ojo con las versiones antiguas de estos métodos, el `firstChild()`, `lastChild()`, o `children()`.  Están y funcionan como les da la gana. lo mejor es que utilicéis las funciones de la tabla anterior...
+Y acordaros que  `childNodes()`  devuelve un HTMLCollection, por lo tanto, tendremos que acceder a sus elementos (o iterar en ellos), para tener objetos de tipo element. No podemos tratar a la HTMLCollection como un Element, porque no lo es, y peta.
 
 ### **3.2 Acceso Directo a Elementos**
 
@@ -203,11 +206,14 @@ Podemos acceder de manera más directa a los nodos de los elementos del DOM con 
 
 #### Métodos para Acceso Directo a Elementos
 
-- **`getElementById(id)`**: Recupera un elemento por su atributo ID.
+- **`getElementById(id)`**: Recupera un elemento por su atributo ID. Si utilizamos este, debemos asegurarnos que el `id` buscado es realmente único en toda la página. Si no puede devovler cualquiera de los que haya, y ojiito si son de diferente etiqueta..... Si estamos "pintando" datos de un JSON, lo lógico es que cambiemos los `ìd` de todos los elementos en los que metemos los datos, para que no se repitan.
 - **`getElementsByClassName(className)`**: Recupera una colección de elementos que tienen un nombre de clase especificado.
 - **`getElementsByTagName(tagName)`**: Recupera una colección de elementos con el nombre de etiqueta especificado.
 - **`querySelector(selector)`**: Devuelve el primer elemento que coincide con un selector CSS especificado.
 - **`querySelectorAll(selector)`**: Devuelve una NodeList que contiene todos los elementos que coinciden con un selector CSS especificado.
+
+Cuidadinnn! las funciones `getElements..." devuelven un HTMLColection (aunque solo tenga un sólo elemento). Por tanto, tenemos que manejarlas o iterar en ellas.
+Si utilizamos las funciones de JQuery, debemos importar la libreria.
 
 #### Ejemplo en JavaScript
 
