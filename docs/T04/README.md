@@ -197,7 +197,7 @@ Podemos navegar por el árbol del DOM desde un nodo dado a elementos relativos c
 | `childNodes()`                 | Devuelve una HTMLCollection en vivo de los elementos hijos del elemento especificado. |
 | `childElementCount()`        | Devuelve el número de elementos hijos del elemento especificado.                  |
 
-Mucho ojo con las versiones antiguas de estos métodos, el `firstChild()`, `lastChild()`, o `children()`.  Están y funcionan como les da la gana. lo mejor es que utilicéis las funciones de la tabla anterior...
+Mucho ojo con las versiones antiguas de estos métodos, el `firstChild()`, `lastChild()`, o `children()`.  Están y funcionan como les da la gana. Lo mejor es que utilicéis las funciones de la tabla anterior...
 Y acordaros que  `childNodes()`  devuelve un HTMLCollection, por lo tanto, tendremos que acceder a sus elementos (o iterar en ellos), para tener objetos de tipo element. No podemos tratar a la HTMLCollection como un Element, porque no lo es, y peta.
 
 ### **3.2 Acceso Directo a Elementos**
@@ -212,7 +212,7 @@ Podemos acceder de manera más directa a los nodos de los elementos del DOM con 
 - **`querySelector(selector)`**: Devuelve el primer elemento que coincide con un selector CSS especificado.
 - **`querySelectorAll(selector)`**: Devuelve una NodeList que contiene todos los elementos que coinciden con un selector CSS especificado.
 
-Cuidadinnn! las funciones `getElements..." devuelven un HTMLColection (aunque solo tenga un sólo elemento). Por tanto, tenemos que manejarlas o iterar en ellas.
+Cuidadinnn! las funciones `getElements...` devuelven un HTMLColection (aunque tenga un sólo elemento). Por tanto, tenemos que manejarlas o iterar en ellas.
 Si utilizamos las funciones de JQuery, debemos importar la libreria.
 
 #### Ejemplo en JavaScript
