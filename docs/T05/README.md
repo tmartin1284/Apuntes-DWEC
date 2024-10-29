@@ -364,7 +364,7 @@ Para organizar los formularios y aplicar estilos de manera efectiva, es una buen
 </div>
 ```
 
-```js
+```css
 .form-group {
   margin-bottom: 1em;
 }

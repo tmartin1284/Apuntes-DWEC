@@ -1126,7 +1126,7 @@ unas dentro de otras. DOM permite manejar esas etiquetas como objetos de la pág
 </tr>
 </tbody>
 </table>
-<p>Mucho ojo con las versiones antiguas de estos métodos, el <code>firstChild()</code>, <code>lastChild()</code>, o <code>children()</code>.  Están y funcionan como les da la gana. lo mejor es que utilicéis las funciones de la tabla anterior...
+<p>Mucho ojo con las versiones antiguas de estos métodos, el <code>firstChild()</code>, <code>lastChild()</code>, o <code>children()</code>.  Están y funcionan como les da la gana. Lo mejor es que utilicéis las funciones de la tabla anterior...
 Y acordaros que  <code>childNodes()</code>  devuelve un HTMLCollection, por lo tanto, tendremos que acceder a sus elementos (o iterar en ellos), para tener objetos de tipo element. No podemos tratar a la HTMLCollection como un Element, porque no lo es, y peta.</p>
 <h3 id="32-acceso-directo-a-elementos"><strong>3.2 Acceso Directo a Elementos</strong></h3>
 <p>Podemos acceder de manera más directa a los nodos de los elementos del DOM con estos métodos:</p>
@@ -1138,7 +1138,7 @@ Y acordaros que  <code>childNodes()</code>  devuelve un HTMLCollection, por lo t
 <li><strong><code>querySelector(selector)</code></strong>: Devuelve el primer elemento que coincide con un selector CSS especificado.</li>
 <li><strong><code>querySelectorAll(selector)</code></strong>: Devuelve una NodeList que contiene todos los elementos que coinciden con un selector CSS especificado.</li>
 </ul>
-<p>Cuidadinnn! las funciones `getElements..." devuelven un HTMLColection (aunque solo tenga un sólo elemento). Por tanto, tenemos que manejarlas o iterar en ellas.
+<p>Cuidadinnn! las funciones <code>getElements...</code> devuelven un HTMLColection (aunque tenga un sólo elemento). Por tanto, tenemos que manejarlas o iterar en ellas.
 Si utilizamos las funciones de JQuery, debemos importar la libreria.</p>
 <h4 id="ejemplo-en-javascript">Ejemplo en JavaScript</h4>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Ejemplo de acceso directo y manipulación</span>
