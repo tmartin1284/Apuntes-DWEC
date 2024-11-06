@@ -164,9 +164,7 @@ Las APIs REST públicas proporcionan a los desarrolladores acceso a una variedad
 
 5. **OpenWeatherMap API**
       - **Descripción:** Proporciona datos meteorológicos, pronósticos e información histórica.
-     - **Documentación:** [OpenWeatherMap
-
- API Docs](https://openweathermap.org/api)
+     - **Documentación:** [OpenWeatherMap API Docs](https://openweathermap.org/api)
 
 6. **Mapbox API**
      - **Descripción:** Ofrece mapas personalizables y servicios de geolocalización.
