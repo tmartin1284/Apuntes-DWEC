@@ -389,9 +389,7 @@ REST Client es otra extensión de VSCode que te permite enviar solicitudes HTTP 
 3. Escribe tu solicitud, por ejemplo:
 
 ```http
-GET https://example.com/comments/
-
-1 HTTP/1.1
+GET https://example.com/comments/1 HTTP/1.1
 
 ###
 
