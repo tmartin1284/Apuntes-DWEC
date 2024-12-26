@@ -1,8 +1,16 @@
-# **UNIDAD 7 - Almacenamiento del Lado del Cliente**
+# **UNIDAD 9 - React**
 
 ## 1. **Introducción**
 
-El almacenamiento del lado del cliente se refiere a los diversos métodos que permiten a las aplicaciones web almacenar datos en el lado del cliente, dentro del navegador del usuario. Esto permite a las aplicaciones web guardar y recuperar datos sin requerir comunicación constante con el servidor. El almacenamiento del lado del cliente mejora la experiencia del usuario al proporcionar acceso más rápido a los datos y reducir la carga del servidor.
+
+
+
+
+
+
+
+
+
 
 ### 1.1 **Usos**
 
