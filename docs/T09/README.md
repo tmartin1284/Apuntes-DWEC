@@ -32,14 +32,15 @@ Todo esto, hace que React sea una de las librerias/habilidades más demandadas p
 
 ## 2. **Código React y Código JS**
 
-Vamos a ver una [página simple en Javascript (con vainilla)](https://codesandbox.io/p/devbox/hg2rkw), y después veremos una [página similar usando React](https://codesandbox.io/p/devbox/88hszh). Sus estructuras etc, y las analizamos.
+Vamos a ver una [página simple en Javascript (con vainilla)](https://codesandbox.io/p/devbox/hg2rkw), y después veremos una [página similar usando React](https://codesandbox.io/p/devbox/88hszh). 
+Ambas están en mi repositorio.
 
-![Web sencillita](/docs/T09/img/websimple.JPG)
+![Web sencillita](img/websimple.JPG)
 
 En una web JS, tenemos la página HTML, y el archivo JS, que se encarga de obtener los botones, configurar los listeners, y definir la funcionalidad cada vez que se pulsa un botón (cambiando el fondo de todos los botones, generando el texto, etc...). 
 
 
-![React sencillita](/docs/T09/img/reactsimple.JPG)
+![React sencillita](img/reactsimple.JPG)
 
 
 Si echamos un vistazo, en la carpeta /Public tenemos un archivo html, que está casi vacio. Tiene un `<div>` que  es la carcasa de la web (SPA).
@@ -50,6 +51,35 @@ Si aparecen unos elementos que nos hablan del estado (o de los estados) de una p
 Importante: En React se programa o configura el estado en el que tiene que estar todos los componentes de la página, no los pasos para llegar a ese estado. Por tanto la web va a estar siempre en un estado válido.
 
 
-![Declarativo vs Imperativo](/docs/T09/img/decvsimp.png)
+![Declarativo vs Imperativo](img/decvsimp.png)
+
+
+<div class="exercise-box">
+    <h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico: React o solo JS</h3>
+    <p>1. Editemos ambas versiones de la web para añadir un cuarto botón, con el texto que querais. Deberíamos cronometrarnos etc.
+    Los arrais ya están preparados para ese botón</p>
+</div>
+
+## 3. **Nuevo Proyecto**
+
+Para crear un nuevo proyecto utilizamos el gestor de paquetes **npm** que ya comentamos en el primer tema, aparte de todas las librerias de React que tendrían que estar en nuestro VSCode. Abrimos el terminal y procedemos con el siguiente comando `npm init react-app ruta y nombre de la aplicación`. 
+De esto, comentar que `npm` es el gestor de paquetes de Node.js (recordemos que esto se basa en Node, aunque explicitamente no vemos dependencias). Se usa para instalar y administrar dependencias. `init`es el comando de npm para iniciar un nuevo proyecto. `react-app` es el paquete preconfigurado que se usa para crear una aplicacion de React con la estructura de directorios, y archivos recomendada. `ruta y nombre de la aplicación` pues la ruta y el nombre del proyecto (Yo uso "Tema9/9.2/reactapp".) Es muy probable que dé error por problemas con dependencias, para solucionarlo, añadimos `--legacy-peer-dep`.
+
+Y taachaaaan: Ya tenemos el proyecto creado. Ahora hay que meterle cosillas. Bueno, ya le meteremos cosillas luego. Ahora lo importante es arrancar la app que acabamos de crear.
+
+En primer lugar, nos movemos al directorio de la aplicación `cd ruta completa del directorio`. Después arrancamos React en ese directorio `npm start`. El resultado nos debe mostrar las direcciones tanto local como de red desde las que son visible nuestra web.
+
+[esto furula](img/direcciones.JPG)
+
+Y taaachaaaaaannn: Ya funciona.
+Ah bueno, no. Puede dar fallos. si los da, ejecutamos `npm install ajv@latest ajv-keywords@latest ´--legacy-peer-dep` y volvemos a lanzar el último comando.
+
+
+
+... y ahora si :) se debe abrir el navegador con nuestra página (en blanco).
+
+[ay mi react que bonito es](img/quebonito.JPG)
+
+
 
 
