@@ -30,13 +30,26 @@ Todo esto, hace que React sea una de las librerias/habilidades más demandadas p
   - React solo visualiza la interfaz, pero para crear un proyecto completo, se necesita una **pila de tecnología**.
 
 
+## 2. **Código React y Código JS**
+
+Vamos a ver una [página simple en Javascript (con vainilla)](https://codesandbox.io/p/devbox/hg2rkw), y después veremos una [página similar usando React](https://codesandbox.io/p/devbox/88hszh). Sus estructuras etc, y las analizamos.
+
+![Web sencillita](/docs/T09/img/websimple.JPG)
+
+En una web JS, tenemos la página HTML, y el archivo JS, que se encarga de obtener los botones, configurar los listeners, y definir la funcionalidad cada vez que se pulsa un botón (cambiando el fondo de todos los botones, generando el texto, etc...). 
 
 
+![React sencillita](/docs/T09/img/reactsimple.JPG)
 
 
+Si echamos un vistazo, en la carpeta /Public tenemos un archivo html, que está casi vacio. Tiene un `<div>` que  es la carcasa de la web (SPA).
+El archivo JS, de hecho también está bastante vacío, y su función es solo para vincular el html con React, esto es, usar React para **renderizar** la pagina web. De hecho la función `render` es un componente de React que está devolviendo etiquetas html **marcadas** (distinguirás estas etiquetas porque aparecen en mayúscula). 
+El archivo `App.js` tiene toda la "chicha". Tiene la función `app` que devuelve un código html muy parecido al html del ejemplo en la versión sin React. Por otra parte, no tenemos las instrucciones JavaScrpt pero si que tenemos algunas sentencias JS mezcladas en el codigo html. 
+Si aparecen unos elementos que nos hablan del estado (o de los estados) de una página web. Estos estados los controla React, y se aplican a todos los elementos que integran la web.
+
+Importante: En React se programa o configura el estado en el que tiene que estar todos los componentes de la página, no los pasos para llegar a ese estado. Por tanto la web va a estar siempre en un estado válido.
 
 
-
-
+![Declarativo vs Imperativo](/docs/T09/img/decvsimp.png)
 
 
