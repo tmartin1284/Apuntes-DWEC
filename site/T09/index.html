@@ -486,6 +486,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2-codigo-react-y-codigo-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Código React y Código JS
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -544,6 +553,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2-codigo-react-y-codigo-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Código React y Código JS
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -565,10 +583,12 @@
 React se basa en el uso de <strong>componentes</strong>, una fusión  <code>html</code> con <code>javascript</code>, escritos en <strong>JSX (JavaScript XML)</strong>. A través de JSX, se crea una copia de DOM (Modelo de Objetos del Documento) llamada <strong>DOM virtual</strong>. Si un componente cambia su estado, React compara el <strong>DOM virtual</strong> con el DOM real (de la página web) y aplica este cambio solamente al elemento que ha sido actualizado, sin necesidad de volver a renderizar toda la página.</p>
 <h3 id="por-que-usar-react">¿Por qué usar <strong>React</strong>?</h3>
 <p>De hecho, JavaScript ya se encarga "por detrás", de cagar los datos que la página web necesita en función de la interacción del usuario (ir a una nueva pestaña, por ejemplo), diseñar la nueva página web, y presentarla al usuario de forma transparente a este. Y esto ha convertido a JS en un lenguaje demandado para la programación web.</p>
-<p>Sin embargo, usar <strong>sólo Javascript</strong> en esencia no es una buena opción para proyectos realistas (recordemos que estamos evolucionando hacia SPA - Single Page Application, es decir, webs dónde sólo hay una página -vacia- que se va cargando con JS):
-  - Crear <strong>páginas complejas</strong> (realistas), se puede convertir en algo <strong>tortuoso</strong>. Sobretodo en un proyecto real dónde los requisitos van cambiando.
-  - JS (de verdad) es propenso a errores. No que la página no haga lo que debe, si no <strong>que haga lo que no debe</strong>.
-  - Los proyectos de JS (de verdad) son <strong>dificiles de entender</strong> (benditos comentarios), y por tanto <strong>mantener o editar</strong>.</p>
+<p>Sin embargo, usar <strong>sólo Javascript</strong> en esencia no es una buena opción para proyectos realistas (recordemos que estamos evolucionando hacia SPA - Single Page Application, es decir, webs dónde sólo hay una página -vacia- que se va cargando con JS):</p>
+<ul>
+<li>Crear <strong>páginas complejas</strong> (realistas), se puede convertir en algo <strong>tortuoso</strong>. Sobretodo en un proyecto real dónde los requisitos van cambiando.</li>
+<li>JS (de verdad) es propenso a errores. No que la página no haga lo que debe, si no <strong>que haga lo que no debe</strong>.</li>
+<li>Los proyectos de JS (de verdad) son <strong>dificiles de entender</strong> (benditos comentarios), y por tanto <strong>mantener o editar</strong>.</li>
+</ul>
 <p>React ofrece una manera más lógica e intuitiva de estructurar una página web con las que ofrece soluciones a esas desventajas de JS:</p>
 <ul>
 <li>Los componentes de React <strong>agilizan la creación de una interfaz sensible a cualquier cambio</strong> en un sitio web o una aplicación de cualquier complejidad.</li>
@@ -576,40 +596,24 @@ React se basa en el uso de <strong>componentes</strong>, una fusión  <code>html
 <li>El código de React tiene una <strong>lógica clara</strong>, es fácil de leer, entender y depurar, lo que ayuda a reducir errores.</li>
 <li>Las interfaces interactivas creadas con React garantizan una <strong>mejor experiencia de usuario</strong>.</li>
 <li>React es fácil de aprender, tiene una <strong>documentación accesible</strong> y muchos recursos gratuitos online.</li>
-<li>
+</ul>
 <p>Todo esto, hace que React sea una de las librerias/habilidades más demandadas para conseguir el trabajo de desarrollo Front End. Aunque también tiene algunos puntos en contra:</p>
-</li>
-<li>
-<p>Necesidad de un conocimiento sólido de <strong>HTML</strong> y <strong>JavaScript</strong> para aprender la sintaxis de JXS.</p>
-</li>
+<ul>
+<li>Necesidad de un conocimiento sólido de <strong>HTML</strong> y <strong>JavaScript</strong> para aprender la sintaxis de JXS.</li>
 <li>La biblioteca puede <strong>aumentar el tamaño de tu aplicación</strong>.</li>
 <li>React solo visualiza la interfaz, pero para crear un proyecto completo, se necesita una <strong>pila de tecnología</strong>.</li>
 </ul>
-<p>Características de React</p>
-<p>La arquitectura de las aplicaciones desarrolladas con React está compuesta de múltiples componentes; cada uno tiene su propia lógica de comportamiento, vista y estado.</p>
-<p>Existen componentes funcionales:</p>
-<p>123 
-function Welcome(props) {
-return <h1>Hola, {props.name}</h1>;
-}
-y de clase:</p>
-<p>12345 <br />
-class Welcome extends React.Component {
-render() {
-return <h1>Hola, {this.props.name}</h1>;
-}
-}
-Los componentes tienen propiedades (props), que son sus atributos de configuración inmutables. Los estados (state) representan un componente en un momento concreto.</p>
-<p>Existen dos tipos de componentes: stateful (con estado) y stateless (sin estado). Los componentes con estado dependen de los datos cambiantes. A lo largo de su existencia, pasan por una serie de estados, que se le llama “ciclo de vida”. Mientras que los componentes sin estado son más simples, pues únicamente representan la información que les llega como parámetros.</p>
-<p>La programación declarativa con React describe cada estado de los elementos de una aplicación. React se encargará de actualizar y renderizar los componentes cuando cambien los datos.</p>
-<p>Además, React tiene un flujo de datos unidireccional. Es decir, los datos se transmiten en una dirección desde los componentes superiores hasta los inferiores. Los componentes inferiores procesan los datos, cambian su estado y envían los eventos hacia los componentes superiores que los actualizan.</p>
-<p>Para ampliar las posibilidades de React, existen varias extensiones adicionales como React Native, Flux, React Style Helper y Redux.</p>
-<p>Vlash</p>
-<p>React se aplica en el desarrollo de redes sociales, por ejemplo, Twitter, Facebook e Instagram. Permite crear feeds de actualización automática, sistemas de autenticación de usuarios, implementar comentarios y reacciones.
-La biblioteca ayuda a desarrollar sistemas de gestión de ventas para tiendas en línea. Además, se aplica para elaborar aplicaciones móviles de comercio electrónico, como UberEats y Walmart.
-Las plataformas de entretenimiento, como Netflix, YouTube y Spotify, usan React en sus servicios web y apps, lo que les permite desarrollar interfaces interactivas con comentarios, reacciones, suscripciones y calificaciones.
-React se usa para crear interfaces de apps de mensajería, como WhatsApp, Viber, Skype y Facebook Messenger.
-Además, la biblioteca se aplica para desarrollar aplicaciones de productividad y de gestión de tiempo, como Todoist, Notion y Things.</p>
+<h2 id="2-codigo-react-y-codigo-js">2. <strong>Código React y Código JS</strong></h2>
+<p>Vamos a ver una <a href="https://codesandbox.io/p/devbox/hg2rkw">página simple en Javascript (con vainilla)</a>, y después veremos una <a href="https://codesandbox.io/p/devbox/88hszh">página similar usando React</a>. Sus estructuras etc, y las analizamos.</p>
+<p><img alt="Web sencillita" src="/docs/T09/img/websimple.JPG" /></p>
+<p>En una web JS, tenemos la página HTML, y el archivo JS, que se encarga de obtener los botones, configurar los listeners, y definir la funcionalidad cada vez que se pulsa un botón (cambiando el fondo de todos los botones, generando el texto, etc...). </p>
+<p><img alt="React sencillita" src="/docs/T09/img/reactsimple.JPG" /></p>
+<p>Si echamos un vistazo, en la carpeta /Public tenemos un archivo html, que está casi vacio. Tiene un <code>&lt;div&gt;</code> que  es la carcasa de la web (SPA).
+El archivo JS, de hecho también está bastante vacío, y su función es solo para vincular el html con React, esto es, usar React para <strong>renderizar</strong> la pagina web. De hecho la función <code>render</code> es un componente de React que está devolviendo etiquetas html <strong>marcadas</strong> (distinguirás estas etiquetas porque aparecen en mayúscula). 
+El archivo <code>App.js</code> tiene toda la "chicha". Tiene la función <code>app</code> que devuelve un código html muy parecido al html del ejemplo en la versión sin React. Por otra parte, no tenemos las instrucciones JavaScrpt pero si que tenemos algunas sentencias JS mezcladas en el codigo html. 
+Si aparecen unos elementos que nos hablan del estado (o de los estados) de una página web. Estos estados los controla React, y se aplican a todos los elementos que integran la web.</p>
+<p>Importante: En React se programa o configura el estado en el que tiene que estar todos los componentes de la página, no los pasos para llegar a ese estado. Por tanto la web va a estar siempre en un estado válido.</p>
+<p><img alt="Declarativo vs Imperativo" src="/docs/T09/img/decvsimp.png" /></p>
 
 
 
