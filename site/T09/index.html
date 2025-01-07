@@ -495,6 +495,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-nuevo-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Nuevo Proyecto
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -562,6 +571,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-nuevo-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Nuevo Proyecto
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -604,16 +622,33 @@ React se basa en el uso de <strong>componentes</strong>, una fusión  <code>html
 <li>React solo visualiza la interfaz, pero para crear un proyecto completo, se necesita una <strong>pila de tecnología</strong>.</li>
 </ul>
 <h2 id="2-codigo-react-y-codigo-js">2. <strong>Código React y Código JS</strong></h2>
-<p>Vamos a ver una <a href="https://codesandbox.io/p/devbox/hg2rkw">página simple en Javascript (con vainilla)</a>, y después veremos una <a href="https://codesandbox.io/p/devbox/88hszh">página similar usando React</a>. Sus estructuras etc, y las analizamos.</p>
-<p><img alt="Web sencillita" src="/docs/T09/img/websimple.JPG" /></p>
+<p>Vamos a ver una <a href="https://codesandbox.io/p/devbox/hg2rkw">página simple en Javascript (con vainilla)</a>, y después veremos una <a href="https://codesandbox.io/p/devbox/88hszh">página similar usando React</a>. 
+Ambas están en mi repositorio.</p>
+<p><img alt="Web sencillita" src="img/websimple.JPG" /></p>
 <p>En una web JS, tenemos la página HTML, y el archivo JS, que se encarga de obtener los botones, configurar los listeners, y definir la funcionalidad cada vez que se pulsa un botón (cambiando el fondo de todos los botones, generando el texto, etc...). </p>
-<p><img alt="React sencillita" src="/docs/T09/img/reactsimple.JPG" /></p>
+<p><img alt="React sencillita" src="img/reactsimple.JPG" /></p>
 <p>Si echamos un vistazo, en la carpeta /Public tenemos un archivo html, que está casi vacio. Tiene un <code>&lt;div&gt;</code> que  es la carcasa de la web (SPA).
 El archivo JS, de hecho también está bastante vacío, y su función es solo para vincular el html con React, esto es, usar React para <strong>renderizar</strong> la pagina web. De hecho la función <code>render</code> es un componente de React que está devolviendo etiquetas html <strong>marcadas</strong> (distinguirás estas etiquetas porque aparecen en mayúscula). 
 El archivo <code>App.js</code> tiene toda la "chicha". Tiene la función <code>app</code> que devuelve un código html muy parecido al html del ejemplo en la versión sin React. Por otra parte, no tenemos las instrucciones JavaScrpt pero si que tenemos algunas sentencias JS mezcladas en el codigo html. 
 Si aparecen unos elementos que nos hablan del estado (o de los estados) de una página web. Estos estados los controla React, y se aplican a todos los elementos que integran la web.</p>
 <p>Importante: En React se programa o configura el estado en el que tiene que estar todos los componentes de la página, no los pasos para llegar a ese estado. Por tanto la web va a estar siempre en un estado válido.</p>
-<p><img alt="Declarativo vs Imperativo" src="/docs/T09/img/decvsimp.png" /></p>
+<p><img alt="Declarativo vs Imperativo" src="img/decvsimp.png" /></p>
+<div class="exercise-box">
+    <h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico: React o solo JS</h3>
+    <p>1. Editemos ambas versiones de la web para añadir un cuarto botón, con el texto que querais. Deberíamos cronometrarnos etc.
+    Los arrais ya están preparados para ese botón</p>
+</div>
+
+<h2 id="3-nuevo-proyecto">3. <strong>Nuevo Proyecto</strong></h2>
+<p>Para crear un nuevo proyecto utilizamos el gestor de paquetes <strong>npm</strong> que ya comentamos en el primer tema, aparte de todas las librerias de React que tendrían que estar en nuestro VSCode. Abrimos el terminal y procedemos con el siguiente comando <code>npm init react-app ruta y nombre de la aplicación</code>. 
+De esto, comentar que <code>npm</code> es el gestor de paquetes de Node.js (recordemos que esto se basa en Node, aunque explicitamente no vemos dependencias). Se usa para instalar y administrar dependencias. <code>init</code>es el comando de npm para iniciar un nuevo proyecto. <code>react-app</code> es el paquete preconfigurado que se usa para crear una aplicacion de React con la estructura de directorios, y archivos recomendada. <code>ruta y nombre de la aplicación</code> pues la ruta y el nombre del proyecto (Yo uso "Tema9/9.2/reactapp".) Es muy probable que dé error por problemas con dependencias, para solucionarlo, añadimos <code>--legacy-peer-dep</code>.</p>
+<p>Y taachaaaan: Ya tenemos el proyecto creado. Ahora hay que meterle cosillas. Bueno, ya le meteremos cosillas luego. Ahora lo importante es arrancar la app que acabamos de crear.</p>
+<p>En primer lugar, nos movemos al directorio de la aplicación <code>cd ruta completa del directorio</code>. Después arrancamos React en ese directorio <code>npm start</code>. El resultado nos debe mostrar las direcciones tanto local como de red desde las que son visible nuestra web.</p>
+<p><a href="img/direcciones.JPG">esto furula</a></p>
+<p>Y taaachaaaaaannn: Ya funciona.
+Ah bueno, no. Puede dar fallos. si los da, ejecutamos <code>npm install ajv@latest ajv-keywords@latest ´--legacy-peer-dep</code> y volvemos a lanzar el último comando.</p>
+<p>... y ahora si :) se debe abrir el navegador con nuestra página (en blanco).</p>
+<p><a href="img/quebonito.JPG">ay mi react que bonito es</a></p>
 
 
 
