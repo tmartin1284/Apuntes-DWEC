@@ -704,16 +704,25 @@ React se basa en el uso de <strong>componentes</strong>, una fusión  <code>html
 Ambas están en mi repositorio.</p>
 <h3 id="21-js-y-ya"><strong>2.1 JS y ya</strong></h3>
 <p><img alt="Web sencillita" src="img/websimple.jpg" /></p>
-<p>En una web basada en JS tenemos tres elementos principales: el archivo <code>html</code>, que es la página en si; el archivo <code>css</code> ~~que sirve para cosas raras que vereis con Jose Enrique~~ para dar formato a la web; y el archivo <code>.js</code> que se encarga de obtener los botones, configurar los listeners, gestionar el DOM y definir la funcionalidad cada vez que se pulsa un botón (cambiando el fondo de todos los botones, generando el texto, etc...). </p>
+<p>En una web basada en JS tenemos tres elementos principales: </p>
+<ul>
+<li>el archivo <code>html</code>, que es la página en si; </li>
+<li>el archivo <code>css</code> ~que sirve para cosas raras que vereis con Jose Enrique~ para dar formato a la web; </li>
+<li>y el archivo <code>.js</code> que se encarga de obtener los botones, configurar los listeners, gestionar el DOM y definir la funcionalidad cada vez que se pulsa un botón (cambiando el fondo de todos los botones, generando el texto, etc...). </li>
+</ul>
 <p>Todo esto es lo que hemos visto hasta ahora en el módulo.</p>
 <h3 id="22-react"><strong>2.2 React</strong></h3>
-<p>Una aplicación de <strong>React</strong> es un poco más compleja. Empezando porque se basa en una estructura de archivos y directorios muy bien definida.</p>
+<p>Una aplicación de <strong>React</strong> es un poco más compleja. Empezando porque se basa en una estructura de archivos y directorios muy bien definida. Más adelante la veremos en detalle.</p>
 <p><img alt="React sencillita" src="img/reactsimple.jpg" /></p>
-<p>Si echamos un vistazo, en la carpeta <code>/Public</code> tenemos un archivo <code>.html</code>, que está casi vacio: tiene un <code>&lt;div&gt;</code> que  es la carcasa de la web (SPA).</p>
-<p>El resto de elementos están en la carpeta <code>/src</code>, aunque hay más carpetas propias de la estructura de un proyecto <strong>React</strong>.</p>
-<p>El archivo<code>.js</code>, de hecho también está bastante vacío, y su función es solo para vincular el <code>html</code> con <strong>React</strong>, esto es, <em>a través del achivo <code>.js</code> se va a usar </em><em>React</em><em> para </em><em>renderizar</em><em> la pagina web</em>. De hecho la función <code>render</code> es un componente de React que está devolviendo etiquetas html <strong>marcadas</strong> (distinguirás estas etiquetas porque aparecen en mayúscula, aparte que el editor las marca con otro color). </p>
+<p>Si echamos un vistazo, en la carpeta <code>/Public</code> tenemos </p>
+<ul>
+<li>Un archivo <code>.html</code>, que está casi vacio: tiene un <code>&lt;div&gt;</code> que  es la carcasa de la web (SPA).</li>
+<li>El resto de elementos están en la carpeta <code>/src</code>, aunque hay más carpetas propias de la estructura de un proyecto <strong>React</strong>.</li>
+<li>El archivo<code>.js</code>, de hecho también está bastante vacío, y su función es solo para vincular el <code>html</code> con <strong>React</strong>, esto es, <em>a través del achivo <code>.js</code> se va a usar </em><em>React</em><em> para </em><em>renderizar</em><em> la pagina web</em>. De hecho la función <code>render</code> es un componente de React que está devolviendo etiquetas html <strong>marcadas</strong> (distinguirás estas etiquetas porque aparecen en mayúscula, aparte que el editor las marca con otro color). </li>
+</ul>
 <p>El archivo <code>App.js</code> tiene toda la "chicha": Tiene la función <code>app</code> que devuelve un código html muy parecido al html del ejemplo anterior <strong><em>¡¡¡¡Se está mezclando html con js!!!! ¡¡ay dios mio!!</em></strong>. Por otra parte, no tenemos las instrucciones JavaScript pero si que tenemos algunas sentencias JS mezcladas en el codigo html <strong><em>to junto! que estres!!</em></strong>. </p>
 <p>Si aparecen unos elementos que nos hablan del <strong><em>estado (o de los estados)</em></strong> de una página web. Estos estados los controla React, y se aplican a todos los elementos que integran la web.</p>
+<p>Para arrancar el proyecto, nos situamos con el terminal en la carpeta <em>react</em> y ejecuta el comando <code>npm start</code>.</p>
 <p>Importante: En React se programa o configura el estado en el que tiene que estar todos los componentes de la página, no los pasos para llegar a ese estado. Por tanto la web va a estar siempre en un estado válido. Es lo que se denomina <strong>Programación Declarativa</strong> que basicamente consiste en decir como tiene que estar todo configurado, pero sin decir los pasos para configurarlo, que sería <strong>Programación imperativa</strong>.</p>
 <p><img alt="Declarativo vs Imperativo" src="img/decvsimp.png" /></p>
 <div class="exercise-box">
