@@ -20,7 +20,8 @@ El temario se estructura de la siguiente forma:
 **Segundo trimestre**
 
 8. **[NodeJS](T08/README.md)**  
-9. **[React](T09/README.md)**   
+9. **[Java Moderno](T09/README.md)**  
+10. **[React](T10/README.md)**  
 
 
 

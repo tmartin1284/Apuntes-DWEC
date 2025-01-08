@@ -10,9 +10,10 @@ nav:
   - U5 - Eventos y formularios: T05/README.md
   - U6 - AJAX: T06/README.md
   - U7 - Almacenamiento del lado del cliente: T07/README.md
-  - U8 - NodeJS: T08/README.md
-  - U9 - React: T09/README.md
 
+  - U8 - NodeJS: T08/README.md
+  - U9 - Newest Java : T09/README.md
+  - U10 - React : T10/README.md
 
 theme:
   logo: img/js.jpg
