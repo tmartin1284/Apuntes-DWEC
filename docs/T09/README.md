@@ -1,4 +1,4 @@
-# **UNIDAD 10 - React**
+# **UNIDAD 09 - React**
 
 ## **1. Introducción**
 
@@ -237,8 +237,7 @@ Si queremos usar React con Vite, simplemente debemos seguir los siguientes pasos
      - Nos vamos a la carpeta del directorio creado `  cd Tema9\ProyectoViteReact`
      - Instalamos los paquetes de Vite `  npm install`. Tarda un poco, tened paciencia!.
      - Ejecutamos la aplicación  ` npm run dev`
-   - Y obtenemos este resultado ![inicio vite](img/vite.jpg)
-   - Aqui podemos ver la dirección en localhost dónde se está mostrando la página, y cómo podemos acceder a los archivos de código ![vitereact](img/vitereact.jpg).
+   - Y obtenemos este resultado: ![inicio vite](img/vite.jpg) Aqui podemos ver la dirección en localhost dónde se está mostrando la página, y cómo podemos acceder a los archivos de código. Por otra parte, se habrá creado el proyecto React con la estructura de directorios y ficheros vista ![proyecto](img/proyectoreact.JPG). Y por supuesto, en el navegador, podemos ver nuestra primera página ![vitereact](img/vitereact.jpg).
   
 
   
