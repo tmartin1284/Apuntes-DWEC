@@ -175,7 +175,7 @@ Si aparecen unos elementos que nos hablan del ***estado (o de los estados)*** de
 
  Para arrancar el proyecto, nos situamos con el terminal en la carpeta *react* y ejecuta el comando `npm start`.
 
-### Programaciòn declarativa vs imperativa
+## **Programaciòn declarativa vs imperativa**
 
 En React se programa o configura el estado en el que tiene que estar todos los componentes de la página, no los pasos para llegar a ese estado. Por tanto la web va a estar siempre en un estado válido. Es lo que se denomina **Programación Declarativa** que basicamente consiste en decir como tiene que estar todo configurado, pero sin decir los pasos para configurarlo, que sería **Programación imperativa**.
 
