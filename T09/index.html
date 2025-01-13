@@ -874,10 +874,10 @@ Ambas están en mi repositorio.</p>
 </div>
 
 <h2 id="3-nuevo-proyecto"><strong>3. Nuevo Proyecto</strong></h2>
-<p>Hay dos versiones a la hora de crear un proyecto: </p>
+<p>Hay varias versiones a la hora de crear un proyecto en React: </p>
 <ul>
-<li>Por una parte podemos utilizar el gestor de paquetes <strong>npm</strong> que ya comentamos en el primer tema.</li>
-<li>O el gestor <strong>vite</strong></li>
+<li>"A pelo". Usando el gestor de paquetes <strong>npm</strong> que ya comentamos en el primer tema. </li>
+<li>O con el bundler de <strong>vite</strong></li>
 </ul>
 <h3 id="npm"><strong>NPM</strong></h3>
 <p>De esto, comentar que <code>npm</code> es el gestor de paquetes de Node.js (recordemos que esto se basa en Node). Se usa para instalar y administrar dependencias.</p>
@@ -891,6 +891,8 @@ Ambas están en mi repositorio.</p>
  Puede dar fallos. si los da, ejecutamos <code>npm install ajv@latest ajv-keywords@latest ´--legacy-peer-dep</code> y volvemos a lanzar <code>npm start</code>.</p>
 <p>... y ahora si :) se debe abrir el navegador con nuestra página (en blanco).</p>
 <p><img alt="ay mi react que bonito es" src="img/quebonito.jpg" /></p>
+<p>Si queremos hacerlo paso a paso, es decir, crear nuestro proyecto e ir incorporandole las dependencias (las librerias de React o ReactDOM son dos dependencias), podemos seguir los pasos que se explican en estas diapositivas <a href="slides/2._Setup.pdf">setup React, parte empaquetado</a>. 
+De esta forma somos más conscientes de las relaciones entre los diferentes módulos, pero si nos interesa que funcione, mejor ver el siguiente apartado. </p>
 <h3 id="react-y-vite"><strong>React y Vite</strong></h3>
 <p>Si queremos usar React con Vite, simplemente debemos seguir los siguientes pasos:</p>
 <ul>
@@ -911,12 +913,31 @@ Ambas están en mi repositorio.</p>
 </li>
 <li>Y obtenemos este resultado: <img alt="inicio vite" src="img/vite.jpg" /> Aqui podemos ver la dirección en localhost dónde se está mostrando la página, y cómo podemos acceder a los archivos de código. Por otra parte, se habrá creado el proyecto React con la estructura de directorios y ficheros vista <img alt="proyecto" src="img/proyectoreact.JPG" />. Y por supuesto, en el navegador, podemos ver nuestra primera página <img alt="vitereact" src="img/vitereact.jpg" />.</li>
 </ul>
+<p>Podemos instalar algunas cosas más, como Prettier <code>npm install --dev prettier</code> antes de ejecutar el proyecto.</p>
 <h2 id="4-que-es-react-y-porque-react"><strong>4. ¿Qué es React? ¿Y Porqué React</strong></h2>
 <p>Para explicar esta parte, voy a usar unas transparencias que me he encontrado.
 <a href="slides/1._Fundamentals.pdf">Fundamentos de React</a></p>
-<p><a href="slides/2._Setup.pdf">setup React</a></p>
+<p><a href="slides/2._Setup.pdf">setup React, de code styles en adelante</a>.</p>
 <p><a href="slides/3._Render.pdf">Render react</a></p>
 <p><a href="slides/4._Props__state.pdf">props state</a></p>
+<p>instalar airbnb
+<code>npm install eslint-config-airbnb eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-import --save-dev --legacy-peer-deps</code>
+en el archivo eslint.config.js sustituir la parte de export por </p>
+<p>`export default [
+  {files: ["*<em>/</em>.{js,mjs,cjs,ts,jsx,tsx}"]},
+  {languageOptions: { globals: globals.browser }},
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  pluginReact.configs.flat.recommended,</p>
+<p>{
+    files: ["<strong>/*.js", "</strong>/*.jsx"], // Aplica las reglas a archivos .js y .jsx
+    extends: ["airbnb-base"], // Si usas React, cambia a "airbnb"
+    rules: {
+      // Aquí puedes sobrescribir reglas específicas
+      "no-console": "off", // Ejemplo: Permitir console.log
+    },
+  },</p>
+<p>`</p>
 
 
 
