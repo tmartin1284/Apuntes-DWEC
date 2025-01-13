@@ -923,22 +923,23 @@ De esta forma somos más conscientes de las relaciones entre los diferentes mód
 <p>instalar airbnb
 <code>npm install eslint-config-airbnb eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-import --save-dev --legacy-peer-deps</code>
 en el archivo eslint.config.js sustituir la parte de export por </p>
-<p>```json</p>
-<p>export default [
-  {files: ["*<em>/</em>.{js,mjs,cjs,ts,jsx,tsx}"]},
-  {languageOptions: { globals: globals.browser }},
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,</p>
-<p>{
-    files: ["<strong>/*.js", "</strong>/*.jsx"], // Aplica las reglas a archivos .js y .jsx
-    extends: ["airbnb-base"], // Si usas React, cambia a "airbnb"
-    rules: {
-      // Aquí puedes sobrescribir reglas específicas
-      "no-console": "off", // Ejemplo: Permitir console.log
-    },
-  },</p>
-<p>```</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="err">expor</span><span class="kc">t</span><span class="w"> </span><span class="err">de</span><span class="kc">fault</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="p">{</span><span class="kc">f</span><span class="err">iles</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;**/*.{js,mjs,cjs,ts,jsx,tsx}&quot;</span><span class="p">]},</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="p">{</span><span class="err">la</span><span class="kc">n</span><span class="err">guageOp</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">globals</span><span class="p">:</span><span class="w"> </span><span class="err">globals.browser</span><span class="w"> </span><span class="p">}},</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="err">plugi</span><span class="kc">n</span><span class="err">Js.co</span><span class="kc">nf</span><span class="err">igs.recomme</span><span class="kc">n</span><span class="err">ded</span><span class="p">,</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="err">...</span><span class="kc">tsesl</span><span class="err">i</span><span class="kc">nt</span><span class="err">.co</span><span class="kc">nf</span><span class="err">igs.recomme</span><span class="kc">n</span><span class="err">ded</span><span class="p">,</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="err">plugi</span><span class="kc">n</span><span class="err">Reac</span><span class="kc">t</span><span class="err">.co</span><span class="kc">nf</span><span class="err">igs.</span><span class="kc">flat</span><span class="err">.recomme</span><span class="kc">n</span><span class="err">ded</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="kc">f</span><span class="err">iles</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;**/*.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;**/*.jsx&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Aplica las reglas a archivos .js y .jsx</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="err">ex</span><span class="kc">ten</span><span class="err">ds</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;airbnb-base&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Si usas React, cambia a &quot;airbnb&quot;</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="err">rules</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">      </span><span class="c1">// Aquí puedes sobrescribir reglas específicas</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">      </span><span class="nt">&quot;no-console&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;off&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Ejemplo: Permitir console.log</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">  </span><span class="p">},</span>
+</span></code></pre></div>
 <p>en el arvhivo package.json, la linea del script de lint, ponemos esto</p>
 <p><code>"lint": "eslint --fix src/**/*.{js,jsx}",</code></p>
 <p>instalar husky</p>
@@ -946,8 +947,8 @@ en el archivo eslint.config.js sustituir la parte de export por </p>
 <p>ejecutamos</p>
 <p><code>npx husky</code></p>
 <p>en el archivo package.json  añadirmos la linea en el script</p>
-<p><code>json
- "postinstall": "husky install"</code></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">&quot;postinstall&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;husky install&quot;</span>
+</span></code></pre></div>
 
 
 
