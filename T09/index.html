@@ -1058,22 +1058,22 @@ Ambas están en mi repositorio.</p>
 </ul>
 <h3 id="51-npm"><strong>5.1 NPM</strong></h3>
 <p>De esto, comentar que <code>npm</code> es el gestor de paquetes de Node.js (recordemos que esto se basa en Node). Se usa para instalar y administrar dependencias.</p>
-<p>Abrimos el terminal y procedemos con el comando: 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npm init react-app ruta y nombre de la aplicación
-</span></code></pre></div></p>
+<p>Abrimos el terminal y procedemos con el comando: </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npm<span class="w"> </span>init<span class="w"> </span>react-app<span class="w"> </span>ruta<span class="w"> </span>y<span class="w"> </span>nombre<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>aplicación
+</span></code></pre></div>
 <p><code>init</code> es el comando de npm para iniciar un nuevo proyecto. <code>react-app</code> es el paquete preconfigurado que se usa para crear una aplicacion de React con la estructura de directorios y archivos recomendada. <code>ruta y nombre de la aplicación</code> pues la ruta y el nombre del proyecto.</p>
 <p>Es muy probable que dé error por problemas con dependencias, para solucionarlo, añadimos al comando:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>--legacy-peer-dep
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>--legacy-peer-dep
 </span></code></pre></div>
 con esto le estamos diciendo que resuelva los problemas de dependencias que se encuentre. En general, esta opción nos será bastante útil cada vez que tengamos problemas con las dependencias</p>
 <p>Ya tenemos el proyecto creado. Ahora hay que meterle cosillas. Bueno, ya le meteremos cosillas luego. Ahora lo importante es arrancar la app que acabamos de crear.</p>
 <p>En primer lugar, nos movemos al directorio de la aplicación <code>cd ruta completa del directorio</code>. Después arrancamos React en ese directorio 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>npm start
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>npm<span class="w"> </span>start
 </span></code></pre></div>
 El resultado nos debe mostrar las direcciones tanto local como de red desde las que son visible nuestra web.</p>
 <p><img alt="esto furula" src="img/direcciones.jpg" /></p>
 <p>Y si no ha habido ningún fallo de última hora, ya debería funcionar.  Puede dar fallos. si los da, ejecutamos 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npm install ajv@latest ajv-keywords@latest --legacy-peer-dep
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npm<span class="w"> </span>install<span class="w"> </span>ajv@latest<span class="w"> </span>ajv-keywords@latest<span class="w"> </span>--legacy-peer-dep
 </span></code></pre></div></p>
 <p>y volvemos a lanzar <code>npm start</code>. Y ahora si se debe abrir el navegador con nuestra página (en blanco).</p>
 <p><img alt="ay mi react que bonito es" src="img/quebonito.jpg" /></p>
@@ -1082,7 +1082,7 @@ El resultado nos debe mostrar las direcciones tanto local como de red desde las 
 <ul>
 <li>Abrir una terminal (como siempre, os acordáis de cuánto odiabais los comandos en SiSi... quién nos iba a decir...)</li>
 <li>Escribimos 
-  <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>npm create vite@latest
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>npm<span class="w"> </span>create<span class="w"> </span>vite@latest
 </span></code></pre></div>
   con esto creamos un proyecto de Vite, pero OJO, que nos va a pedir cosillas:<ul>
 <li>En primer lugar, nos va a pedir permiso para crear los paquetes. Decimos que <code>y</code>es.</li>
@@ -1095,14 +1095,15 @@ El resultado nos debe mostrar las direcciones tanto local como de red desde las 
 <li>Ahora solo tenemos que ejecutar los tres comandos que nos dice Vite:<ul>
 <li>Nos vamos a la carpeta del directorio creado <code>cd Tema9\ProyectoViteReact</code> (Recordad ios a la carpeta que hayais puesto en vuestro proyecto)</li>
 <li>Instalamos los paquetes de Vite 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>npm install  
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>npm<span class="w"> </span>install<span class="w">  </span>
 </span></code></pre></div>
 Tarda un poco, tened paciencia!.</li>
 <li>Actualizamos los paquetes de React y ReactDOM que se han instalado 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npm install  react@latest react-dom@latest
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npm<span class="w"> </span>install<span class="w">  </span>react@latest<span class="w"> </span>react-dom@latest
 </span></code></pre></div></li>
 <li>Ejecutamos la aplicación 
-   <code>npm run dev</code></li>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>npm<span class="w"> </span>run<span class="w"> </span>dev
+</span></code></pre></div></li>
 </ul>
 </li>
 <li>Y obtenemos este resultado: <img alt="inicio vite" src="img/vite.jpg" /> Aqui podemos ver la dirección en localhost dónde se está mostrando la página, y cómo podemos acceder a los archivos de código. Por otra parte, se habrá creado el proyecto React con la estructura de directorios y ficheros vista <img alt="proyecto" src="img/proyectoreact.JPG" />. Y por supuesto, en el navegador, podemos ver nuestra primera página <img alt="vitereact" src="img/vitereact.jpg" />.</li>
@@ -1164,57 +1165,76 @@ Estas son unas reglas creadas por la empresa homónima que se enfocan en:</p>
 <ul>
 <li>Ejecutamos el siguiente comando. Presta atención a la parte de <code>--legacy-peer-deps</code>, para evitar problemas con las dependencias</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>npm install eslint-config-airbnb eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-import --save-dev --legacy-peer-deps
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>npm<span class="w"> </span>install<span class="w"> </span>eslint-config-airbnb<span class="w"> </span>eslint-plugin-react<span class="w"> </span>eslint-plugin-jsx-a11y<span class="w"> </span>eslint-plugin-import<span class="w"> </span>--save-dev<span class="w"> </span>--legacy-peer-deps
 </span></code></pre></div>
 <p>Para asegurarnos de que nos bajamos e instalamos la última versión de cada uno de estos paquetes, podemos añadir <code>@latest</code>despues del nombre del paquete.
   - Además, tenenemos que modificar el archivo de configuración de <strong>Eslint</strong>: <code>eslint.config.js</code>, incluir el siguiente campo de export:
 en el archivo eslint.config.js sustituir la parte de export por </p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="p">{</span><span class="nx">files</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;**/*.{js,mjs,cjs,ts,jsx,tsx}&quot;</span><span class="p">]},</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="p">{</span><span class="nx">languageOptions</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">globals</span><span class="o">:</span><span class="w"> </span><span class="nx">globals</span><span class="p">.</span><span class="nx">browser</span><span class="w"> </span><span class="p">}},</span>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">  </span><span class="nx">pluginJs</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="nx">recommended</span><span class="p">,</span>
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">  </span><span class="p">...</span><span class="nx">tseslint</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="nx">recommended</span><span class="p">,</span>
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="nx">pluginReact</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="nx">flat</span><span class="p">.</span><span class="nx">recommended</span><span class="p">,</span>
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
-</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
-</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">  </span><span class="p">{</span>
-</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">    </span><span class="nx">files</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;**/*.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;**/*.jsx&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Aplica las reglas a archivos .js y .jsx</span>
-</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">    </span><span class="k">extends</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;airbnb-base&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Si usas React, cambia a &quot;airbnb&quot;</span>
-</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">    </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="w">      </span><span class="c1">// Aquí puedes sobrescribir reglas específicas</span>
-</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="w">      </span><span class="s2">&quot;no-console&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;off&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Ejemplo: Permitir console.log</span>
-</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="w">    </span><span class="p">},</span>
-</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="w">  </span><span class="p">},</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="p">{</span><span class="nx">files</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;**/*.{js,mjs,cjs,ts,jsx,tsx}&quot;</span><span class="p">]},</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="p">{</span><span class="nx">languageOptions</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">globals</span><span class="o">:</span><span class="w"> </span><span class="nx">globals</span><span class="p">.</span><span class="nx">browser</span><span class="w"> </span><span class="p">}},</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="nx">pluginJs</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="nx">recommended</span><span class="p">,</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span><span class="p">...</span><span class="nx">tseslint</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="nx">recommended</span><span class="p">,</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">  </span><span class="nx">pluginReact</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="nx">flat</span><span class="p">.</span><span class="nx">recommended</span><span class="p">,</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">    </span><span class="nx">files</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;**/*.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;**/*.jsx&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Aplica las reglas a archivos .js y .jsx</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">    </span><span class="k">extends</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;airbnb-base&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Si usas React, cambia a &quot;airbnb&quot;</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">    </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">      </span><span class="c1">// Aquí puedes sobrescribir reglas específicas</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">      </span><span class="s2">&quot;no-console&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;off&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Ejemplo: Permitir console.log</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">  </span><span class="p">},</span>
 </span></code></pre></div>
 <ul>
 <li>Finalmente, para hacer que se cargue el <strong>Eslint</strong> en nuestro proyecto, en el archivo <code>package.json</code>, en la parte de <em>scripts</em>, añadimos la siguiente línea¡:</li>
 </ul>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w"> </span><span class="nt">&quot;lint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eslint --fix src/**/*.{js,jsx}&quot;</span><span class="p">,</span>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w"> </span><span class="nt">&quot;lint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eslint --fix src/**/*.{js,jsx}&quot;</span><span class="p">,</span>
 </span></code></pre></div>
 <h4 id="pretier"><strong>Pretier</strong>*</h4>
 <p><a href="https://prettier.io/"><strong>Prettier</strong></a> es una herramienta de formateo de código que se acopla con <em>Eslint</em>, nos permite basicamente hacer un formateo automático del código (esto es, añadir ; al final de cada línea de js, si así lo decidimos). Con ello, logramos un estilo consistente.
  instalar pretieer</p>
 <p>Podemos instalar como una extensión de VSCode. Solo tenemos que buscarlo, e instalar <em>Prettier ESLint</em> (Recordad que se acoplan). Si sólo queremos instalarlo para un proyecto, podemos probar con:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>npm install --dev prettier --legacy-peer-deps
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>npm<span class="w"> </span>install<span class="w"> </span>--dev<span class="w"> </span>prettier<span class="w"> </span>--legacy-peer-deps
 </span></code></pre></div>
 <p>Una vez instalado, tenemos que añadir las reglas al archivo <code>package.json</code>. Al final del archivo, después de <code>devDependencies</code>, añadimos las reglas de <strong>*Prettier</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>...., 
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>  &quot;prettier&quot;: {
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>&quot;trailingComma&quot;: &quot;all&quot;,
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>&quot;singleQuote&quot;: true
-</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>}
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>,<span class="w"> </span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="s2">&quot;prettier&quot;</span>:<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="s2">&quot;trailingComma&quot;</span>:<span class="w"> </span><span class="s2">&quot;all&quot;</span>,
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="s2">&quot;singleQuote&quot;</span>:<span class="w"> </span><span class="nb">true</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="o">}</span>
 </span></code></pre></div></p>
 <p>Con estas reglas, estamos obligando a que se añada el ; al final de todas las líneas, y forzando a que se use las comillas simples <code>'...'</code>, en lugar de las dobles <code>"...."</code> para definir las cadenas. 
 Hay otras reglas que podemos añadir, como definir por defecto los tabuladores como 2 o 3 espacios... etc. Mirad la documentación de <em>Prettier</em> para más info acerca de las opciones disponibles. </p>
 <h4 id="huski"><strong>Huski</strong></h4>
-<p><a href=""><strong>Husky</strong></a> es uan herramienta de automatización de tareas</p>
-<p>instalar husky</p>
-<p><code>npm install husky --save-dev --legacy-peer-deps</code></p>
-<p>ejecutamos</p>
-<p><code>npx husky</code></p>
-<p>en el archivo package.json  añadirmos la linea en el script</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nt">&quot;postinstall&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;husky install&quot;</span>
+<p><a href=""><strong>Husky</strong></a> es uan herramienta que permite ejecutar ganchos (llamados hooks, como el capitán Hook) de git en los proyectos.
+Los ganchos son scripts que se ejecutan en ciertos momentos clave del proyecto, como la compilación, o la subida al repositiorio de forma automática.</p>
+<ul>
+<li>Automatización de tareas: Puedes configurar Husky para ejecutar tareas automáticamente, como linters, pruebas o formateadores, antes de realizar commits o push.</li>
+<li>Prevención de errores: Garantiza que el código que se sube al repositorio cumpla con los estándares y no contenga errores básicos.</li>
+<li>Flujo de trabajo colaborativo: Asegura que todo el equipo siga las mismas reglas de calidad y estilo.</li>
+</ul>
+<p>Para instalar husky:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>npm<span class="w"> </span>install<span class="w"> </span>husky<span class="w"> </span>--save-dev<span class="w"> </span>--legacy-peer-deps
 </span></code></pre></div>
+<p>Ejecutamos:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>npx<span class="w"> </span>husky
+</span></code></pre></div>
+<p>En el archivo <code>package.json</code>  añadirmos la linea en el script</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nt">&quot;postinstall&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;husky install&quot;</span>
+</span></code></pre></div>
+<p>Ejemplos de uso de Husky:
+Podemos añadir scripts al directorio <code>.Husky</code>, y configurar cómo utilizarlos:</p>
+<ul>
+<li>Puedes agregar scripts directamente en el directorio .husky de tu proyecto. Por ejemplo:</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Copiar<span class="w"> </span>código
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>npx<span class="w"> </span>husky<span class="w"> </span>add<span class="w"> </span>.husky/pre-commit<span class="w"> </span><span class="s2">&quot;npm test&quot;</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>npx<span class="w"> </span>husky<span class="w"> </span>add<span class="w"> </span>.husky/pre-commit<span class="w"> </span><span class="s2">&quot;npx eslint .&quot;</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>npx<span class="w"> </span>husky<span class="w"> </span>add<span class="w"> </span>.husky/pre-commit<span class="w"> </span><span class="s2">&quot;npx prettier --write .&quot;</span>
+</span></code></pre></div>
+<p>Con esto ejectuamos el test de <em>npm</em>, el <em>eslint</em> y el <em>prettier</em> antes de hacer un commit.</p>
 <h2 id="6-renderizado-con-react"><strong>6. Renderizado con React</strong></h2>
 <p><a href="slides/3._Render.pdf">Render react</a></p>
 <h2 id="7-gestion-de-props-y-state"><strong>7. Gestión de <em>Props<em> y </em>State</em></strong></h2>
