@@ -648,24 +648,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#6-renderizado-con-react" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Renderizado con React
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-gestion-de-props-y-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Gestión de Props y State
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -886,24 +868,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#6-renderizado-con-react" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Renderizado con React
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-gestion-de-props-y-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Gestión de Props y State
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -922,7 +886,7 @@
 <h1 id="unidad-09-react"><strong>UNIDAD 09 - React</strong></h1>
 <h2 id="1-introduccion"><strong>1. Introducción</strong></h2>
 <p><a href="https://es.react.dev/">React</a> es una libreria para el desarrollo de aplicaciones web. Concretamente una librería javascript para construir interfactes web.<br />
-React se basa en el uso de <strong>componentes</strong>, una fusión  <code>html</code> con <code>javascript</code>, escritos en <strong>JSX (JavaScript XML)</strong>. A través de JSX, se crea una copia de DOM (Modelo de Objetos del Documento) llamada <strong>DOM virtual</strong>. Si un componente cambia su estado, React compara el <strong>DOM virtual</strong> con el DOM real (de la página web) y aplica este cambio solamente al elemento que ha sido actualizado, sin necesidad de volver a renderizar toda la página.</p>
+React se basa en el uso de <strong>componentes</strong>, una fusión <code>html</code> con <code>javascript</code>, escritos en <strong>JSX (JavaScript XML)</strong>. A través de JSX, se crea una copia de DOM (Modelo de Objetos del Documento) llamada <strong>DOM virtual</strong>. Si un componente cambia su estado, React compara el <strong>DOM virtual</strong> con el DOM real (de la página web) y aplica este cambio solamente al elemento que ha sido actualizado, sin necesidad de volver a renderizar toda la página.</p>
 <h3 id="por-que-usar-react"><strong>¿Por qué usar <em>React</em>?</strong></h3>
 <p>De hecho, JavaScript ya se encarga "por detrás", de cagar los datos que la página web necesita en función de la interacción del usuario (ir a una nueva pestaña, por ejemplo), diseñar la nueva página web, y presentarla al usuario de forma transparente a este. Y esto ha convertido a JS en un lenguaje demandado para la programación web.</p>
 <p>Sin embargo, usar <strong>sólo Javascript</strong> en esencia no es una buena opción para proyectos realistas (recordemos que estamos evolucionando hacia SPA - Single Page Application, es decir, webs dónde sólo hay una página -vacia- que se va cargando con JS):</p>
@@ -946,7 +910,7 @@ React se basa en el uso de <strong>componentes</strong>, una fusión  <code>html
 <li>React solo visualiza la interfaz, pero para crear un proyecto completo, se necesita una <strong>pila de tecnología</strong>.</li>
 </ul>
 <h2 id="2-fundamentos-de-react"><strong>2. Fundamentos de React</strong></h2>
-<p>La parte de Fundamentos de React, así como la evolución desde el punto de vista del desarrollo del código que implica React, está más o menos explicada en estas transparencias. </p>
+<p>La parte de Fundamentos de React, así como la evolución desde el punto de vista del desarrollo del código que implica React, está más o menos explicada en estas transparencias.</p>
 <p><a href="slides/1._Fundamentals.pdf">Fundamentos de React</a></p>
 <h2 id="3-caracteristicas-modernas-de-javascript-para-el-desarrollo-en-react"><strong>3. Características Modernas de JavaScript para el Desarrollo en React</strong></h2>
 <h3 id="31-modulos-de-javascript"><strong>3.1 Módulos de JavaScript</strong></h3>
@@ -1016,33 +980,33 @@ React se basa en el uso de <strong>componentes</strong>, una fusión  <code>html
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greet</span><span class="p">());</span><span class="w"> </span><span class="c1">// Salida: ¡Hola, Invitado!</span>
 </span></code></pre></div>
 <h2 id="4-codigo-react-y-codigo-js"><strong>4. Código React y Código JS</strong></h2>
-<p>Vamos a ver una <a href="https://codesandbox.io/p/devbox/hg2rkw">página simple en Javascript (con vainilla)</a>, y después veremos una <a href="https://codesandbox.io/p/devbox/88hszh">página similar usando React</a>. 
+<p>Vamos a ver una <a href="https://codesandbox.io/p/devbox/hg2rkw">página simple en Javascript (con vainilla)</a>, y después veremos una <a href="https://codesandbox.io/p/devbox/88hszh">página similar usando React</a>.
 Ambas están en mi repositorio.</p>
 <h3 id="41-js-y-ya"><strong>4.1 JS y ya</strong></h3>
 <p><img alt="Web sencillita" src="img/websimple.jpg" /></p>
-<p>En una web basada en JS tenemos tres elementos principales: </p>
+<p>En una web basada en JS tenemos tres elementos principales:</p>
 <ul>
-<li>el archivo <code>html</code>, que es la página en si; </li>
-<li>el archivo <code>css</code> ~que sirve para cosas raras que vereis con Jose Enrique~ para dar formato a la web; </li>
-<li>y el archivo <code>.js</code> que se encarga de obtener los botones, configurar los listeners, gestionar el DOM y definir la funcionalidad cada vez que se pulsa un botón (cambiando el fondo de todos los botones, generando el texto, etc...). </li>
+<li>el archivo <code>html</code>, que es la página en si;</li>
+<li>el archivo <code>css</code> ~que sirve para cosas raras que vereis con Jose Enrique~ para dar formato a la web;</li>
+<li>y el archivo <code>.js</code> que se encarga de obtener los botones, configurar los listeners, gestionar el DOM y definir la funcionalidad cada vez que se pulsa un botón (cambiando el fondo de todos los botones, generando el texto, etc...).</li>
 </ul>
 <p>Todo esto es lo que hemos visto hasta ahora en el módulo.</p>
 <h3 id="42-react"><strong>4.2 React</strong></h3>
 <p>Una aplicación de <strong>React</strong> es un poco más compleja. Empezando porque se basa en una estructura de archivos y directorios muy bien definida. Más adelante la veremos en detalle.</p>
 <p><img alt="React sencillita" src="img/reactsimple.jpg" /></p>
-<p>Si echamos un vistazo, en la carpeta <code>/Public</code> tenemos </p>
+<p>Si echamos un vistazo, en la carpeta <code>/Public</code> tenemos</p>
 <ul>
-<li>Un archivo <code>.html</code>, que está casi vacio: tiene un <code>&lt;div&gt;</code> que  es la carcasa de la web (SPA).</li>
+<li>Un archivo <code>.html</code>, que está casi vacio: tiene un <code>&lt;div&gt;</code> que es la carcasa de la web (SPA).</li>
 <li>El resto de elementos están en la carpeta <code>/src</code>, aunque hay más carpetas propias de la estructura de un proyecto <strong>React</strong>.</li>
-<li>El archivo<code>.js</code>, de hecho también está bastante vacío, y su función es solo para vincular el <code>html</code> con <strong>React</strong>, esto es, <em>a través del achivo <code>.js</code> se va a usar </em><em>React</em><em> para </em><em>renderizar</em><em> la pagina web</em>. De hecho la función <code>render</code> es un componente de React que está devolviendo etiquetas html <strong>marcadas</strong> (distinguirás estas etiquetas porque aparecen en mayúscula, aparte que el editor las marca con otro color). </li>
+<li>El archivo<code>.js</code>, de hecho también está bastante vacío, y su función es solo para vincular el <code>html</code> con <strong>React</strong>, esto es, <em>a través del achivo <code>.js</code> se va a usar <strong>React</strong> para <strong>renderizar</strong> la pagina web</em>. De hecho la función <code>render</code> es un componente de React que está devolviendo etiquetas html <strong>marcadas</strong> (distinguirás estas etiquetas porque aparecen en mayúscula, aparte que el editor las marca con otro color).</li>
 </ul>
-<p>El archivo <code>App.js</code> tiene toda la "chicha": Tiene la función <code>app</code> que devuelve un código html muy parecido al html del ejemplo anterior <strong><em>¡¡¡¡Se está mezclando html con js!!!! ¡¡ay dios mio!!</em></strong>. Por otra parte, no tenemos las instrucciones JavaScript pero si que tenemos algunas sentencias JS mezcladas en el codigo html <strong><em>to junto! que estres!!</em></strong>. </p>
+<p>El archivo <code>App.js</code> tiene toda la "chicha": Tiene la función <code>app</code> que devuelve un código html muy parecido al html del ejemplo anterior <strong><em>¡¡¡¡Se está mezclando html con js!!!! ¡¡ay dios mio!!</em></strong>. Por otra parte, no tenemos las instrucciones JavaScript pero si que tenemos algunas sentencias JS mezcladas en el codigo html <strong><em>to junto! que estres!!</em></strong>.</p>
 <p>Si aparecen unos elementos que nos hablan del <strong><em>estado (o de los estados)</em></strong> de una página web. Estos estados los controla React, y se aplican a todos los elementos que integran la web.</p>
 <p>Para arrancar el proyecto, nos situamos con el terminal en la carpeta <em>react</em> y ejecuta el comando <code>npm start</code>.</p>
-<h3 id="43-programacion-declarativa-vs-imperativa"><strong>4.3 <em>Programaciòn declarativa<em> vs </em>imperativa</em></strong></h3>
+<h3 id="43-programacion-declarativa-vs-imperativa"><strong>4.3 <em>Programaciòn declarativa</em> vs <em>imperativa</em></strong></h3>
 <p>En React se programa o configura el estado en el que tiene que estar todos los componentes de la página, no los pasos para llegar a ese estado. Por tanto la web va a estar siempre en un estado válido. Es lo que se denomina <strong>Programación Declarativa</strong> que basicamente consiste en decir como tiene que estar todo configurado, pero sin decir los pasos para configurarlo, que sería <strong>Programación imperativa</strong>.</p>
 <p><img alt="Declarativo vs Imperativo" src="img/decvsimp.png" /></p>
-<p>La programación declarativa se basa en una máquina de estados, y las transiciones entre estados. </p>
+<p>La programación declarativa se basa en una máquina de estados, y las transiciones entre estados.</p>
 <div class="exercise-box">
     <h3><i class="fas fa-laptop-code"></i> Ejercicio Práctico: React o solo JS</h3>
     <p>1. Editemos ambas versiones de la web para añadir un cuarto botón, llamadlo como queráis. 
@@ -1051,125 +1015,120 @@ Ambas están en mi repositorio.</p>
 </div>
 
 <h2 id="5-preparacion-del-entorno"><strong>5. Preparación del entorno</strong></h2>
-<p>Hay varias versiones a la hora de crear un proyecto en React: </p>
+<p>Hay varias versiones a la hora de crear un proyecto en React:</p>
 <ul>
-<li>"A pelo". Usando el gestor de paquetes <a href="https://www.npmjs.com/"><strong>npm</strong></a> que ya comentamos en el primer tema. </li>
+<li>"A pelo". Usando el gestor de paquetes <a href="https://www.npmjs.com/"><strong>npm</strong></a> que ya comentamos en el primer tema.</li>
 <li>O con el bundler de <a href="https://vite.dev/"><strong>vite</strong></a>.</li>
 </ul>
 <h3 id="51-npm"><strong>5.1 NPM</strong></h3>
 <p>De esto, comentar que <code>npm</code> es el gestor de paquetes de Node.js (recordemos que esto se basa en Node). Se usa para instalar y administrar dependencias.</p>
-<p>Abrimos el terminal y procedemos con el comando: </p>
+<p>Abrimos el terminal y procedemos con el comando:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npm<span class="w"> </span>init<span class="w"> </span>react-app<span class="w"> </span>ruta<span class="w"> </span>y<span class="w"> </span>nombre<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>aplicación
 </span></code></pre></div>
 <p><code>init</code> es el comando de npm para iniciar un nuevo proyecto. <code>react-app</code> es el paquete preconfigurado que se usa para crear una aplicacion de React con la estructura de directorios y archivos recomendada. <code>ruta y nombre de la aplicación</code> pues la ruta y el nombre del proyecto.</p>
-<p>Es muy probable que dé error por problemas con dependencias, para solucionarlo, añadimos al comando:
+<p>Es muy probable que dé error por problemas con dependencias, para solucionarlo, añadimos al comando:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>--legacy-peer-dep
 </span></code></pre></div>
-con esto le estamos diciendo que resuelva los problemas de dependencias que se encuentre. En general, esta opción nos será bastante útil cada vez que tengamos problemas con las dependencias</p>
+<p>con esto le estamos diciendo que resuelva los problemas de dependencias que se encuentre. En general, esta opción nos será bastante útil cada vez que tengamos problemas con las dependencias</p>
 <p>Ya tenemos el proyecto creado. Ahora hay que meterle cosillas. Bueno, ya le meteremos cosillas luego. Ahora lo importante es arrancar la app que acabamos de crear.</p>
-<p>En primer lugar, nos movemos al directorio de la aplicación <code>cd ruta completa del directorio</code>. Después arrancamos React en ese directorio 
+<p>En primer lugar, nos movemos al directorio de la aplicación <code>cd ruta completa del directorio</code>. Después arrancamos React en ese directorio</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>npm<span class="w"> </span>start
 </span></code></pre></div>
-El resultado nos debe mostrar las direcciones tanto local como de red desde las que son visible nuestra web.</p>
+<p>El resultado nos debe mostrar las direcciones tanto local como de red desde las que son visible nuestra web.</p>
 <p><img alt="esto furula" src="img/direcciones.jpg" /></p>
-<p>Y si no ha habido ningún fallo de última hora, ya debería funcionar.  Puede dar fallos. si los da, ejecutamos 
+<p>Y si no ha habido ningún fallo de última hora, ya debería funcionar. Puede dar fallos. si los da, ejecutamos</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npm<span class="w"> </span>install<span class="w"> </span>ajv@latest<span class="w"> </span>ajv-keywords@latest<span class="w"> </span>--legacy-peer-dep
-</span></code></pre></div></p>
+</span></code></pre></div>
 <p>y volvemos a lanzar <code>npm start</code>. Y ahora si se debe abrir el navegador con nuestra página (en blanco).</p>
 <p><img alt="ay mi react que bonito es" src="img/quebonito.jpg" /></p>
 <h3 id="52-react-con-vite"><strong>5.2 React con Vite</strong></h3>
 <p>Si queremos usar React con Vite, simplemente debemos seguir los siguientes pasos:</p>
 <ul>
 <li>Abrir una terminal (como siempre, os acordáis de cuánto odiabais los comandos en SiSi... quién nos iba a decir...)</li>
-<li>Escribimos 
+<li>Escribimos</li>
+</ul>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>npm<span class="w"> </span>create<span class="w"> </span>vite@latest
 </span></code></pre></div>
-  con esto creamos un proyecto de Vite, pero OJO, que nos va a pedir cosillas:<ul>
-<li>En primer lugar, nos va a pedir permiso para crear los paquetes. Decimos que <code>y</code>es.</li>
-<li>Después nos pide un <em>nombre</em> para el proyecto. Recordad que creará una carpeta con el nombre del proyecto en el directorio actual, y dentro creará toda la estrucura del proyecto. Si forzamos la creación de directorios intermedios, asumirá que le hemos dado la <em>ruta</em> y nos volverá a pedir <em>nombre</em> del proyecto. <img alt="nombre" src="img/nombre.jpg" /></li>
-<li>El <em>framework</em> que vamos a utilizar <img alt="tecnologia" src="img/tecnologia.jpg" /> y podremos desplazarnos con las flechas.</li>
-<li>El <em>lenguaje</em>, <img alt="lenguaje" src="img/lenguaje.jpg" /></li>
-</ul>
-</li>
+<p>con esto creamos un proyecto de Vite, pero OJO, que nos va a pedir cosillas: - En primer lugar, nos va a pedir permiso para crear los paquetes. Decimos que <code>y</code>es. - Después nos pide un <em>nombre</em> para el proyecto. Recordad que creará una carpeta con el nombre del proyecto en el directorio actual, y dentro creará toda la estrucura del proyecto. Si forzamos la creación de directorios intermedios, asumirá que le hemos dado la <em>ruta</em> y nos volverá a pedir <em>nombre</em> del proyecto. <img alt="nombre" src="img/nombre.jpg" /> - El <em>framework</em> que vamos a utilizar <img alt="tecnologia" src="img/tecnologia.jpg" /> y podremos desplazarnos con las flechas. - El <em>lenguaje</em>, <img alt="lenguaje" src="img/lenguaje.jpg" /></p>
+<ul>
 <li>Con esto, ya tendremos creado el proyecto Vite. Si todo ha ido bien nos mostrará una imagen con más info: <img alt="vite" src="img/vitecreado.jpg" /></li>
-<li>Ahora solo tenemos que ejecutar los tres comandos que nos dice Vite:<ul>
+<li>Ahora solo tenemos que ejecutar los tres comandos que nos dice Vite:</li>
 <li>Nos vamos a la carpeta del directorio creado <code>cd Tema9\ProyectoViteReact</code> (Recordad ios a la carpeta que hayais puesto en vuestro proyecto)</li>
-<li>Instalamos los paquetes de Vite 
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>npm<span class="w"> </span>install<span class="w">  </span>
-</span></code></pre></div>
-Tarda un poco, tened paciencia!.</li>
-<li>Actualizamos los paquetes de React y ReactDOM que se han instalado 
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npm<span class="w"> </span>install<span class="w">  </span>react@latest<span class="w"> </span>react-dom@latest
-</span></code></pre></div></li>
-<li>Ejecutamos la aplicación 
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>npm<span class="w"> </span>run<span class="w"> </span>dev
-</span></code></pre></div></li>
+<li>Instalamos los paquetes de Vite</li>
 </ul>
-</li>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>npm<span class="w"> </span>install
+</span></code></pre></div>
+<p>Tarda un poco, tened paciencia!. - Actualizamos los paquetes de React y ReactDOM que se han instalado</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npm<span class="w"> </span>install<span class="w">  </span>react@latest<span class="w"> </span>react-dom@latest
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code> - Ejecutamos la aplicación
+</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>npm<span class="w"> </span>run<span class="w"> </span>dev
+</span></code></pre></div>
+<ul>
 <li>Y obtenemos este resultado: <img alt="inicio vite" src="img/vite.jpg" /> Aqui podemos ver la dirección en localhost dónde se está mostrando la página, y cómo podemos acceder a los archivos de código. Por otra parte, se habrá creado el proyecto React con la estructura de directorios y ficheros vista <img alt="proyecto" src="img/proyectoreact.JPG" />. Y por supuesto, en el navegador, podemos ver nuestra primera página <img alt="vitereact" src="img/vitereact.jpg" />.</li>
 </ul>
 <h3 id="53-configuracion-del-entorno-de-desarrollo-para-trabajar-con-react"><strong>5.3 Configuración del entorno de desarrollo para trabajar con React</strong></h3>
-<p>Esta parte se basa en las transparencias  <a href="slides/2._Setup.pdf">setup React</a>, pero las adapta a una distribución en VSCode.</p>
-<p>Para recapitular, en el desarrollo de un proyecto con React vamos a necesitar algunos elementos:</p>
-<ul>
-<li>Las librerías de React y React-DOM, que se han instalado al crear el proyecto de React en la sección anterior</li>
-<li>Un gestor de contenido, que sería <code>npm</code> o <code>yarn</code>, aunque el primero ya lo tenenos puesto.</li>
-<li>Si hemos hecho la instalación con Vite, el se va a encargar de empaquetar el código que generemos</li>
-</ul>
-<p>Ahora es el momento de instalar algunas liberias y paquetes de desarrollo:</p>
-<h4 id="linting">**Linting **</h4>
-<p>Cualquier <em>Lintern</em> tiene el objetivo de revisar, analizar y mejorar nuestro código, conforme vamos escribiendo. No sólo detecta errores que provocarían <em>no compilar</em>, si no que detecta malas prácticas, inconsistencias y otros fallos en el código fuente.
-Por otra parte, sugiere mejoras de estilo y optimizaciones en cuanto a la escritura de código. Aunque debemos recordar que al final cada desarrollador <em>desarrolla</em> su propia forma de programar. También detecta variables o funciones no usadas.
+<!--
+Esta parte se basa en las transparencias  [setup React](slides/2._Setup.pdf), pero las adapta a una distribución en VSCode.
+
+Para recapitular, en el desarrollo de un proyecto con React vamos a necesitar algunos elementos:
+
+  - Las librerías de React y React-DOM, que se han instalado al crear el proyecto de React en la sección anterior
+  - Un gestor de contenido, que sería `npm` o `yarn`, aunque el primero ya lo tenenos puesto.
+  - Si hemos hecho la instalación con Vite, el se va a encargar de empaquetar el código que generemos
+
+Ahora es el momento de instalar algunas liberias y paquetes de desarrollo:
+
+#### **Linting**
+
+Cualquier *Lintern* tiene el objetivo de revisar, analizar y mejorar nuestro código, conforme vamos escribiendo. No sólo detecta errores que provocarían *no compilar*, si no que detecta malas prácticas, inconsistencias y otros fallos en el código fuente.
+Por otra parte, sugiere mejoras de estilo y optimizaciones en cuanto a la escritura de código. Aunque debemos recordar que al final cada desarrollador *desarrolla* su propia forma de programar. También detecta variables o funciones no usadas.
 Salvo que sean errores propios del lenguaje (que el compilador detectaría, o que llevaría a un error en el caso de lenguajes interpretados), los errores que detecta un lintern generalmente no impiden que el código se ejecute bien.
-Por esto, a veces las líneas rojas que marca el Lintern pueden sacar de quicio a un programador novel.</p>
-<p>Podemos encontrarnos varios Linterns (algunos incluso están como pluguins de VSCode):</p>
-<ul>
-<li><a href="https://eslint.org/"><strong>ESLint</strong></a> es el más utilizado en proyecto se React. Detecta problemas de código, errores de sintaxis y problemas específicos de React. Además, permite definir reglas personalizables e incorporar estilos predefinidos (Airbnb, Standard, etc.). Las reglas principalmente se usan en grandes equipos de desarrollo, para unificar la manera de programar de todos los integrantes.</li>
-<li><strong>Style-lint</strong> para mantener un estilo uniforme en las hojas de estilo.</li>
-</ul>
-<p><strong>Eslint</strong> ya viene añadido al proyecto si lo hemos creado con <strong>Vite</strong>. 
-Sin embargo, también se recomienda instalar <a href="https://airbnb.io/javascript/"><strong>Airbnb</strong></a>. 
-Estas son unas reglas creadas por la empresa homónima que se enfocan en:</p>
-<ul>
-<li>Mejorar la <strong>consistencia</strong> para que el código se vea y comporte de la misma forma en todo el proyecto.</li>
-<li>Garantizar la <strong>legibilidad</strong>, sobretodo pensando en que otros desarrolladores, o tu mismo, pero en otro momento, tengan que entender <em>qué</em> hace el código.</li>
-<li>Prevenir <strong>errores</strong>, al menos los más comunes.</li>
-</ul>
-<p>Las principales características de Airbnb son:</p>
-<ul>
-<li>Reglas de formato<ul>
-<li>Uso de comillas simples (') en lugar de dobles (").</li>
-<li>Indentación de 2 espacios.</li>
-<li>Uso de punto y coma (;) al final de cada línea.</li>
-</ul>
-</li>
-<li>Buenas prácticas:<ul>
-<li>Prohíbe el uso de variables no declaradas.    </li>
-<li>Requiere el uso de const o let en lugar de var.</li>
-<li>Sugiere usar funciones flecha (=&gt;) siempre que sea posible.</li>
-</ul>
-</li>
-<li>Específico para React:<ul>
-<li>Requiere propTypes o TypeScript para la validación de propiedades.</li>
-<li>Promueve el uso de fragmentos (&lt;&gt;) en lugar de div innecesarios.</li>
-<li>Obliga a seguir buenas prácticas en los hooks de React.</li>
-</ul>
-</li>
-<li>Compatibilidad con ES6+:<ul>
-<li>Promueve el uso de destructuración de objetos y arrays.</li>
-<li>Sugiere usar template literals para la concatenación de cadenas.</li>
-</ul>
-</li>
-</ul>
-<p>Para instalar <strong>Airbnb</strong>, sobre <strong>Eslint</strong>:</p>
-<ul>
-<li>Ejecutamos el siguiente comando. Presta atención a la parte de <code>--legacy-peer-deps</code>, para evitar problemas con las dependencias</li>
-</ul>
+Por esto, a veces las líneas rojas que marca el Lintern pueden sacar de quicio a un programador novel.
+
+Podemos encontrarnos varios Linterns (algunos incluso están como pluguins de VSCode):
+
+  - [**ESLint**](https://eslint.org/) es el más utilizado en proyecto se React. Detecta problemas de código, errores de sintaxis y problemas específicos de React. Además, permite definir reglas personalizables e incorporar estilos predefinidos (Airbnb, Standard, etc.). Las reglas principalmente se usan en grandes equipos de desarrollo, para unificar la manera de programar de todos los integrantes.
+  - **Style-lint** para mantener un estilo uniforme en las hojas de estilo.
+
+**Eslint** ya viene añadido al proyecto si lo hemos creado con **Vite**.
+Sin embargo, también se recomienda instalar [**Airbnb**](https://airbnb.io/javascript/).
+Estas son unas reglas creadas por la empresa homónima que se enfocan en:
+
+ - Mejorar la **consistencia** para que el código se vea y comporte de la misma forma en todo el proyecto.
+ - Garantizar la **legibilidad**, sobretodo pensando en que otros desarrolladores, o tu mismo, pero en otro momento, tengan que entender *qué* hace el código.
+ - Prevenir **errores**, al menos los más comunes.
+
+Las principales características de Airbnb son:
+
+- Reglas de formato
+    - Uso de comillas simples (') en lugar de dobles (").
+    - Indentación de 2 espacios.
+    - Uso de punto y coma (;) al final de cada línea.
+  - Buenas prácticas:
+    - Prohíbe el uso de variables no declaradas.
+    - Requiere el uso de const o let en lugar de var.
+    - Sugiere usar funciones flecha (=>) siempre que sea posible.
+  - Específico para React:
+    - Requiere propTypes o TypeScript para la validación de propiedades.
+    - Promueve el uso de fragmentos (<></>) en lugar de div innecesarios.
+    - Obliga a seguir buenas prácticas en los hooks de React.
+  - Compatibilidad con ES6+:
+    - Promueve el uso de destructuración de objetos y arrays.
+    - Sugiere usar template literals para la concatenación de cadenas.
+
+Para instalar **Airbnb**, sobre **Eslint**:
+
+  - Ejecutamos el siguiente comando. Presta atención a la parte de `--legacy-peer-deps`, para evitar problemas con las dependencias
+
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>npm<span class="w"> </span>install<span class="w"> </span>eslint-config-airbnb<span class="w"> </span>eslint-plugin-react<span class="w"> </span>eslint-plugin-jsx-a11y<span class="w"> </span>eslint-plugin-import<span class="w"> </span>--save-dev<span class="w"> </span>--legacy-peer-deps
 </span></code></pre></div>
-<p>Para asegurarnos de que nos bajamos e instalamos la última versión de cada uno de estos paquetes, podemos añadir <code>@latest</code>despues del nombre del paquete.
-  - Además, tenenemos que modificar el archivo de configuración de <strong>Eslint</strong>: <code>eslint.config.js</code>, incluir el siguiente campo de export:
-en el archivo eslint.config.js sustituir la parte de export por </p>
+
+Para asegurarnos de que nos bajamos e instalamos la última versión de cada uno de estos paquetes, podemos añadir `@latest`despues del nombre del paquete.
+  - Además, tenenemos que modificar el archivo de configuración de **Eslint**: `eslint.config.js`, incluir el siguiente campo de export:
+en el archivo eslint.config.js sustituir la parte de export por
+
 <div class="language-js highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">[</span>
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="p">{</span><span class="nx">files</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;**/*.{js,mjs,cjs,ts,jsx,tsx}&quot;</span><span class="p">]},</span>
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="p">{</span><span class="nx">languageOptions</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">globals</span><span class="o">:</span><span class="w"> </span><span class="nx">globals</span><span class="p">.</span><span class="nx">browser</span><span class="w"> </span><span class="p">}},</span>
@@ -1187,57 +1146,92 @@ en el archivo eslint.config.js sustituir la parte de export por </p>
 </span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">    </span><span class="p">},</span>
 </span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">  </span><span class="p">},</span>
 </span></code></pre></div>
-<ul>
-<li>Finalmente, para hacer que se cargue el <strong>Eslint</strong> en nuestro proyecto, en el archivo <code>package.json</code>, en la parte de <em>scripts</em>, añadimos la siguiente línea¡:</li>
-</ul>
+
+  - Finalmente, para hacer que se cargue el **Eslint** en nuestro proyecto, en el archivo `package.json`, en la parte de *scripts*, añadimos la siguiente línea¡:
+
 <div class="language-json highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w"> </span><span class="nt">&quot;lint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eslint --fix src/**/*.{js,jsx}&quot;</span><span class="p">,</span>
 </span></code></pre></div>
-<h4 id="pretier"><strong>Pretier</strong>*</h4>
-<p><a href="https://prettier.io/"><strong>Prettier</strong></a> es una herramienta de formateo de código que se acopla con <em>Eslint</em>, nos permite basicamente hacer un formateo automático del código (esto es, añadir ; al final de cada línea de js, si así lo decidimos). Con ello, logramos un estilo consistente.
- instalar pretieer</p>
-<p>Podemos instalar como una extensión de VSCode. Solo tenemos que buscarlo, e instalar <em>Prettier ESLint</em> (Recordad que se acoplan). Si sólo queremos instalarlo para un proyecto, podemos probar con:</p>
+
+
+#### **Pretier***
+
+[**Prettier**](https://prettier.io/) es una herramienta de formateo de código que se acopla con *Eslint*, nos permite basicamente hacer un formateo automático del código (esto es, añadir ; al final de cada línea de js, si así lo decidimos). Con ello, logramos un estilo consistente.
+ instalar pretieer
+
+Podemos instalar como una extensión de VSCode. Solo tenemos que buscarlo, e instalar *Prettier ESLint* (Recordad que se acoplan). Si sólo queremos instalarlo para un proyecto, podemos probar con:
+
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>npm<span class="w"> </span>install<span class="w"> </span>--dev<span class="w"> </span>prettier<span class="w"> </span>--legacy-peer-deps
 </span></code></pre></div>
-<p>Una vez instalado, tenemos que añadir las reglas al archivo <code>package.json</code>. Al final del archivo, después de <code>devDependencies</code>, añadimos las reglas de <strong>*Prettier</strong>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>,<span class="w"> </span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="s2">&quot;prettier&quot;</span>:<span class="w"> </span><span class="o">{</span>
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="s2">&quot;trailingComma&quot;</span>:<span class="w"> </span><span class="s2">&quot;all&quot;</span>,
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="s2">&quot;singleQuote&quot;</span>:<span class="w"> </span><span class="nb">true</span>
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="o">}</span>
-</span></code></pre></div></p>
-<p>Con estas reglas, estamos obligando a que se añada el ; al final de todas las líneas, y forzando a que se use las comillas simples <code>'...'</code>, en lugar de las dobles <code>"...."</code> para definir las cadenas. 
-Hay otras reglas que podemos añadir, como definir por defecto los tabuladores como 2 o 3 espacios... etc. Mirad la documentación de <em>Prettier</em> para más info acerca de las opciones disponibles. </p>
-<h4 id="huski"><strong>Huski</strong></h4>
-<p><a href=""><strong>Husky</strong></a> es uan herramienta que permite ejecutar ganchos (llamados hooks, como el capitán Hook) de git en los proyectos.
-Los ganchos son scripts que se ejecutan en ciertos momentos clave del proyecto, como la compilación, o la subida al repositiorio de forma automática.</p>
-<ul>
-<li>Automatización de tareas: Puedes configurar Husky para ejecutar tareas automáticamente, como linters, pruebas o formateadores, antes de realizar commits o push.</li>
-<li>Prevención de errores: Garantiza que el código que se sube al repositorio cumpla con los estándares y no contenga errores básicos.</li>
-<li>Flujo de trabajo colaborativo: Asegura que todo el equipo siga las mismas reglas de calidad y estilo.</li>
-</ul>
-<p>Para instalar husky:</p>
+
+Una vez instalado, tenemos que añadir las reglas al archivo `package.json`. Al final del archivo, después de `devDependencies`, añadimos las reglas de ***Prettier**
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="w">  </span><span class="s2">&quot;prettier&quot;</span>:<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="s2">&quot;trailingComma&quot;</span>:<span class="w"> </span><span class="s2">&quot;all&quot;</span>,
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="s2">&quot;singleQuote&quot;</span>:<span class="w"> </span><span class="nb">true</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="o">}</span>
+</span></code></pre></div>
+
+Con estas reglas, estamos obligando a que se añada el ; al final de todas las líneas, y forzando a que se use las comillas simples `'...'`, en lugar de las dobles `"...."` para definir las cadenas.
+Hay otras reglas que podemos añadir, como definir por defecto los tabuladores como 2 o 3 espacios... etc. Mirad la documentación de *Prettier* para más info acerca de las opciones disponibles.
+
+
+
+#### **Huski**
+
+[**Husky**]() es uan herramienta que permite ejecutar ganchos (llamados hooks, como el capitán Hook) de git en los proyectos.
+Los ganchos son scripts que se ejecutan en ciertos momentos clave del proyecto, como la compilación, o la subida al repositiorio de forma automática.
+
+- Automatización de tareas: Puedes configurar Husky para ejecutar tareas automáticamente, como linters, pruebas o formateadores, antes de realizar commits o push.
+- Prevención de errores: Garantiza que el código que se sube al repositorio cumpla con los estándares y no contenga errores básicos.
+- Flujo de trabajo colaborativo: Asegura que todo el equipo siga las mismas reglas de calidad y estilo.
+
+
+
+Para instalar husky:
+
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>npm<span class="w"> </span>install<span class="w"> </span>husky<span class="w"> </span>--save-dev<span class="w"> </span>--legacy-peer-deps
 </span></code></pre></div>
-<p>Ejecutamos:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>npx<span class="w"> </span>husky
+
+Ejecutamos:
+
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>npx<span class="w"> </span>husky<span class="w"> </span>init
 </span></code></pre></div>
-<p>En el archivo <code>package.json</code>  añadirmos la linea en el script</p>
+
+En el archivo `package.json`  añadirmos la linea en el script
+
 <div class="language-json highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nt">&quot;postinstall&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;husky install&quot;</span>
 </span></code></pre></div>
-<p>Ejemplos de uso de Husky:
-Podemos añadir scripts al directorio <code>.Husky</code>, y configurar cómo utilizarlos:</p>
-<ul>
-<li>Puedes agregar scripts directamente en el directorio .husky de tu proyecto. Por ejemplo:</li>
-</ul>
+
+Ejemplos de uso de Husky:
+Podemos añadir scripts al directorio `.Husky`, y configurar cómo utilizarlos:
+
+- Puedes agregar scripts directamente en el directorio .husky de tu proyecto. Por ejemplo:
+
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>npx<span class="w"> </span>husky<span class="w"> </span>add<span class="w"> </span>.husky/pre-commit<span class="w"> </span><span class="s2">&quot;npm test&quot;</span>
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>npx<span class="w"> </span>husky<span class="w"> </span>add<span class="w"> </span>.husky/pre-commit<span class="w"> </span><span class="s2">&quot;npx eslint .&quot;</span>
 </span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>npx<span class="w"> </span>husky<span class="w"> </span>add<span class="w"> </span>.husky/pre-commit<span class="w"> </span><span class="s2">&quot;npx prettier --write .&quot;</span>
 </span></code></pre></div>
-<p>Con esto ejectuamos el test de <em>npm</em>, el <em>eslint</em> y el <em>prettier</em> antes de hacer un commit.</p>
-<h2 id="6-renderizado-con-react"><strong>6. Renderizado con React</strong></h2>
-<p><a href="slides/3._Render.pdf">Render react</a></p>
-<h2 id="7-gestion-de-props-y-state"><strong>7. Gestión de <em>Props<em> y </em>State</em></strong></h2>
-<p><a href="slides/4._Props__state.pdf">props state</a></p>
+
+Con esto ejectuamos el test de *npm*, el *eslint* y el *prettier* antes de hacer un commit.
+
+
+
+
+
+
+
+
+## **6. Renderizado con React**
+
+[Render react](slides/3._Render.pdf)
+
+## **7. Gestión de *Props* y *State***
+
+[props state](slides/4._Props__state.pdf)
+
+
+
+
+ -->
 
 
 
