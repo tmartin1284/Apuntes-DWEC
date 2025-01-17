@@ -643,8 +643,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#54-instalacion-de-las-extensiones-en-nuestro-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Instalación de las extensiones en nuestro proyecto
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-renderizado-con-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Renderizado con React
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-gestion-de-props-y-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Gestión de Props y State
+    </span>
+  </a>
   
 </li>
       
@@ -863,8 +890,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#54-instalacion-de-las-extensiones-en-nuestro-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Instalación de las extensiones en nuestro proyecto
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-renderizado-con-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Renderizado con React
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-gestion-de-props-y-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Gestión de Props y State
+    </span>
+  </a>
   
 </li>
       
@@ -1069,55 +1123,182 @@ Ambas están en mi repositorio.</p>
 <li>Y obtenemos este resultado: <img alt="inicio vite" src="img/vite.jpg" /> Aqui podemos ver la dirección en localhost dónde se está mostrando la página, y cómo podemos acceder a los archivos de código. Por otra parte, se habrá creado el proyecto React con la estructura de directorios y ficheros vista <img alt="proyecto" src="img/proyectoreact.JPG" />. Y por supuesto, en el navegador, podemos ver nuestra primera página <img alt="vitereact" src="img/vitereact.jpg" />.</li>
 </ul>
 <h3 id="53-configuracion-del-entorno-de-desarrollo-para-trabajar-con-react"><strong>5.3 Configuración del entorno de desarrollo para trabajar con React</strong></h3>
-<!--
-Esta parte se basa en las transparencias  [setup React](slides/2._Setup.pdf), pero las adapta a una distribución en VSCode.
-
-Para recapitular, en el desarrollo de un proyecto con React vamos a necesitar algunos elementos:
-
-  - Las librerías de React y React-DOM, que se han instalado al crear el proyecto de React en la sección anterior
-  - Un gestor de contenido, que sería `npm` o `yarn`, aunque el primero ya lo tenenos puesto.
-  - Si hemos hecho la instalación con Vite, el se va a encargar de empaquetar el código que generemos
-
-Ahora es el momento de instalar algunas liberias y paquetes de desarrollo:
-
-#### **Linting**
-
-Cualquier *Lintern* tiene el objetivo de revisar, analizar y mejorar nuestro código, conforme vamos escribiendo. No sólo detecta errores que provocarían *no compilar*, si no que detecta malas prácticas, inconsistencias y otros fallos en el código fuente.
-Por otra parte, sugiere mejoras de estilo y optimizaciones en cuanto a la escritura de código. Aunque debemos recordar que al final cada desarrollador *desarrolla* su propia forma de programar. También detecta variables o funciones no usadas.
+<p>Esta parte se basa en las transparencias <a href="slides/2._Setup.pdf">setup React</a>, pero las adapta a una distribución en VSCode.</p>
+<p>Para recapitular, en el desarrollo de un proyecto con React vamos a necesitar algunos elementos:</p>
+<ul>
+<li>Las librerías de React y React-DOM, que se han instalado al crear el proyecto de React en la sección anterior</li>
+<li>Un gestor de contenido, que sería <code>npm</code> o <code>yarn</code>, aunque el primero ya lo tenenos puesto.</li>
+<li>Si hemos hecho la instalación con Vite, el se va a encargar de empaquetar el código que generemos</li>
+</ul>
+<p>Ahora es el momento de instalar algunas liberias y paquetes de desarrollo:</p>
+<h4 id="linting"><strong>Linting</strong></h4>
+<p>Cualquier <em>Lintern</em> tiene el objetivo de revisar, analizar y mejorar nuestro código, conforme vamos escribiendo. No sólo detecta errores que provocarían <em>no compilar</em>, si no que detecta malas prácticas, inconsistencias y otros fallos en el código fuente.
+Por otra parte, sugiere mejoras de estilo y optimizaciones en cuanto a la escritura de código. Aunque debemos recordar que al final cada desarrollador <em>desarrolla</em> su propia forma de programar. También detecta variables o funciones no usadas.
 Salvo que sean errores propios del lenguaje (que el compilador detectaría, o que llevaría a un error en el caso de lenguajes interpretados), los errores que detecta un lintern generalmente no impiden que el código se ejecute bien.
-Por esto, a veces las líneas rojas que marca el Lintern pueden sacar de quicio a un programador novel.
-
-Podemos encontrarnos varios Linterns (algunos incluso están como pluguins de VSCode):
-
-  - [**ESLint**](https://eslint.org/) es el más utilizado en proyecto se React. Detecta problemas de código, errores de sintaxis y problemas específicos de React. Además, permite definir reglas personalizables e incorporar estilos predefinidos (Airbnb, Standard, etc.). Las reglas principalmente se usan en grandes equipos de desarrollo, para unificar la manera de programar de todos los integrantes.
-  - **Style-lint** para mantener un estilo uniforme en las hojas de estilo.
-
-**Eslint** ya viene añadido al proyecto si lo hemos creado con **Vite**.
-Sin embargo, también se recomienda instalar [**Airbnb**](https://airbnb.io/javascript/).
-Estas son unas reglas creadas por la empresa homónima que se enfocan en:
-
- - Mejorar la **consistencia** para que el código se vea y comporte de la misma forma en todo el proyecto.
- - Garantizar la **legibilidad**, sobretodo pensando en que otros desarrolladores, o tu mismo, pero en otro momento, tengan que entender *qué* hace el código.
- - Prevenir **errores**, al menos los más comunes.
-
-Las principales características de Airbnb son:
-
-- Reglas de formato
-    - Uso de comillas simples (') en lugar de dobles (").
-    - Indentación de 2 espacios.
-    - Uso de punto y coma (;) al final de cada línea.
-  - Buenas prácticas:
-    - Prohíbe el uso de variables no declaradas.
-    - Requiere el uso de const o let en lugar de var.
-    - Sugiere usar funciones flecha (=>) siempre que sea posible.
-  - Específico para React:
-    - Requiere propTypes o TypeScript para la validación de propiedades.
-    - Promueve el uso de fragmentos (<></>) en lugar de div innecesarios.
-    - Obliga a seguir buenas prácticas en los hooks de React.
-  - Compatibilidad con ES6+:
-    - Promueve el uso de destructuración de objetos y arrays.
-    - Sugiere usar template literals para la concatenación de cadenas.
-
+Por esto, a veces las líneas rojas que marca el Lintern pueden sacar de quicio a un programador novel.</p>
+<p>Podemos encontrarnos varios Linterns (algunos incluso están como pluguins de VSCode):</p>
+<ul>
+<li><a href="https://eslint.org/"><strong>ESLint</strong></a> es el más utilizado en proyecto se React. Detecta problemas de código, errores de sintaxis y problemas específicos de React. Además, permite definir reglas personalizables e incorporar estilos predefinidos (Airbnb, Standard, etc.). Las reglas principalmente se usan en grandes equipos de desarrollo, para unificar la manera de programar de todos los integrantes.</li>
+<li><strong>Style-lint</strong> para mantener un estilo uniforme en las hojas de estilo.</li>
+</ul>
+<p><strong>Eslint</strong> ya viene añadido al proyecto si lo hemos creado con <strong>Vite</strong>.
+Sin embargo, también se recomienda instalar <a href="https://airbnb.io/javascript/"><strong>Airbnb</strong></a>.
+Estas son unas reglas creadas por la empresa homónima que se enfocan en:</p>
+<ul>
+<li>Mejorar la <strong>consistencia</strong> para que el código se vea y comporte de la misma forma en todo el proyecto.</li>
+<li>Garantizar la <strong>legibilidad</strong>, sobretodo pensando en que otros desarrolladores, o tu mismo, pero en otro momento, tengan que entender <em>qué</em> hace el código.</li>
+<li>Prevenir <strong>errores</strong>, al menos los más comunes.</li>
+</ul>
+<p>Las principales características de Airbnb son:</p>
+<ul>
+<li>Reglas de formato</li>
+<li>Uso de comillas simples (') en lugar de dobles (").</li>
+<li>Indentación de 2 espacios.</li>
+<li>Uso de punto y coma (;) al final de cada línea.</li>
+<li>Buenas prácticas:<ul>
+<li>Prohíbe el uso de variables no declaradas.</li>
+<li>Requiere el uso de const o let en lugar de var.</li>
+<li>Sugiere usar funciones flecha (=&gt;) siempre que sea posible.</li>
+</ul>
+</li>
+<li>Específico para React:<ul>
+<li>Requiere propTypes o TypeScript para la validación de propiedades.</li>
+<li>Promueve el uso de fragmentos (&lt;&gt;) en lugar de div innecesarios.</li>
+<li>Obliga a seguir buenas prácticas en los hooks de React.</li>
+</ul>
+</li>
+<li>Compatibilidad con ES6+:<ul>
+<li>Promueve el uso de destructuración de objetos y arrays.</li>
+<li>Sugiere usar template literals para la concatenación de cadenas.</li>
+</ul>
+</li>
+</ul>
+<h4 id="pretier"><strong>Pretier</strong></h4>
+<p><a href="https://prettier.io/"><strong>Prettier</strong></a> es una herramienta de formateo de código que se acopla con <em>Eslint</em>, nos permite basicamente hacer un formateo automático del código (esto es, añadir ; al final de cada línea de js, si así lo decidimos). Con ello, logramos un estilo consistente.
+instalar pretieer</p>
+<h4 id="huski"><strong>Huski</strong></h4>
+<p><a href=""><strong>Husky</strong></a> es uan herramienta que permite ejecutar ganchos (llamados hooks, como el capitán Hook) de git en los proyectos.
+Los ganchos son scripts que se ejecutan en ciertos momentos clave del proyecto, como la compilación, o la subida al repositiorio de forma automática.</p>
+<ul>
+<li>Automatización de tareas: Puedes configurar Husky para ejecutar tareas automáticamente, como linters, pruebas o formateadores, antes de realizar commits o push.</li>
+<li>Prevención de errores: Garantiza que el código que se sube al repositorio cumpla con los estándares y no contenga errores básicos.</li>
+<li>Flujo de trabajo colaborativo: Asegura que todo el equipo siga las mismas reglas de calidad y estilo.</li>
+</ul>
+<h3 id="54-instalacion-de-las-extensiones-en-nuestro-proyecto"><strong>5.4 Instalación de las extensiones en nuestro proyecto</strong></h3>
+<p>instalando react</p>
+<ol>
+<li>
+<p>cofiguramos eslint y prettier como formatter dentro de code:
+   en settings buscamos formatter y le indicadmos que es prettier; además buscamos la opción de format on save</p>
+</li>
+<li>
+<p>comprobamos que tengamos instalado npm y node
+   npm -v
+   node -v</p>
+</li>
+<li>
+<p>instalamos yarn (por si acaso)
+   npm install -g yarn</p>
+</li>
+<li>
+<p>Creamos el proyecto con vite
+   npm create vite@latest, y seguimos el proceso de creación e instalación, salvo por la parte de levantar la web</p>
+</li>
+<li>
+<p>actualizamos los paquetes de react y react-dom, para que tengan la últia versión
+   npm install react@latest react-dom@latest
+   y lo comprobamos
+   npm list react react-dom</p>
+</li>
+</ol>
+<p>AHORA VIENE LO BUENO. (añadimos @latest en todos los paquetes, y --legacy-peer-deps en todos los comandosssssssssssssssssssssssssssssssssssssa</p>
+<p>6 instalamos eslint con las reglsa de airbnb
+npm install eslint@latest eslint-config-airbnb@latest eslint-plugin-react@latest eslint-plugin-react-hooks@latest eslint-plugin-jsx-a11y@latest eslint-plugin-import@latest eslint-plugin-react-refresh@latest --save-dev --legacy-peer-deps
+si estuvieramos usando typescript, tb añadimos
+npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev</p>
+<p>7 inicializamos eslint
+npx eslint --init , ojo que al final, le he dicho que uso el yarn y no el npm como gestor de paquetes</p>
+<p>-- no da fallo, pero si deberia crear el archivo .eslintrc. lo creamos y añadimos el código</p>
+<p>{
+"env": {
+"browser": true,
+"es2021": true
+},
+"extends": [
+"airbnb",
+"airbnb/hooks",
+"eslint:recommended",
+"plugin:react/recommended",
+"plugin:react-hooks/recommended"
+],
+"parserOptions": {
+"ecmaVersion": 2021,
+"sourceType": "module",
+"ecmaFeatures": {
+"jsx": true
+}
+},
+"plugins": ["react", "react-hooks"],
+"rules": {
+"react/react-in-jsx-scope": "off", // No es necesario importar React en Vite.
+"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+}
+}</p>
+<p>8 instalamos prettier
+npm install prettier@latest eslint-config-prettier@latest eslint-plugin-prettier@latest --save-dev --legacy-peer-deps</p>
+<p>vuelve a dar fallo por dependencias. la alternativa sería usar yarn :
+yarn add prettier eslint eslint-config-airbnb --dev</p>
+<ol>
+<li>cfreamos el archivo .prettierrc con este codigo
+   {
+   "semi": true,
+   "singleQuote": true,
+   "trailingComma": "all",
+   "printWidth": 80,
+   "tabWidth": 2
+   }</li>
+</ol>
+<p>10 creamos el archivo .prettierignore con este codigo
+node_modules
+dist
+build</p>
+<p>11 en el archivo .eslintrc que hemos creado en unpaso anterior, añadimos esta linea dentro de los exports</p>
+<p>,
+"plugin:prettier/recommended"</p>
+<p>en los scripts del package.json añadimos
+"format": "prettier --write .", para que se encargeu de formatearnos</p>
+<p>12 instalamos husky y lintstaged
+npm install husky lint-staged --save-dev</p>
+<p>arrancamos el repositorio del proyecto
+git init</p>
+<p>y lo ejecutamos
+npx husky-init</p>
+<p>arrancamos husky para que cree la configuración
+npx husky add .husky/pre-commit "npm test"
+con esto crea .husky/pre-commit en el proyecto
+hacemos el archivo ejecutable
+chmod +x .husky/pre-commit</p>
+<p>para probar husky hacemos un commit</p>
+<p>git add .
+git commit -m "Setup Husky"</p>
+<p>si da error, hacemos esto en el package.json</p>
+<p>{
+"scripts": {
+"test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+}
+}</p>
+<p>añadimos esto al .eslintrc</p>
+<p>"extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+"plugins": ["prettier"],
+"rules": {
+"prettier/prettier": "error"
+}
+}</p>
+<h2 id="6-renderizado-con-react"><strong>6. Renderizado con React</strong></h2>
+<p><a href="slides/3._Render.pdf">Render react</a></p>
+<h2 id="7-gestion-de-props-y-state"><strong>7. Gestión de <em>Props</em> y <em>State</em></strong></h2>
+<p><a href="slides/4._Props__state.pdf">props state</a></p>
+<!--
 Para instalar **Airbnb**, sobre **Eslint**:
 
   - Ejecutamos el siguiente comando. Presta atención a la parte de `--legacy-peer-deps`, para evitar problemas con las dependencias
@@ -1153,10 +1334,8 @@ en el archivo eslint.config.js sustituir la parte de export por
 </span></code></pre></div>
 
 
-#### **Pretier***
+prettier
 
-[**Prettier**](https://prettier.io/) es una herramienta de formateo de código que se acopla con *Eslint*, nos permite basicamente hacer un formateo automático del código (esto es, añadir ; al final de cada línea de js, si así lo decidimos). Con ello, logramos un estilo consistente.
- instalar pretieer
 
 Podemos instalar como una extensión de VSCode. Solo tenemos que buscarlo, e instalar *Prettier ESLint* (Recordad que se acoplan). Si sólo queremos instalarlo para un proyecto, podemos probar con:
 
@@ -1174,15 +1353,7 @@ Con estas reglas, estamos obligando a que se añada el ; al final de todas las l
 Hay otras reglas que podemos añadir, como definir por defecto los tabuladores como 2 o 3 espacios... etc. Mirad la documentación de *Prettier* para más info acerca de las opciones disponibles.
 
 
-
-#### **Huski**
-
-[**Husky**]() es uan herramienta que permite ejecutar ganchos (llamados hooks, como el capitán Hook) de git en los proyectos.
-Los ganchos son scripts que se ejecutan en ciertos momentos clave del proyecto, como la compilación, o la subida al repositiorio de forma automática.
-
-- Automatización de tareas: Puedes configurar Husky para ejecutar tareas automáticamente, como linters, pruebas o formateadores, antes de realizar commits o push.
-- Prevención de errores: Garantiza que el código que se sube al repositorio cumpla con los estándares y no contenga errores básicos.
-- Flujo de trabajo colaborativo: Asegura que todo el equipo siga las mismas reglas de calidad y estilo.
+husky
 
 
 
@@ -1217,16 +1388,6 @@ Con esto ejectuamos el test de *npm*, el *eslint* y el *prettier* antes de hacer
 
 
 
-
-
-
-## **6. Renderizado con React**
-
-[Render react](slides/3._Render.pdf)
-
-## **7. Gestión de *Props* y *State***
-
-[props state](slides/4._Props__state.pdf)
 
 
 
