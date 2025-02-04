@@ -192,7 +192,7 @@ La programación declarativa se basa en una máquina de estados, y las transicio
     <p><u>Deberíamos cronometrarnos para ver lo que nos cuesta hacerlo con una y otra tecnología.</u></p>
 </div>
 
-## **5. Preparación del entorno**
+## **5. Creando un proyecto React en Code**
 
 Hay varias versiones a la hora de crear un proyecto en React:
 
@@ -343,128 +343,181 @@ Los ganchos son scripts que se ejecutan en ciertos momentos clave del proyecto, 
 
 ### **5.4 Instalación de las extensiones en nuestro proyecto**
 
-instalando react
+Para crear un proyecto **React** en **VSCode**, y añadir paquetes y extensiones, se han seguido los siguientes pasos:
 
-1. cofiguramos eslint y prettier como formatter dentro de code:
-   en settings buscamos formatter y le indicadmos que es prettier; además buscamos la opción de format on save
+- 1. Se configura `eslint` y `prettier` como `formatter` dentro de code. Para ello, en `settings` buscamos `formatter` y le indicadmos que es `prettier`; además buscamos la opción de `format on save`, y la activamos. Con esto además, formaterará el texto automáticamente cuando guardemos un archivo (y lo guardará cuando cambiemos de archivo). Todo en uno.
 
-2. comprobamos que tengamos instalado npm y node
-   npm -v
-   node -v
+- 2. Comprobamos que tengamos instalado `npm` y `node`, que deberían estar según los pasos del punto 5.1
 
-3. instalamos yarn (por si acaso)
+```bash
+npm -v
+node -v
+```
+
+- 1. En ppio no necesitarémos intalar `yarn` (otro gestor de paquetes alternativo a `npm`, pero por si acaso, lo instalaríamos:
+
+```bash
    npm install -g yarn
+```
 
-4. Creamos el proyecto con vite
-   npm create vite@latest, y seguimos el proceso de creación e instalación, salvo por la parte de levantar la web
+- 2. Creamos el proyecto con vite
 
-5. actualizamos los paquetes de react y react-dom, para que tengan la últia versión
+```bash
+   npm create vite@latest, y seguimos el proceso de creación e instalación que nos indica (véase apartado 5.1)
+```
+
+- 3. Actualizamos los paquetes de `react` y `react-dom`, para que tengan la última versión (por si acaso). Y comprobamos estas versiones. Podemos ver también que se actualiza la versión en el archivo `json` del proyecto.
+
+```bash
    npm install react@latest react-dom@latest
-   y lo comprobamos
    npm list react react-dom
+```
 
-AHORA VIENE LO BUENO. (añadimos @latest en todos los paquetes, y --legacy-peer-deps en todos los comandosssssssssssssssssssssssssssssssssssssa
+A partir de ahora, para asegurarnos que al instalar algún paquete, nos instale la última versión, añadirémos `@latest` en el nombre de todos los paquetes, y `--legacy-peer-deps` en todos los comandos, para que resuelva las dependencias que puedan surgir.
 
-6 instalamos eslint con las reglsa de airbnb
+- 6. Instalnstalamos `eslint` con las reglsa de `airbnb` en el proyecto
+
+```bash
 npm install eslint@latest eslint-config-airbnb@latest eslint-plugin-react@latest eslint-plugin-react-hooks@latest eslint-plugin-jsx-a11y@latest eslint-plugin-import@latest eslint-plugin-react-refresh@latest --save-dev --legacy-peer-deps
-si estuvieramos usando typescript, tb añadimos
+```
+
+Si estuvieramos usando typescript, también añadimos :
+
+```bash
 npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
+```
 
-7 inicializamos eslint
-npx eslint --init , ojo que al final, le he dicho que uso el yarn y no el npm como gestor de paquetes
+- 7. Inicializamos `eslint`:
 
--- no da fallo, pero si deberia crear el archivo .eslintrc. lo creamos y añadimos el código
+```bash
+npx eslint --init
+```
 
+OJO que al final, le he dicho que uso el yarn y no el npm como gestor de paquetes.
+
+Si no crea el archivo `.eslintrc.` lo creamos y añadimos el siguiiente código:
+
+```json
 {
-"env": {
-"browser": true,
-"es2021": true
-},
-"extends": [
-"airbnb",
-"airbnb/hooks",
-"eslint:recommended",
-"plugin:react/recommended",
-"plugin:react-hooks/recommended"
-],
-"parserOptions": {
-"ecmaVersion": 2021,
-"sourceType": "module",
-"ecmaFeatures": {
-"jsx": true
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react", "react-hooks"],
+  "rules": {
+    "react/react-in-jsx-scope": "off", // No es necesario importar React en Vite.
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ]
+  }
 }
-},
-"plugins": ["react", "react-hooks"],
-"rules": {
-"react/react-in-jsx-scope": "off", // No es necesario importar React en Vite.
-"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
-}
-}
+```
 
-8 instalamos prettier
+- 8. Instalamos `prettier`:
+
+```bash
 npm install prettier@latest eslint-config-prettier@latest eslint-plugin-prettier@latest --save-dev --legacy-peer-deps
+```
 
-vuelve a dar fallo por dependencias. la alternativa sería usar yarn :
-yarn add prettier eslint eslint-config-airbnb --dev
+- 9. Si no lo crea en la raiz del proyecto, creamos el archivo `.prettierrc` con este codigo:
 
-9. cfreamos el archivo .prettierrc con este codigo
-   {
-   "semi": true,
-   "singleQuote": true,
-   "trailingComma": "all",
-   "printWidth": 80,
-   "tabWidth": 2
-   }
+```json
+{
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "printWidth": 80,
+  "tabWidth": 2
+}
+```
 
-10 creamos el archivo .prettierignore con este codigo
+- 10. Si no lo crea, creamos el archivo `.prettierignore` con este codigo:
+
+```json
 node_modules
 dist
 build
+```
 
-11 en el archivo .eslintrc que hemos creado en unpaso anterior, añadimos esta linea dentro de los exports
+- 11. En el archivo `.eslintrc` que hemos creado en un paso anterior, añadimos esta linea dentro de los exports
 
+```json
 ,
 "plugin:prettier/recommended"
+```
 
-en los scripts del package.json añadimos
-"format": "prettier --write .", para que se encargeu de formatearnos
+en los scripts del `package.json` añadimos:
 
-12 instalamos husky y lintstaged
+```json
+"format": "prettier --write .",
+```
+
+- 12. Instalamos `husky` y `lintstaged`
+
+```bash
 npm install husky lint-staged --save-dev
+```
 
-arrancamos el repositorio del proyecto
+- 13. Arrancamos el repositorio del proyecto, y lo ejecutamos
+
+```bash
 git init
-
-y lo ejecutamos
 npx husky-init
+```
 
-arrancamos husky para que cree la configuración
+- 14. Arrancamos `husky` para que cree la configuración
+
+```bash
 npx husky add .husky/pre-commit "npm test"
 con esto crea .husky/pre-commit en el proyecto
 hacemos el archivo ejecutable
 chmod +x .husky/pre-commit
+```
 
-para probar husky hacemos un commit
+Para probar husky hacemos un commit
 
+```bash
 git add .
 git commit -m "Setup Husky"
+```
 
-si da error, hacemos esto en el package.json
+Si da error, es proque no está configurado. Hacemos esto en el `package.json`
 
+```json
 {
-"scripts": {
-"test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
-}
+```
 
-añadimos esto al .eslintrc
+Y añadimos esto al `.eslintrc`
 
+```json
 "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
 "plugins": ["prettier"],
 "rules": {
 "prettier/prettier": "error"
 }
 }
+```
+
+En principio, después de todo esto, el proyecto ya debe estar configurado con todos los plugins.
 
 ## **6. Renderizado con React**
 

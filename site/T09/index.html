@@ -12,6 +12,8 @@
         <link rel="prev" href="../T08/">
       
       
+        <link rel="next" href="../T10/">
+      
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
@@ -607,13 +609,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-preparacion-del-entorno" class="md-nav__link">
+  <a href="#5-creando-un-proyecto-react-en-code" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Preparación del entorno
+      5. Creando un proyecto React en Code
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. Preparación del entorno">
+    <nav class="md-nav" aria-label="5. Creando un proyecto React en Code">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -643,8 +645,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#54-instalacion-de-las-extensiones-en-nuestro-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Instalación de las extensiones en nuestro proyecto
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-renderizado-con-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Renderizado con React
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-gestion-de-props-y-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Gestión de Props y State
+    </span>
+  </a>
   
 </li>
       
@@ -652,6 +681,26 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U10 - TypeScript
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -827,13 +876,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-preparacion-del-entorno" class="md-nav__link">
+  <a href="#5-creando-un-proyecto-react-en-code" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Preparación del entorno
+      5. Creando un proyecto React en Code
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. Preparación del entorno">
+    <nav class="md-nav" aria-label="5. Creando un proyecto React en Code">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -863,8 +912,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#54-instalacion-de-las-extensiones-en-nuestro-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Instalación de las extensiones en nuestro proyecto
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-renderizado-con-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Renderizado con React
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-gestion-de-props-y-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Gestión de Props y State
+    </span>
+  </a>
   
 </li>
       
@@ -1014,7 +1090,7 @@ Ambas están en mi repositorio.</p>
     <p><u>Deberíamos cronometrarnos para ver lo que nos cuesta hacerlo con una y otra tecnología.</u></p>
 </div>
 
-<h2 id="5-preparacion-del-entorno"><strong>5. Preparación del entorno</strong></h2>
+<h2 id="5-creando-un-proyecto-react-en-code"><strong>5. Creando un proyecto React en Code</strong></h2>
 <p>Hay varias versiones a la hora de crear un proyecto en React:</p>
 <ul>
 <li>"A pelo". Usando el gestor de paquetes <a href="https://www.npmjs.com/"><strong>npm</strong></a> que ya comentamos en el primer tema.</li>
@@ -1069,136 +1145,340 @@ Ambas están en mi repositorio.</p>
 <li>Y obtenemos este resultado: <img alt="inicio vite" src="img/vite.jpg" /> Aqui podemos ver la dirección en localhost dónde se está mostrando la página, y cómo podemos acceder a los archivos de código. Por otra parte, se habrá creado el proyecto React con la estructura de directorios y ficheros vista <img alt="proyecto" src="img/proyectoreact.JPG" />. Y por supuesto, en el navegador, podemos ver nuestra primera página <img alt="vitereact" src="img/vitereact.jpg" />.</li>
 </ul>
 <h3 id="53-configuracion-del-entorno-de-desarrollo-para-trabajar-con-react"><strong>5.3 Configuración del entorno de desarrollo para trabajar con React</strong></h3>
-<!--
-Esta parte se basa en las transparencias  [setup React](slides/2._Setup.pdf), pero las adapta a una distribución en VSCode.
-
-Para recapitular, en el desarrollo de un proyecto con React vamos a necesitar algunos elementos:
-
-  - Las librerías de React y React-DOM, que se han instalado al crear el proyecto de React en la sección anterior
-  - Un gestor de contenido, que sería `npm` o `yarn`, aunque el primero ya lo tenenos puesto.
-  - Si hemos hecho la instalación con Vite, el se va a encargar de empaquetar el código que generemos
-
-Ahora es el momento de instalar algunas liberias y paquetes de desarrollo:
-
-#### **Linting**
-
-Cualquier *Lintern* tiene el objetivo de revisar, analizar y mejorar nuestro código, conforme vamos escribiendo. No sólo detecta errores que provocarían *no compilar*, si no que detecta malas prácticas, inconsistencias y otros fallos en el código fuente.
-Por otra parte, sugiere mejoras de estilo y optimizaciones en cuanto a la escritura de código. Aunque debemos recordar que al final cada desarrollador *desarrolla* su propia forma de programar. También detecta variables o funciones no usadas.
+<p>Esta parte se basa en las transparencias <a href="slides/2._Setup.pdf">setup React</a>, pero las adapta a una distribución en VSCode.</p>
+<p>Para recapitular, en el desarrollo de un proyecto con React vamos a necesitar algunos elementos:</p>
+<ul>
+<li>Las librerías de React y React-DOM, que se han instalado al crear el proyecto de React en la sección anterior</li>
+<li>Un gestor de contenido, que sería <code>npm</code> o <code>yarn</code>, aunque el primero ya lo tenenos puesto.</li>
+<li>Si hemos hecho la instalación con Vite, el se va a encargar de empaquetar el código que generemos</li>
+</ul>
+<p>Ahora es el momento de instalar algunas liberias y paquetes de desarrollo:</p>
+<h4 id="linting"><strong>Linting</strong></h4>
+<p>Cualquier <em>Lintern</em> tiene el objetivo de revisar, analizar y mejorar nuestro código, conforme vamos escribiendo. No sólo detecta errores que provocarían <em>no compilar</em>, si no que detecta malas prácticas, inconsistencias y otros fallos en el código fuente.
+Por otra parte, sugiere mejoras de estilo y optimizaciones en cuanto a la escritura de código. Aunque debemos recordar que al final cada desarrollador <em>desarrolla</em> su propia forma de programar. También detecta variables o funciones no usadas.
 Salvo que sean errores propios del lenguaje (que el compilador detectaría, o que llevaría a un error en el caso de lenguajes interpretados), los errores que detecta un lintern generalmente no impiden que el código se ejecute bien.
-Por esto, a veces las líneas rojas que marca el Lintern pueden sacar de quicio a un programador novel.
-
-Podemos encontrarnos varios Linterns (algunos incluso están como pluguins de VSCode):
-
-  - [**ESLint**](https://eslint.org/) es el más utilizado en proyecto se React. Detecta problemas de código, errores de sintaxis y problemas específicos de React. Además, permite definir reglas personalizables e incorporar estilos predefinidos (Airbnb, Standard, etc.). Las reglas principalmente se usan en grandes equipos de desarrollo, para unificar la manera de programar de todos los integrantes.
-  - **Style-lint** para mantener un estilo uniforme en las hojas de estilo.
-
-**Eslint** ya viene añadido al proyecto si lo hemos creado con **Vite**.
-Sin embargo, también se recomienda instalar [**Airbnb**](https://airbnb.io/javascript/).
-Estas son unas reglas creadas por la empresa homónima que se enfocan en:
-
- - Mejorar la **consistencia** para que el código se vea y comporte de la misma forma en todo el proyecto.
- - Garantizar la **legibilidad**, sobretodo pensando en que otros desarrolladores, o tu mismo, pero en otro momento, tengan que entender *qué* hace el código.
- - Prevenir **errores**, al menos los más comunes.
-
-Las principales características de Airbnb son:
-
-- Reglas de formato
-    - Uso de comillas simples (') en lugar de dobles (").
-    - Indentación de 2 espacios.
-    - Uso de punto y coma (;) al final de cada línea.
-  - Buenas prácticas:
-    - Prohíbe el uso de variables no declaradas.
-    - Requiere el uso de const o let en lugar de var.
-    - Sugiere usar funciones flecha (=>) siempre que sea posible.
-  - Específico para React:
-    - Requiere propTypes o TypeScript para la validación de propiedades.
-    - Promueve el uso de fragmentos (<></>) en lugar de div innecesarios.
-    - Obliga a seguir buenas prácticas en los hooks de React.
-  - Compatibilidad con ES6+:
-    - Promueve el uso de destructuración de objetos y arrays.
-    - Sugiere usar template literals para la concatenación de cadenas.
-
+Por esto, a veces las líneas rojas que marca el Lintern pueden sacar de quicio a un programador novel.</p>
+<p>Podemos encontrarnos varios Linterns (algunos incluso están como pluguins de VSCode):</p>
+<ul>
+<li><a href="https://eslint.org/"><strong>ESLint</strong></a> es el más utilizado en proyecto se React. Detecta problemas de código, errores de sintaxis y problemas específicos de React. Además, permite definir reglas personalizables e incorporar estilos predefinidos (Airbnb, Standard, etc.). Las reglas principalmente se usan en grandes equipos de desarrollo, para unificar la manera de programar de todos los integrantes.</li>
+<li><strong>Style-lint</strong> para mantener un estilo uniforme en las hojas de estilo.</li>
+</ul>
+<p><strong>Eslint</strong> ya viene añadido al proyecto si lo hemos creado con <strong>Vite</strong>.
+Sin embargo, también se recomienda instalar <a href="https://airbnb.io/javascript/"><strong>Airbnb</strong></a>.
+Estas son unas reglas creadas por la empresa homónima que se enfocan en:</p>
+<ul>
+<li>Mejorar la <strong>consistencia</strong> para que el código se vea y comporte de la misma forma en todo el proyecto.</li>
+<li>Garantizar la <strong>legibilidad</strong>, sobretodo pensando en que otros desarrolladores, o tu mismo, pero en otro momento, tengan que entender <em>qué</em> hace el código.</li>
+<li>Prevenir <strong>errores</strong>, al menos los más comunes.</li>
+</ul>
+<p>Las principales características de Airbnb son:</p>
+<ul>
+<li>Reglas de formato</li>
+<li>Uso de comillas simples (') en lugar de dobles (").</li>
+<li>Indentación de 2 espacios.</li>
+<li>Uso de punto y coma (;) al final de cada línea.</li>
+<li>Buenas prácticas:<ul>
+<li>Prohíbe el uso de variables no declaradas.</li>
+<li>Requiere el uso de const o let en lugar de var.</li>
+<li>Sugiere usar funciones flecha (=&gt;) siempre que sea posible.</li>
+</ul>
+</li>
+<li>Específico para React:<ul>
+<li>Requiere propTypes o TypeScript para la validación de propiedades.</li>
+<li>Promueve el uso de fragmentos (&lt;&gt;) en lugar de div innecesarios.</li>
+<li>Obliga a seguir buenas prácticas en los hooks de React.</li>
+</ul>
+</li>
+<li>Compatibilidad con ES6+:<ul>
+<li>Promueve el uso de destructuración de objetos y arrays.</li>
+<li>Sugiere usar template literals para la concatenación de cadenas.</li>
+</ul>
+</li>
+</ul>
+<h4 id="pretier"><strong>Pretier</strong></h4>
+<p><a href="https://prettier.io/"><strong>Prettier</strong></a> es una herramienta de formateo de código que se acopla con <em>Eslint</em>, nos permite basicamente hacer un formateo automático del código (esto es, añadir ; al final de cada línea de js, si así lo decidimos). Con ello, logramos un estilo consistente.
+instalar pretieer</p>
+<h4 id="huski"><strong>Huski</strong></h4>
+<p><a href=""><strong>Husky</strong></a> es uan herramienta que permite ejecutar ganchos (llamados hooks, como el capitán Hook) de git en los proyectos.
+Los ganchos son scripts que se ejecutan en ciertos momentos clave del proyecto, como la compilación, o la subida al repositiorio de forma automática.</p>
+<ul>
+<li>Automatización de tareas: Puedes configurar Husky para ejecutar tareas automáticamente, como linters, pruebas o formateadores, antes de realizar commits o push.</li>
+<li>Prevención de errores: Garantiza que el código que se sube al repositorio cumpla con los estándares y no contenga errores básicos.</li>
+<li>Flujo de trabajo colaborativo: Asegura que todo el equipo siga las mismas reglas de calidad y estilo.</li>
+</ul>
+<h3 id="54-instalacion-de-las-extensiones-en-nuestro-proyecto"><strong>5.4 Instalación de las extensiones en nuestro proyecto</strong></h3>
+<p>Para crear un proyecto <strong>React</strong> en <strong>VSCode</strong>, y añadir paquetes y extensiones, se han seguido los siguientes pasos:</p>
+<ul>
+<li>
+<ol>
+<li>Se configura <code>eslint</code> y <code>prettier</code> como <code>formatter</code> dentro de code. Para ello, en <code>settings</code> buscamos <code>formatter</code> y le indicadmos que es <code>prettier</code>; además buscamos la opción de <code>format on save</code>, y la activamos. Con esto además, formaterará el texto automáticamente cuando guardemos un archivo (y lo guardará cuando cambiemos de archivo). Todo en uno.</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Comprobamos que tengamos instalado <code>npm</code> y <code>node</code>, que deberían estar según los pasos del punto 5.1</li>
+</ol>
+</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>npm<span class="w"> </span>-v
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>node<span class="w"> </span>-v
+</span></code></pre></div>
+<ul>
+<li>
+<ol>
+<li>En ppio no necesitarémos intalar <code>yarn</code> (otro gestor de paquetes alternativo a <code>npm</code>, pero por si acaso, lo instalaríamos:</li>
+</ol>
+</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">   </span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>yarn
+</span></code></pre></div>
+<ul>
+<li>
+<ol>
+<li>Creamos el proyecto con vite</li>
+</ol>
+</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">   </span>npm<span class="w"> </span>create<span class="w"> </span>vite@latest,<span class="w"> </span>y<span class="w"> </span>seguimos<span class="w"> </span>el<span class="w"> </span>proceso<span class="w"> </span>de<span class="w"> </span>creación<span class="w"> </span>e<span class="w"> </span>instalación<span class="w"> </span>que<span class="w"> </span>nos<span class="w"> </span>indica<span class="w"> </span><span class="o">(</span>véase<span class="w"> </span>apartado<span class="w"> </span><span class="m">5</span>.1<span class="o">)</span>
+</span></code></pre></div>
+<ul>
+<li>
+<ol>
+<li>Actualizamos los paquetes de <code>react</code> y <code>react-dom</code>, para que tengan la última versión (por si acaso). Y comprobamos estas versiones. Podemos ver también que se actualiza la versión en el archivo <code>json</code> del proyecto.</li>
+</ol>
+</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="w">   </span>npm<span class="w"> </span>install<span class="w"> </span>react@latest<span class="w"> </span>react-dom@latest
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">   </span>npm<span class="w"> </span>list<span class="w"> </span>react<span class="w"> </span>react-dom
+</span></code></pre></div>
+<p>A partir de ahora, para asegurarnos que al instalar algún paquete, nos instale la última versión, añadirémos <code>@latest</code> en el nombre de todos los paquetes, y <code>--legacy-peer-deps</code> en todos los comandos, para que resuelva las dependencias que puedan surgir.</p>
+<ul>
+<li>
+<ol>
+<li>Instalnstalamos <code>eslint</code> con las reglsa de <code>airbnb</code> en el proyecto</li>
+</ol>
+</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>npm<span class="w"> </span>install<span class="w"> </span>eslint@latest<span class="w"> </span>eslint-config-airbnb@latest<span class="w"> </span>eslint-plugin-react@latest<span class="w"> </span>eslint-plugin-react-hooks@latest<span class="w"> </span>eslint-plugin-jsx-a11y@latest<span class="w"> </span>eslint-plugin-import@latest<span class="w"> </span>eslint-plugin-react-refresh@latest<span class="w"> </span>--save-dev<span class="w"> </span>--legacy-peer-deps
+</span></code></pre></div>
+<p>Si estuvieramos usando typescript, también añadimos :</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>npm<span class="w"> </span>install<span class="w"> </span>@typescript-eslint/parser<span class="w"> </span>@typescript-eslint/eslint-plugin<span class="w"> </span>--save-dev
+</span></code></pre></div>
+<ul>
+<li>
+<ol>
+<li>Inicializamos <code>eslint</code>:</li>
+</ol>
+</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>npx<span class="w"> </span>eslint<span class="w"> </span>--init
+</span></code></pre></div>
+<p>OJO que al final, le he dicho que uso el yarn y no el npm como gestor de paquetes.</p>
+<p>Si no crea el archivo <code>.eslintrc.</code> lo creamos y añadimos el siguiiente código:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">{</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">  </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="nt">&quot;browser&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="nt">&quot;es2021&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">  </span><span class="nt">&quot;extends&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">    </span><span class="s2">&quot;airbnb&quot;</span><span class="p">,</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">    </span><span class="s2">&quot;airbnb/hooks&quot;</span><span class="p">,</span>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="w">    </span><span class="s2">&quot;eslint:recommended&quot;</span><span class="p">,</span>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="w">    </span><span class="s2">&quot;plugin:react/recommended&quot;</span><span class="p">,</span>
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="w">    </span><span class="s2">&quot;plugin:react-hooks/recommended&quot;</span>
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="w">  </span><span class="nt">&quot;parserOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="w">    </span><span class="nt">&quot;ecmaVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2021</span><span class="p">,</span>
+</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="w">    </span><span class="nt">&quot;sourceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;module&quot;</span><span class="p">,</span>
+</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="w">    </span><span class="nt">&quot;ecmaFeatures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-17"><a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a><span class="w">      </span><span class="nt">&quot;jsx&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-22-18"><a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-22-19"><a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-22-20"><a id="__codelineno-22-20" name="__codelineno-22-20" href="#__codelineno-22-20"></a><span class="w">  </span><span class="nt">&quot;plugins&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;react&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;react-hooks&quot;</span><span class="p">],</span>
+</span><span id="__span-22-21"><a id="__codelineno-22-21" name="__codelineno-22-21" href="#__codelineno-22-21"></a><span class="w">  </span><span class="nt">&quot;rules&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-22"><a id="__codelineno-22-22" name="__codelineno-22-22" href="#__codelineno-22-22"></a><span class="w">    </span><span class="nt">&quot;react/react-in-jsx-scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;off&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// No es necesario importar React en Vite.</span>
+</span><span id="__span-22-23"><a id="__codelineno-22-23" name="__codelineno-22-23" href="#__codelineno-22-23"></a><span class="w">    </span><span class="nt">&quot;react/jsx-filename-extension&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-22-24"><a id="__codelineno-22-24" name="__codelineno-22-24" href="#__codelineno-22-24"></a><span class="w">      </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-22-25"><a id="__codelineno-22-25" name="__codelineno-22-25" href="#__codelineno-22-25"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;.jsx&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;.ts&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;.tsx&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-22-26"><a id="__codelineno-22-26" name="__codelineno-22-26" href="#__codelineno-22-26"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-22-27"><a id="__codelineno-22-27" name="__codelineno-22-27" href="#__codelineno-22-27"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-22-28"><a id="__codelineno-22-28" name="__codelineno-22-28" href="#__codelineno-22-28"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>
+<ol>
+<li>Instalamos <code>prettier</code>:</li>
+</ol>
+</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>npm<span class="w"> </span>install<span class="w"> </span>prettier@latest<span class="w"> </span>eslint-config-prettier@latest<span class="w"> </span>eslint-plugin-prettier@latest<span class="w"> </span>--save-dev<span class="w"> </span>--legacy-peer-deps
+</span></code></pre></div>
+<ul>
+<li>
+<ol>
+<li>Si no lo crea en la raiz del proyecto, creamos el archivo <code>.prettierrc</code> con este codigo:</li>
+</ol>
+</li>
+</ul>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">{</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">  </span><span class="nt">&quot;semi&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">  </span><span class="nt">&quot;singleQuote&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">  </span><span class="nt">&quot;trailingComma&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;all&quot;</span><span class="p">,</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">  </span><span class="nt">&quot;printWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="w">  </span><span class="nt">&quot;tabWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>
+<ol>
+<li>Si no lo crea, creamos el archivo <code>.prettierignore</code> con este codigo:</li>
+</ol>
+</li>
+</ul>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kc">n</span><span class="err">ode_modules</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="err">dis</span><span class="kc">t</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="err">build</span>
+</span></code></pre></div>
+<ul>
+<li>
+<ol>
+<li>En el archivo <code>.eslintrc</code> que hemos creado en un paso anterior, añadimos esta linea dentro de los exports</li>
+</ol>
+</li>
+</ul>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="p">,</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="s2">&quot;plugin:prettier/recommended&quot;</span>
+</span></code></pre></div>
+<p>en los scripts del <code>package.json</code> añadimos:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;prettier --write .&quot;</span><span class="p">,</span>
+</span></code></pre></div>
+<ul>
+<li>
+<ol>
+<li>Instalamos <code>husky</code> y <code>lintstaged</code></li>
+</ol>
+</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>npm<span class="w"> </span>install<span class="w"> </span>husky<span class="w"> </span>lint-staged<span class="w"> </span>--save-dev
+</span></code></pre></div>
+<ul>
+<li>
+<ol>
+<li>Arrancamos el repositorio del proyecto, y lo ejecutamos</li>
+</ol>
+</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>git<span class="w"> </span>init
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>npx<span class="w"> </span>husky-init
+</span></code></pre></div>
+<ul>
+<li>
+<ol>
+<li>Arrancamos <code>husky</code> para que cree la configuración</li>
+</ol>
+</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>npx<span class="w"> </span>husky<span class="w"> </span>add<span class="w"> </span>.husky/pre-commit<span class="w"> </span><span class="s2">&quot;npm test&quot;</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>con<span class="w"> </span>esto<span class="w"> </span>crea<span class="w"> </span>.husky/pre-commit<span class="w"> </span>en<span class="w"> </span>el<span class="w"> </span>proyecto
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>hacemos<span class="w"> </span>el<span class="w"> </span>archivo<span class="w"> </span>ejecutable
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>chmod<span class="w"> </span>+x<span class="w"> </span>.husky/pre-commit
+</span></code></pre></div>
+<p>Para probar husky hacemos un commit</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Setup Husky&quot;</span>
+</span></code></pre></div>
+<p>Si da error, es proque no está configurado. Hacemos esto en el <code>package.json</code></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="p">{</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">  </span><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">    </span><span class="nt">&quot;test&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Y añadimos esto al <code>.eslintrc</code></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nt">&quot;extends&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;eslint:recommended&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;plugin:react/recommended&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;plugin:prettier/recommended&quot;</span><span class="p">],</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="nt">&quot;plugins&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;prettier&quot;</span><span class="p">],</span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="nt">&quot;rules&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="nt">&quot;prettier/prettier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span>
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="p">}</span>
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>En principio, después de todo esto, el proyecto ya debe estar configurado con todos los plugins.</p>
+<h2 id="6-renderizado-con-react"><strong>6. Renderizado con React</strong></h2>
+<p><a href="slides/3._Render.pdf">Render react</a></p>
+<h2 id="7-gestion-de-props-y-state"><strong>7. Gestión de <em>Props</em> y <em>State</em></strong></h2>
+<p><a href="slides/4._Props__state.pdf">props state</a></p>
+<!--
 Para instalar **Airbnb**, sobre **Eslint**:
 
   - Ejecutamos el siguiente comando. Presta atención a la parte de `--legacy-peer-deps`, para evitar problemas con las dependencias
 
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>npm<span class="w"> </span>install<span class="w"> </span>eslint-config-airbnb<span class="w"> </span>eslint-plugin-react<span class="w"> </span>eslint-plugin-jsx-a11y<span class="w"> </span>eslint-plugin-import<span class="w"> </span>--save-dev<span class="w"> </span>--legacy-peer-deps
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>npm<span class="w"> </span>install<span class="w"> </span>eslint-config-airbnb<span class="w"> </span>eslint-plugin-react<span class="w"> </span>eslint-plugin-jsx-a11y<span class="w"> </span>eslint-plugin-import<span class="w"> </span>--save-dev<span class="w"> </span>--legacy-peer-deps
 </span></code></pre></div>
 
 Para asegurarnos de que nos bajamos e instalamos la última versión de cada uno de estos paquetes, podemos añadir `@latest`despues del nombre del paquete.
   - Además, tenenemos que modificar el archivo de configuración de **Eslint**: `eslint.config.js`, incluir el siguiente campo de export:
 en el archivo eslint.config.js sustituir la parte de export por
 
-<div class="language-js highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="p">{</span><span class="nx">files</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;**/*.{js,mjs,cjs,ts,jsx,tsx}&quot;</span><span class="p">]},</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="p">{</span><span class="nx">languageOptions</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">globals</span><span class="o">:</span><span class="w"> </span><span class="nx">globals</span><span class="p">.</span><span class="nx">browser</span><span class="w"> </span><span class="p">}},</span>
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="nx">pluginJs</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="nx">recommended</span><span class="p">,</span>
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span><span class="p">...</span><span class="nx">tseslint</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="nx">recommended</span><span class="p">,</span>
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">  </span><span class="nx">pluginReact</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="nx">flat</span><span class="p">.</span><span class="nx">recommended</span><span class="p">,</span>
-</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
-</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
-</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">  </span><span class="p">{</span>
-</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">    </span><span class="nx">files</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;**/*.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;**/*.jsx&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Aplica las reglas a archivos .js y .jsx</span>
-</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">    </span><span class="k">extends</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;airbnb-base&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Si usas React, cambia a &quot;airbnb&quot;</span>
-</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">    </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">      </span><span class="c1">// Aquí puedes sobrescribir reglas específicas</span>
-</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">      </span><span class="s2">&quot;no-console&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;off&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Ejemplo: Permitir console.log</span>
-</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">    </span><span class="p">},</span>
-</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">  </span><span class="p">},</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">  </span><span class="p">{</span><span class="nx">files</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;**/*.{js,mjs,cjs,ts,jsx,tsx}&quot;</span><span class="p">]},</span>
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="w">  </span><span class="p">{</span><span class="nx">languageOptions</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">globals</span><span class="o">:</span><span class="w"> </span><span class="nx">globals</span><span class="p">.</span><span class="nx">browser</span><span class="w"> </span><span class="p">}},</span>
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="w">  </span><span class="nx">pluginJs</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="nx">recommended</span><span class="p">,</span>
+</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a><span class="w">  </span><span class="p">...</span><span class="nx">tseslint</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="nx">recommended</span><span class="p">,</span>
+</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a><span class="w">  </span><span class="nx">pluginReact</span><span class="p">.</span><span class="nx">configs</span><span class="p">.</span><span class="nx">flat</span><span class="p">.</span><span class="nx">recommended</span><span class="p">,</span>
+</span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>
+</span><span id="__span-35-8"><a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>
+</span><span id="__span-35-9"><a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-35-10"><a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a><span class="w">    </span><span class="nx">files</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;**/*.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;**/*.jsx&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Aplica las reglas a archivos .js y .jsx</span>
+</span><span id="__span-35-11"><a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a><span class="w">    </span><span class="k">extends</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;airbnb-base&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Si usas React, cambia a &quot;airbnb&quot;</span>
+</span><span id="__span-35-12"><a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a><span class="w">    </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-35-13"><a id="__codelineno-35-13" name="__codelineno-35-13" href="#__codelineno-35-13"></a><span class="w">      </span><span class="c1">// Aquí puedes sobrescribir reglas específicas</span>
+</span><span id="__span-35-14"><a id="__codelineno-35-14" name="__codelineno-35-14" href="#__codelineno-35-14"></a><span class="w">      </span><span class="s2">&quot;no-console&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;off&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Ejemplo: Permitir console.log</span>
+</span><span id="__span-35-15"><a id="__codelineno-35-15" name="__codelineno-35-15" href="#__codelineno-35-15"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-35-16"><a id="__codelineno-35-16" name="__codelineno-35-16" href="#__codelineno-35-16"></a><span class="w">  </span><span class="p">},</span>
 </span></code></pre></div>
 
   - Finalmente, para hacer que se cargue el **Eslint** en nuestro proyecto, en el archivo `package.json`, en la parte de *scripts*, añadimos la siguiente línea¡:
 
-<div class="language-json highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w"> </span><span class="nt">&quot;lint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eslint --fix src/**/*.{js,jsx}&quot;</span><span class="p">,</span>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="w"> </span><span class="nt">&quot;lint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eslint --fix src/**/*.{js,jsx}&quot;</span><span class="p">,</span>
 </span></code></pre></div>
 
 
-#### **Pretier***
+prettier
 
-[**Prettier**](https://prettier.io/) es una herramienta de formateo de código que se acopla con *Eslint*, nos permite basicamente hacer un formateo automático del código (esto es, añadir ; al final de cada línea de js, si así lo decidimos). Con ello, logramos un estilo consistente.
- instalar pretieer
 
 Podemos instalar como una extensión de VSCode. Solo tenemos que buscarlo, e instalar *Prettier ESLint* (Recordad que se acoplan). Si sólo queremos instalarlo para un proyecto, podemos probar con:
 
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>npm<span class="w"> </span>install<span class="w"> </span>--dev<span class="w"> </span>prettier<span class="w"> </span>--legacy-peer-deps
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>npm<span class="w"> </span>install<span class="w"> </span>--dev<span class="w"> </span>prettier<span class="w"> </span>--legacy-peer-deps
 </span></code></pre></div>
 
 Una vez instalado, tenemos que añadir las reglas al archivo `package.json`. Al final del archivo, después de `devDependencies`, añadimos las reglas de ***Prettier**
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="w">  </span><span class="s2">&quot;prettier&quot;</span>:<span class="w"> </span><span class="o">{</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="s2">&quot;trailingComma&quot;</span>:<span class="w"> </span><span class="s2">&quot;all&quot;</span>,
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="s2">&quot;singleQuote&quot;</span>:<span class="w"> </span><span class="nb">true</span>
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="o">}</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="w">  </span><span class="s2">&quot;prettier&quot;</span>:<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="s2">&quot;trailingComma&quot;</span>:<span class="w"> </span><span class="s2">&quot;all&quot;</span>,
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="s2">&quot;singleQuote&quot;</span>:<span class="w"> </span><span class="nb">true</span>
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="o">}</span>
 </span></code></pre></div>
 
 Con estas reglas, estamos obligando a que se añada el ; al final de todas las líneas, y forzando a que se use las comillas simples `'...'`, en lugar de las dobles `"...."` para definir las cadenas.
 Hay otras reglas que podemos añadir, como definir por defecto los tabuladores como 2 o 3 espacios... etc. Mirad la documentación de *Prettier* para más info acerca de las opciones disponibles.
 
 
-
-#### **Huski**
-
-[**Husky**]() es uan herramienta que permite ejecutar ganchos (llamados hooks, como el capitán Hook) de git en los proyectos.
-Los ganchos son scripts que se ejecutan en ciertos momentos clave del proyecto, como la compilación, o la subida al repositiorio de forma automática.
-
-- Automatización de tareas: Puedes configurar Husky para ejecutar tareas automáticamente, como linters, pruebas o formateadores, antes de realizar commits o push.
-- Prevención de errores: Garantiza que el código que se sube al repositorio cumpla con los estándares y no contenga errores básicos.
-- Flujo de trabajo colaborativo: Asegura que todo el equipo siga las mismas reglas de calidad y estilo.
+husky
 
 
 
 Para instalar husky:
 
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>npm<span class="w"> </span>install<span class="w"> </span>husky<span class="w"> </span>--save-dev<span class="w"> </span>--legacy-peer-deps
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>npm<span class="w"> </span>install<span class="w"> </span>husky<span class="w"> </span>--save-dev<span class="w"> </span>--legacy-peer-deps
 </span></code></pre></div>
 
 Ejecutamos:
 
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>npx<span class="w"> </span>husky<span class="w"> </span>init
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>npx<span class="w"> </span>husky<span class="w"> </span>init
 </span></code></pre></div>
 
 En el archivo `package.json`  añadirmos la linea en el script
 
-<div class="language-json highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nt">&quot;postinstall&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;husky install&quot;</span>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="nt">&quot;postinstall&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;husky install&quot;</span>
 </span></code></pre></div>
 
 Ejemplos de uso de Husky:
@@ -1206,9 +1486,9 @@ Podemos añadir scripts al directorio `.Husky`, y configurar cómo utilizarlos:
 
 - Puedes agregar scripts directamente en el directorio .husky de tu proyecto. Por ejemplo:
 
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>npx<span class="w"> </span>husky<span class="w"> </span>add<span class="w"> </span>.husky/pre-commit<span class="w"> </span><span class="s2">&quot;npm test&quot;</span>
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>npx<span class="w"> </span>husky<span class="w"> </span>add<span class="w"> </span>.husky/pre-commit<span class="w"> </span><span class="s2">&quot;npx eslint .&quot;</span>
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>npx<span class="w"> </span>husky<span class="w"> </span>add<span class="w"> </span>.husky/pre-commit<span class="w"> </span><span class="s2">&quot;npx prettier --write .&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>npx<span class="w"> </span>husky<span class="w"> </span>add<span class="w"> </span>.husky/pre-commit<span class="w"> </span><span class="s2">&quot;npm test&quot;</span>
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>npx<span class="w"> </span>husky<span class="w"> </span>add<span class="w"> </span>.husky/pre-commit<span class="w"> </span><span class="s2">&quot;npx eslint .&quot;</span>
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>npx<span class="w"> </span>husky<span class="w"> </span>add<span class="w"> </span>.husky/pre-commit<span class="w"> </span><span class="s2">&quot;npx prettier --write .&quot;</span>
 </span></code></pre></div>
 
 Con esto ejectuamos el test de *npm*, el *eslint* y el *prettier* antes de hacer un commit.
@@ -1217,16 +1497,6 @@ Con esto ejectuamos el test de *npm*, el *eslint* y el *prettier* antes de hacer
 
 
 
-
-
-
-## **6. Renderizado con React**
-
-[Render react](slides/3._Render.pdf)
-
-## **7. Gestión de *Props* y *State***
-
-[props state](slides/4._Props__state.pdf)
 
 
 
