@@ -1,4 +1,4 @@
-# **APÉNDICE B Aprendiendo TypeScript para React**
+# **Tema 10. TypeScript para React**
 
 Esta guía te introduce a los conceptos esenciales de TypeScript para usarlo eficazmente con React, con una breve explicación de **alias de tipo** e **interfaces**, y cuándo usar cada uno.
 
@@ -33,6 +33,8 @@ Características clave:
    Luego, crea un archivo `tsconfig.json` con `npx tsc --init`.
 
 ---
+
+También podemos crear el proyecto con `vite`, y definirlo para el lenguaje `typescript`.
 
 ## 3. **Conceptos básicos de TypeScript**
 
@@ -270,3 +272,6 @@ export default UserCard;
 - Para props y estados con **estructuras de datos complejas**, define tipos/interfaces reutilizables para mantener claridad y consistencia.
 
 Al combinar estos conceptos, puedes manejar props y estado en React de manera efectiva mientras aprovechas la potencia de TypeScript. 🚀
+
+- [typescript.org](https://www.typescriptlang.org/)
+- [Using Typescipt in React](https://react.dev/learn/typescript)

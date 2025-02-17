@@ -631,3 +631,6 @@ Con esto ejectuamos el test de *npm*, el *eslint* y el *prettier* antes de hacer
 
 
  -->
+
+- [Learn React from react.dev](https://react.dev/learn)
+- [Vite Guide](https://vite.dev/guide/)
