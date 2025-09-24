@@ -1,6 +1,5 @@
 # Desarrollo web en Entorno Cliente
 
-![Logo de la asignatura](img/js.jpg)
 En esta web (en desarrollo) están los apuntes del módulo profesional de [Desarrollo Web en Entorno Cliente.](https://tmartin1284.github.io/Apuntes-DWEC/)
 El material intelectual pertenece al profesor José Enrique Atienzar. Los materiales originales están accesibles en inglés en [https://jeatzr.github.io/dwec-bi/](https://jeatzr.github.io/dwec-bi/).
 

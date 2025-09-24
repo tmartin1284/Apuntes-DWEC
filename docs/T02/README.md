@@ -1,12 +1,13 @@
-
-
 # **UNIDAD 2 - Fundamentos de JavaScript**
 
 ## **1. Sintaxis General de JavaScript**
+
 #### Sintaxis de ECMAScript
+
 JavaScript, también conocido como ECMAScript, tiene una sintaxis similar a lenguajes como C++ y Java.
 
 #### Comentarios de una sola línea
+
 Usa `//` para escribir comentarios en una sola línea.
 
 ```javascript
@@ -14,7 +15,9 @@ Usa `//` para escribir comentarios en una sola línea.
 ```
 
 #### Comentarios de varias líneas
+
 Usa `/* ... */` para escribir comentarios que abarquen varias líneas.
+
 ```javascript
 /* Esto es 
 un comentario
@@ -23,14 +26,17 @@ multilínea
 ```
 
 #### Puntos y comas
+
 El punto y coma (`;`) al final de una línea es opcional, pero se recomienda para evitar posibles problemas durante la ejecución del código.
 
 ```js
-let x = 5;  // Se recomienda el punto y coma
+let x = 5; // Se recomienda el punto y coma
 ```
 
 #### Palabras reservadas
+
 No utilices palabras clave reservadas para nombres de variables, ya que tienen un significado especial en el lenguaje.
+
 ```js
 // Incorrecto
 let for = 10;  // 'for' es una palabra reservada
@@ -42,14 +48,15 @@ let count = 10;
 Lista de palabras reservadas: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)
 
 #### Tipado débil
+
 JavaScript es un lenguaje de tipado débil, lo que significa que no necesitas declarar explícitamente los tipos de datos.
+
 ```js
-let variable = 10;   // No es necesario declarar el tipo, es un número
-variable = "texto";   // Ahora es una cadena
+let variable = 10; // No es necesario declarar el tipo, es un número
+variable = "texto"; // Ahora es una cadena
 ```
 
 Gramática léxica: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-
 
 ## **2. Mensajes en consola y alertas en el navegador**
 
@@ -59,25 +66,27 @@ Podemos ver la consola en el navegador seleccionando la opción "Inspeccionar". 
 Podemos interactuar con el objeto de consola del sistema invocando sus métodos.
 
 ```js
-console.log('¡Hola Mundo!');           // mensaje general
-console.info('Este es un mensaje informativo'); // mensaje informativo
-console.warn('¡Ten cuidado!');            // mensaje de advertencia
-console.error('Error fatal');           // mensaje de error
+console.log("¡Hola Mundo!"); // mensaje general
+console.info("Este es un mensaje informativo"); // mensaje informativo
+console.warn("¡Ten cuidado!"); // mensaje de advertencia
+console.error("Error fatal"); // mensaje de error
 ```
 
 #### Declaración `debugger`
+
 La declaración `debugger` se puede utilizar para pausar la ejecución de un script con fines de depuración.
 
 Usando la declaración `debugger`, puedes pausar la ejecución del código en un punto específico para inspeccionar el estado actual de las variables y la pila de llamadas.
 
 ```javascript
 function add(a, b) {
-    debugger;  // La ejecución se detendrá aquí 
-                //si las herramientas de desarrollo están abiertas
-    return a + b;
+  debugger; // La ejecución se detendrá aquí
+  //si las herramientas de desarrollo están abiertas
+  return a + b;
 }
 add(2, 3);
 ```
+
 Cuando la ejecución del código alcanza la declaración `debugger`, se pausará, permitiéndote usar las herramientas de desarrollo del navegador para inspeccionar el estado actual y depurar tu código de manera efectiva.
 
 ### **2.2 Alertas, Prompt y Confirmaciones**
@@ -85,6 +94,7 @@ Cuando la ejecución del código alcanza la declaración `debugger`, se pausará
 Estos métodos se utilizan para mostrar alertas en el navegador, solicitar datos y confirmar acciones con un cuadro de diálogo de OK/Cancelar.
 
 #### alert()
+
 El método `alert()` muestra un cuadro de alerta con un mensaje especificado y un botón OK.
 
 ```javascript
@@ -92,6 +102,7 @@ alert("¡Este es un mensaje de alerta!");
 ```
 
 #### prompt()
+
 El método `prompt()` muestra un cuadro de diálogo con un mensaje solicitando al usuario que ingrese algún texto. Devuelve el texto ingresado por el usuario o `null` si el usuario presionó Cancelar.
 
 ```js
@@ -100,18 +111,20 @@ console.log("El usuario ingresó: " + userInput);
 ```
 
 #### confirm()
+
 El método `confirm()` muestra un cuadro de diálogo con un mensaje especificado, junto con un botón OK y un botón Cancelar. Devuelve `true` si el usuario presionó OK, y `false` si presionó Cancelar.
 
 ```js
 let userConfirmed = confirm("¿Realmente deseas eliminar este elemento?");
 if (userConfirmed) {
-    console.log("El usuario confirmó la acción.");
+  console.log("El usuario confirmó la acción.");
 } else {
-    console.log("El usuario canceló la acción.");
+  console.log("El usuario canceló la acción.");
 }
 ```
 
 #### Mejores Prácticas
+
 Debemos intentar evitar el uso de estos métodos siempre que sea posible. Interrumpen la experiencia del usuario y generalmente se consideran una mala práctica en el desarrollo web moderno. Los utilizaremos por ahora, ya que aún no conocemos otras formas de comunicación dinámica con el usuario.
 
 ## **3. Declaración de variables**
@@ -120,7 +133,7 @@ Podemos declarar variables de tres maneras:
 
 #### **var**
 
-La forma tradicional de declarar una variable. No se recomienda hoy en día. 
+La forma tradicional de declarar una variable. No se recomienda hoy en día.
 
 Las variables declaradas con `var` dentro de una función son de **ámbito de función**, lo que significa que son accesibles a lo largo de la función en la que se declaran, pero no fuera de ella.
 
@@ -128,13 +141,13 @@ Las variables declaradas con `var` dentro de una función son de **ámbito de fu
 
 ```js
 var globalVar = "Soy accesible desde cualquier lugar en el script";
-function testVar() {
-    var functionVar = "Soy accesible solo dentro de esta función";
-    console.log(globalVar);  // Muestra: Soy accesible desde cualquier lugar en el script
-    console.log(functionVar);  // Muestra: Soy accesible solo dentro de esta función
+if (true) {
+  var innerVar = "Soy accesible solo dentro de esta función";
+  console.log(globalVar); // Muestra: Soy accesible desde cualquier lugar en el script
+  console.log(innerVar); // Muestra: Soy accesible solo dentro de esta función
 }
-console.log(globalVar);  // Muestra: Soy accesible desde cualquier lugar en el script
-// console.log(functionVar);  // Error de referencia no capturado: functionVar no está definida
+console.log(globalVar); // Muestra: Soy accesible desde cualquier lugar en el script
+console.log(innerVar); // Error de referencia no capturado: functionVar no está definida
 ```
 
 #### **let**
@@ -143,14 +156,14 @@ Una variable que solo es accesible dentro del bloque, sentencia o expresión don
 
 ```js
 function testLet() {
-    let blockVar = "Soy accesible solo dentro de este bloque";
-    if (true) {
-        let innerBlockVar = "Soy accesible solo dentro de este bloque interno";
-        console.log(blockVar);  // Muestra: Soy accesible solo dentro de este bloque
-        console.log(innerBlockVar);  // Muestra: Soy accesible solo dentro de este bloque interno
-    }
-    console.log(blockVar);  // Muestra: Soy accesible solo dentro de este bloque
-    // console.log(innerBlockVar);  // Error de referencia no capturado: innerBlockVar no está definida
+  let blockVar = "Soy accesible solo dentro de este bloque";
+  if (true) {
+    let innerBlockVar = "Soy accesible solo dentro de este bloque interno";
+    console.log(blockVar); // Muestra: Soy accesible solo dentro de este bloque
+    console.log(innerBlockVar); // Muestra: Soy accesible solo dentro de este bloque interno
+  }
+  console.log(blockVar); // Muestra: Soy accesible solo dentro de este bloque
+  // console.log(innerBlockVar);  // Error de referencia no capturado: innerBlockVar no está definida
 }
 ```
 
@@ -160,15 +173,15 @@ Una constante que solo es accesible dentro del bloque, sentencia o expresión do
 
 ```js
 function testConst() {
-    const constantVar = "Soy una constante dentro de este bloque";
-    if (true) {
-        const innerConstantVar = "Soy una constante dentro de este bloque interno";
-        console.log(constantVar);  // Muestra: Soy una constante dentro de este bloque
-        console.log(innerConstantVar);  // Muestra: Soy una constante dentro de este bloque interno
-    }
-    console.log(constantVar);  // Muestra: Soy una constante dentro de este bloque
-    // console.log(innerConstantVar);  // Error de referencia no capturado: innerConstantVar no está definida
-    // constantVar = "Nuevo valor";  // Error de tipo no capturado: Asignación a una variable constante.
+  const constantVar = "Soy una constante dentro de este bloque";
+  if (true) {
+    const innerConstantVar = "Soy una constante dentro de este bloque interno";
+    console.log(constantVar); // Muestra: Soy una constante dentro de este bloque
+    console.log(innerConstantVar); // Muestra: Soy una constante dentro de este bloque interno
+  }
+  console.log(constantVar); // Muestra: Soy una constante dentro de este bloque
+  // console.log(innerConstantVar);  // Error de referencia no capturado: innerConstantVar no está definida
+  // constantVar = "Nuevo valor";  // Error de tipo no capturado: Asignación a una variable constante.
 }
 ```
 
@@ -187,22 +200,20 @@ const variableInmutable = "No puedo cambiar";
 // variableInmutable = "Intentando cambiar";  // Error de tipo no capturado: Asignación a una variable constante.
 ```
 
-
 ## **4. Tipos de Datos Primitivos**
 
 JavaScript tiene varios tipos de datos primitivos:
 
 - **Number (Número):** Representa tanto números enteros como números de punto flotante.
-  
 - **String (Cadena):** Representa una secuencia de caracteres (texto).
 
 - **Boolean (Booleano):** Representa una entidad lógica y puede tener dos valores: `true` o `false`.
 
 - **Undefined (Indefinido):** Indica que una variable ha sido declarada pero aún no se le ha asignado un valor.
-  
 - **Null (Nulo):** Representa la ausencia intencional de cualquier valor de objeto. Es uno de los valores primitivos de JavaScript y se trata como un valor "falso" en operaciones booleanas.
 
 #### Nota:
+
 - **Undefined:** `undefined` significa que una variable ha sido declarada pero aún no se le ha asignado un valor.
 - **Null:** `null` es un valor asignado. Puede ser asignado a una variable como representación de la ausencia de valor.
 
@@ -243,45 +254,46 @@ Puedes realizar varias operaciones aritméticas con números:
 - Exponenciación `**`: Eleva el primer operando a la potencia del segundo operando.
 - Incremento `++`: Aumenta el valor de una variable en 1.
 - Decremento `--`: Disminuye el valor de una variable en 1.
-  
-```js
-let suma = 4 + 5;  // 9
-let resta = 10 - 3;  // 7
-let producto = 4 * 3;  // 12
-let cociente = 12 / 4;  // 3
 
-let potencia = 2 ** 3;  // 8
+```js
+let suma = 4 + 5; // 9
+let resta = 10 - 3; // 7
+let producto = 4 * 3; // 12
+let cociente = 12 / 4; // 3
+
+let potencia = 2 ** 3; // 8
 
 let contador = 0;
-contador++;  // el contador ahora es 1
+contador++; // el contador ahora es 1
 
-contador--;  // el contador ahora es 0
+contador--; // el contador ahora es 0
 ```
 
 #### Operaciones de Comparación
 
 También puedes comparar números utilizando varios operadores de comparación:
 
--  Menor que `<`
--  Mayor que `>`
--  Menor o igual que `<=`
--  Mayor o igual que `>=`
--  Igual a `==`
--  Estrictamente igual a `===`
--  Distinto de `!=`
--  Estrictamente distinto de `!==`
+- Menor que `<`
+- Mayor que `>`
+- Menor o igual que `<=`
+- Mayor o igual que `>=`
+- Igual a `==`
+- Estrictamente igual a `===`
+- Distinto de `!=`
+- Estrictamente distinto de `!==`
 
 ```js
-let esMenorQue = 5 < 10;  // true
-let esMayorQue = 10 > 5;  // true
-let esMenorOIgualQue = 5 <= 5;  // true
-let esMayorOIgualQue = 10 >= 10;  // true
-let esIgual = 5 == '5';  // true (coerción de tipos)
-let esEstrictamenteIgual = 5 === 5;  // true
-let esEstrictamenteIgualConTiposDiferentes = 5 === '5';  // false (sin coerción de tipos)
-let esDistinto = 5 != '5';  // false (coerción de tipos)
-let esEstrictamenteDistinto = 5 !== '5';  // true (sin coerción de tipos)
+let esMenorQue = 5 < 10; // true
+let esMayorQue = 10 > 5; // true
+let esMenorOIgualQue = 5 <= 5; // true
+let esMayorOIgualQue = 10 >= 10; // true
+let esIgual = 5 == "5"; // true (coerción de tipos)
+let esEstrictamenteIgual = 5 === 5; // true
+let esEstrictamenteIgualConTiposDiferentes = 5 === "5"; // false (sin coerción de tipos)
+let esDistinto = 5 != "5"; // false (coerción de tipos)
+let esEstrictamenteDistinto = 5 !== "5"; // true (sin coerción de tipos)
 ```
+
 La "coerción de tipos" fuerza la conversión y comparación del contenido de los operandos, cuando son de tipos distintos.
 [--> Comparaciones de igualdad y semejanza](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
 
@@ -309,20 +321,20 @@ JavaScript también proporciona varios métodos incorporados para trabajar con n
 
 ```js
 // Tipo de la variable
-let tipoDeNumero = typeof 123;  // 'number'
-let tipoDeCadena = typeof '123';  // 'string'
+let tipoDeNumero = typeof 123; // 'number'
+let tipoDeCadena = typeof "123"; // 'string'
 
 // NaN (No es un número)
 let noEsUnNumero = NaN;
-let chequeoNaN1 = isNaN(123);  // false
-let chequeoNaN2 = isNaN(NaN);  // true
-let chequeoNaN3 = isNaN('Hola');  // true
+let chequeoNaN1 = isNaN(123); // false
+let chequeoNaN2 = isNaN(NaN); // true
+let chequeoNaN3 = isNaN("Hola"); // true
 
 // Convertir número a cadena
-let numeroACadena = (123).toString();  // '123'
+let numeroACadena = (123).toString(); // '123'
 
 // Formatear número a decimales fijos
-let decimalFijo = (123.456).toFixed(2);  // '123.46'
+let decimalFijo = (123.456).toFixed(2); // '123.46'
 ```
 
 ### **4.2 Tipo Cadena**
@@ -338,38 +350,38 @@ En JavaScript, el tipo de datos `string` se utiliza para representar datos textu
 #### Operaciones con Cadenas
 
 - **Concatenación:** Combinar múltiples cadenas en una sola.
-    - Ejemplo: `cadena = 'Hola' + ' mundo'` da como resultado `'Hola mundo'`
+  - Ejemplo: `cadena = 'Hola' + ' mundo'` da como resultado `'Hola mundo'`
 - **Operaciones de Comparación:** Comparar cadenas.
-    - Igual a (`==`)
-    - Estrictamente igual a (`===`)
-    - Distinto de (`!=`)
+  - Igual a (`==`)
+  - Estrictamente igual a (`===`)
+  - Distinto de (`!=`)
 - **Otros Métodos Útiles:** Se pueden encontrar en el [Objeto String](#64-string-object)
 
 ```js
 // Características de las cadenas
 let cadena1 = "Hola mundo";
-let cadena2 = 'Hola mundo';
+let cadena2 = "Hola mundo";
 
 // Concatenación
-let saludo = 'Hola' + ' mundo';  // 'Hola mundo'
+let saludo = "Hola" + " mundo"; // 'Hola mundo'
 
 // Operaciones de Comparación
-let esIgual = 'Hola' == 'Hola';  // true
-let esEstrictamenteIgual = 'Hola' === 'Hola';  // true
-let esEstrictamenteIgual2 = '123' === 132;  // false
-let esDistinto = 'Hola' != 'Mundo';  // true
+let esIgual = "Hola" == "Hola"; // true
+let esEstrictamenteIgual = "Hola" === "Hola"; // true
+let esEstrictamenteIgual2 = "123" === 132; // false
+let esDistinto = "Hola" != "Mundo"; // true
 
 // Otros métodos útiles
-let longitudDeCadena = saludo.length;  // 10
-let enMayusculas = saludo.toUpperCase();  // 'HOLA MUNDO'
-let enMinusculas = saludo.toLowerCase();  // 'hola mundo'
-let incluyePalabra = saludo.includes('mundo');  // true
-let dividirCadena = saludo.split(' ');  // ['Hola', 'mundo']
-let subCadena = saludo.substring(1, 4);  // 'ola'  substring(inicio, fin+1)
-let caracterEn = saludo.charAt(1);  // 'o'
-let indiceDelCaracter = saludo.indexOf('m');  // 5
-let cadenaReemplazada = saludo.replace('mundo', 'todos');  // 'Hola todos'
-let cadenaRecortada = '   Hola mundo   '.trim();  // 'Hola mundo'
+let longitudDeCadena = saludo.length; // 10
+let enMayusculas = saludo.toUpperCase(); // 'HOLA MUNDO'
+let enMinusculas = saludo.toLowerCase(); // 'hola mundo'
+let incluyePalabra = saludo.includes("mundo"); // true
+let dividirCadena = saludo.split(" "); // ['Hola', 'mundo']
+let subCadena = saludo.substring(1, 4); // 'ola'  substring(inicio, fin+1)
+let caracterEn = saludo.charAt(1); // 'o'
+let indiceDelCaracter = saludo.indexOf("m"); // 5
+let cadenaReemplazada = saludo.replace("mundo", "todos"); // 'Hola todos'
+let cadenaRecortada = "   Hola mundo   ".trim(); // 'Hola mundo'
 ```
 
 #### Literales de Plantilla
@@ -390,7 +402,7 @@ let apellido = "Pérez";
 let edad = 30;
 let presentacion = `Mi nombre es ${nombre} ${apellido} y tengo ${edad} años.`;
 
-let resultado = `2 + 2 es ${2 + 2}`;  // "2 + 2 es 4"
+let resultado = `2 + 2 es ${2 + 2}`; // "2 + 2 es 4"
 ```
 
 2. **Cadenas Multilínea:** Crear cadenas que ocupan varias líneas.
@@ -439,14 +451,13 @@ Ciudad Springfield
     </ol>
 </div>
 
-
-
 ### **4.3 Tipo Booleano**
 
 - Solo acepta dos valores: `true` o `false`
 - Es útil para verificar el estado de la aplicación
 - Se recomienda que su nombre defina el estado positivo
-    - Ejemplo: `userIsLogged`, `itemFound`, `errorFound` 
+
+  - Ejemplo: `userIsLogged`, `itemFound`, `errorFound`
 
 - `Boolean(value);` devuelve el valor booleano de una condición o variable.
 
@@ -467,38 +478,38 @@ Ciudad Springfield
 
 ```js
 // Ejemplo 1: Usando Boolean() para obtener el valor booleano
-console.log(Boolean(1));           // true
-console.log(Boolean(0));           // false
-console.log(Boolean("Cualquiera"));  // true
-console.log(Boolean(""));          // false
+console.log(Boolean(1)); // true
+console.log(Boolean(0)); // false
+console.log(Boolean("Cualquiera")); // true
+console.log(Boolean("")); // false
 
 // Ejemplo 2: Usando expresiones
-console.log(100 > 5);              // true
-console.log(1 < 100);              // true
-console.log('1' == 1);             // true
-console.log('1' === 1);            // false
+console.log(100 > 5); // true
+console.log(1 < 100); // true
+console.log("1" == 1); // true
+console.log("1" === 1); // false
 
 // Ejemplo 3: Verificación de undefined y null
 let a;
-console.log(Boolean(a));           // false
+console.log(Boolean(a)); // false
 
 let b = null;
-console.log(Boolean(b));           // false
+console.log(Boolean(b)); // false
 
 // Ejemplo 4: Verificación de NaN
 let c = NaN;
-console.log(Boolean(c));           // false
-console.log(isNaN(c));             // true
+console.log(Boolean(c)); // false
+console.log(isNaN(c)); // true
 
 // Ejemplo 5: Combinando múltiples verificaciones
 let value = "Hola";
 if (value && typeof value === "string") {
-    console.log("El valor es una cadena no vacía"); // Esto se imprimirá
+  console.log("El valor es una cadena no vacía"); // Esto se imprimirá
 }
 
 let number = 0;
 if (!number) {
-    console.log("El número es cero o falso"); // Esto se imprimirá
+  console.log("El número es cero o falso"); // Esto se imprimirá
 }
 ```
 
@@ -507,36 +518,40 @@ if (!number) {
 En JavaScript, `undefined` y `null` son dos tipos distintos que representan la ausencia de valor o no existencia. A menudo se confunden entre sí pero tienen significados y casos de uso diferentes.
 
 #### Undefined
+
 - **Tipo**: `undefined`
 - **Descripción**: Una variable que ha sido declarada pero aún no se le ha asignado un valor tiene el valor `undefined`.
 - **Ejemplo**:
-    ```javascript
-    let a;
-    console.log(a); // Salida: undefined
-    ```
+  ```javascript
+  let a;
+  console.log(a); // Salida: undefined
+  ```
 
 #### Null
+
 - **Tipo**: `object`
 - **Descripción**: `null` es un valor de asignación que se puede utilizar para representar la ausencia de valor o de objeto. Se establece explícitamente por el programador para indicar "sin valor".
 - **Ejemplo**:
-    ```javascript
-    let b = null;
-    console.log(b); // Salida: null
-    ```
+  ```javascript
+  let b = null;
+  console.log(b); // Salida: null
+  ```
 
 #### Diferencias Clave
 
 - **Tipo**:
-    - `undefined`: El tipo de `undefined` es `undefined`.
-    - `null`: El tipo de `null` es `object` (esto es un error histórico en JavaScript, pero permanece para compatibilidad con versiones anteriores).
+
+  - `undefined`: El tipo de `undefined` es `undefined`.
+  - `null`: El tipo de `null` es `object` (esto es un error histórico en JavaScript, pero permanece para compatibilidad con versiones anteriores).
 
 - **Valor por Defecto**:
-    - `undefined` es el valor por defecto para variables no inicializadas.
-    - `null` es una asignación explícita para indicar un valor vacío o inexistente.
+
+  - `undefined` es el valor por defecto para variables no inicializadas.
+  - `null` es una asignación explícita para indicar un valor vacío o inexistente.
 
 - **Uso**:
-    - Usa `undefined` para verificar si una variable ha sido declarada pero aún no se le ha asignado un valor.
-    - Usa `null` para significar intencionalmente que una variable debería estar vacía.
+  - Usa `undefined` para verificar si una variable ha sido declarada pero aún no se le ha asignado un valor.
+  - Usa `null` para significar intencionalmente que una variable debería estar vacía.
 
 #### Ejemplos
 
@@ -555,11 +570,8 @@ console.log(typeof y); // Salida: object
 ```
 
 #### ¿Puedes resolver el mayor enigma de JS?
+
 ![Gran enigma de JS](img/js-enigma.webp)
-
-
-
-
 
 ## **5. Sentencias de Control**
 
@@ -575,11 +587,11 @@ Ejemplos de uso:
 let number = 10;
 
 if (number > 0) {
-    console.log("El número es positivo.");
+  console.log("El número es positivo.");
 } else if (number < 0) {
-    console.log("El número es negativo.");
+  console.log("El número es negativo.");
 } else {
-    console.log("El número es cero.");
+  console.log("El número es cero.");
 }
 ```
 
@@ -592,23 +604,23 @@ Ejemplos de uso:
 #### JavaScript
 
 ```javascript
-let fruit = 'apple';
+let fruit = "apple";
 
 switch (fruit) {
-    case 'manzana':
-        console.log("Esto es una manzana.");
-        break;
-    case 'platano':
-        console.log("Esto es un plátano.");
-        break;
-    case 'naranja':
-        console.log("Esto es una naranja.");
-        break;
-    case 'zanahoria':
-        console.log("Cuidao que se lo come Manolo.");
-        break;
-    default:
-        console.log("Fruta desconocida.");
+  case "manzana":
+    console.log("Esto es una manzana.");
+    break;
+  case "platano":
+    console.log("Esto es un plátano.");
+    break;
+  case "naranja":
+    console.log("Esto es una naranja.");
+    break;
+  case "zanahoria":
+    console.log("Cuidao que se lo come Manolo.");
+    break;
+  default:
+    console.log("Fruta desconocida.");
 }
 ```
 
@@ -624,49 +636,52 @@ Ejemplos de uso:
 
 ```javascript
 let age = 18;
-let canVote = (age >= 18) ? "Sí, puedes votar." : "No, no puedes votar.";
+let canVote = age >= 18 ? "Sí, puedes votar." : "No, no puedes votar.";
 console.log(canVote);
 ```
 
 ### **5.2 Bucles o Iteraciones**
 
 #### [for](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) (bucle tradicional con contador)
+
 El bucle `for` es un bucle tradicional que itera con un contador. Se usa para repetir un bloque de código un número determinado de veces.
 
 Ejemplos de uso:
 
 ```javascript
 for (let i = 0; i < 5; i++) {
-    console.log(i);
+  console.log(i);
 }
 
 // Contando hacia atrás en pasos de 5 unidades
 for (let i = 50; i >= 0; i -= 5) {
-    console.log(i);
+  console.log(i);
 }
 ```
 
 #### [for..in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) (itera sobre propiedades de un objeto)
+
 El bucle `for..in` itera sobre las propiedades enumerables de un objeto. Se usa para recorrer las propiedades del objeto.
 
 Ejemplos de uso:
 
 ```js
-let person = {name: 'John', age: 30, city: 'New York'};
+let person = { name: "John", age: 30, city: "New York" };
 for (let key in person) {
-    console.log(key + ': ' + person[key]);
+  console.log(key + ": " + person[key]);
 }
 ```
 
 #### [for..of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) (ES6) (itera sobre una colección de objetos)
+
 El bucle `for..of`, introducido en ES6, itera sobre objetos iterables como arrays, cadenas y otras colecciones.
 
 Ejemplos de uso:
 
 ```js
-let fruits = ['apple', 'banana', 'orange'];
+let fruits = ["apple", "banana", "orange"];
 for (let fruit of fruits) {
-    console.log(fruit);
+  console.log(fruit);
 }
 ```
 
@@ -675,21 +690,26 @@ for (let fruit of fruits) {
 Sin embargo, en JavaScript, **la forma más común de iterar sobre arrays de objetos** es utilizando el método `forEach`. Este método ejecuta una función proporcionada una vez para cada elemento del array, lo que lo hace más conveniente y legible para estas tareas.
 
 ```js
-const users = [  //sabemos lo que es name y age
-    { name: 'John', age: 15 },
-    { name: 'Jane', age: 25 },
-    { name: 'Jim', age: 35 },
-    { name: 'Manolo', age: 2 },
+const users = [
+  //sabemos lo que es name y age
+  { name: "John", age: 15 },
+  { name: "Jane", age: 25 },
+  { name: "Jim", age: 35 },
+  { name: "Manolo", age: 2 },
 ];
 
-users.forEach(user => {
-    console.log(`${user.name} tiene ${user.age} años.`);  //fijaos que estamos usando literales
-    if (user.age >= 18) {  //le estamos pasando una función, y dentro podemos poner el codigo que nos dé la gana
-        console.log(`El usuario ${user.name} es mayor de edad, y puede salir al recreo`); 
-    } else {
-        console.log(`El usuario ${user.name} es menor de edad, y necesita que le firmen su padres`); 
-
-    }
+users.forEach((user) => {
+  console.log(`${user.name} tiene ${user.age} años.`); //fijaos que estamos usando literales
+  if (user.age >= 18) {
+    //le estamos pasando una función, y dentro podemos poner el codigo que nos dé la gana
+    console.log(
+      `El usuario ${user.name} es mayor de edad, y puede salir al recreo`
+    );
+  } else {
+    console.log(
+      `El usuario ${user.name} es menor de edad, y necesita que le firmen su padres`
+    );
+  }
 });
 ```
 
@@ -699,15 +719,13 @@ El bucle `while` repite un bloque de código mientras una condición especificad
 
 ```js
 let i = 0;
-while (i > 0.5) {  //cuidado con la expresión que ponemos aqui, no vayamos a crear un bucle infinito
-    console.log(i);
-    i = Math.rand();
+while (i > 0.5) {
+  //cuidado con la expresión que ponemos aqui, no vayamos a crear un bucle infinito
+  console.log(i);
+  i = Math.rand();
 }
 console.log(`Se encontró un número aleatorio mayor que 0.5: ${i}`);
 ```
-
-
-
 
 ## **6. Objetos Nativos de JavaScript**
 
@@ -755,7 +773,7 @@ Vamos a explicar los más útiles para nosotros en el alcance de este curso.
 Constructor:
 
 ```js
-let currentDate = new Date();               // Fecha y hora actuales
+let currentDate = new Date(); // Fecha y hora actuales
 let specificDate = new Date(1626176282855); // Ejemplo con número de milisegundos
 let customDate = new Date(2023, 5, 12, 14, 30, 0, 0); // 12 de junio de 2023, 14:30:00
 ```
@@ -802,23 +820,27 @@ let hours = now.getHours();
 let minutes = now.getMinutes();
 let seconds = now.getSeconds();
 
-console.log(`Fecha y hora actuales: ${day}/${month + 1}/${year} ${hours}:${minutes}:${seconds}`);
+console.log(
+  `Fecha y hora actuales: ${day}/${
+    month + 1
+  }/${year} ${hours}:${minutes}:${seconds}`
+);
 ```
 
 Aquí está el ejemplo en JavaScript comparando dos fechas:
 
 ```js
 // Crear dos fechas
-let date1 = new Date('2023-07-13');
-let date2 = new Date('2023-07-14');
+let date1 = new Date("2023-07-13");
+let date2 = new Date("2023-07-14");
 
 // Comparar las fechas
 if (date1 < date2) {
-    console.log(`${date1.toDateString()} es antes que ${date2.toDateString()}`);
+  console.log(`${date1.toDateString()} es antes que ${date2.toDateString()}`);
 } else if (date1 > date2) {
-    console.log(`${date1.toDateString()} es después de ${date2.toDateString()}`);
+  console.log(`${date1.toDateString()} es después de ${date2.toDateString()}`);
 } else {
-    console.log(`${date1.toDateString()} y ${date2.toDateString()} son iguales`);
+  console.log(`${date1.toDateString()} y ${date2.toDateString()} son iguales`);
 }
 ```
 
@@ -837,36 +859,34 @@ El objeto Math en JavaScript proporciona constantes y funciones matemáticas, pe
 - `Math.PI`: Número PI
 
 ```js
-let absoluteValue = Math.abs(-5);  // 5
-let roundedUp = Math.ceil(4.2);  // 5
-let roundedDown = Math.floor(4.8);  // 4
-let rounded = Math.round(4.5);  // 5
-let roundedDownExample = Math.round(4.4);  // 4
-let max = Math.max(1, 2, 3);  // 3
-let min = Math.min(1, 2, 3);  // 1
-let random = Math.random();  // ej., 0.543
-let squareRoot = Math.sqrt(16);  // 4
+let absoluteValue = Math.abs(-5); // 5
+let roundedUp = Math.ceil(4.2); // 5
+let roundedDown = Math.floor(4.8); // 4
+let rounded = Math.round(4.5); // 5
+let roundedDownExample = Math.round(4.4); // 4
+let max = Math.max(1, 2, 3); // 3
+let min = Math.min(1, 2, 3); // 1
+let random = Math.random(); // ej., 0.543
+let squareRoot = Math.sqrt(16); // 4
 
 // Además, el objeto Math contiene algunas constantes útiles como PI o el número E
-let piNumber = Math.PI;  // 3.1415......
+let piNumber = Math.PI; // 3.1415......
 ```
-
-
-
 
 ### [**6.4 Objeto String**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
 El objeto `String` es un envoltorio alrededor del tipo de dato primitivo string de JavaScript. Proporciona varios métodos y propiedades para trabajar con cadenas de texto de manera efectiva.
 
 #### Creación de Objetos String
+
 En JavaScript, puedes crear una cadena primitiva directamente o usar el constructor del objeto `String` para crear un objeto `String`:
 
 ```javascript
 // Cadena primitiva
-let mensaje = '¡Hola, Mundo!';
+let mensaje = "¡Hola, Mundo!";
 
 // Usando el constructor del objeto String
-let otroMensaje = new String('¡Hola, Mundo!');
+let otroMensaje = new String("¡Hola, Mundo!");
 ```
 
 #### Métodos y propiedades útiles
@@ -900,15 +920,19 @@ Además de los objetos presentados anteriormente, hay otros tipos de objetos que
 Para identificar las características de la plataforma en la que se ejecuta una aplicación web, puedes usar propiedades y métodos proporcionados por el objeto `navigator` en JavaScript:
 
 1. **Tipo de Navegador y Versión**:
-    - Usa `navigator.userAgent` para obtener la cadena del User-Agent, que incluye información sobre el tipo de navegador y la versión.
+
+   - Usa `navigator.userAgent` para obtener la cadena del User-Agent, que incluye información sobre el tipo de navegador y la versión.
 
 2. **Sistema Operativo**:
-    - Usa `navigator.platform` para recuperar la plataforma en la que se está ejecutando el navegador (por ejemplo, "Win32", "Linux x86_64", "MacIntel").
+
+   - Usa `navigator.platform` para recuperar la plataforma en la que se está ejecutando el navegador (por ejemplo, "Win32", "Linux x86_64", "MacIntel").
 
 3. **Geolocalización**:
-    - Utiliza la API de Geolocalización para solicitar y obtener la ubicación geográfica actual del dispositivo, siempre que el usuario conceda permiso.
+
+   - Utiliza la API de Geolocalización para solicitar y obtener la ubicación geográfica actual del dispositivo, siempre que el usuario conceda permiso.
 
    Ejemplo de código JavaScript:
+
 ```javascript
 // User Agent
 let infoNavegador = navigator.userAgent;
@@ -919,15 +943,18 @@ let infoPlataforma = navigator.platform;
 console.log(`Plataforma: ${infoPlataforma}`);
 
 // Geolocalización
-if ('geolocation' in navigator) {
-    navigator.geolocation.getCurrentPosition(position => {
-      console.log('Latitud:', position.coords.latitude);
-      console.log('Longitud:', position.coords.longitude);
-    }, error => {
-        console.error('Error al obtener la geolocalización:', error);
-    });
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      console.log("Latitud:", position.coords.latitude);
+      console.log("Longitud:", position.coords.longitude);
+    },
+    (error) => {
+      console.error("Error al obtener la geolocalización:", error);
+    }
+  );
 } else {
-    console.error('La geolocalización no es soportada por este navegador.');
+  console.error("La geolocalización no es soportada por este navegador.");
 }
 ```
 
@@ -981,8 +1008,8 @@ El objeto `document` en JavaScript representa la página web actual cargada en l
 
 ```javascript
 // Accediendo a un elemento por su ID y cambiando su contenido
-const elementoEncabezado = document.getElementById('header');
-elementoEncabezado.textContent = '¡Bienvenidos a nuestro sitio web!';
+const elementoEncabezado = document.getElementById("header");
+elementoEncabezado.textContent = "¡Bienvenidos a nuestro sitio web!";
 ```
 
 #### [history](https://developer.mozilla.org/en-US/docs/Web/API/History)
@@ -1004,11 +1031,11 @@ En JavaScript, el objeto `history` proporciona métodos y propiedades para naveg
 ```javascript
 // Navegando hacia atrás y hacia adelante en el historial
 function irAtras() {
-    window.history.back();
+  window.history.back();
 }
 
 function irAdelante() {
-    window.history.forward();
+  window.history.forward();
 }
 
 // Accediendo a la longitud de la pila del historial
@@ -1039,11 +1066,11 @@ Nota que en JavaScript no declaramos el tipo de los parámetros ni el valor de r
 ```javascript
 // Declaración de Función
 function saludar(nombre) {
-    return `¡Hola, ${nombre}!`;
+  return `¡Hola, ${nombre}!`;
 }
 
 // Llamada a la Función
-let mensaje = saludar('Alice');
+let mensaje = saludar("Alice");
 console.log(mensaje); // Salida: ¡Hola, Alice!
 ```
 
@@ -1052,112 +1079,134 @@ console.log(mensaje); // Salida: ¡Hola, Alice!
 Las funciones globales en JavaScript son funciones integradas que son parte del objeto global y pueden ser llamadas desde cualquier parte de tu código. Están disponibles tanto en el entorno del navegador como en Node.js. Aquí hay algunas de las funciones globales más comúnmente utilizadas:
 
 1. **`parseInt(string, radix)`**
-     - Analiza una cadena y devuelve un entero en la base especificada.
-     - Ejemplo:
-     ```javascript
-     let num = parseInt("10", 10); // 10
-     ```
+
+   - Analiza una cadena y devuelve un entero en la base especificada.
+   - Ejemplo:
+
+   ```javascript
+   let num = parseInt("10", 10); // 10
+   ```
 
 2. **`parseFloat(string)`**
-     - Analiza una cadena y devuelve un número de punto flotante.
-     - Ejemplo:
-     ```javascript
-     let num = parseFloat("10.5"); // 10.5
-     ```
+
+   - Analiza una cadena y devuelve un número de punto flotante.
+   - Ejemplo:
+
+   ```javascript
+   let num = parseFloat("10.5"); // 10.5
+   ```
 
 3. **`isNaN(value)`**
-     - Determina si un valor es NaN (No es un Número).
-     - Ejemplo:
-     ```javascript
-     let resultado = isNaN("hola"); // true
-     ```
+
+   - Determina si un valor es NaN (No es un Número).
+   - Ejemplo:
+
+   ```javascript
+   let resultado = isNaN("hola"); // true
+   ```
 
 4. **`isFinite(value)`**
-     - Determina si un valor es un número finito.
-     - Ejemplo:
-     ```javascript
-     let resultado = isFinite(10); // true
-     let resultado2 = isFinite(Infinity); // false
-     ```
+
+   - Determina si un valor es un número finito.
+   - Ejemplo:
+
+   ```javascript
+   let resultado = isFinite(10); // true
+   let resultado2 = isFinite(Infinity); // false
+   ```
 
 5. **`eval(string)`**
-     - Evalúa código JavaScript representado como una cadena.
-     - Ejemplo:
-     ```javascript
-     let resultado = eval("2 + 2"); // 4
-     ```
+
+   - Evalúa código JavaScript representado como una cadena.
+   - Ejemplo:
+
+   ```javascript
+   let resultado = eval("2 + 2"); // 4
+   ```
 
 6. **`encodeURI(uri)`**
-     - Codifica un Identificador de Recurso Uniforme (URI) escapando ciertos caracteres.
-     - Ejemplo:
-     ```javascript
-     let uri = "https://www.example.com?name=John Doe";
-     let uriCodificado = encodeURI(uri); // "https://www.example.com?name=John%20Doe"
-     ```
+
+   - Codifica un Identificador de Recurso Uniforme (URI) escapando ciertos caracteres.
+   - Ejemplo:
+
+   ```javascript
+   let uri = "https://www.example.com?name=John Doe";
+   let uriCodificado = encodeURI(uri); // "https://www.example.com?name=John%20Doe"
+   ```
 
 7. **`encodeURIComponent(uriComponent)`**
-     - Codifica un componente URI escapando ciertos caracteres.
-     - Ejemplo:
-     ```javascript
-     let componenteURI = "John Doe & Co";
-     let componenteURICodificado = encodeURIComponent(componenteURI); // "John%20Doe%20%26%20Co"
-     ```
+
+   - Codifica un componente URI escapando ciertos caracteres.
+   - Ejemplo:
+
+   ```javascript
+   let componenteURI = "John Doe & Co";
+   let componenteURICodificado = encodeURIComponent(componenteURI); // "John%20Doe%20%26%20Co"
+   ```
 
 8. **`decodeURI(encodedURI)`**
-     - Decodifica un Identificador de Recurso Uniforme (URI) creado con `encodeURI`.
-     - Ejemplo:
-     ```javascript
-     let uriCodificado = "https://www.example.com?name=John%20Doe";
-     let uriDecodificado = decodeURI(uriCodificado); // "https://www.example.com?name=John Doe"
-     ```
+
+   - Decodifica un Identificador de Recurso Uniforme (URI) creado con `encodeURI`.
+   - Ejemplo:
+
+   ```javascript
+   let uriCodificado = "https://www.example.com?name=John%20Doe";
+   let uriDecodificado = decodeURI(uriCodificado); // "https://www.example.com?name=John Doe"
+   ```
 
 9. **`decodeURIComponent(encodedURIComponent)`**
-     - Decodifica un componente URI creado con `encodeURIComponent`.
-     - Ejemplo:
-     ```javascript
-     let componenteURICodificado = "John%20Doe%20%26%20Co";
-     let componenteURIDecodificado = decodeURIComponent(componenteURICodificado); // "John Doe & Co"
-     ```
+
+   - Decodifica un componente URI creado con `encodeURIComponent`.
+   - Ejemplo:
+
+   ```javascript
+   let componenteURICodificado = "John%20Doe%20%26%20Co";
+   let componenteURIDecodificado = decodeURIComponent(componenteURICodificado); // "John Doe & Co"
+   ```
 
 10. **`setTimeout(function, delay)`**
-     - Llama a una función o evalúa una expresión después de un número específico de milisegundos.
-     - Ejemplo:
-      ```javascript
-      setTimeout(function() {
-          console.log("Hola después de 2 segundos");
-      }, 2000);
-      ```
+
+    - Llama a una función o evalúa una expresión después de un número específico de milisegundos.
+    - Ejemplo:
+
+    ```javascript
+    setTimeout(function () {
+      console.log("Hola después de 2 segundos");
+    }, 2000);
+    ```
 
 11. **`setInterval(function, delay)`**
-     - Llama repetidamente a una función o evalúa una expresión a intervalos especificados (en milisegundos).
-     - Ejemplo:
-      ```javascript
-      setInterval(function() {
-          console.log("Hola cada 2 segundos");
-      }, 2000);
-      ```
+
+    - Llama repetidamente a una función o evalúa una expresión a intervalos especificados (en milisegundos).
+    - Ejemplo:
+
+    ```javascript
+    setInterval(function () {
+      console.log("Hola cada 2 segundos");
+    }, 2000);
+    ```
 
 12. **`clearTimeout(timeoutID)`**
-     - Limpia un temporizador establecido con `setTimeout`.
-     - Ejemplo:
-      ```javascript
-      let timeoutID = setTimeout(function() {
-          console.log("Esto no se ejecutará");
-      }, 2000);
-      clearTimeout(timeoutID);
-      ```
+
+    - Limpia un temporizador establecido con `setTimeout`.
+    - Ejemplo:
+
+    ```javascript
+    let timeoutID = setTimeout(function () {
+      console.log("Esto no se ejecutará");
+    }, 2000);
+    clearTimeout(timeoutID);
+    ```
 
 13. **`clearInterval(intervalID)`**
-     - Limpia un temporizador establecido con `setInterval`.
-     - Ejemplo:
-      ```javascript
-      let intervalID = setInterval(function() {
-          console.log("Esto no se ejecutará repetidamente");
-      }, 2000);
-      clearInterval(intervalID);
-      ```
-
-
+    - Limpia un temporizador establecido con `setInterval`.
+    - Ejemplo:
+    ```javascript
+    let intervalID = setInterval(function () {
+      console.log("Esto no se ejecutará repetidamente");
+    }, 2000);
+    clearInterval(intervalID);
+    ```
 
 ### **7.2 Declaración de Funciones del Usuario**
 
@@ -1170,7 +1219,7 @@ La forma clásica de definir una función en JavaScript es utilizando la palabra
 ```javascript
 // Función nombrada
 function add(a, b) {
-    return a + b;
+  return a + b;
 }
 
 // Llamada a la función
@@ -1185,7 +1234,7 @@ Puedes asignar una función a una variable mediante una expresión. Esto incluye
 ```javascript
 // 1. Función por expresión
 const multiply = function multiplication(a, b) {
-    return a * b;
+  return a * b;
 };
 
 // Llamada a la función
@@ -1194,7 +1243,7 @@ console.log(result); // Salida: 15
 
 // 2. Función Lambda o anónima por expresión
 const divide = function (a, b) {
-    return a / b;
+  return a / b;
 };
 
 // Llamada a la función
@@ -1202,7 +1251,7 @@ let resultDiv = divide(15, 3);
 console.log(resultDiv); // Salida: 5
 ```
 
-#### Funciones Arrow (Lambda) 
+#### Funciones Arrow (Lambda)
 
 Las funciones arrow proporcionan una sintaxis más concisa para escribir funciones en JavaScript. Son anónimas y a menudo se utilizan en lugar de las expresiones de función.
 
@@ -1210,20 +1259,20 @@ Las funciones arrow proporcionan una sintaxis más concisa para escribir funcion
 // Función tradicional
 const f1 = function (a) {
   return a + 100;
-}
+};
 
 // Desglose de la Función Arrow
 
 // 1. Elimina la palabra clave "function" y coloca la flecha entre el argumento y la llave de apertura.
 const f2 = (a) => {
   return a + 100;
-}
+};
 
 // 2. Elimina las llaves del cuerpo y la palabra clave "return" — el retorno es implícito.
 const f3 = (a) => a + 100;
 
 // 3. Omite los paréntesis alrededor del argumento si hay un solo argumento
-const f4 = a => a + 100;
+const f4 = (a) => a + 100;
 ```
 
 <div class="exercise-box">
@@ -1265,16 +1314,16 @@ A un alto nivel, un callback es cuando una función B se pasa como parámetro a 
 ```javascript
 // Función A toma la función B como parámetro de callback
 function A(callback) {
-    // Lógica de la función A
-    console.log("Dentro de la función A");
-    
-    // Invoca la función callback B
-    callback();
+  // Lógica de la función A
+  console.log("Dentro de la función A");
+
+  // Invoca la función callback B
+  callback();
 }
 
 // Función B (función callback)
 function B() {
-    console.log("Función callback B ejecutada");
+  console.log("Función callback B ejecutada");
 }
 
 // Llama a la función A y pasa la función B como callback
@@ -1292,12 +1341,12 @@ En JavaScript, las funciones callback ad-hoc son funciones que se definen en lí
 const numbers = [1, 2, 3, 4, 5];
 
 // Usando forEach con una función callback ad-hoc
-numbers.forEach(function(item) {
-    console.log(item); // Muestra cada número
+numbers.forEach(function (item) {
+  console.log(item); // Muestra cada número
 });
 
 // Usando forEach con una función callback ad-hoc de tipo arrow
-numbers.forEach(item => {
-    console.log(item * 2); // Muestra cada número multiplicado por 2
+numbers.forEach((item) => {
+  console.log(item * 2); // Muestra cada número multiplicado por 2
 });
 ```

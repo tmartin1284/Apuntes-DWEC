@@ -1,7 +1,3 @@
-Aquí tienes la traducción al español:
-
----
-
 # P9.2 - **Asignación Final de Práctica con React**
 
 ## Objetivo
@@ -61,7 +57,7 @@ El repositorio debe incluir un archivo **README.md** que sirva como documentaci�
 
 1. **Objetivos** – Descripción de los principales objetivos del proyecto.
 2. **Características** – Lista de las funcionalidades principales de la aplicación.
-3. **Prototipo en Figma** – Enlace a un **wireframe o prototipo básico** de la aplicación.
+3. **Prototipo UI** – Boceto de cómo deben combinarse los componentes en pantalla.
 4. **Tecnologías Utilizadas** – Lista de frameworks, bibliotecas y APIs empleadas.
 5. **Instrucciones de Instalación** – Explicación sobre cómo configurar y ejecutar el proyecto localmente.
 6. **Guía de Uso** – Descripción general de cómo funciona la aplicación.
@@ -73,17 +69,17 @@ El repositorio debe incluir un archivo **README.md** que sirva como documentaci�
 
 El proyecto será evaluado con base en los siguientes aspectos:
 
-| Criterio                    | Descripción                                                                       | Puntos  |
-| --------------------------- | --------------------------------------------------------------------------------- | ------- |
-| **Estructura del Proyecto** | Organización adecuada de carpetas y modularidad                                   | 10      |
-| **Diseño de Componentes**   | Uso de componentes atómicos, moleculares, organismos, layout y rutas              | 15      |
-| **Rutas y Navegación**      | Implementación de React Router para SPA, incluyendo rutas dinámicas               | 10      |
-| **Integración de API**      | Uso correcto de solicitudes AJAX, múltiples búsquedas en API y filtrado           | 10      |
-| **Estilos**                 | Aplicación adecuada de metodologías CSS y estilos dentro de componentes           | 10      |
-| **Documentación**           | README completo con todas las secciones requeridas, incluyendo Figma y despliegue | 15      |
-| **Calidad del Código**      | Código limpio, legible y mantenible                                               | 10      |
-| **Presentación y Q&A**      | Claridad y profundidad en la presentación oral y respuestas a preguntas           | 20      |
-| **Total**                   | **Puntaje final sobre 100**                                                       | **100** |
+| Criterio                    | Descripción                                                                    | Puntos  |
+| --------------------------- | ------------------------------------------------------------------------------ | ------- |
+| **Estructura del Proyecto** | Organización adecuada de carpetas y modularidad                                | 10      |
+| **Diseño de Componentes**   | Uso de componentes atómicos, moleculares, organismos, layout y rutas           | 15      |
+| **Rutas y Navegación**      | Implementación de React Router para SPA, incluyendo rutas dinámicas            | 10      |
+| **Integración de API**      | Uso correcto de solicitudes AJAX, múltiples búsquedas en API y filtrado        | 10      |
+| **Estilos**                 | Aplicación adecuada de metodologías CSS y estilos dentro de componentes        | 10      |
+| **Documentación**           | README completo con todas las secciones requeridas, incluyendo UI y despliegue | 15      |
+| **Calidad del Código**      | Código limpio, legible y mantenible                                            | 10      |
+| **Presentación y Q&A**      | Claridad y profundidad en la presentación oral y respuestas a preguntas        | 20      |
+| **Total**                   | **Puntaje final sobre 100**                                                    | **100** |
 
 Cada miembro del equipo recibirá una **calificación individual** basada en su participación en la presentación y sus respuestas durante la sesión de preguntas y respuestas.
 
