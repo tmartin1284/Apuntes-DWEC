@@ -774,7 +774,8 @@ const intRegex = /^[1-9]\d*$/;
 // Entero con signo
 const signIntRegex = /^[-+]?\d+$/;
 // Código Postal (España)
-const cpRegex  = /^[0-5][0-9]{5}$/;
+const cpRegex  = /^[0-5][0-9]{4}$/;
+const cpRegexcompleto =  /^[0[1-9]|[0-4][0-9]|5[0-2]][0-9]{4}$/;
 // Correo electrónico 99.9% preciso
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
