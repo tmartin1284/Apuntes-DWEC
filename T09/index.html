@@ -1125,20 +1125,32 @@ Ambas están en mi repositorio.</p>
 </ul>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>npm<span class="w"> </span>create<span class="w"> </span>vite@latest
 </span></code></pre></div>
-<p>con esto creamos un proyecto de Vite, pero OJO, que nos va a pedir cosillas: - En primer lugar, nos va a pedir permiso para crear los paquetes. Decimos que <code>y</code>es. - Después nos pide un <em>nombre</em> para el proyecto. Recordad que creará una carpeta con el nombre del proyecto en el directorio actual, y dentro creará toda la estrucura del proyecto. Si forzamos la creación de directorios intermedios, asumirá que le hemos dado la <em>ruta</em> y nos volverá a pedir <em>nombre</em> del proyecto. <img alt="nombre" src="img/nombre.jpg" /> - El <em>framework</em> que vamos a utilizar <img alt="tecnologia" src="img/tecnologia.jpg" /> y podremos desplazarnos con las flechas. - El <em>lenguaje</em>, <img alt="lenguaje" src="img/lenguaje.jpg" /></p>
+<p>con esto creamos un proyecto de Vite, pero OJO, que nos va a pedir cosillas:</p>
 <ul>
-<li>Con esto, ya tendremos creado el proyecto Vite. Si todo ha ido bien nos mostrará una imagen con más info: <img alt="vite" src="img/vitecreado.jpg" /></li>
+<li>En primer lugar, nos va a pedir permiso para crear los paquetes. Decimos que <code>y</code>es.</li>
+<li>Después nos pide un <em>nombre</em> para el proyecto. Recordad que creará una carpeta con el nombre del proyecto en el directorio actual, y dentro creará toda la estrucura del proyecto. Si forzamos la creación de directorios intermedios, asumirá que le hemos dado la <em>ruta</em> y nos volverá a pedir <em>nombre</em> del proyecto. <img alt="nombre" src="img/nombre.jpg" /></li>
+<li>El <em>framework</em> que vamos a utilizar <img alt="tecnologia" src="img/tecnologia.jpg" /> y podremos desplazarnos con las flechas.</li>
+<li>
+<p>El <em>lenguaje</em>, <img alt="lenguaje" src="img/lenguaje.jpg" /></p>
+</li>
+<li>
+<p>Con esto, ya tendremos creado el proyecto Vite. Si todo ha ido bien nos mostrará una imagen con más info: <img alt="vite" src="img/vitecreado.jpg" /></p>
+</li>
 <li>Ahora solo tenemos que ejecutar los tres comandos que nos dice Vite:</li>
 <li>Nos vamos a la carpeta del directorio creado <code>cd Tema9\ProyectoViteReact</code> (Recordad ios a la carpeta que hayais puesto en vuestro proyecto)</li>
 <li>Instalamos los paquetes de Vite</li>
 </ul>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>npm<span class="w"> </span>install
 </span></code></pre></div>
-<p>Tarda un poco, tened paciencia!. - Actualizamos los paquetes de React y ReactDOM que se han instalado</p>
+<p>Tarda un poco, tened paciencia!.</p>
+<ul>
+<li>Actualizamos los paquetes de React y ReactDOM que se han instalado</li>
+</ul>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npm<span class="w"> </span>install<span class="w">  </span>react@latest<span class="w"> </span>react-dom@latest
 </span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code> - Ejecutamos la aplicación
-</code></pre></div>
+<ul>
+<li>Ejecutamos la aplicación</li>
+</ul>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>npm<span class="w"> </span>run<span class="w"> </span>dev
 </span></code></pre></div>
 <ul>
@@ -1148,7 +1160,7 @@ Ambas están en mi repositorio.</p>
 <p>Esta parte se basa en las transparencias <a href="slides/2._Setup.pdf">setup React</a>, pero las adapta a una distribución en VSCode.</p>
 <p>Para recapitular, en el desarrollo de un proyecto con React vamos a necesitar algunos elementos:</p>
 <ul>
-<li>Las librerías de React y React-DOM, que se han instalado al crear el proyecto de React en la sección anterior</li>
+<li>Las librerías de <em>React</em> y <em>React-DOM</em>, que se han instalado al crear el proyecto de React en la sección anterior</li>
 <li>Un gestor de contenido, que sería <code>npm</code> o <code>yarn</code>, aunque el primero ya lo tenenos puesto.</li>
 <li>Si hemos hecho la instalación con Vite, el se va a encargar de empaquetar el código que generemos</li>
 </ul>
@@ -1199,7 +1211,7 @@ Estas son unas reglas creadas por la empresa homónima que se enfocan en:</p>
 <p><a href="https://prettier.io/"><strong>Prettier</strong></a> es una herramienta de formateo de código que se acopla con <em>Eslint</em>, nos permite basicamente hacer un formateo automático del código (esto es, añadir ; al final de cada línea de js, si así lo decidimos). Con ello, logramos un estilo consistente.
 instalar pretieer</p>
 <h4 id="huski"><strong>Huski</strong></h4>
-<p><a href=""><strong>Husky</strong></a> es uan herramienta que permite ejecutar ganchos (llamados hooks, como el capitán Hook) de git en los proyectos.
+<p><a href=""><strong>Husky</strong></a> es una herramienta que permite ejecutar ganchos (llamados hooks, como el capitán Hook) de git en los proyectos.
 Los ganchos son scripts que se ejecutan en ciertos momentos clave del proyecto, como la compilación, o la subida al repositiorio de forma automática.</p>
 <ul>
 <li>Automatización de tareas: Puedes configurar Husky para ejecutar tareas automáticamente, como linters, pruebas o formateadores, antes de realizar commits o push.</li>
@@ -1226,7 +1238,7 @@ Los ganchos son scripts que se ejecutan en ciertos momentos clave del proyecto, 
 <ul>
 <li>
 <ol>
-<li>En ppio no necesitarémos intalar <code>yarn</code> (otro gestor de paquetes alternativo a <code>npm</code>, pero por si acaso, lo instalaríamos:</li>
+<li>En ppio no necesitaremos intalar <code>yarn</code> (otro gestor de paquetes alternativo a <code>npm</code>, pero por si acaso), lo instalaríamos:</li>
 </ol>
 </li>
 </ul>
