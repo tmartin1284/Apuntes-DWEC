@@ -340,10 +340,11 @@ npm install -D eslint eslint-config-airbnb eslint-config-airbnb-base eslint-plug
 npx eslint --init
 ```
 
-Para terminar el proceso de instalación, nos va a hacer una serie de preguntas. Aqui os dejo mi respuesta, según un proyecto básico de React con JS
+Para terminar el proceso de instalación, nos va a hacer una serie de preguntas. Aqui os dejo mi respuesta, según un proyecto básico de React con JS.
 
 ![instalación de eslint con airbnb](./img/eslint.JPG).
 
+<!--
 Al finalizar nos va a crear un archivo _.eslintrc.cjs_ o _.eslintrc.js_. los archivos de conf de eslint.
 
 4. Editamos el archivo .eslintrc.cjs para que quede con esta forma. Ojo, he incluido la parte de prettier
@@ -439,6 +440,7 @@ echo '
 npx lint-staged
 
 ```
+-->
 
 En principio, después de todo esto, el proyecto ya debe estar configurado con todos los plugins.
 

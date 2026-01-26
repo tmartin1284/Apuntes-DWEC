@@ -1200,12 +1200,13 @@ Para hacer todo esto, seguimos los siguientes pasos:</p>
 </span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1"># inicializamos eslint</span>
 </span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>npx<span class="w"> </span>eslint<span class="w"> </span>--init
 </span></code></pre></div>
-<p>Para terminar el proceso de instalación, nos va a hacer una serie de preguntas. Aqui os dejo mi respuesta, según un proyecto básico de React con JS</p>
+<p>Para terminar el proceso de instalación, nos va a hacer una serie de preguntas. Aqui os dejo mi respuesta, según un proyecto básico de React con JS.</p>
 <p><img alt="instalación de eslint con airbnb" src="img/eslint.JPG" />.</p>
-<p>Al finalizar nos va a crear un archivo <em>.eslintrc.cjs</em> o <em>.eslintrc.js</em>. los archivos de conf de eslint.</p>
-<ol>
-<li>Editamos el archivo .eslintrc.cjs para que quede con esta forma. Ojo, he incluido la parte de prettier</li>
-</ol>
+<!--
+Al finalizar nos va a crear un archivo _.eslintrc.cjs_ o _.eslintrc.js_. los archivos de conf de eslint.
+
+4. Editamos el archivo .eslintrc.cjs para que quede con esta forma. Ojo, he incluido la parte de prettier
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>module.exports = {
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  env: {
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    browser: true,
@@ -1231,9 +1232,9 @@ Para hacer todo esto, seguimos los siguientes pasos:</p>
 </span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>  },
 </span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>};
 </span></code></pre></div>
-<ol>
-<li>Instalamos prettier; instalamos y activamos Husky; e instalamos lint-staged (Dejo todos los comandos juntos, para ejecutarlos de una). Con esto nos creará la carpeta .husky/ y un hook pre-commit</li>
-</ol>
+
+5. Instalamos prettier; instalamos y activamos Husky; e instalamos lint-staged (Dejo todos los comandos juntos, para ejecutarlos de una). Con esto nos creará la carpeta .husky/ y un hook pre-commit
+
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-D<span class="w"> </span>prettier<span class="w"> </span>eslint-config-prettier<span class="w"> </span>eslint-plugin-prettier
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="c1"># Crea .prettierrc:</span>
@@ -1257,9 +1258,9 @@ Para hacer todo esto, seguimos los siguientes pasos:</p>
 </span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="c1"># Instalar lint-staged</span>
 </span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>npm<span class="w"> </span>install<span class="w"> </span>-D<span class="w"> </span>lint-staged
 </span></code></pre></div>
-<ol>
-<li>Configurar scripts y lint-staged en package.json</li>
-</ol>
+
+6. Configurar scripts y lint-staged en package.json
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>{
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  .....
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>   &quot;scripts&quot;: {
@@ -1279,9 +1280,9 @@ Para hacer todo esto, seguimos los siguientes pasos:</p>
 </span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>  }
 </span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>}
 </span></code></pre></div>
-<ol>
-<li>Configurar Husky para usar lint-staged, y lo lanzamos:</li>
-</ol>
+
+7. Configurar Husky para usar lint-staged, y lo lanzamos:
+
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Reemplazamos el archivo /Husky/pre-commit</span>
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;</span>
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="s1">#!/usr/bin/env sh</span>
@@ -1289,6 +1290,8 @@ Para hacer todo esto, seguimos los siguientes pasos:</p>
 </span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
 </span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>npx<span class="w"> </span>lint-staged
 </span></code></pre></div>
+-->
+
 <p>En principio, después de todo esto, el proyecto ya debe estar configurado con todos los plugins.</p>
 <h2 id="6-renderizado-con-react"><strong>6. Renderizado con React</strong></h2>
 <p><a href="slides/3._Render.pdf">Render react</a></p>
