@@ -13,6 +13,7 @@ nav:
   - U8 - NodeJS: T08/README.md
   - U9 - React: T09/README.md
   - U10 - TypeScript: T10/README.md
+  - U11 - React Router: T11/README.md
 
 theme:
   logo: img/js.jpg

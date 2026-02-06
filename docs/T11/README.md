@@ -1,10 +1,4 @@
-¡Sí! 😊
-Aquí lo tienes **en formato Markdown (`.md`)**, listo para copiar y pegar en un archivo.
-
----
-
-````md
-## UNIDAD 9: React – Tema 2: Construcción de una SPA Real
+# UNIDAD 11: React – Tema 2: Construcción de una SPA Real
 
 Este segundo y último tema se centra en convertir los conocimientos básicos de React en una **Single Page Application (SPA)** real.
 
@@ -55,7 +49,7 @@ La obtención de datos y la lógica se gestionan usando:
 
 #### Configuración básica
 
-```tsx
+```ts
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -71,7 +65,6 @@ function App() {
   );
 }
 ```
-````
 
 ---
 
@@ -132,6 +125,38 @@ export async function loader() {
 ---
 
 ## 2. Conceptos de Navegación y Rutas
+
+### Creación del proyecto RR Declarativo
+
+Creamos un proyecto React de la forma habitual. Elegimos el lenguaje de programación que queramos.
+
+```bs
+npm create vite@latest
+
+```
+
+Dentro del componente `App` tenemos que incluir dos elementos: indicar qué componente debe renderizarse en función de la ruta, e incluir los links de navegación a estas rutas: Todo dentro del elemento BrouserRouter.
+
+```ts
+export default function App() {
+  return (
+    <>
+ <BrowserRouter>
+      <nav>
+        <Link to="/">Comp</Link>
+        <Link to="/comp2">Comp2</Link>
+      </nav>
+
+
+        <Routes>
+          <Route path="/" element={<Comp />} />
+          <Route path="/comp2" element={<Comp2 />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+}
+```
 
 ### Enlaces de Navegación
 
@@ -365,13 +390,3 @@ El alumnado debería ser capaz de construir una SPA con:
 - Este tema se centra en React práctico
 - Los patrones mostrados son comunes en trabajos reales
 - Proporciona una base sólida para frameworks como **Next.js**
-
-```
-
----
-
-Si quieres, en el siguiente paso puedo:
-- Ajustarlo a **apuntes para alumnado**
-- Reducirlo a una **chuleta/resumen**
-- Prepararlo como **documentación de proyecto o README** 📄✨
-```

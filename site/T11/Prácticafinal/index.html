@@ -16,7 +16,7 @@
     
     
       
-        <title>P9.2 - Asignación Final de Práctica con React - DWEC</title>
+        <title>Proyecto final con React - DWEC</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#p92-asignacion-final-de-practica-con-react" class="md-skip">
+        <a href="#proyecto-final-con-react" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              P9.2 - Asignación Final de Práctica con React
+              Proyecto final con React
             
           </span>
         </div>
@@ -435,11 +435,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../T10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     U10 - TypeScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U11 - React Router
   </span>
   
 
@@ -585,7 +605,7 @@
                   
 
 
-<h1 id="p92-asignacion-final-de-practica-con-react">P9.2 - <strong>Asignación Final de Práctica con React</strong></h1>
+<h1 id="proyecto-final-con-react"><strong>Proyecto final con React</strong></h1>
 <h2 id="objetivo">Objetivo</h2>
 <p>El objetivo de esta asignación es desarrollar una <strong>Aplicación de Página Única (SPA) utilizando React</strong> con múltiples rutas. Esto se logrará mediante el uso de <strong>React Router</strong> y <strong>TypeScript</strong>. La aplicación deberá recuperar datos a través de <strong>solicitudes AJAX</strong>, ya sea desde una API personalizada, una API de terceros o ambas.</p>
 <h2 id="requisitos-del-proyecto">Requisitos del Proyecto</h2>
@@ -594,9 +614,10 @@
 <h3 id="estructura-del-proyecto">Estructura del Proyecto</h3>
 <p>El proyecto debe estar estructurado de la siguiente manera:</p>
 <ul>
-<li><strong>routes/</strong> – Contiene todos los componentes de ruta.</li>
+<li><strong>router/</strong> – Contiene la definición del ruter, incluyendo el <code>index.ts</code> que incluye las rutas y la carpeta con los loaders.</li>
 <li><strong>layout/</strong> – Almacena los diferentes componentes de diseño.</li>
-<li><strong>components/</strong> – Incluye componentes atómicos, moleculares y organismos, organizados por <strong>tipo</strong> o <strong>característica</strong>.</li>
+<li><strong>pages</strong> - Incluyendo los componentes que renderizan las rutas.</li>
+<li><strong>components/</strong> – Incluye componentes atómicos, moleculares y organismos, organizados por <strong>tipo</strong> o <strong>característica</strong>. Todos los que no son páginas.</li>
 <li><strong>services/</strong> – Contiene bibliotecas para solicitudes a la API.</li>
 <li><strong>types/</strong> – Almacena interfaces TypeScript que definen los formatos de datos utilizados en la aplicación.</li>
 </ul>
@@ -607,7 +628,7 @@
 <li><strong>Componentes Moleculares</strong> – Combinaciones de componentes atómicos que forman elementos reutilizables de la interfaz.</li>
 <li><strong>Componentes Organismo</strong> – Secciones de UI más complejas compuestas por múltiples componentes moleculares.</li>
 <li><strong>Componentes de Diseño (Layout Components)</strong> – Definen la estructura general de la aplicación.</li>
-<li><strong>Componentes de Ruta</strong> – Páginas que definen diferentes vistas dentro de la aplicación.</li>
+<li><strong>Componentes de Pagina/Ruta</strong> – Páginas que definen diferentes vistas dentro de la aplicación.</li>
 </ul>
 <h3 id="requisitos-de-rutas-y-api">Requisitos de Rutas y API</h3>
 <ul>
@@ -626,7 +647,7 @@
 <h2 id="entrega-del-proyecto">Entrega del Proyecto</h2>
 <p>Cada equipo debe entregar lo siguiente:</p>
 <ul>
-<li>Un enlace al <strong>repositorio de GitHub</strong> que contenga el proyecto completo.</li>
+<li>Un enlace al <strong>repositorio de GitHub</strong> que contenga el proyecto completo, e incluir al profe en el proeycto.</li>
 <li>El repositorio de GitHub debe reflejar un <strong>desarrollo progresivo</strong> (no se aceptarán repositorios con pocos commits masivos).</li>
 </ul>
 <h2 id="archivo-readme">Archivo README</h2>
@@ -700,7 +721,7 @@
 </tr>
 </tbody>
 </table>
-<p>Cada miembro del equipo recibirá una <strong>calificación individual</strong> basada en su participación en la presentación y sus respuestas durante la sesión de preguntas y respuestas.</p>
+<p>Cada miembro del equipo recibirá una <strong>calificación individual</strong> basada en su participación en la presentación y sus respuestas durante la sesión de preguntas y respuestas. Todos los items anteriores serán comunes para el grupo, salvo la parte de presentación, que será individual para cada uno.</p>
 <p>Este proyecto final servirá como una <strong>demostración práctica</strong> de la capacidad de los estudiantes para trabajar con <strong>React, TypeScript, React Router, integración de API, arquitectura de componentes y metodologías de estilización</strong>.</p>
 
 
