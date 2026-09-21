@@ -21,3 +21,5 @@ El temario se estructura de la siguiente forma:
 9. **[React](T09/README.md)**
 10. **[Typescript](T10/README.md)**
 11. **[React Router](T11/README.md)**
+
+Toda la documentación está creada en formato [**markdown**](https://markdown.es/) para aprender más, haz click [aqui.](./markdown.md)

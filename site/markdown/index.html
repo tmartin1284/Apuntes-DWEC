@@ -1,0 +1,889 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Markdown - DWEC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-instalacion-y-herramientas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DWEC" class="md-header__button md-logo" aria-label="DWEC" data-md-component="logo">
+      
+  <img src="../img/js.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DWEC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Markdown
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to automatic mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to automatic mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DWEC" class="md-nav__button md-logo" aria-label="DWEC" data-md-component="logo">
+      
+  <img src="../img/js.jpg" alt="logo">
+
+    </a>
+    DWEC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U1 - Herramientas de Frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U2 - Fundamentos de JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U3 - Arrays, objetos... y clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U4 - Gestionando el DOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U5 - Eventos y formularios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U6 - AJAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T07/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U7 - Almacenamiento del lado del cliente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T08/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U8 - NodeJS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T09/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U9 - React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U10 - TypeScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U11 - React Router
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-instalacion-y-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Instalación y Herramientas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Instalación y Herramientas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editores-recomendados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editores recomendados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-de-compilacion-por-linea-de-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramientas de compilación por línea de comandos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologias-concretas" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologías concretas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-ejecutar-la-web-en-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      Para ejecutar la web en local:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sintaxis-y-formatos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Sintaxis y Formatos Principales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Sintaxis y Formatos Principales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encabezados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encabezados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encabezado-1-h1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encabezado 1 (H1)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encabezado 1 (H1)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encabezado-2-h2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encabezado 2 (H2)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encabezado 2 (H2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encabezado-3-h3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encabezado 3 (H3)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato de Texto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enlaces-e-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enlaces e Imágenes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#citas-blockquotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Citas (Blockquotes)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#separadores-horizontales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Separadores Horizontales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><strong>Markdown</strong> es un lenguaje de marcado ligero creado por John Gruber y Aaron Swartz en 2004. Su objetivo es ofrecer máxima legibilidad y facilidad de escritura, permitiendo convertir texto plano en HTML válido y otros formatos visuales.</p>
+<hr />
+<h2 id="1-instalacion-y-herramientas">1. Instalación y Herramientas</h2>
+<p>Markdown en sí no requiere una "instalación" como un programa ejecutable, ya que es una sintaxis de texto plano. Sin embargo, para escribirlo, visualizarlo y exportarlo se utilizan editores e intérpretes.</p>
+<h3 id="editores-recomendados">Editores recomendados</h3>
+<ul>
+<li><strong>VS Code (Visual Studio Code):</strong> Incluye previsualización nativa. Soporta extensiones como <em>Markdown All in One</em> o <em>Markdown Preview Enhanced</em>.</li>
+<li><strong>Typora:</strong> Editor WYSIWYG ("lo que ves es lo que obtienes") con previsualización en tiempo real.</li>
+<li><strong>Obsidian / Logseq:</strong> Herramientas para gestión del conocimiento orientadas al formato Markdown.</li>
+<li><strong>MarkText:</strong> Editor de código abierto centrado en una experiencia limpia y sin distracciones.</li>
+</ul>
+<h3 id="herramientas-de-compilacion-por-linea-de-comandos">Herramientas de compilación por línea de comandos</h3>
+<ul>
+<li><strong>Pandoc:</strong> El conversor universal de documentos más potente (requiere instalación independiente).</li>
+<li><strong>Node.js (CLI tools):</strong> Herramientas como <code>marked-cli</code> o <code>markdown-it</code>.</li>
+<li><strong>Python:</strong> Biblioteca <code>markdown</code> accesible vía terminal.</li>
+</ul>
+<h3 id="tecnologias-concretas">tecnologías concretas</h3>
+<p>Se usan las siguientes tecnologías:</p>
+<ul>
+<li><a href="https://www.mkdocs.org/">MkDocs</a></li>
+<li><a href="https://squidfunk.github.io/mkdocs-material/">Material para MkDocs</a></li>
+</ul>
+<h3 id="para-ejecutar-la-web-en-local">Para ejecutar la web en local:</h3>
+<ol>
+<li>
+<p>Tienes que instalar dos herramientas si no las tienes. Si las tienes, ve al siguiente paso (como en los libros de <a href="https://www.ddo.com/home">Dragones y Mazmorras</a>).</p>
+</li>
+<li>
+<p>Necesitas instalar <a href="https://www.python.org/"><code>python</code></a> y <code>pip</code> (que normalmente se instala con python).</p>
+</li>
+<li>Instalas <code>pip</code>:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install mkdocs
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pip install mkdocs-material
+</span></code></pre></div>
+<ol>
+<li>Descargas este repositorio, lo descomprimes, y abres un terminal (ventana de comandos) en la carpeta raiz que acabas de descomprimir, y ejecutas:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdocs build //para construir el proyecto
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>mkdocs serve //para servirlo en el servidor local
+</span></code></pre></div>
+<p>Con esto, tendrás la página de documentación lista para acceder en modo local (127.0.0.1/8000). Aunque también puedes</p>
+<ol>
+<li>Desplegar tu página en <strong>github.pages</strong>. Entendemos que tendrás tu proyecto de <strong>markdown</strong> en tu repositorio de github, tendrás que configurar el despliegue en <strong>Settings</strong> del repositorio, y en la ventana de comandos de tu proyecto</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdocs build //para construir el proyecto
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>mkdocs gh-deploy //para servirlo en el servidor de github pages
+</span></code></pre></div>
+<hr />
+<h2 id="2-sintaxis-y-formatos-principales">2. Sintaxis y Formatos Principales</h2>
+<h3 id="encabezados">Encabezados</h3>
+<p>```markdown</p>
+<h1 id="encabezado-1-h1">Encabezado 1 (H1)</h1>
+<h2 id="encabezado-2-h2">Encabezado 2 (H2)</h2>
+<h3 id="encabezado-3-h3">Encabezado 3 (H3)</h3>
+<h4 id="encabezado-4-h4">Encabezado 4 (H4)</h4>
+<p>```</p>
+<p>Estos encabezados pueden o no llevar numeración</p>
+<h3 id="formato-de-texto">Formato de Texto</h3>
+<p>```markdown
+<em>Texto en cursiva</em> o <em>Texto en cursiva</em>
+<strong>Texto en negrita</strong> o <strong>Texto en negrita</strong>
+<strong><em>Negrita y cursiva</em></strong>
+~~Texto tachado~~
+```</p>
+<h3 id="listas">Listas</h3>
+<p><strong>Listas no ordenadas:</strong>
+```markdown</p>
+<ul>
+<li>Elemento 1</li>
+<li>Elemento 2</li>
+<li>
+<p>Subelemento 2.1</p>
+</li>
+<li>
+<p>Elemento alternativo
+  ```</p>
+</li>
+</ul>
+<p>Markdown considera un nuevo nivel a partir de 4 espacios.</p>
+<p><strong>Listas ordenadas:</strong>
+```markdown</p>
+<ol>
+<li>Primer paso</li>
+<li>Segundo paso</li>
+<li>Tercer paso
+   ```</li>
+</ol>
+<h3 id="enlaces-e-imagenes">Enlaces e Imágenes</h3>
+<p>```markdown</p>
+<!-- Enlace -->
+
+<p><a href="https://www.ejemplo.com">Texto del enlace</a></p>
+<!-- Imagen -->
+
+<p><img alt="Texto alternativo" src="https://via.placeholder.com/150" title="Título opcional" />
+```</p>
+<h3 id="citas-blockquotes">Citas (Blockquotes)</h3>
+<p>```markdown</p>
+<blockquote>
+<p>La simplicidad es la clave de la verdadera elegancia.</p>
+<blockquote>
+<p>Cita anidada
+```</p>
+</blockquote>
+</blockquote>
+<h3 id="codigo">Código</h3>
+<p>`<code>`markdown
+Código en línea: Utiliza</code>npm start` para ejecutar la aplicación.</p>
+<p>Bloque de código con resaltado de sintaxis:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hola, </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nx">saludar</span><span class="p">(</span><span class="s2">&quot;Mundo&quot;</span><span class="p">);</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="sb">```</span>
+</span></code></pre></div>
+<h3 id="tablas">Tablas</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nombre</th>
+<th style="text-align: center;">Rol</th>
+<th style="text-align: right;">Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Ana</td>
+<td style="text-align: center;">Admin</td>
+<td style="text-align: right;">Activo</td>
+</tr>
+<tr>
+<td style="text-align: left;">Carlos</td>
+<td style="text-align: center;">User</td>
+<td style="text-align: right;">Inactivo</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Los puntos <code>:</code> determinan la alineación: izquierda <code>:---</code>, centro <code>:---:</code>, derecha <code>---:</code>)</em></p>
+<hr />
+<h3 id="separadores-horizontales">Separadores Horizontales</h3>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gu">---</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="gu">---</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>---
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>

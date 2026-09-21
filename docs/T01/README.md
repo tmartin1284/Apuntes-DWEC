@@ -1,4 +1,3 @@
-
 # **UNIDAD 1 - Introducción a las Herramientas de Frontend**
 
 ## **1. Diferencia entre Internet y la Web**
@@ -8,6 +7,7 @@
 ![Internet vs el WEB](img/00_internet_www.jpg)
 
 #### El Internet:
+
 - **Definición**: El Internet es una red global de computadoras y otros dispositivos interconectados. Es la infraestructura que permite diversos tipos de comunicación digital e intercambio de datos.
 - **Historia**: El desarrollo del Internet comenzó a fines de la década de 1960 con la creación de ARPANET, un proyecto financiado por el Departamento de Defensa de EE.UU. A lo largo de las décadas siguientes, evolucionó hasta convertirse en una red global con la creación de los protocolos TCP/IP en la década de 1980. Posteriormente se crearon protocolos en las diferentes capas de la arquitectura
 - **Componentes**: El Internet consta de hardware (servidores, enrutadores, cables) y ciertos estándares y protocolos (TCP/IP, Ethernet).
@@ -15,7 +15,9 @@
 - **Analogía**: Piensa en el Internet como la red física de caminos y carreteras.
 
 Para más información, recordad los apuntes de SISI del año pasao. Echadle un ojo a la parte de redes (tercer trimestre, y sobretodo al curso de ccna de Cisco que hicistéis).
+
 #### La World Wide Web (WWW):
+
 - **Definición**: La World Wide Web es una colección de información, accesible a través del Internet, que está formateada e interconectada utilizando hipertexto y hipermedia. Es un servicio que opera sobre el Internet.
 - **Historia**: La World Wide Web (WWW), o comunmente conocida como "la Web" fue inventada por Tim Berners-Lee en 1989 mientras trabajaba en CERN. Desarrolló el primer navegador web y servidor web, y el primer sitio web se publicó en 1991. La web creció rápidamente en popularidad a lo largo de la década de 1990, convirtiéndose en una parte importante de la vida cotidiana.
 - **Componentes**: La WWW consta de páginas web, sitios web y navegadores web. Las páginas web son documentos escritos en HTML y se accede a través de URLs.
@@ -24,6 +26,7 @@ Para más información, recordad los apuntes de SISI del año pasao. Echadle un 
 - **Analogía**: Piensa en la web como un sistema específico de caminos y puntos de referencia (sitios web y páginas web) que existen en las carreteras y autopistas físicas (el Internet).
 
 #### Resumen:
+
 - **Internet**: La red global subyacente que conecta millones de computadoras.
 - **La Web**: Un subconjunto del Internet, compuesto por páginas y sitios web, accesibles a través de navegadores web.
 
@@ -33,10 +36,10 @@ La web depende del Internet para funcionar, pero el Internet también soporta mu
 
 La arquitectura más común es cliente/servidor.
 
- - Un **cliente** es un consumidor de servicios. El navegador web en nuestro dispositivo actúa como cliente.
- - Un **servidor** es uno o más procesos alojados en máquinas que proporcionan los servicios consumidos por el cliente. El servicio más utilizado en la WWW es HTTP.
+- Un **cliente** es un consumidor de servicios. El navegador web en nuestro dispositivo actúa como cliente.
+- Un **servidor** es uno o más procesos alojados en máquinas que proporcionan los servicios consumidos por el cliente. El servicio más utilizado en la WWW es HTTP.
 
- ![Arquitectura Cliente/Servidor](img/01_web_architecture.png)
+![Arquitectura Cliente/Servidor](img/01_web_architecture.png)
 
 ## **3. Desarrollo Frontend y Backend**
 
@@ -84,10 +87,6 @@ Podemos escribir la lógica de nuestra página en Vanilla JS. Pero la complejida
 - Muchos más y muchos más por venir.
 
 ![Frameworks de Frontend](img/06_frontend_frameworks.png)
-  
-
-
-
 
 ## **4. Lenguaje JavaScript**
 
@@ -108,6 +107,7 @@ Se utiliza principalmente en el **lado del cliente**, implementado como parte de
 También se puede usar en el **lado del servidor** con **node.js** para crear el backend y muchas otras aplicaciones.
 
 **RECORDATORIO**
+
 > - **Lenguajes compilados**: Un lenguaje compilado es un lenguaje de programación donde el código fuente se traduce completamente a código máquina antes de la ejecución, lo que generalmente resulta en un rendimiento más rápido pero requiere una compilación específica para diferentes plataformas. Ejemplos incluyen C, C++ y Rust.
 > - **Lenguajes interpretados**: Un lenguaje interpretado es un lenguaje de programación donde **el código se ejecuta línea por línea mediante un intérprete**, traduciendo cada instrucción a código máquina una a una durante el tiempo de ejecución. Este enfoque mejora la portabilidad entre diferentes sistemas, pero generalmente resulta en un rendimiento más lento en comparación con los lenguajes compilados. Ejemplos incluyen Python, JavaScript y Ruby.
 
@@ -169,9 +169,9 @@ Usaremos el más extendido hoy en día: [VSCode](https://code.visualstudio.com/)
 Los desarrolladores dependen de los navegadores no solo para ver páginas web, sino también para herramientas y capacidades esenciales que ayudan en el desarrollo y la depuración:
 
 - **Herramientas de Desarrollo:** Los navegadores modernos vienen equipados con herramientas de desarrollo (como las Herramientas de Desarrollador de Chrome, Herramientas de Desarrollador de Firefox y el Inspector Web de Safari) que proporcionan características como:
-    - Inspección del DOM
-    - Inspección de CSS
-    - Consola de JavaScript
+  - Inspección del DOM
+  - Inspección de CSS
+  - Consola de JavaScript
 
 ![Navegadores web](img/08_web_browsers.webp)
 
@@ -184,32 +184,32 @@ Las herramientas de control de versiones son sistemas de software que ayudan a g
 ![Git y GitHub](img/09_git.png)
 
 - **GitHub**: GitHub funciona principalmente como una plataforma de alojamiento para repositorios de Git, permitiendo sincronizar nuestro proyecto local de Git con GitHub. Pero podemos ver todos los diferentes propósitos de esta herramienta:
-    1. **Control de versiones**: GitHub aloja repositorios de Git, permitiendo a los desarrolladores gestionar y rastrear cambios en su base de código a lo largo del tiempo.
+  1. **Control de versiones**: GitHub aloja repositorios de Git, permitiendo a los desarrolladores gestionar y rastrear cambios en su base de código a lo largo del tiempo.
 
-    2. **Colaboración**: Facilita el trabajo en equipo al permitir que varios desarrolladores trabajen en el mismo proyecto simultáneamente, gestionen ramas y fusionen cambios.
+  2. **Colaboración**: Facilita el trabajo en equipo al permitir que varios desarrolladores trabajen en el mismo proyecto simultáneamente, gestionen ramas y fusionen cambios.
 
-    3. **Alojamiento de código**: Proporciona una plataforma para que los desarrolladores alojen y compartan sus repositorios de código fuente, haciéndolos accesibles para su visualización, clonación y contribución.
+  3. **Alojamiento de código**: Proporciona una plataforma para que los desarrolladores alojen y compartan sus repositorios de código fuente, haciéndolos accesibles para su visualización, clonación y contribución.
 
-    4. **Seguimiento de problemas**: Incluye un sistema de seguimiento de problemas para gestionar y resolver errores, tareas y solicitudes de características relacionadas con proyectos.
+  4. **Seguimiento de problemas**: Incluye un sistema de seguimiento de problemas para gestionar y resolver errores, tareas y solicitudes de características relacionadas con proyectos.
 
-    5. **Gestión de proyectos**: Ofrece herramientas como tableros de proyectos y hitos para organizar tareas, rastrear el progreso y priorizar elementos de trabajo entre equipos.
+  5. **Gestión de proyectos**: Ofrece herramientas como tableros de proyectos y hitos para organizar tareas, rastrear el progreso y priorizar elementos de trabajo entre equipos.
 
-    6. **Integración CI/CD**: Se integra con herramientas de CI/CD para automatizar los procesos de construcción, prueba y despliegue, asegurando que los cambios de código sean probados y desplegados de manera eficiente.
+  6. **Integración CI/CD**: Se integra con herramientas de CI/CD para automatizar los procesos de construcción, prueba y despliegue, asegurando que los cambios de código sean probados y desplegados de manera eficiente.
 
-    7. **Comunidad y código abierto**: Fomenta una comunidad en torno al desarrollo de software de código abierto, permitiendo a los usuarios descubrir, contribuir y colaborar en proyectos a nivel global.
+  7. **Comunidad y código abierto**: Fomenta una comunidad en torno al desarrollo de software de código abierto, permitiendo a los usuarios descubrir, contribuir y colaborar en proyectos a nivel global.
 
-    8. **Documentación**: Proporciona herramientas para crear y mantener documentación del proyecto, wikis y archivos README para explicar los objetivos del proyecto, instrucciones de uso y directrices de contribución.
+  8. **Documentación**: Proporciona herramientas para crear y mantener documentación del proyecto, wikis y archivos README para explicar los objetivos del proyecto, instrucciones de uso y directrices de contribución.
 
 **DOCUMENTAR, DOCUMENTAR, DOCUMENTAR!!!**
+
 > - No olvides documentar tu proyecto con un archivo **README.md** escrito en **Markdown**. Markdown es un lenguaje de marcado ligero que se usa comúnmente para formatear texto en la web. Al escribir archivos README en plataformas como GitHub, Markdown proporciona una forma simple y legible de estructurar y dar estilo al texto sin necesidad de escribir HTML directamente.
 > - Aprende algo sobre [el lenguaje Markdown](https://www.markdownguide.org/cheat-sheet/)
-> ![markdown](img/10_md.png)
+>   ![markdown](img/10_md.png)
 > - Echa un vistazo a este ejemplo -> [README.md](https://github.com/jeatzr/txt2gift/blob/main/README.md)
 > - Las notas actuales que estás leyendo también están escritas en Markdown y luego compiladas por `mkdocs` para generar una documentación bonita. -> [README.md](https://github.com/jeatzr/dwec-bi/blob/main/docs/01_frontend_introduction/README.md)
 > - Ejemplo de sintaxis Markdown:
-> 
 
-```
+````
 # Nombre del Proyecto
 
 Descripción de tu proyecto.
@@ -228,10 +228,7 @@ Ejemplos e instrucciones sobre cómo usar tu proyecto
 
 ```javascript
 console.log('¡Hola, Mundo!');
-```
-
-
-
+````
 
 ### **5.4 Gestores de Paquetes**
 
@@ -300,127 +297,125 @@ Estas herramientas son esenciales en el desarrollo web moderno, ayudando a mante
 Tenemos varias formas de incluir código JavaScript en nuestra página web:
 
 1. **JavaScript Interno**
-   
-    Puedes incluir JavaScript dentro de la sección `<head>` o `<body>` de tu archivo HTML usando la etiqueta `<script>`. Si deseas asegurarte de que el código se ejecute una vez que se haya analizado todo el documento, se recomienda incluir esta etiqueta al final de `<body>`.
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ejemplo de JavaScript Interno</title>
-        
-    </head>
-    <body>
-        <h1>Ejemplo de JavaScript Interno</h1>
-        <script>
-            alert("¡Hola, Mundo!");       
-        </script>
-    </body>
-    </html>
-    ```
+   Puedes incluir JavaScript dentro de la sección `<head>` o `<body>` de tu archivo HTML usando la etiqueta `<script>`. Si deseas asegurarte de que el código se ejecute una vez que se haya analizado todo el documento, se recomienda incluir esta etiqueta al final de `<body>`.
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="es">
+     <head>
+       <meta charset="UTF-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title>Ejemplo de JavaScript Interno</title>
+     </head>
+     <body>
+       <h1>Ejemplo de JavaScript Interno</h1>
+       <script>
+         alert("¡Hola, Mundo!");
+       </script>
+     </body>
+   </html>
+   ```
 
 2. **JavaScript Externo**
 
-    Puedes incluir JavaScript desde un archivo externo usando la etiqueta `<script>` con el atributo `src`. Al igual que con el JavaScript interno, la posición de la etiqueta `<script>` dentro del documento HTML es importante.
+   Puedes incluir JavaScript desde un archivo externo usando la etiqueta `<script>` con el atributo `src`. Al igual que con el JavaScript interno, la posición de la etiqueta `<script>` dentro del documento HTML es importante.
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ejemplo de JavaScript Externo</title>
-    </head>
-    <body>
-        <h1>Ejemplo de JavaScript Externo</h1>
-        <script src="script.js"></script>
-    </body>
-    </html>
-    ```
+   ```html
+   <!DOCTYPE html>
+   <html lang="es">
+     <head>
+       <meta charset="UTF-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title>Ejemplo de JavaScript Externo</title>
+     </head>
+     <body>
+       <h1>Ejemplo de JavaScript Externo</h1>
+       <script src="script.js"></script>
+     </body>
+   </html>
+   ```
 
-    **script.js**:
-    ```js
-    alert("¡Hola, Mundo!");
-    console.log("¡Hola Mundo!!!")
-    ```
+   **script.js**:
+
+   ```js
+   alert("¡Hola, Mundo!");
+   console.log("¡Hola Mundo!!!");
+   ```
 
 3. **Atributos Defer y Async**
-    Puedes usar los atributos `defer` o `async` en la etiqueta `<script>` para controlar el comportamiento de carga de tu JavaScript.
+   Puedes usar los atributos `defer` o `async` en la etiqueta `<script>` para controlar el comportamiento de carga de tu JavaScript.
+   - `defer`: El script se ejecutará después de que el HTML se haya analizado completamente. Esto nos añade dos ventajas: por una parte, la carga de la página no se queda 'parada' proque haya que cargar un script 'gordo' (que los hay, de hecho es lo más común); y dos, cuando el script se ejecuta es seguro que toda la página (con los objetos correspondientes a las etiquetas) está cargada y son accesibles al script. El uso de `defer` nos da más control sobre la ejecución de los scripts porque `defer` mantiene el orden de ejecución si tienes múltiples scripts.
+   - `async`: El script se ejecutará de manera asíncrona tan pronto como esté disponible. Se ejecuta a su "bola", y si hay varios scripts marcados con `async`, se van a ejecutar todos en hilos (procesos) independientes al proceso de carga de la página principal.
 
-      - `defer`: El script se ejecutará después de que el HTML se haya analizado completamente. Esto nos añade dos ventajas: por una parte, la carga de la página no se queda 'parada' proque haya que cargar un script 'gordo' (que los hay, de hecho es lo más común); y dos, cuando el script se ejecuta es seguro que toda la página (con los objetos correspondientes a las etiquetas) está cargada y son accesibles al script. El uso de `defer` nos da más control sobre la ejecución de los scripts porque `defer` mantiene el orden de ejecución si tienes múltiples scripts.
-      - `async`: El script se ejecutará de manera asíncrona tan pronto como esté disponible. Se ejecuta a su "bola", y si hay varios scripts marcados con `async`, se van a ejecutar todos en hilos (procesos) independientes al proceso de carga de la página principal.
+   ```html
+   <!DOCTYPE html>
+   <html lang="es">
+     <head>
+       <meta charset="UTF-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title>Ejemplo de Defer y Async</title>
+       <script src="defer-script.js" defer></script>
+       <script src="async-script.js" async></script>
+     </head>
+     <body>
+       <h1>Ejemplo de Defer y Async</h1>
+     </body>
+   </html>
+   ```
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ejemplo de Defer y Async</title>
-        <script src="defer-script.js" defer></script>
-        <script src="async-script.js" async></script>
-    </head>
-    <body>
-        <h1>Ejemplo de Defer y Async</h1>
-    </body>
-    </html>
-    ```
+   **defer-script.js**
 
-    **defer-script.js**
+   ```js
+   console.log("Script Defer Cargado");
+   ```
 
-    ```js
-    console.log("Script Defer Cargado");
-    ```
+   **async-script.js**
 
-    **async-script.js**
+   ```js
+   console.log("Script Async Cargado");
+   ```
 
-    ```js
-    console.log("Script Async Cargado");
-    ```
+   La alternativa sin usar estos atributos, es poner los scripts justo antes de la etiqueta de cierre del `</body>`.
 
-    La alternativa sin usar estos atributos, es poner los scripts justo antes de la etiqueta de cierre del  `</body>`.
+   ```js
+   <body>
+     ...todo el contenido está arriba del script...
+     <script src="./miscript.js"></script>
+   </body>
+   ```
 
-    ```js
-    <body>
-         ...todo el contenido está arriba del script...
+   Colocar tus etiquetas de script justo antes de la etiqueta de cierre `</body>` asegura que el script se ejecute después de que se haya analizado el HTML. Sin embargo, esto no garantiza inherentemente el orden de ejecución si tienes múltiples scripts y comportamiento asíncrono.
 
-         <script src="./miscript.js"></script>
-    </body>
-    ```
-
-    Colocar tus etiquetas de script justo antes de la etiqueta de cierre `</body>` asegura que el script se ejecute después de que se haya analizado el HTML. Sin embargo, esto no garantiza inherentemente el orden de ejecución si tienes múltiples scripts y comportamiento asíncrono. 
-
-    Aun así, en nuestro caso, cualquiera de las dos opciones es válida para preservar la ejecución del script una vez que el documento HTML esté totalmente analizado.
-
+   Aun así, en nuestro caso, cualquiera de las dos opciones es válida para preservar la ejecución del script una vez que el documento HTML esté totalmente analizado.
 
 4. **Manejadores de Eventos en Atributos HTML**
-   
-    Puedes incluir JavaScript directamente dentro de los atributos HTML, como `onclick`, `onload`, etc. No es una buena práctica, solo en algunos casos específicos.
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ejemplo de Manejadores de Eventos</title>
-    </head>
-    <body>
-        <h1>Ejemplo de Manejadores de Eventos</h1>
-        <button onclick="alert('¡Hola, Mundo!')">Haz Clic Aquí</button>
-    </body>
-    </html>
-    ```
+   Puedes incluir JavaScript directamente dentro de los atributos HTML, como `onclick`, `onload`, etc. No es una buena práctica, solo en algunos casos específicos.
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="es">
+     <head>
+       <meta charset="UTF-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title>Ejemplo de Manejadores de Eventos</title>
+     </head>
+     <body>
+       <h1>Ejemplo de Manejadores de Eventos</h1>
+       <button onclick="alert('¡Hola, Mundo!')">Haz Clic Aquí</button>
+     </body>
+   </html>
+   ```
 
 ## **7. Bootstrap**
 
 #### ¿Qué es Bootstrap?
 
-Bootstrap es un popular framework de código abierto para el desarrollo de **sitios web responsivos y orientados a móviles**. Proporciona una colección de componentes de CSS y JavaScript que te ayudan a diseñar y construir interfaces de usuario de manera rápida y eficiente. Bootstrap está diseñado para simplificar el proceso de creación de diseños consistentes y visualmente atractivos en diferentes dispositivos y tamaños de pantalla.
+Bootstrap es un popular framework de código abierto para el desarrollo de **sitios web responsivos y orientados a móviles**. Proporciona una colección de componentes de CSS y JavaScript que te ayudan a diseñar y construir interfaces de usuario de manera rápida y eficiente. Bootstrap está diseñado para simplificar el proceso de creación de diseños consistentes y visualmente atractivos en diferentes dispositivos y tamaños de pantalla. Breve resumen de [**Bootstrap** aqui](bootstrap.md).
 
 #### Características Clave:
+
 - **Sistema de Cuadrícula Responsiva**: Ajusta automáticamente el diseño según el tamaño de la pantalla, asegurando que tu sitio web se vea bien en todos los dispositivos.
 - **Componentes Pre-estilizados**: Incluye una amplia gama de componentes listos para usar, como botones, formularios, barras de navegación y modales.
 - **Personalizable**: Permite la personalización de componentes y estilos utilizando variables y temas.
@@ -429,46 +424,44 @@ Bootstrap es un popular framework de código abierto para el desarrollo de **sit
 #### Cómo Usar Bootstrap:
 
 1. **Formas de Incluir Bootstrap en Tu Proyecto:**
-    - **Descargar Bootstrap**: Puedes descargar los archivos compilados de Bootstrap manualmente y agregarlos a tu archivo HTML.
-    - **A través de CDN**: Puedes agregar los enlaces de CDN a los archivos CSS y de scripts en el archivo HTML sin descargarlos.
-    - **Instalar dependencias**: Puedes instalar las dependencias en el proyecto con `npm i bootstrap@5.3.3`. En este caso, el gestor de paquetes de Node mantiene el control de los archivos.
-    - **Usar Snippet de Bootstrap**: Puedes usar, por ejemplo, el snippet `bs5-$` en el editor VSCode. La plantilla Bs5 escribirá todos los enlaces de CDN por ti.
+   - **Descargar Bootstrap**: Puedes descargar los archivos compilados de Bootstrap manualmente y agregarlos a tu archivo HTML.
+   - **A través de CDN**: Puedes agregar los enlaces de CDN a los archivos CSS y de scripts en el archivo HTML sin descargarlos.
+   - **Instalar dependencias**: Puedes instalar las dependencias en el proyecto con `npm i bootstrap@5.3.3`. En este caso, el gestor de paquetes de Node mantiene el control de los archivos.
+   - **Usar Snippet de Bootstrap**: Puedes usar, por ejemplo, el snippet `bs5-$` en el editor VSCode. La plantilla Bs5 escribirá todos los enlaces de CDN por ti.
 
    Obtén más información en: [getbootstrap.com](https://getbootstrap.com).
 
 2. **Usar Componentes de Bootstrap:**
+   - **Sistema de Cuadrícula**: Crea diseños responsivos utilizando el sistema de cuadrícula de Bootstrap. Por ejemplo:
 
-    - **Sistema de Cuadrícula**: Crea diseños responsivos utilizando el sistema de cuadrícula de Bootstrap. Por ejemplo:
-     ```html
-     <div class="container">
-         <div class="row">
-             <div class="col-md-6">Columna 1</div>
-             <div class="col-md-6">Columna 2</div>
-         </div>
+   ```html
+   <div class="container">
+     <div class="row">
+       <div class="col-md-6">Columna 1</div>
+       <div class="col-md-6">Columna 2</div>
      </div>
-     ```
-    - **Componentes**: Utiliza componentes pre-estilizados como botones, formularios y barras de navegación:
-     ```html
-     <button type="button" class="btn btn-primary">Botón Primario</button>
-     ```
+   </div>
+   ```
+
+   - **Componentes**: Utiliza componentes pre-estilizados como botones, formularios y barras de navegación:
+
+   ```html
+   <button type="button" class="btn btn-primary">Botón Primario</button>
+   ```
 
 3. **Personalizar Bootstrap:**
-    - **Sobrescribir Predeterminados**: Personaliza los estilos de Bootstrap agregando tus propias reglas CSS después del enlace CSS de Bootstrap en tu HTML.
-    - **Usar las Herramientas de Personalización de Bootstrap**: Modifica las variables de Bootstrap y recompila el CSS si estás utilizando una herramienta de construcción.
+   - **Sobrescribir Predeterminados**: Personaliza los estilos de Bootstrap agregando tus propias reglas CSS después del enlace CSS de Bootstrap en tu HTML.
+   - **Usar las Herramientas de Personalización de Bootstrap**: Modifica las variables de Bootstrap y recompila el CSS si estás utilizando una herramienta de construcción.
 
 4. **Usar Snippets de B5 en Visual Studio Code:**
-    - **Instalar la Extensión Bootstrap 5 Quick Snippets**: Para agilizar tu proceso de desarrollo, instala la extensión **Bootstrap 5 Quick Snippets** para Visual Studio Code. Esta extensión proporciona fragmentos de código para Bootstrap 5, permitiéndote insertar rápidamente componentes y clases de Bootstrap en tu código.
-    - **Usar Snippets**: Una vez instalada, puedes usar los snippets para insertar código de Bootstrap. Por ejemplo:
-     - Escribe `bs5-$` y presiona `Tab` para crear la plantilla completa del documento HTML.
-     - Escribe `bs5-navbar-default` y presiona `Tab` para insertar un snippet de barra de navegación de Bootstrap.
-     - Escribe `bs5-button-default` y presiona `Tab` para insertar un snippet de botón predeterminado de Bootstrap.
+   - **Instalar la Extensión Bootstrap 5 Quick Snippets**: Para agilizar tu proceso de desarrollo, instala la extensión **Bootstrap 5 Quick Snippets** para Visual Studio Code. Esta extensión proporciona fragmentos de código para Bootstrap 5, permitiéndote insertar rápidamente componentes y clases de Bootstrap en tu código.
+   - **Usar Snippets**: Una vez instalada, puedes usar los snippets para insertar código de Bootstrap. Por ejemplo:
+   - Escribe `bs5-$` y presiona `Tab` para crear la plantilla completa del documento HTML.
+   - Escribe `bs5-navbar-default` y presiona `Tab` para insertar un snippet de barra de navegación de Bootstrap.
+   - Escribe `bs5-button-default` y presiona `Tab` para insertar un snippet de botón predeterminado de Bootstrap.
 
 #### Recursos:
-   - **Documentación Oficial**: [Documentación de Bootstrap](https://getbootstrap.com/docs/)
-   - **Ejemplos y Plantillas**: Explora varios ejemplos y plantillas de Bootstrap para comenzar rápidamente.
-   - **Snippets de B4 para VSCode**: [Extensión B5 Quick Snippets](https://marketplace.visualstudio.com/items?itemName=anbuselvanrocky.bootstrap5-vscode)
 
-
-
-
-
+- **Documentación Oficial**: [Documentación de Bootstrap](https://getbootstrap.com/docs/)
+- **Ejemplos y Plantillas**: Explora varios ejemplos y plantillas de Bootstrap para comenzar rápidamente.
+- **Snippets de B5 para VSCode**: [Extensión B5 Quick Snippets](https://marketplace.visualstudio.com/items?itemName=anbuselvanrocky.bootstrap5-vscode)

@@ -1044,12 +1044,10 @@
 <h3 id="52-navegadores-web"><strong>5.2 Navegadores web</strong></h3>
 <p>Los desarrolladores dependen de los navegadores no solo para ver páginas web, sino también para herramientas y capacidades esenciales que ayudan en el desarrollo y la depuración:</p>
 <ul>
-<li><strong>Herramientas de Desarrollo:</strong> Los navegadores modernos vienen equipados con herramientas de desarrollo (como las Herramientas de Desarrollador de Chrome, Herramientas de Desarrollador de Firefox y el Inspector Web de Safari) que proporcionan características como:<ul>
+<li><strong>Herramientas de Desarrollo:</strong> Los navegadores modernos vienen equipados con herramientas de desarrollo (como las Herramientas de Desarrollador de Chrome, Herramientas de Desarrollador de Firefox y el Inspector Web de Safari) que proporcionan características como:</li>
 <li>Inspección del DOM</li>
 <li>Inspección de CSS</li>
 <li>Consola de JavaScript</li>
-</ul>
-</li>
 </ul>
 <p><img alt="Navegadores web" src="img/08_web_browsers.webp" /></p>
 <h3 id="53-herramientas-de-control-de-versiones"><strong>5.3 Herramientas de control de versiones</strong></h3>
@@ -1059,9 +1057,7 @@
 </ul>
 <p><img alt="Git y GitHub" src="img/09_git.png" /></p>
 <ul>
-<li>
-<p><strong>GitHub</strong>: GitHub funciona principalmente como una plataforma de alojamiento para repositorios de Git, permitiendo sincronizar nuestro proyecto local de Git con GitHub. Pero podemos ver todos los diferentes propósitos de esta herramienta:</p>
-<ol>
+<li><strong>GitHub</strong>: GitHub funciona principalmente como una plataforma de alojamiento para repositorios de Git, permitiendo sincronizar nuestro proyecto local de Git con GitHub. Pero podemos ver todos los diferentes propósitos de esta herramienta:</li>
 <li>
 <p><strong>Control de versiones</strong>: GitHub aloja repositorios de Git, permitiendo a los desarrolladores gestionar y rastrear cambios en su base de código a lo largo del tiempo.</p>
 </li>
@@ -1086,19 +1082,16 @@
 <li>
 <p><strong>Documentación</strong>: Proporciona herramientas para crear y mantener documentación del proyecto, wikis y archivos README para explicar los objetivos del proyecto, instrucciones de uso y directrices de contribución.</p>
 </li>
-</ol>
-</li>
 </ul>
 <p><strong>DOCUMENTAR, DOCUMENTAR, DOCUMENTAR!!!</strong></p>
 <blockquote>
 <ul>
 <li>No olvides documentar tu proyecto con un archivo <strong>README.md</strong> escrito en <strong>Markdown</strong>. Markdown es un lenguaje de marcado ligero que se usa comúnmente para formatear texto en la web. Al escribir archivos README en plataformas como GitHub, Markdown proporciona una forma simple y legible de estructurar y dar estilo al texto sin necesidad de escribir HTML directamente.</li>
 <li>Aprende algo sobre <a href="https://www.markdownguide.org/cheat-sheet/">el lenguaje Markdown</a>
-<img alt="markdown" src="img/10_md.png" /></li>
+  <img alt="markdown" src="img/10_md.png" /></li>
 <li>Echa un vistazo a este ejemplo -&gt; <a href="https://github.com/jeatzr/txt2gift/blob/main/README.md">README.md</a></li>
 <li>Las notas actuales que estás leyendo también están escritas en Markdown y luego compiladas por <code>mkdocs</code> para generar una documentación bonita. -&gt; <a href="https://github.com/jeatzr/dwec-bi/blob/main/docs/01_frontend_introduction/README.md">README.md</a></li>
-<li>Ejemplo de sintaxis Markdown:
-</li>
+<li>Ejemplo de sintaxis Markdown:</li>
 </ul>
 </blockquote>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># Nombre del Proyecto
@@ -1177,66 +1170,63 @@
 <h2 id="6-incluir-codigo-javascript"><strong>6. Incluir Código JavaScript</strong></h2>
 <p>Tenemos varias formas de incluir código JavaScript en nuestra página web:</p>
 <ol>
-<li>
-<p><strong>JavaScript Interno</strong></p>
+<li><strong>JavaScript Interno</strong></li>
+</ol>
 <p>Puedes incluir JavaScript dentro de la sección <code>&lt;head&gt;</code> o <code>&lt;body&gt;</code> de tu archivo HTML usando la etiqueta <code>&lt;script&gt;</code>. Si deseas asegurarte de que el código se ejecute una vez que se haya analizado todo el documento, se recomienda incluir esta etiqueta al final de <code>&lt;body&gt;</code>.</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de JavaScript Interno<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Ejemplo de JavaScript Interno<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;¡Hola, Mundo!&quot;</span><span class="p">);</span><span class="w">       </span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Ejemplo de JavaScript Interno<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;¡Hola, Mundo!&quot;</span><span class="p">);</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></code></pre></div>
-</li>
-<li>
-<p><strong>JavaScript Externo</strong></p>
+<ol>
+<li><strong>JavaScript Externo</strong></li>
+</ol>
 <p>Puedes incluir JavaScript desde un archivo externo usando la etiqueta <code>&lt;script&gt;</code> con el atributo <code>src</code>. Al igual que con el JavaScript interno, la posición de la etiqueta <code>&lt;script&gt;</code> dentro del documento HTML es importante.</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de JavaScript Externo<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Ejemplo de JavaScript Externo<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;script.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p><strong>script.js</strong>:
+<p><strong>script.js</strong>:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;¡Hola, Mundo!&quot;</span><span class="p">);</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;¡Hola Mundo!!!&quot;</span><span class="p">)</span>
-</span></code></pre></div></p>
-</li>
-<li>
-<p><strong>Atributos Defer y Async</strong>
-    Puedes usar los atributos <code>defer</code> o <code>async</code> en la etiqueta <code>&lt;script&gt;</code> para controlar el comportamiento de carga de tu JavaScript.</p>
-<ul>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;¡Hola Mundo!!!&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+<ol>
+<li><strong>Atributos Defer y Async</strong>
+   Puedes usar los atributos <code>defer</code> o <code>async</code> en la etiqueta <code>&lt;script&gt;</code> para controlar el comportamiento de carga de tu JavaScript.</li>
 <li><code>defer</code>: El script se ejecutará después de que el HTML se haya analizado completamente. Esto nos añade dos ventajas: por una parte, la carga de la página no se queda 'parada' proque haya que cargar un script 'gordo' (que los hay, de hecho es lo más común); y dos, cuando el script se ejecuta es seguro que toda la página (con los objetos correspondientes a las etiquetas) está cargada y son accesibles al script. El uso de <code>defer</code> nos da más control sobre la ejecución de los scripts porque <code>defer</code> mantiene el orden de ejecución si tienes múltiples scripts.</li>
 <li><code>async</code>: El script se ejecutará de manera asíncrona tan pronto como esté disponible. Se ejecuta a su "bola", y si hay varios scripts marcados con <code>async</code>, se van a ejecutar todos en hilos (procesos) independientes al proceso de carga de la página principal.</li>
-</ul>
+</ol>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de Defer y Async<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;defer-script.js&quot;</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;async-script.js&quot;</span> <span class="na">async</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Ejemplo de Defer y Async<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <p><strong>defer-script.js</strong></p>
@@ -1245,37 +1235,34 @@
 <p><strong>async-script.js</strong></p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Script Async Cargado&quot;</span><span class="p">);</span>
 </span></code></pre></div>
-<p>La alternativa sin usar estos atributos, es poner los scripts justo antes de la etiqueta de cierre del  <code>&lt;/body&gt;</code>.</p>
+<p>La alternativa sin usar estos atributos, es poner los scripts justo antes de la etiqueta de cierre del <code>&lt;/body&gt;</code>.</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">     </span><span class="p">...</span><span class="nx">todo</span><span class="w"> </span><span class="nx">el</span><span class="w"> </span><span class="nx">contenido</span><span class="w"> </span><span class="nx">está</span><span class="w"> </span><span class="nx">arriba</span><span class="w"> </span><span class="nx">del</span><span class="w"> </span><span class="nx">script</span><span class="p">...</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">     </span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;./miscript.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="o">&lt;</span><span class="err">/body&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="p">...</span><span class="nx">todo</span><span class="w"> </span><span class="nx">el</span><span class="w"> </span><span class="nx">contenido</span><span class="w"> </span><span class="nx">está</span><span class="w"> </span><span class="nx">arriba</span><span class="w"> </span><span class="nx">del</span><span class="w"> </span><span class="nx">script</span><span class="p">...</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;./miscript.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="o">&lt;</span><span class="err">/body&gt;</span>
 </span></code></pre></div>
-<p>Colocar tus etiquetas de script justo antes de la etiqueta de cierre <code>&lt;/body&gt;</code> asegura que el script se ejecute después de que se haya analizado el HTML. Sin embargo, esto no garantiza inherentemente el orden de ejecución si tienes múltiples scripts y comportamiento asíncrono. </p>
+<p>Colocar tus etiquetas de script justo antes de la etiqueta de cierre <code>&lt;/body&gt;</code> asegura que el script se ejecute después de que se haya analizado el HTML. Sin embargo, esto no garantiza inherentemente el orden de ejecución si tienes múltiples scripts y comportamiento asíncrono.</p>
 <p>Aun así, en nuestro caso, cualquiera de las dos opciones es válida para preservar la ejecución del script una vez que el documento HTML esté totalmente analizado.</p>
-</li>
-<li>
-<p><strong>Manejadores de Eventos en Atributos HTML</strong></p>
+<ol>
+<li><strong>Manejadores de Eventos en Atributos HTML</strong></li>
+</ol>
 <p>Puedes incluir JavaScript directamente dentro de los atributos HTML, como <code>onclick</code>, <code>onload</code>, etc. No es una buena práctica, solo en algunos casos específicos.</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
 </span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de Manejadores de Eventos<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 </span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Ejemplo de Manejadores de Eventos<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;alert(&#39;¡Hola, Mundo!&#39;)&quot;</span><span class="p">&gt;</span>Haz Clic Aquí<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></code></pre></div>
-</li>
-</ol>
 <h2 id="7-bootstrap"><strong>7. Bootstrap</strong></h2>
 <h4 id="que-es-bootstrap">¿Qué es Bootstrap?</h4>
-<p>Bootstrap es un popular framework de código abierto para el desarrollo de <strong>sitios web responsivos y orientados a móviles</strong>. Proporciona una colección de componentes de CSS y JavaScript que te ayudan a diseñar y construir interfaces de usuario de manera rápida y eficiente. Bootstrap está diseñado para simplificar el proceso de creación de diseños consistentes y visualmente atractivos en diferentes dispositivos y tamaños de pantalla.</p>
+<p>Bootstrap es un popular framework de código abierto para el desarrollo de <strong>sitios web responsivos y orientados a móviles</strong>. Proporciona una colección de componentes de CSS y JavaScript que te ayudan a diseñar y construir interfaces de usuario de manera rápida y eficiente. Bootstrap está diseñado para simplificar el proceso de creación de diseños consistentes y visualmente atractivos en diferentes dispositivos y tamaños de pantalla. Breve resumen de <a href="bootstrap/"><strong>Bootstrap</strong> aqui</a>.</p>
 <h4 id="caracteristicas-clave">Características Clave:</h4>
 <ul>
 <li><strong>Sistema de Cuadrícula Responsiva</strong>: Ajusta automáticamente el diseño según el tamaño de la pantalla, asegurando que tu sitio web se vea bien en todos los dispositivos.</li>
@@ -1285,55 +1272,49 @@
 </ul>
 <h4 id="como-usar-bootstrap">Cómo Usar Bootstrap:</h4>
 <ol>
-<li><strong>Formas de Incluir Bootstrap en Tu Proyecto:</strong><ul>
+<li><strong>Formas de Incluir Bootstrap en Tu Proyecto:</strong></li>
 <li><strong>Descargar Bootstrap</strong>: Puedes descargar los archivos compilados de Bootstrap manualmente y agregarlos a tu archivo HTML.</li>
 <li><strong>A través de CDN</strong>: Puedes agregar los enlaces de CDN a los archivos CSS y de scripts en el archivo HTML sin descargarlos.</li>
 <li><strong>Instalar dependencias</strong>: Puedes instalar las dependencias en el proyecto con <code>npm i bootstrap@5.3.3</code>. En este caso, el gestor de paquetes de Node mantiene el control de los archivos.</li>
 <li><strong>Usar Snippet de Bootstrap</strong>: Puedes usar, por ejemplo, el snippet <code>bs5-$</code> en el editor VSCode. La plantilla Bs5 escribirá todos los enlaces de CDN por ti.</li>
-</ul>
-</li>
 </ol>
 <p>Obtén más información en: <a href="https://getbootstrap.com">getbootstrap.com</a>.</p>
 <ol>
-<li>
-<p><strong>Usar Componentes de Bootstrap:</strong></p>
-<ul>
-<li><strong>Sistema de Cuadrícula</strong>: Crea diseños responsivos utilizando el sistema de cuadrícula de Bootstrap. Por ejemplo:
- <div class="language-html highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-6&quot;</span><span class="p">&gt;</span>Columna 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-6&quot;</span><span class="p">&gt;</span>Columna 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<li><strong>Usar Componentes de Bootstrap:</strong></li>
+<li><strong>Sistema de Cuadrícula</strong>: Crea diseños responsivos utilizando el sistema de cuadrícula de Bootstrap. Por ejemplo:</li>
+</ol>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-6&quot;</span><span class="p">&gt;</span>Columna 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-6&quot;</span><span class="p">&gt;</span>Columna 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></code></pre></div></li>
-<li><strong>Componentes</strong>: Utiliza componentes pre-estilizados como botones, formularios y barras de navegación:
- <div class="language-html highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="p">&gt;</span>Botón Primario<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></code></pre></div></li>
-</ul>
-</li>
-<li>
-<p><strong>Personalizar Bootstrap:</strong></p>
+</span></code></pre></div>
 <ul>
-<li><strong>Sobrescribir Predeterminados</strong>: Personaliza los estilos de Bootstrap agregando tus propias reglas CSS después del enlace CSS de Bootstrap en tu HTML.</li>
-<li><strong>Usar las Herramientas de Personalización de Bootstrap</strong>: Modifica las variables de Bootstrap y recompila el CSS si estás utilizando una herramienta de construcción.</li>
+<li><strong>Componentes</strong>: Utiliza componentes pre-estilizados como botones, formularios y barras de navegación:</li>
 </ul>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="p">&gt;</span>Botón Primario<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<ol>
+<li><strong>Personalizar Bootstrap:</strong></li>
+<li><strong>Sobrescribir Predeterminados</strong>: Personaliza los estilos de Bootstrap agregando tus propias reglas CSS después del enlace CSS de Bootstrap en tu HTML.</li>
+<li>
+<p><strong>Usar las Herramientas de Personalización de Bootstrap</strong>: Modifica las variables de Bootstrap y recompila el CSS si estás utilizando una herramienta de construcción.</p>
 </li>
 <li>
 <p><strong>Usar Snippets de B5 en Visual Studio Code:</strong></p>
-<ul>
+</li>
 <li><strong>Instalar la Extensión Bootstrap 5 Quick Snippets</strong>: Para agilizar tu proceso de desarrollo, instala la extensión <strong>Bootstrap 5 Quick Snippets</strong> para Visual Studio Code. Esta extensión proporciona fragmentos de código para Bootstrap 5, permitiéndote insertar rápidamente componentes y clases de Bootstrap en tu código.</li>
 <li><strong>Usar Snippets</strong>: Una vez instalada, puedes usar los snippets para insertar código de Bootstrap. Por ejemplo:</li>
 <li>Escribe <code>bs5-$</code> y presiona <code>Tab</code> para crear la plantilla completa del documento HTML.</li>
 <li>Escribe <code>bs5-navbar-default</code> y presiona <code>Tab</code> para insertar un snippet de barra de navegación de Bootstrap.</li>
 <li>Escribe <code>bs5-button-default</code> y presiona <code>Tab</code> para insertar un snippet de botón predeterminado de Bootstrap.</li>
-</ul>
-</li>
 </ol>
 <h4 id="recursos">Recursos:</h4>
 <ul>
 <li><strong>Documentación Oficial</strong>: <a href="https://getbootstrap.com/docs/">Documentación de Bootstrap</a></li>
 <li><strong>Ejemplos y Plantillas</strong>: Explora varios ejemplos y plantillas de Bootstrap para comenzar rápidamente.</li>
-<li><strong>Snippets de B4 para VSCode</strong>: <a href="https://marketplace.visualstudio.com/items?itemName=anbuselvanrocky.bootstrap5-vscode">Extensión B5 Quick Snippets</a></li>
+<li><strong>Snippets de B5 para VSCode</strong>: <a href="https://marketplace.visualstudio.com/items?itemName=anbuselvanrocky.bootstrap5-vscode">Extensión B5 Quick Snippets</a></li>
 </ul>
 
 
