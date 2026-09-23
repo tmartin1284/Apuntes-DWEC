@@ -596,6 +596,45 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encabezado-1-h1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encabezado 1 (H1)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encabezado 1 (H1)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encabezado-2-h2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encabezado 2 (H2)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encabezado 2 (H2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encabezado-3-h3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encabezado 3 (H3)
+    </span>
+  </a>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#formato-de-texto" class="md-nav__link">
     <span class="md-ellipsis">
@@ -742,9 +781,21 @@
 <h3 id="encabezado-3-h3">Encabezado 3 (H3)</h3>
 <h4 id="encabezado-4-h4">Encabezado 4 (H4)</h4>
 <p>```</p>
-<p>Estos encabezados pueden o no llevar numeración</p>
+<p>```txt</p>
+<h1 id="encabezado-1-h1_1">Encabezado 1 (H1)</h1>
+<h2 id="encabezado-2-h2_1">Encabezado 2 (H2)</h2>
+<h3 id="encabezado-3-h3_1">Encabezado 3 (H3)</h3>
+<h4 id="encabezado-4-h4_1">Encabezado 4 (H4)</h4>
+<p>```
+Estos encabezados pueden o no llevar numeración</p>
 <h3 id="formato-de-texto">Formato de Texto</h3>
 <p>```markdown
+<em>Texto en cursiva</em> o <em>Texto en cursiva</em>
+<strong>Texto en negrita</strong> o <strong>Texto en negrita</strong>
+<strong><em>Negrita y cursiva</em></strong>
+~~Texto tachado~~
+```
+```txt
 <em>Texto en cursiva</em> o <em>Texto en cursiva</em>
 <strong>Texto en negrita</strong> o <strong>Texto en negrita</strong>
 <strong><em>Negrita y cursiva</em></strong>
@@ -764,7 +815,19 @@
   ```</p>
 </li>
 </ul>
-<p>Markdown considera un nuevo nivel a partir de 4 espacios.</p>
+<p>```txt</p>
+<ul>
+<li>Elemento 1</li>
+<li>Elemento 2</li>
+<li>
+<p>Subelemento 2.1</p>
+</li>
+<li>
+<p>Elemento alternativo
+  ```
+  Markdown considera un nuevo nivel a partir de 4 espacios.</p>
+</li>
+</ul>
 <p><strong>Listas ordenadas:</strong>
 ```markdown</p>
 <ol>
@@ -773,8 +836,23 @@
 <li>Tercer paso
    ```</li>
 </ol>
+<p>```txt</p>
+<ol>
+<li>Primer paso</li>
+<li>Segundo paso</li>
+<li>Tercer paso
+   ```</li>
+</ol>
 <h3 id="enlaces-e-imagenes">Enlaces e Imágenes</h3>
 <p>```markdown</p>
+<!-- Enlace -->
+
+<p><a href="https://www.ejemplo.com">Texto del enlace</a></p>
+<!-- Imagen -->
+
+<p><img alt="Texto alternativo" src="https://via.placeholder.com/150" title="Título opcional" />
+```</p>
+<p>```txt</p>
 <!-- Enlace -->
 
 <p><a href="https://www.ejemplo.com">Texto del enlace</a></p>
@@ -791,6 +869,14 @@
 ```</p>
 </blockquote>
 </blockquote>
+<p>```txt</p>
+<blockquote>
+<p>La simplicidad es la clave de la verdadera elegancia.</p>
+<blockquote>
+<p>Cita anidada
+```</p>
+</blockquote>
+</blockquote>
 <h3 id="codigo">Código</h3>
 <p>`<code>`markdown
 Código en línea: Utiliza</code>npm start` para ejecutar la aplicación.</p>
@@ -800,6 +886,15 @@ Código en línea: Utiliza</code>npm start` para ejecutar la aplicación.</p>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nx">saludar</span><span class="p">(</span><span class="s2">&quot;Mundo&quot;</span><span class="p">);</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="sb">```</span>
+</span></code></pre></div>
+<p>`<code>`tct
+Código en línea: Utiliza</code>npm start` para ejecutar la aplicación.</p>
+<p>Bloque de código con resaltado de sintaxis:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hola, </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nx">saludar</span><span class="p">(</span><span class="s2">&quot;Mundo&quot;</span><span class="p">);</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="sb">```</span>
 </span></code></pre></div>
 <h3 id="tablas">Tablas</h3>
 <table>
@@ -823,13 +918,18 @@ Código en línea: Utiliza</code>npm start` para ejecutar la aplicación.</p>
 </tr>
 </tbody>
 </table>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>| Nombre |  Rol  |   Estado |
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>| :----- | :---: | -------: |
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>| Ana    | Admin |   Activo |
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>| Carlos | User  | Inactivo |
+</span></code></pre></div>
 <p><em>(Los puntos <code>:</code> determinan la alineación: izquierda <code>:---</code>, centro <code>:---:</code>, derecha <code>---:</code>)</em></p>
 <hr />
 <h3 id="separadores-horizontales">Separadores Horizontales</h3>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gu">---</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="gu">---</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>---
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="gu">---</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="gu">---</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>---
 </span></code></pre></div>
 
 
