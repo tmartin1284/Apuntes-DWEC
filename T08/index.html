@@ -484,21 +484,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1 - Instalación de Node.js">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proceso-de-instalacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Proceso de instalación
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -522,6 +507,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-ejecucion-es-similar-al-punto-anterior-node-ejercicio1mjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      La ejecución es similar al punto anterior: node ejercicio1.mjs,
+    </span>
+  </a>
   
 </li>
       
@@ -998,21 +992,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1 - Instalación de Node.js">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proceso-de-instalacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Proceso de instalación
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1036,6 +1015,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-ejecucion-es-similar-al-punto-anterior-node-ejercicio1mjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      La ejecución es similar al punto anterior: node ejercicio1.mjs,
+    </span>
+  </a>
   
 </li>
       
@@ -1410,12 +1398,9 @@
 <p>En <a href="https://www.tutorialesprogramacionya.com/javascriptya/nodejsya/">programación ya</a> podeis encontrar un tutorial pasito a pasito de la instalación de node. Explicando con detalle cada uno de los puntos.</p>
 <p>Todo el código que vaya desarrollando estará en <a href="https://github.com/tmartin1284/node">este repo de github</a></p>
 <h2 id="1-instalacion-de-nodejs">1 - Instalación de Node.js</h2>
-<p>Node.js es un entorno de ejecución de JavaScript en el servidor construido con el motor V8 de Google Chrome. Nos permite desarrollar aplicaciones backend escalables utilizando JavaScript.</p>
-<h3 id="proceso-de-instalacion">Proceso de instalación</h3>
 <ol>
-<li>Ingrese al sitio oficial: <a href="https://nodejs.org">https://nodejs.org</a>.</li>
-<li>Descargue la versión recomendada para la mayoría de los usuarios (<strong>LTS</strong>).</li>
-<li>Siga las instrucciones del instalador en su sistema operativo (Windows, macOS o Linux).</li>
+<li>Descargarlo del sitio oficial: <a href="https://nodejs.org">https://nodejs.org</a>. La versión recomendada para la mayoría de los usuarios es (<strong>LTS</strong>).</li>
+<li>Seguir las instrucciones del instalador en su sistema operativo (Windows -si, aceptar, si, siguiente, finalizar-, macOS o Linux).</li>
 <li>Abra una ventana de la consola o terminal y verifique que Node.js y <code>npm</code> estén correctamente instalados ejecutando:</li>
 </ol>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>node<span class="w"> </span>-v
@@ -1455,6 +1440,7 @@
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La resta de 10-4 es &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">mat</span><span class="p">.</span><span class="nx">restar</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">));</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El valor de PI es &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">mat</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>
 </span></code></pre></div>
+<p>Para ejecutarlo, lanzar en la ventana de comandos <code>node ejercicio1.js</code>, o la ruta correspondiente al archivo <code>ejercicio1.js</code>.</p>
 <h4 id="opcion-b-es-modules-esm">Opción B: ES Modules (ESM)</h4>
 <p>Para habilitar este sistema en Node.js se debe agregar <code>"type": "module"</code> en el archivo <code>package.json</code> o nombrar los archivos con extensión <code>.mjs</code>.</p>
 <h5 id="matematicamjs"><code>matematica.mjs</code></h5>
@@ -1475,7 +1461,7 @@
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La resta de 8-2 es &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">restar</span><span class="p">(</span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Valor de PI: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">PI</span><span class="p">);</span>
 </span></code></pre></div>
-<hr />
+<h2 id="la-ejecucion-es-similar-al-punto-anterior-node-ejercicio1mjs">La ejecución es similar al punto anterior: <code>node ejercicio1.mjs</code>,</h2>
 <h2 id="3-consumir-modulo-del-nucleo-de-nodejs">3 - Consumir módulo del núcleo de Node.js</h2>
 <p>Node.js incluye módulos por defecto (llamados <em>módulos del núcleo</em> o <em>core modules</em>) que no requieren instalación adicional mediante <code>npm</code>. Algunos ejemplos son <code>os</code> (sistema operativo), <code>fs</code> (archivos) y <code>http</code> (servidor web).</p>
 <h3 id="problema_1">Problema</h3>
@@ -1566,7 +1552,7 @@
 <li><code>pedido</code> (<code>req</code>): Objeto de tipo <code>http.IncomingMessage</code> con los datos enviados por el navegador.</li>
 <li><code>respuesta</code> (<code>res</code>): Objeto de tipo <code>http.ServerResponse</code> utilizado para responder al cliente.</li>
 <li><code>respuesta.writeHead(...)</code>: Define el código de estado HTTP (200 OK) y las cabeceras (<em>headers</em>).</li>
-<li><code>servidor.listen(8888)</code>: Pone al servidor a escuchar peticiones en el puerto 8888.</li>
+<li><code>servidor.listen(8888)</code>: Pone al servidor a escuchar peticiones en el puerto 8888. El servidor, y el programa se quedará escuchando hasta que lo paremos con <code>ctrl+C</code>.</li>
 </ul>
 <hr />
 <h2 id="6-modulo-http-datos-que-envia-el-navegador">6 - Módulo http: datos que envía el navegador</h2>
