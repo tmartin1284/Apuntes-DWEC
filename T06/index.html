@@ -1211,46 +1211,12 @@ El formato más común para enviar datos es texto plano formateado en JSON.</p>
 </ol>
 <hr />
 <ol>
-<li>
-<p><strong>Europeana REST API (Patrimonio cultural digitalizado)</strong></p>
-<ul>
+<li><strong>Europeana REST API (Patrimonio cultural digitalizado)</strong><ul>
 <li><strong>Descripción:</strong> Permite buscar cartas, manuscritos originales y fotografías de la época. Utiliza parámetros de consulta REST estándar, aunque requiere que generes una API Key gratuita en su plataforma.</li>
 <li><strong>Documentación:</strong> <a href="https://europeana.atlassian.net/wiki/spaces/EF/pages/2385739812/Search+API+Documentation#:~:text=Request.%20Every%20call%20to%20the%20Search%20API,to%20separate%20parameters%20from%20each%20other.%20api.europeana.eu%2Frecord%2Fv2%2Fsearch.json%3F"><code>https://europeana.atlassian.net</code></a></li>
 </ul>
 </li>
 </ol>
-<h6 id="resumen-de-integracion-recomendada">Resumen de Integración Recomendada</h6>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">API</th>
-<th style="text-align: left;">Uso Principal</th>
-<th style="text-align: left;">Complejidad de Uso</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Wikidata</strong></td>
-<td style="text-align: left;">Biografías, redes de autores y relaciones</td>
-<td style="text-align: left;">Media (Requiere SPARQL)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Datos BNE</strong></td>
-<td style="text-align: left;">Registros bibliográficos oficiales y manuscritos</td>
-<td style="text-align: left;">Media (Requiere SPARQL/RDF)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Europeana</strong></td>
-<td style="text-align: left;">Documentos históricos digitalizados e imágenes</td>
-<td style="text-align: left;">Baja (API REST)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Gutendex</strong></td>
-<td style="text-align: left;">Libros y textos completos en dominio público</td>
-<td style="text-align: left;">Baja (API REST)</td>
-</tr>
-</tbody>
-</table>
 <p>Para generar una web que muestre datos de una generación poetica, en este caso la Generación del 27, o del 98, podemos hacer uso de una doble API: la publica para obtener los datos, y una propia que genere el índice de contenidos.</p>
 <hr />
 <blockquote>
