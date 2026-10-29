@@ -18,50 +18,54 @@ Al dominar la gestión de eventos y la validación de formularios, mejorarás la
 En JavaScript, la gestión de eventos te permite responder a acciones de los usuarios u otros eventos activados en el navegador. Existen diferentes modelos para gestionar eventos, cada uno ofreciendo distintas maneras de adjuntar oyentes de eventos y gestionar la propagación de eventos.
 
 1. **Modelo Tradicional de Eventos (`onclick`, `onmouseover`, etc.)**
-     - **Descripción:** Este modelo implica asignar directamente atributos de manejador de eventos a elementos HTML.
-     - **Uso:** Adjuntar eventos dentro de etiquetas HTML o configurarlos mediante JavaScript utilizando propiedades de los elementos (`element.onclick = function() {...}`).
-     - **Ejemplo:**
-     ```html
-     <button onclick="alert('¡Botón clicado!')">Haz clic aquí</button>
-     ```
+   - **Descripción:** Este modelo implica asignar directamente atributos de manejador de eventos a elementos HTML.
+   - **Uso:** Adjuntar eventos dentro de etiquetas HTML o configurarlos mediante JavaScript utilizando propiedades de los elementos (`element.onclick = function() {...}`).
+   - **Ejemplo:**
+
+   ```html
+   <button onclick="alert('¡Botón clicado!')">Haz clic aquí</button>
+   ```
 
 2. **Modelo de Eventos Nivel 2 del DOM (método `addEventListener()`)**
-     - **Descripción:** Introducido en el Nivel 2 del DOM, este modelo ofrece un enfoque más flexible para la gestión de eventos.
-     - **Uso:** Adjuntar eventos utilizando `addEventListener(event, handler, useCapture)`, donde `event` es el tipo de evento (por ejemplo, `'click'`), `handler` es la función a ejecutar, y `useCapture` (opcional) especifica el flujo del evento.
-     - **Ejemplo:**
-     ```javascript
-     const boton = document.querySelector('button');
-     boton.addEventListener('click', function() {
-       alert('¡Botón clicado usando addEventListener!');
-     });
-     ```
+   - **Descripción:** Introducido en el Nivel 2 del DOM, este modelo ofrece un enfoque más flexible para la gestión de eventos.
+   - **Uso:** Adjuntar eventos utilizando `addEventListener(event, handler, useCapture)`, donde `event` es el tipo de evento (por ejemplo, `'click'`), `handler` es la función a ejecutar, y `useCapture` (opcional) especifica el flujo del evento.
+   - **Ejemplo:**
+
+   ```javascript
+   const boton = document.querySelector("button");
+   boton.addEventListener("click", function () {
+     alert("¡Botón clicado usando addEventListener!");
+   });
+   ```
 
 3. **Delegación de Eventos**
-     - **Descripción:** En lugar de adjuntar oyentes de eventos a elementos individuales, esta técnica implica adjuntar un solo oyente de eventos a un elemento padre.
-     - **Uso:** Utilizar la burbuja de eventos colocando oyentes de eventos en elementos padres y delegar el manejo en función del elemento objetivo (`event.target`).
-     - **Ejemplo:**
-     ```html
-     <ul id="lista">
-       <li>Elemento 1</li>
-       <li>Elemento 2</li>
-       <li>Elemento 3</li>
-     </ul>
+   - **Descripción:** En lugar de adjuntar oyentes de eventos a elementos individuales, esta técnica implica adjuntar un solo oyente de eventos a un elemento padre.
+   - **Uso:** Utilizar la burbuja de eventos colocando oyentes de eventos en elementos padres y delegar el manejo en función del elemento objetivo (`event.target`).
+   - **Ejemplo:**
 
-     <script>
-       const lista = document.getElementById('lista');
-       lista.addEventListener('click', function(evento) {
-         if (evento.target.tagName === 'LI') {
-           console.log('Clic en:', evento.target.textContent);
-         }
-       });
-     </script>
-     ```
+   ```html
+   <ul id="lista">
+     <li>Elemento 1</li>
+     <li>Elemento 2</li>
+     <li>Elemento 3</li>
+   </ul>
+
+   <script>
+     const lista = document.getElementById("lista");
+     lista.addEventListener("click", function (evento) {
+       if (evento.target.tagName === "LI") {
+         console.log("Clic en:", evento.target.textContent);
+       }
+     });
+   </script>
+   ```
 
 ## **2. Tipos de Eventos en JavaScript**
 
 JavaScript ofrece una gran variedad de eventos que se pueden utilizar para interactuar con las páginas web. Estos eventos se pueden clasificar en diferentes categorías según su naturaleza y los elementos a los que están asociados.
 
 #### Categorías de Eventos
+
 1. Eventos de Ratón
 2. Eventos de Teclado
 3. Eventos de Formularios
@@ -71,6 +75,7 @@ JavaScript ofrece una gran variedad de eventos que se pueden utilizar para inter
 7. Eventos de Pantalla Táctil
 
 ### 2.1 **Eventos de Ratón**
+
 Los eventos de ratón se activan por acciones del usuario con el ratón.
 
 - **click**: Se dispara cuando el usuario hace clic en un elemento.
@@ -82,6 +87,7 @@ Los eventos de ratón se activan por acciones del usuario con el ratón.
 - **mouseout**: Se dispara cuando el usuario mueve el puntero del ratón fuera de un elemento.
 
 ### 2.2 **Eventos de Teclado**
+
 Los eventos de teclado se activan por acciones del usuario con el teclado.
 
 - **keydown**: Se dispara cuando el usuario presiona una tecla.
@@ -148,6 +154,7 @@ Ejemplo de HTML para el ejercicio:
 ```
 
 ### 2.3 **Eventos de Formularios**
+
 Los eventos de formularios están relacionados con los elementos del formulario.
 
 - **submit**: Se dispara cuando se envía un formulario.
@@ -158,37 +165,43 @@ Los eventos de formularios están relacionados con los elementos del formulario.
 - **input**: Se dispara cuando el usuario introduce texto en un elemento.
 
 ### 2.4 **Eventos del Documento**
+
 Los eventos del documento se activan por acciones que afectan al documento en su totalidad.
 
 - **DOMContentLoaded**: Se dispara cuando el documento HTML inicial ha sido completamente cargado y analizado.
+
 ```js
-document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('El DOM está completamente cargado y analizado');
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("El DOM está completamente cargado y analizado");
 });
 ```
+
 - **DOMSubtreeModified**: Se activa cuando se agregan o eliminan nodos del subárbol de un elemento o del documento.
 - **DOMNodeInserted**: Ocurre cuando un nuevo nodo hijo es agregado a un nodo padre.
 - **DOMNodeRemoved**: Ocurre cuando un nodo con un nodo padre es eliminado.
 
 ### 2.5 **Eventos de la Ventana**
+
 - **load**: Se dispara cuando toda la página (ventana) y todos los recursos dependientes han terminado de cargarse.
+
 ```js
-window.addEventListener('load', (event) => {
-    console.log('La página está completamente cargada');
+window.addEventListener("load", (event) => {
+  console.log("La página está completamente cargada");
 });
 ```
 
->El evento `load` de `window` y el evento `DOMContentLoaded` de `document` se pueden utilizar para fines similares, actuando como un "método principal" en el que podemos asegurarnos de que el código dentro de ellos se ejecute una vez que la página esté cargada, con algunas diferencias:
+> El evento `load` de `window` y el evento `DOMContentLoaded` de `document` se pueden utilizar para fines similares, actuando como un "método principal" en el que podemos asegurarnos de que el código dentro de ellos se ejecute una vez que la página esté cargada, con algunas diferencias:
 >
 > - **DOMContentLoaded**: Se dispara una vez que el árbol del DOM está completamente construido.
 > - **load**: Se dispara una vez que todos los recursos de la página, incluyendo multimedia, están completamente cargados.
-> Es una buena práctica colocar el código que queremos ejecutar dentro de una función controladora para uno de estos eventos. Sin embargo, si el script se carga al final del `body`, al menos podemos asegurar que todo el DOM esté cargado.
+>   Es una buena práctica colocar el código que queremos ejecutar dentro de una función controladora para uno de estos eventos. Sin embargo, si el script se carga al final del `body`, al menos podemos asegurar que todo el DOM esté cargado.
 
 - **unload**: Se dispara cuando toda la página (ventana) o un recurso hijo está siendo descargado.
 - **resize**: Se dispara cuando la vista del documento (ventana) es redimensionada.
 - **scroll**: Se dispara cuando la vista del documento (ventana) es desplazada.
 
 ### 2.6 **Eventos de Arrastrar y Soltar**
+
 Los eventos de arrastrar y soltar se utilizan para mover elementos arrastrándolos.
 
 - **drag**: Se dispara cuando un elemento está siendo arrastrado.
@@ -298,21 +311,21 @@ Podemos cambiar el estilo de los botones para asegurarnos de que se vean consist
 
 ```css
 button {
-    background-color: #4CAF50; /* Verde */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
+  background-color: #4caf50; /* Verde */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 ```
 
@@ -322,21 +335,23 @@ Podemos usar fuentes y colores específicos de nuestro sitio web:
 
 ```css
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
+  font-family: "Arial", sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
 }
 
-input, select, textarea {
-    font-family: inherit;
-    font-size: 16px;
-    padding: 10px;
-    margin: 10px 0;
-    box-sizing: border-box;
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
 }
 
 label {
-    font-weight: bold;
+  font-weight: bold;
 }
 ```
 
@@ -346,12 +361,12 @@ Podemos usar un contenedor para centrar el formulario y distribuir sus elementos
 
 ```css
 .form-container {
-    max-width: 500px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 ```
 
@@ -359,8 +374,8 @@ Para organizar los formularios y aplicar estilos de manera efectiva, es una buen
 
 ```html
 <div class="form-group">
-    <label for="name">Nombre:</label>
-    <input type="text" name="name" id="name" autofocus>
+  <label for="name">Nombre:</label>
+  <input type="text" name="name" id="name" autofocus />
 </div>
 ```
 
@@ -370,13 +385,13 @@ Para organizar los formularios y aplicar estilos de manera efectiva, es una buen
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-.form-group>input,
-.form-group>textarea,
-.form-group>select {
+.form-group > input,
+.form-group > textarea,
+.form-group > select {
   display: block;
   width: 100%;
   padding: 10px;
@@ -387,7 +402,7 @@ Para organizar los formularios y aplicar estilos de manera efectiva, es una buen
   box-sizing: border-box;
 }
 
-.form-group>input[type="checkbox"] {
+.form-group > input[type="checkbox"] {
   display: inline-block;
   width: auto;
 }
@@ -398,26 +413,28 @@ Para organizar los formularios y aplicar estilos de manera efectiva, es una buen
 Podemos resaltar los campos erróneos y mostrar mensajes de error:
 
 ```css
-input.error, select.error, textarea.error {
-    border-color: red;
+input.error,
+select.error,
+textarea.error {
+  border-color: red;
 }
 
 .error-message {
-    color: red;
-    font-size: 12px;
-    display: none;
+  color: red;
+  font-size: 12px;
+  display: none;
 }
 
 .error-message.active {
-    display: block;
+  display: block;
 }
 ```
 
 Podemos usar JavaScript para agregar o quitar clases CSS:
 
 ```js
-document.getElementById('myInput').classList.add('error');
-document.getElementById('myErrorMessage').classList.add('active');
+document.getElementById("myInput").classList.add("error");
+document.getElementById("myErrorMessage").classList.add("active");
 ```
 
 #### 3. Usando Bibliotecas como Bootstrap
@@ -427,16 +444,25 @@ Bootstrap proporciona clases predefinidas para formularios:
 ```html
 <form>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Dirección de correo electrónico</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
+    <label for="exampleInputEmail1" class="form-label"
+      >Dirección de correo electrónico</label
+    >
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+    <div id="emailHelp" class="form-text">
+      Nunca compartiremos tu correo electrónico con nadie más.
+    </div>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <input type="password" class="form-control" id="exampleInputPassword1" />
   </div>
   <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
     <label class="form-check-label" for="exampleCheck1">Marcarme</label>
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
@@ -462,22 +488,28 @@ La validación se puede realizar de muchas maneras, pero es aconsejable hacerlo 
 
 ```html
 <form id="contactForm" class="needs-validation">
-    <div class="form-group">
-        <label for="name">Nombre</label>
-        <input type="text" class="form-control" id="name" name="name">
-        <div class="error-message">El nombre es obligatorio y debe tener al menos 2 caracteres.</div>
+  <div class="form-group">
+    <label for="name">Nombre</label>
+    <input type="text" class="form-control" id="name" name="name" />
+    <div class="error-message">
+      El nombre es obligatorio y debe tener al menos 2 caracteres.
     </div>
-    <div class="form-group">
-        <label for="email">Correo electrónico</label>
-        <input type="email" class="form-control" id="email" name="email">
-        <div class="error-message">Por favor, proporciona una dirección de correo electrónico válida.</div>
+  </div>
+  <div class="form-group">
+    <label for="email">Correo electrónico</label>
+    <input type="email" class="form-control" id="email" name="email" />
+    <div class="error-message">
+      Por favor, proporciona una dirección de correo electrónico válida.
     </div>
-    <div class="form-group">
-        <label for="password">Contraseña</label>
-        <input type="password" class="form-control" id="password" name="password">
-        <div class="error-message">La contraseña es obligatoria y debe tener al menos 6 caracteres.</div>
+  </div>
+  <div class="form-group">
+    <label for="password">Contraseña</label>
+    <input type="password" class="form-control" id="password" name="password" />
+    <div class="error-message">
+      La contraseña es obligatoria y debe tener al menos 6 caracteres.
     </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 ```
 
@@ -485,11 +517,10 @@ La validación se puede realizar de muchas maneras, pero es aconsejable hacerlo 
 
 Se recomienda que todo el código esté dentro del evento `DOMContentLoaded` o `load` de la ventana. Esto asegura que todo el documento esté cargado antes de comenzar a ejecutar el código.
 
-
 ```js
-// Es una buena práctica que todo el código esté dentro del evento 'DOMContentLoaded' o 'load' 
+// Es una buena práctica que todo el código esté dentro del evento 'DOMContentLoaded' o 'load'
 document.addEventListener('DOMContentLoaded', function () {
-  // Capturar todos los elementos 
+  // Capturar todos los elementos
   const form = document.getElementById('contactForm');
   const name = document.getElementById('name');
   const email = document.getElementById('email');
@@ -500,7 +531,7 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault(); // Evita que el formulario se envíe automáticamente
     event.stopPropagation(); // Evita que el evento se propague a elementos padre
 
-    // Llamar a la función principal de validación 
+    // Llamar a la función principal de validación
     if (validateForm()) {
       console.log("Todos los campos están bien, podemos proceder");
       form.submit();  // Forzar el envío
@@ -509,7 +540,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Esta función se encarga de validar todos los campos y 
+  // Esta función se encarga de validar todos los campos y
   // devolver un booleano: true si todos los campos están bien, false en caso contrario
   function validateForm() {
     // Esta bandera se inicializa como true.
@@ -517,7 +548,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var isValid = true;
 
     // Lógica de validación personalizada
-    // Ejemplo de validación personalizada solo comprobando la longitud 
+    // Ejemplo de validación personalizada solo comprobando la longitud
     if (name.value.trim().length < 2) {
       markFieldAsNotValid(name);
       isValid = false;
@@ -525,7 +556,7 @@ document.addEventListener('DOMContentLoaded', function () {
       markFieldAsValid(name);
     }
 
-    // Podemos llamar a funciones personalizadas de validación de campos 
+    // Podemos llamar a funciones personalizadas de validación de campos
     // también podemos comprobar diferentes condiciones y mostrar diferentes mensajes de error
     if (email.value === "") {
       markFieldAsNotValid(email, "El correo electrónico es obligatorio");
@@ -555,7 +586,8 @@ document.addEventListener('DOMContentLoaded', function () {
 ```
 
 ##### Funciones de validación de campos específicos
-  Cuando la validación es más compleja, podemos definir funciones que validen ciertos campos.
+
+Cuando la validación es más compleja, podemos definir funciones que validen ciertos campos.
 
 ```js
 function isValidEmail(email) {
@@ -564,12 +596,13 @@ function isValidEmail(email) {
 }
 
 function isValidPassword(passwd) {
-  return (passwd.length >= 6);
+  return passwd.length >= 6;
 }
-
 ```
+
 ##### Funciones auxiliares para gestionar mensajes de error
- Podemos crear funciones que gestionen los mensajes de error. En este caso, hemos creado una para mostrar el error y otra para ocultarlo. Funcionan sobre el elemento que pasamos a la función. El código navega hacia el elemento padre para agregar o eliminar la clase is-not-valid-field.
+
+Podemos crear funciones que gestionen los mensajes de error. En este caso, hemos creado una para mostrar el error y otra para ocultarlo. Funcionan sobre el elemento que pasamos a la función. El código navega hacia el elemento padre para agregar o eliminar la clase is-not-valid-field.
 
 ```js
 // Esta función marca un campo como no válido y añade el mensaje de error
@@ -586,10 +619,9 @@ function markFieldAsNotValid(element, message) {
 function markFieldAsValid(element) {
   element.parentNode.classList.remove("is-not-valid-field");
 }
-
 ```
-Recordemos la estructura de un elemento form-group:
 
+Recordemos la estructura de un elemento form-group:
 
 ```js
 <div class="form-group">
@@ -598,7 +630,6 @@ Recordemos la estructura de un elemento form-group:
     <div class="error-message">El nombre es obligatorio y debe tener al menos 2 caracteres de longitud.</div>
 </div>
 ```
-
 
 ##### CSS para Manejar Errores
 
@@ -636,8 +667,6 @@ Necesitamos algo de CSS para hacer visibles los mensajes de error y el borde roj
     <p>Investiga diferentes frameworks y selecciona uno que usarías para construir una Aplicación de Página Única (SPA). Indica las razones que te convencieron.</p>
 </div>
 
-
-
 ### 4.2 **Validación nativa con HTML5**
 
 HTML5 permite la validación nativa de formularios utilizando atributos específicos en elementos de formulario como `<input>`, `<textarea>` y `<select>`. Esta validación integrada asegura que un formulario no se envíe hasta que se cumplan todos los requisitos especificados por estos atributos. Cuando se encuentra un campo inválido, se proporciona retroalimentación sobre el primer problema encontrado.
@@ -657,19 +686,26 @@ Aunque la validación HTML5 es sencilla y no requiere JavaScript, tiene limitaci
 
 ```html
 <form>
-    <label for="username">Nombre de usuario:</label>
-    <input type="text" id="username" name="username" required minlength="3" maxlength="15">
-    
-    <label for="email">Correo electrónico:</label>
-    <input type="email" id="email" name="email" required>
-    
-    <label for="age">Edad:</label>
-    <input type="number" id="age" name="age" min="18" max="99" required>
-    
-    <label for="website">Sitio web:</label>
-    <input type="url" id="website" name="website" pattern="https?://.+">
-    
-    <button type="submit">Enviar</button>
+  <label for="username">Nombre de usuario:</label>
+  <input
+    type="text"
+    id="username"
+    name="username"
+    required
+    minlength="3"
+    maxlength="15"
+  />
+
+  <label for="email">Correo electrónico:</label>
+  <input type="email" id="email" name="email" required />
+
+  <label for="age">Edad:</label>
+  <input type="number" id="age" name="age" min="18" max="99" required />
+
+  <label for="website">Sitio web:</label>
+  <input type="url" id="website" name="website" pattern="https?://.+" />
+
+  <button type="submit">Enviar</button>
 </form>
 ```
 
@@ -706,7 +742,7 @@ Las expresiones regulares, o regex, son patrones utilizados para coincidir combi
    ```
 2. **Usando el constructor RegExp**:
    ```js
-   const regex = new RegExp('patrón', 'bandera');
+   const regex = new RegExp("patrón", "bandera");
    ```
 
 #### Banderas comúnmente utilizadas
@@ -741,26 +777,28 @@ En nuestro caso, la más útil es la bandera `i`.
 #### Ejemplo de uso
 
 1. **Probando un patrón**:
-    ```js
-    const regex = /hola/i;
-    const str = "¡Hola Mundo!";
-    console.log(regex.test(str)); // true
-    ```
+
+   ```js
+   const regex = /hola/i;
+   const str = "¡Hola Mundo!";
+   console.log(regex.test(str)); // true
+   ```
 
 2. **Coincidencia de un patrón**:
-    ```js
-    const regex = /\d+/g;
-    const str = "Hay 123 manzanas y 456 naranjas.";
-    console.log(str.match(regex)); // ["123", "456"]
-    ```
+
+   ```js
+   const regex = /\d+/g;
+   const str = "Hay 123 manzanas y 456 naranjas.";
+   console.log(str.match(regex)); // ["123", "456"]
+   ```
 
 3. **Reemplazo con un patrón**:
-    ```js
-    const regex = /manzanas/gi;
-    const str = "Las manzanas son dulces. Me gustan las manzanas.";
-    const newStr = str.replace(regex, "naranjas");
-    console.log(newStr); // "Las naranjas son dulces. Me gustan las naranjas."
-    ```
+   ```js
+   const regex = /manzanas/gi;
+   const str = "Las manzanas son dulces. Me gustan las manzanas.";
+   const newStr = str.replace(regex, "naranjas");
+   console.log(newStr); // "Las naranjas son dulces. Me gustan las naranjas."
+   ```
 
 #### Ejemplos de regex
 
@@ -774,11 +812,11 @@ const intRegex = /^[1-9]\d*$/;
 // Entero con signo
 const signIntRegex = /^[-+]?\d+$/;
 // Código Postal (España)
-const cpRegex  = /^[0-5][0-9]{4}$/;
-const cpRegexcompleto =  /^[0[1-9]|[0-4][0-9]|5[0-2]][0-9]{4}$/;
+const cpRegex = /^[0-5][0-9]{4}$/;
+const cpRegexcompleto = /^[0[1-9]|[0-4][0-9]|5[0-2]][0-9]{4}$/;
 // Correo electrónico 99.9% preciso
-const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-
+const emailRegex =
+  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 ```
 
 #### Recursos
@@ -794,31 +832,30 @@ const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+")
 Podemos validar campos utilizando las funciones `test` o `match`:
 
 ```js
-
-function isValidCP (cp){
+function isValidCP(cp) {
   // Código Postal (España)
-  const cpRegex  = /^[0-5][0-9]{5}$/;
+  const cpRegex = /^[0-5][0-9]{5}$/;
   // Usando la función test del regex
-  if(cpRegex.test(cp)){
+  if (cpRegex.test(cp)) {
     return true;
-  }else{
-    return false
+  } else {
+    return false;
   }
 }
 
-function isValidCP2 (cp){
+function isValidCP2(cp) {
   // Código Postal
 
- (España)
-  const cpRegex  = /^[0-5][0-9]{5}$/;
+  España;
+  const cpRegex = /^[0-5][0-9]{5}$/;
   // Usando la función match de la cadena
-  if(cp.match(cpRegex)){
+  if (cp.match(cpRegex)) {
     return true;
-  }else{
-    return false
+  } else {
+    return false;
   }
 }
-
 ```
 
 Las expresiones regulares son herramientas poderosas para la coincidencia de patrones y la manipulación de texto. Pueden ser complejas, pero con práctica, te resultarán increíblemente útiles para diversas tareas en JavaScript.
+Más sobre expresiones regulares en [aqui](https://www.freecodecamp.org/espanol/news/expresiones-regulares-regex-en-javascript-manual-para-principiantes/)

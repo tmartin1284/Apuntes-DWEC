@@ -1,6 +1,7 @@
 # **UNIDAD 6 - AJAX**
 
 ## 1. **Introducción a AJAX**
+
 ¿Qué es AJAX?
 
 ![ajax](img/00_ajax.png)
@@ -80,34 +81,36 @@ Por qué es importante la asincronía
 1. **Callbacks:** Funciones pasadas como argumentos a otras funciones para ser ejecutadas más tarde. Pueden llevar a un "callback hell" al tratar con múltiples callbacks anidados.
 
 2. **[Promesas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)**:
-   
-     - Objetos que representan la eventual finalización o falla de una operación asincrónica.
-     - Proporcionan métodos como then y catch para manejar casos de éxito y error.
+   - Objetos que representan la eventual finalización o falla de una operación asincrónica.
+   - Proporcionan métodos como then y catch para manejar casos de éxito y error.
 
 3. **[Async/Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)**
-
-     - Azúcar sintáctica construida sobre Promesas, proporcionando una forma más legible y concisa de escribir código asincrónico.
-     - Requiere el uso de la palabra clave async para definir una función que utiliza await para operaciones asincrónicas.
+   - Azúcar sintáctica construida sobre Promesas, proporcionando una forma más legible y concisa de escribir código asincrónico.
+   - Requiere el uso de la palabra clave async para definir una función que utiliza await para operaciones asincrónicas.
 
 ### 1.3 **Métodos para Hacer Solicitudes Ajax en JS**
 
 #### [Objeto XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API)
+
 - **Descripción**: Un método clásico para realizar solicitudes HTTP. Desarrollado inicialmente en 2006, todavía se utiliza hoy en día. Originalmente tenía problemas de compatibilidad con Internet Explorer, que usaba un nombre diferente para este objeto.
 - **Uso**: Aunque es más antiguo y considerado más engorroso, `XMLHttpRequest` todavía es funcional y está soportado en todos los navegadores.
 
 #### [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+
 - **Descripción**: Un método más moderno, potente, flexible y fácil de usar para hacer solicitudes HTTP.
 - **Uso**: La Fetch API es ahora la forma preferida de hacer solicitudes HTTP debido a su simplicidad y arquitectura basada en promesas incorporadas.
 
 #### Otros Métodos
+
 - **[Axios](https://axios-http.com/docs/intro)**: Un cliente HTTP basado en promesas para el navegador y Node.js. Es popular por su facilidad de uso y capacidad para manejar solicitudes y respuestas como JSON.
 - **[jQuery](https://jquery.com/)**: Una biblioteca de JavaScript rápida, pequeña y rica en características. jQuery proporciona un método simple [`$.ajax`](https://api.jquery.com/Jquery.ajax/) para realizar solicitudes Ajax, lo que simplifica el proceso. La biblioteca jQuery y su método `$.ajax()` tuvieron su momento de gloria facilitando las cosas durante la era de `XMLHttpRequest` y el antiguo Internet Explorer.
 
 ## 2. **REST API**
 
-Una REST API (Representational State Transfer Application Programming Interface) es una  interfaz de programación de aplicaciones (API o API web) que se ajusta a los límites de la arquitectura REST (Transferencia de Estado Representacional). Es un conjunto de reglas y convenciones para construir e interactuar con servicios web. Las REST APIs permiten que diferentes sistemas **se comuniquen a través de HTTP** utilizando los métodos estándar que hemos visto en el punto anterior, facilitando la integración e interacción con aplicaciones y servicios web.
+Una REST API (Representational State Transfer Application Programming Interface) es una interfaz de programación de aplicaciones (API o API web) que se ajusta a los límites de la arquitectura REST (Transferencia de Estado Representacional). Es un conjunto de reglas y convenciones para construir e interactuar con servicios web. Las REST APIs permiten que diferentes sistemas **se comuniquen a través de HTTP** utilizando los métodos estándar que hemos visto en el punto anterior, facilitando la integración e interacción con aplicaciones y servicios web.
 
 #### Componentes Clave
+
 - **Punto final:** Una **URL** específica donde se puede acceder a la API.
 - **Método:** El tipo de solicitud que se está realizando (por ejemplo, GET, POST, PUT, DELETE, PATCH).
 - **Solicitud:** Los datos o acciones que deseas enviar al servidor. En la solicitud se incluyen los **encabezados** y el **cuerpo** si es necesario.
@@ -123,7 +126,7 @@ Podemos construir una REST API con cualquier lenguaje de servidor:
 - Java
 - Ruby
 - Python
-- NODE.js 
+- NODE.js
 - ASP.NET
 
 Para construir una API, a menudo usarás un marco de servidor. Algunas opciones populares son:
@@ -145,82 +148,125 @@ Las APIs REST públicas proporcionan a los desarrolladores acceso a una variedad
 ##### Redes Sociales y Comunicación
 
 1. **Twitter API**
-     - **Descripción:** Permite a los desarrolladores interactuar con datos de Twitter.
-     - **Documentación:** [Twitter API Docs](https://developer.twitter.com/en/docs)
+   - **Descripción:** Permite a los desarrolladores interactuar con datos de Twitter.
+   - **Documentación:** [Twitter API Docs](https://developer.twitter.com/en/docs)
 
 2. **Facebook Graph API**
-     - **Descripción:** Proporciona acceso a datos del gráfico social de Facebook.
-     - **Documentación:** [Facebook Graph API Docs](https://developers.facebook.com/docs/graph-api/)
+   - **Descripción:** Proporciona acceso a datos del gráfico social de Facebook.
+   - **Documentación:** [Facebook Graph API Docs](https://developers.facebook.com/docs/graph-api/)
 
 3. **Slack API**
-     - **Descripción:** Permite la integración con Slack para mensajería y colaboración.
-     - **Documentación:** [Slack API Docs](https://api.slack.com/)
+   - **Descripción:** Permite la integración con Slack para mensajería y colaboración.
+   - **Documentación:** [Slack API Docs](https://api.slack.com/)
 
 ##### Mapas y Geolocalización
 
 4. **Google Maps API**
-     - **Descripción:** Ofrece una amplia gama de servicios relacionados con mapas, incluyendo geolocalización, enrutamiento e información de lugares.
-     - **Documentación:** [Google Maps API Docs](https://developers.google.com/maps/documentation)
+   - **Descripción:** Ofrece una amplia gama de servicios relacionados con mapas, incluyendo geolocalización, enrutamiento e información de lugares.
+   - **Documentación:** [Google Maps API Docs](https://developers.google.com/maps/documentation)
 
 5. **OpenWeatherMap API**
-      - **Descripción:** Proporciona datos meteorológicos, pronósticos e información histórica.
-     - **Documentación:** [OpenWeatherMap API Docs](https://openweathermap.org/api)
+   - **Descripción:** Proporciona datos meteorológicos, pronósticos e información histórica.
+   - **Documentación:** [OpenWeatherMap API Docs](https://openweathermap.org/api)
 
 6. **Mapbox API**
-     - **Descripción:** Ofrece mapas personalizables y servicios de geolocalización.
-     - **Documentación:** [Mapbox API Docs](https://docs.mapbox.com/api/)
+   - **Descripción:** Ofrece mapas personalizables y servicios de geolocalización.
+   - **Documentación:** [Mapbox API Docs](https://docs.mapbox.com/api/)
 
 ##### Finanzas y Criptomonedas
 
 7. **CoinGecko API**
-     - **Descripción:** Proporciona datos sobre criptomonedas, incluyendo precios, capitalización de mercado y volumen de negociación.
-     - **Documentación:** [CoinGecko API Docs](https://www.coingecko.com/en/api)
+   - **Descripción:** Proporciona datos sobre criptomonedas, incluyendo precios, capitalización de mercado y volumen de negociación.
+   - **Documentación:** [CoinGecko API Docs](https://www.coingecko.com/en/api)
 
 8. **Alpha Vantage API**
-     - **Descripción:** Ofrece datos financieros, incluyendo precios de acciones, indicadores técnicos y datos de divisas.
-     - **Documentación:** [Alpha Vantage API Docs](https://www.alphavantage.co/documentation/)
+   - **Descripción:** Ofrece datos financieros, incluyendo precios de acciones, indicadores técnicos y datos de divisas.
+   - **Documentación:** [Alpha Vantage API Docs](https://www.alphavantage.co/documentation/)
 
 ##### Entretenimiento
 
 9. **Spotify API**
-     - **Descripción:** Permite acceso al catálogo musical de Spotify y datos de usuario.
-     - **Documentación:** [Spotify API Docs](https://developer.spotify.com/documentation/web-api/)
+   - **Descripción:** Permite acceso al catálogo musical de Spotify y datos de usuario.
+   - **Documentación:** [Spotify API Docs](https://developer.spotify.com/documentation/web-api/)
 
 10. **The Movie Database (TMDb) API**
-      - **Descripción:** Proporciona información sobre películas, programas de televisión y actores.
-      - **Documentación:** [TMDb API Docs](https://developers.themoviedb.org/3)
+    - **Descripción:** Proporciona información sobre películas, programas de televisión y actores.
+    - **Documentación:** [TMDb API Docs](https://developers.themoviedb.org/3)
 
 11. **YouTube Data API**
-      - **Descripción:** Permite acceso a contenido de YouTube y datos de usuario.
-      - **Documentación:** [YouTube Data API Docs](https://developers.google.com/youtube/v3)
+    - **Descripción:** Permite acceso a contenido de YouTube y datos de usuario.
+    - **Documentación:** [YouTube Data API Docs](https://developers.google.com/youtube/v3)
 
 ##### Utilidad y Varios
 
 12. **GitHub API**
-      - **Descripción:** Proporciona acceso a repositorios de GitHub, versiones y datos de usuario.
-      - **Documentación:** [GitHub API Docs](https://docs.github.com/en/rest)
+    - **Descripción:** Proporciona acceso a repositorios de GitHub, versiones y datos de usuario.
+    - **Documentación:** [GitHub API Docs](https://docs.github.com/en/rest)
 
 13. **REST Countries API**
-      - **Descripción:** Ofrece información sobre países, incluyendo población, área y ciudades capitales.
-      - **Documentación:** [REST Countries API Docs](https://restcountries.com/)
+    - **Descripción:** Ofrece información sobre países, incluyendo población, área y ciudades capitales.
+    - **Documentación:** [REST Countries API Docs](https://restcountries.com/)
 
 14. **NASA API**
-      - **Descripción:** Proporciona acceso a una amplia gama de datos de la NASA, incluyendo imágenes, videos e información planetaria.
-      - **Documentación:** [NASA API Docs](https://api.nasa.gov/)
+    - **Descripción:** Proporciona acceso a una amplia gama de datos de la NASA, incluyendo imágenes, videos e información planetaria.
+    - **Documentación:** [NASA API Docs](https://api.nasa.gov/)
 
 15. **Random User API**
-      - **Descripción:** Genera datos de usuario aleatorios, incluyendo nombres, direcciones y fotos de perfil.
-      - **Documentación:** [Random User API Docs](https://randomuser.me/)
+    - **Descripción:** Genera datos de usuario aleatorios, incluyendo nombres, direcciones y fotos de perfil.
+    - **Documentación:** [Random User API Docs](https://randomuser.me/)
 
-16. **Open Library API**
-      - **Descripción:** Proporciona acceso a datos de libros del proyecto Open Library.
-      - **Documentación:** [Open Library API Docs](https://openlibrary.org/developers/api)
+16. **PokeAPI**
+    - **Descripción:** Ofrece datos del universo Pokémon, incluyendo Pokémon, habilidades y movimientos.
+    - **Documentación:** [PokeAPI Docs](https://pokeapi.co/docs/)
 
-17. **PokeAPI**
-      - **Descripción:** Ofrece datos del universo Pokémon, incluyendo Pokémon, habilidades y movimientos.
-      - **Documentación:** [PokeAPI Docs](https://pokeapi.co/docs/)
+---
+
+##### Lista de APIs con datos bibliográficos (Autores, libros)
+
+A pesar de no existir una API única y centralizada dedicada en exclusiva a la Generación del 27, es posible consultar sus obras, biografías, manuscritos e interconexiones culturales utilizando diversos portales de datos abiertos, grafos de conocimiento y bibliotecas digitales a través de sus puntos de acceso (endpoints).
+
+17. **Gutendex API (Proyecto Gutenberg)**
+
+- **Descripción:** API REST pública sobre los textos digitalizados del Proyecto Gutenberg. Permite recuperar el texto completo y los metadatos de las obras en dominio público de autores del 27 (por ejemplo, _Romancero Gitano_ o _Poema del cante jondo_).
+- **Ejemplo de uso:**
+  - `https://gutendex.com/books/?languages=es&author_year_start=1890&author_year_end=1980`libros de autores entre 1890 y 1980
+  - `/books?search=lorca` devuelve los libros de Lorca
+  - **Documentación** `https://gutendex.com/`
+  - **endpoint:** `https://gutendex.com/books`
+
+18. **Open Library API**
+    - **Descripción:** Proporciona acceso a datos de libros del proyecto Open Library.
+    - `https://openlibrary.org/search/authors.json?q=garcia,lorca` devuelve información de García Lorca
+    - **Documentación:** [Open Library API Docs](https://openlibrary.org/developers/api)
+
+19. **Wikipedia REST API (Datos biográficos y resúmenes)**
+    - **Descripción:** Proporciona metadatos estructurados y extractos de los artículos biográficos de los miembros del 27 (y de lo que le pidamos), siguiendo estrictamente la arquitectura REST.
+    - SiEste endpoint devuelve el resumen introductorio y datos clave de Pedro Salinas.
+    - **Documentación:** `https://es.wikipedia.org/api/`
+
+---
+
+21. **Europeana REST API (Patrimonio cultural digitalizado)**
+
+
+    - **Descripción:** Permite buscar cartas, manuscritos originales y fotografías de la época. Utiliza parámetros de consulta REST estándar, aunque requiere que generes una API Key gratuita en su plataforma.
+    - **Documentación:** [`https://europeana.atlassian.net`](https://europeana.atlassian.net/wiki/spaces/EF/pages/2385739812/Search+API+Documentation#:~:text=Request.%20Every%20call%20to%20the%20Search%20API,to%20separate%20parameters%20from%20each%20other.%20api.europeana.eu%2Frecord%2Fv2%2Fsearch.json%3F)
+
+###### Resumen de Integración Recomendada
+
+| API           | Uso Principal                                    | Complejidad de Uso          |
+| :------------ | :----------------------------------------------- | :-------------------------- |
+| **Wikidata**  | Biografías, redes de autores y relaciones        | Media (Requiere SPARQL)     |
+| **Datos BNE** | Registros bibliográficos oficiales y manuscritos | Media (Requiere SPARQL/RDF) |
+| **Europeana** | Documentos históricos digitalizados e imágenes   | Baja (API REST)             |
+| **Gutendex**  | Libros y textos completos en dominio público     | Baja (API REST)             |
+
+Para generar una web que muestre datos de una generación poetica, en este caso la Generación del 27, o del 98, podemos hacer uso de una doble API: la publica para obtener los datos, y una propia que genere el índice de contenidos.
+
+---
 
 > #### <i class="fa-solid fa-circle-check"></i> ¡-Comprueba esto!
+>
 > [Mucho más que una REST API pública](https://github.com/public-apis/public-apis)
 
 <div class="exercise-box">
@@ -235,7 +281,6 @@ Las APIs REST públicas proporcionan a los desarrolladores acceso a una variedad
     <li>Prueba los puntos finales.</li>
   </ol>
 </div>
-
 
 ### 2.3 **Servidor JSON**
 
@@ -326,9 +371,11 @@ Aquí hay tres soluciones populares:
 ### 3.1 **Postman**
 
 #### Descripción General
+
 Postman es un entorno completo para el desarrollo de APIs que te permite crear, compartir, probar y documentar APIs. Tiene una interfaz amigable y ofrece una amplia gama de características.
 
 #### Características Clave
+
 - **Colecciones:** Organiza tus solicitudes API en colecciones para una mejor gestión y colaboración.
 - **Variables de Entorno:** Cambia fácilmente entre diferentes entornos (por ejemplo, desarrollo, pruebas, producción) usando variables.
 - **Pruebas Automatizadas:** Crea scripts de prueba usando JavaScript para automatizar las pruebas de la API.
@@ -338,6 +385,7 @@ Postman es un entorno completo para el desarrollo de APIs que te permite crear, 
 ![Postman](img/postman.png)
 
 #### Ejemplo de Uso
+
 1. Crea una nueva solicitud.
 2. Establece el método HTTP (GET, POST, PUT, DELETE, etc.).
 3. Ingresa la URL del endpoint de la API.
@@ -345,14 +393,17 @@ Postman es un entorno completo para el desarrollo de APIs que te permite crear, 
 5. Haz clic en el botón "Enviar" para realizar la solicitud e inspeccionar la respuesta.
 
 #### Descargar
+
 [Descargar Postman](https://www.postman.com/downloads/)
 
 ### 3.2 **Thunder Client**
 
 #### Descripción General
+
 Thunder Client es un cliente REST API ligero para la extensión Visual Studio Code (VSCode). Está diseñado para ser simple y fácil de usar dentro del entorno de VSCode.
 
 #### Características Clave
+
 - **Integrado con VSCode:** No es necesario cambiar entre aplicaciones; úsalo directamente dentro de tu editor de código.
 - **Variables de Entorno:** Gestiona variables de entorno para cambiar fácilmente entre diferentes configuraciones.
 - **Colecciones:** Organiza tus solicitudes en colecciones para una mejor estructura.
@@ -360,6 +411,7 @@ Thunder Client es un cliente REST API ligero para la extensión Visual Studio Co
 - **Ligero:** Diseño minimalista con características esenciales para pruebas de API rápidas y eficientes.
 
 #### Ejemplo de Uso
+
 1. Instala la extensión Thunder Client en VSCode.
 2. Abre el panel de Thunder Client desde la barra lateral.
 3. Crea una nueva solicitud y establece el método HTTP.
@@ -370,20 +422,24 @@ Thunder Client es un cliente REST API ligero para la extensión Visual Studio Co
 ![thunder client](img/thunder-client.png)
 
 #### Descargar
+
 [Descargar Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
 
 ### 3.3 **REST Client**
 
 #### Descripción General
+
 REST Client es otra extensión de VSCode que te permite enviar solicitudes HTTP y ver las respuestas directamente en tu editor de código. Es ideal para aquellos que prefieren un enfoque más centrado en el código.
 
 #### Características Clave
+
 - **Archivos de Solicitud:** Escribe tus solicitudes en archivos `.http` o `.rest` para mejor organización y control de versiones.
 - **Variables de Entorno:** Usa variables de entorno para gestionar diferentes configuraciones para tus solicitudes API.
 - **Documentación en Línea:** Documenta tus solicitudes en línea con tu código para una mejor legibilidad.
 - **Soporte para Varios Métodos HTTP:** Envía fácilmente solicitudes GET, POST, PUT, DELETE y otros tipos de solicitudes HTTP.
 
 #### Ejemplo de Uso
+
 1. Instala la extensión REST Client en VSCode.
 2. Crea un nuevo archivo `.http` o `.rest`.
 3. Escribe tu solicitud, por ejemplo:
@@ -404,11 +460,13 @@ content-type: application/json
     "time": "Wed, 21 Oct 2015 18:27:50 GMT"
 }
 ```
+
 4. Haz clic en el enlace "Enviar Solicitud" encima de la solicitud para ejecutarla y ver la respuesta en un panel dividido.
 
 ![REST client](img/rest-client.png)
 
 #### Descargar
+
 [Descargar REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 
 ## 4. **XMLHttpRequest**
@@ -420,7 +478,7 @@ No vamos a usar esta forma más antigua, pero podemos ver este pequeño ejemplo 
 var xhr = new XMLHttpRequest();
 
 // Configúralo: solicitud GET para la URL /users
-xhr.open('GET', 'https://jsonplaceholder.typicode.com/users', true);
+xhr.open("GET", "https://jsonplaceholder.typicode.com/users", true);
 
 // Configura una función para manejar la respuesta
 xhr.addEventListener("load", function () {
@@ -432,16 +490,22 @@ xhr.addEventListener("load", function () {
     console.log(users);
 
     // Muestra la respuesta en el elemento <pre>
-    document.getElementById('responseOutput').textContent = JSON.stringify(users, null, 2);
+    document.getElementById("responseOutput").textContent = JSON.stringify(
+      users,
+      null,
+      2,
+    );
   } else {
-    console.error('La solicitud falló. Código de estado devuelto: ' + xhr.status);
+    console.error(
+      "La solicitud falló. Código de estado devuelto: " + xhr.status,
+    );
   }
 });
 
 // Manejar errores de red
 xhr.addEventListener("error", function () {
-  console.error('La solicitud falló.');
-})
+  console.error("La solicitud falló.");
+});
 
 // Envía la solicitud
 xhr.send();
@@ -452,9 +516,10 @@ xhr.send();
 En el desarrollo web moderno, Fetch simplifica y mejora muchos aspectos de las conexiones AJAX. Es ahora compatible con la mayoría de los navegadores, lo que lo convierte en una opción preferida para manejar solicitudes asíncronas.
 
 #### Métodos Clave para Manejar la Asincronía con Fetch:
+
 1. **Promesas**
 2. **async / await**
-   
+
 ##### [--> Enlace a Fetch en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
 ### 5.1 **Fetch con Promesas**
@@ -463,16 +528,16 @@ La API Fetch utiliza [Promesas](https://developer.mozilla.org/en-US/docs/Web/Jav
 
 ```js
 // Esta es una solicitud GET con promesas
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then(response => {
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then((response) => {
     // analiza la respuesta JSON
     return response.json();
   })
-  .then(data => {
-      // Haz algo con los datos
-      document.getElementById('output').innerText = JSON.stringify(data);
+  .then((data) => {
+    // Haz algo con los datos
+    document.getElementById("output").innerText = JSON.stringify(data);
   })
-  .catch(error => console.error('Error:', error));
+  .catch((error) => console.error("Error:", error));
 ```
 
 ### 5.2 **Fetch con Async/Await**
@@ -482,21 +547,20 @@ La sintaxis [async/await](#52-fetch-with-asyncawait) proporciona una forma más 
 ```js
 // Esta es una solicitud GET con async/await
 async function fetchData() {
-    try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
-        // analiza la respuesta JSON
-        const data = await response.json();
-        // haz algo con los datos
-        console.log(data);
-        return data;
-    } catch (error) {
-        console.error('Error:', error);
-    }
+  try {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/posts/1",
+    );
+    // analiza la respuesta JSON
+    const data = await response.json();
+    // haz algo con los datos
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }
 ```
-
-
-
 
 ### 5.3 **Manejo de Respuestas HTTP**
 
@@ -513,12 +577,12 @@ Este es el que utilizaremos la mayoría de las veces, porque JSON es el formato 
 
 - Devuelve una promesa resuelta a un objeto JSON.
 - Útil para manejar respuestas que contienen datos JSON.
-  
+
 ```javascript
-fetch('https://api.ejemplo.com/datos')
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
+fetch("https://api.ejemplo.com/datos")
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.error("Error:", error));
 ```
 
 #### Información sobre el Estado de la Conexión
@@ -529,23 +593,21 @@ El objeto `Response` también proporciona información sobre el estado de la con
 
 - Devuelve el código de estado de la respuesta.
 - Los valores típicos incluyen:
-    - `100-199`: Respuestas informativas.
-    - `200-299`: Respuestas exitosas.
-          - `200`: OK.
-    - `300-399`: Mensajes de redirección.
-    - `400-499`: Respuesta de error del cliente.
-          - `404`: No encontrado.
-    - `500-599`: Respuestas de error del servidor.
-          - `500`: Error interno del servidor.
-    - [Todos los códigos de estado de respuesta HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+  - `100-199`: Respuestas informativas.
+  - `200-299`: Respuestas exitosas. - `200`: OK.
+  - `300-399`: Mensajes de redirección.
+  - `400-499`: Respuesta de error del cliente. - `404`: No encontrado.
+  - `500-599`: Respuestas de error del servidor. - `500`: Error interno del servidor.
+  - [Todos los códigos de estado de respuesta HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
 ```js
-fetch('https://api.ejemplo.com/datos')
-    .then(response => {
-        console.log(response.status); // por ejemplo, 200, 404, 500
-        return response.json();
-    })
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
+fetch("https://api.ejemplo.com/datos")
+  .then((response) => {
+    console.log(response.status); // por ejemplo, 200, 404, 500
+    return response.json();
+  })
+  .then((data) => console.log(data))
+  .catch((error) => console.error("Error:", error));
 ```
 
 #### `response.ok`
@@ -553,16 +615,16 @@ fetch('https://api.ejemplo.com/datos')
 - Devuelve un booleano que indica si la respuesta fue exitosa (código de estado en el rango 200-299).
 
 ```js
-fetch('https://api.ejemplo.com/datos')
-    .then(response => {
-        if (response.ok) {
-            return response.json();
-        } else {
-            throw new Error('La respuesta de la red no fue correcta');
-        }
-    })
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
+fetch("https://api.ejemplo.com/datos")
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error("La respuesta de la red no fue correcta");
+    }
+  })
+  .then((data) => console.log(data))
+  .catch((error) => console.error("Error:", error));
 ```
 
 ### 5.3 **Solicitudes GET, POST, PUT, PATCH, DELETE**
@@ -581,82 +643,78 @@ Ejemplo:
 
 ```js
 // Ejemplo de solicitud GET simple
-fetch('https://api.ejemplo.com/get-images?query=gatos&limit=20')
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
+fetch("https://api.ejemplo.com/get-images?query=gatos&limit=20")
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.error("Error:", error));
 
 // GET con autorización requerida
-fetch('https://api.ejemplo.com/get-images?query=gatos&limit=20', {
+fetch("https://api.ejemplo.com/get-images?query=gatos&limit=20", {
   headers: {
-        'Authorization': 'Bearer tu-api-key'
-    },
+    Authorization: "Bearer tu-api-key",
+  },
 })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.error("Error:", error));
 ```
 
 #### Solicitudes POST, PUT, PATCH:
 
 Para estos tipos de solicitudes que crean o modifican un recurso, necesitamos enviar un `body`. Será necesario incluir:
 
-- Encabezado `Content-Type` para especificar el tipo de contenido
-      - Valores comunes para el encabezado Content-Type incluyen `application/json`, `application/x-www-form-urlencoded`, `multipart/form-data`, etc.
-- `method`:
-      - `'POST'`
-      - `'PUT'`
-      - `'PATCH'`
-- `body`: La mayoría de las veces, cuando `Content-Type` es JSON, tenemos que 'stringify' algún objeto de datos:
-      - `body: JSON.stringify(data)`
+- Encabezado `Content-Type` para especificar el tipo de contenido - Valores comunes para el encabezado Content-Type incluyen `application/json`, `application/x-www-form-urlencoded`, `multipart/form-data`, etc.
+- `method`: - `'POST'` - `'PUT'` - `'PATCH'`
+- `body`: La mayoría de las veces, cuando `Content-Type` es JSON, tenemos que 'stringify' algún objeto de datos: - `body: JSON.stringify(data)`
 
 Ejemplos:
+
 ```js
-const BASE_URL = 'https://api.ejemplo.com';
-const API_KEY = 'tu-api-key';
+const BASE_URL = "https://api.ejemplo.com";
+const API_KEY = "tu-api-key";
 
 // Función para manejar solicitudes POST
 export async function postData(endpoint, body) {
-    try {
-        const response = await fetch(`${BASE_URL}${endpoint}`, {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${API_KEY}`,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(body)
-        });
-        if (!response.ok) {
-            throw new Error(`Error: ${response.statusText}`);
-        }
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error('Error al enviar datos:', error);
-        throw error;
+  try {
+    const response = await fetch(`${BASE_URL}${endpoint}`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`);
     }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error al enviar datos:", error);
+    throw error;
+  }
 }
 
 // Función para manejar solicitudes PUT
 export async function putData(endpoint, body) {
-    try {
-        const response = await fetch(`${BASE_URL}${endpoint}`, {
-            method: 'PUT',
-            headers: {
-                'Authorization': `Bearer ${API_KEY}`,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(body)
-        });
-        if (!response.ok) {
-            throw new Error(`Error: ${response.statusText}`);
-        }
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error('Error al actualizar datos:', error);
-        throw error;
+  try {
+    const response = await fetch(`${BASE_URL}${endpoint}`, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`);
     }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error al actualizar datos:", error);
+    throw error;
+  }
 }
 ```
 
@@ -665,52 +723,51 @@ export async function putData(endpoint, body) {
 - El método DELETE se utiliza para eliminar un recurso identificado por una URL. Al igual que el método GET, el método DELETE generalmente no necesita un cuerpo y, por lo tanto, no suele requerir un encabezado `Content-Type`. Sin embargo, hay algunos escenarios en los que podrías necesitar incluir un cuerpo con una solicitud DELETE y también podría ser necesario incluir información en el encabezado como `'Authorization'`.
 
 Ejemplo:
+
 ```js
 // Función de eliminación simple sin opciones
 export async function simpleDeleteData(endpoint) {
-    try {
-        const response = await fetch(`${BASE_URL}${endpoint}`, {
-          method: 'DELETE'
-        });
-        if (!response.ok) {
-            throw new Error(`Error: ${response.statusText}`);
-        }
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error('Error al eliminar datos:', error);
-        throw error;
+  try {
+    const response = await fetch(`${BASE_URL}${endpoint}`, {
+      method: "DELETE",
+    });
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`);
     }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error al eliminar datos:", error);
+    throw error;
+  }
 }
 
 // Función más avanzada, con algunas opciones
 export async function deleteData(endpoint, body = null) {
-    try {
-        const options = {
-            method: 'DELETE',
-            headers: {
-                'Authorization': `Bearer ${API_KEY}`
-            }
-        };
-        // Si se pide un cuerpo, lo stringify
-        if (body) {
-            options.headers['Content-Type'] = 'application/json';
-            options.body = JSON.stringify(body);
-        }
-        const response = await fetch(`${BASE_URL}${endpoint}`, options);
-        if (!response.ok) {
-            throw new Error(`Error: ${response.statusText}`);
-        }
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error('Error al eliminar datos:', error);
-        throw error;
+  try {
+    const options = {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${API_KEY}`,
+      },
+    };
+    // Si se pide un cuerpo, lo stringify
+    if (body) {
+      options.headers["Content-Type"] = "application/json";
+      options.body = JSON.stringify(body);
     }
+    const response = await fetch(`${BASE_URL}${endpoint}`, options);
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error al eliminar datos:", error);
+    throw error;
+  }
 }
 ```
-
-
 
 ### 5.4 **Encapsular Solicitudes Fetch en Módulos Reutilizables**
 
@@ -729,49 +786,49 @@ Siempre es una buena práctica encapsular las solicitudes `fetch` a nuestra API 
    ```js
    // your-api.js
 
-   const BASE_URL = 'https://api.example.com';
-   const API_KEY = 'your-api-key';
+   const BASE_URL = "https://api.example.com";
+   const API_KEY = "your-api-key";
 
    // Función para manejar solicitudes GET
    export async function fetchData(endpoint) {
-       try {
-           const response = await fetch(`${BASE_URL}${endpoint}`, {
-               headers: {
-                   'Authorization': `Bearer ${API_KEY}`,
-                   'Content-Type': 'application/json'
-               }
-           });
-           if (!response.ok) {
-               throw new Error(`Error: ${response.statusText}`);
-           }
-           const data = await response.json();
-           return data;
-       } catch (error) {
-           console.error('Error al Obtener Datos:', error);
-           throw error;
+     try {
+       const response = await fetch(`${BASE_URL}${endpoint}`, {
+         headers: {
+           Authorization: `Bearer ${API_KEY}`,
+           "Content-Type": "application/json",
+         },
+       });
+       if (!response.ok) {
+         throw new Error(`Error: ${response.statusText}`);
        }
+       const data = await response.json();
+       return data;
+     } catch (error) {
+       console.error("Error al Obtener Datos:", error);
+       throw error;
+     }
    }
 
    // Función para manejar solicitudes POST
    export async function postData(endpoint, body) {
-       try {
-           const response = await fetch(`${BASE_URL}${endpoint}`, {
-               method: 'POST',
-               headers: {
-                   'Authorization': `Bearer ${API_KEY}`,
-                   'Content-Type': 'application/json'
-               },
-               body: JSON.stringify(body)
-           });
-           if (!response.ok) {
-               throw new Error(`Error: ${response.statusText}`);
-           }
-           const data = await response.json();
-           return data;
-       } catch (error) {
-           console.error('Error al Publicar Datos:', error);
-           throw error;
+     try {
+       const response = await fetch(`${BASE_URL}${endpoint}`, {
+         method: "POST",
+         headers: {
+           Authorization: `Bearer ${API_KEY}`,
+           "Content-Type": "application/json",
+         },
+         body: JSON.stringify(body),
+       });
+       if (!response.ok) {
+         throw new Error(`Error: ${response.statusText}`);
        }
+       const data = await response.json();
+       return data;
+     } catch (error) {
+       console.error("Error al Publicar Datos:", error);
+       throw error;
+     }
    }
 
    // Otras funciones relacionadas con la API se pueden agregar aquí
@@ -783,21 +840,21 @@ Siempre es una buena práctica encapsular las solicitudes `fetch` a nuestra API 
 
    ```js
    // your-main.js
-   import { fetchData, postData } from './your-api.js';
+   import { fetchData, postData } from "./your-api.js";
 
    async function main() {
-       try {
-           // Ejemplo de realizar una solicitud GET
-           const data = await fetchData('/some-endpoint');
-           console.log('Datos Obtenidos:', data);
+     try {
+       // Ejemplo de realizar una solicitud GET
+       const data = await fetchData("/some-endpoint");
+       console.log("Datos Obtenidos:", data);
 
-           // Ejemplo de realizar una solicitud POST
-           const postDataBody = { key: 'value' };
-           const postDataResponse = await postData('/some-endpoint', postDataBody);
-           console.log('Datos Publicados:', postDataResponse);
-       } catch (error) {
-           console.error('Error en la Función Principal:', error);
-       }
+       // Ejemplo de realizar una solicitud POST
+       const postDataBody = { key: "value" };
+       const postDataResponse = await postData("/some-endpoint", postDataBody);
+       console.log("Datos Publicados:", postDataResponse);
+     } catch (error) {
+       console.error("Error en la Función Principal:", error);
+     }
    }
 
    // Ejecutar la función principal

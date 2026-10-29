@@ -72,11 +72,28 @@ mkdocs gh-deploy //para servirlo en el servidor de github pages
 
 \```
 
+\```txt
+
+# Encabezado 1 (H1)
+
+## Encabezado 2 (H2)
+
+### Encabezado 3 (H3)
+
+#### Encabezado 4 (H4)
+
+\```
 Estos encabezados pueden o no llevar numeración
 
 ### Formato de Texto
 
 \```markdown
+_Texto en cursiva_ o _Texto en cursiva_
+**Texto en negrita** o **Texto en negrita**
+**_Negrita y cursiva_**
+~~Texto tachado~~
+\```
+\```txt
 _Texto en cursiva_ o _Texto en cursiva_
 **Texto en negrita** o **Texto en negrita**
 **_Negrita y cursiva_**
@@ -95,10 +112,25 @@ _Texto en cursiva_ o _Texto en cursiva_
 * Elemento alternativo
   \```
 
-Markdown considera un nuevo nivel a partir de 4 espacios.
+\```txt
+
+- Elemento 1
+- Elemento 2
+  - Subelemento 2.1
+
+* Elemento alternativo
+  \```
+  Markdown considera un nuevo nivel a partir de 4 espacios.
 
 **Listas ordenadas:**
 \```markdown
+
+1. Primer paso
+2. Segundo paso
+3. Tercer paso
+   \```
+
+\```txt
 
 1. Primer paso
 2. Segundo paso
@@ -118,9 +150,27 @@ Markdown considera un nuevo nivel a partir de 4 espacios.
 ![Texto alternativo](https://via.placeholder.com/150 "Título opcional")
 \```
 
+\```txt
+
+<!-- Enlace -->
+
+[Texto del enlace](https://www.ejemplo.com)
+
+<!-- Imagen -->
+
+![Texto alternativo](https://via.placeholder.com/150 "Título opcional")
+\```
+
 ### Citas (Blockquotes)
 
 \```markdown
+
+> La simplicidad es la clave de la verdadera elegancia.
+>
+> > Cita anidada
+> > \```
+
+\```txt
 
 > La simplicidad es la clave de la verdadera elegancia.
 >
@@ -144,12 +194,34 @@ saludar("Mundo");
 
 ````
 
+\```tct
+Código en línea: Utiliza `npm start` para ejecutar la aplicación.
+
+Bloque de código con resaltado de sintaxis:
+
+````javascript
+function saludar(nombre) {
+  console.log(`Hola, ${nombre}`);
+}
+saludar("Mundo");
+```
+
+
+````
+
 ### Tablas
 
 | Nombre |  Rol  |   Estado |
 | :----- | :---: | -------: |
 | Ana    | Admin |   Activo |
 | Carlos | User  | Inactivo |
+
+```txt
+| Nombre |  Rol  |   Estado |
+| :----- | :---: | -------: |
+| Ana    | Admin |   Activo |
+| Carlos | User  | Inactivo |
+```
 
 _(Los puntos `:` determinan la alineación: izquierda `:---`, centro `:---:`, derecha `---:`)_
 
